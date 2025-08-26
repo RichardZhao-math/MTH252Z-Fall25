@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch7-TechniquesIntegration" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Techniques of Integration</title>
+
+  <introduction>
+    <p> Blahblahblah. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec71-IntegrationByParts.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec72-TrigIntegral.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec73-TrigSub.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec74-HyperbolicIntegral.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec75-PartialFraction.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec76-StrategiesIntegral.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec77-ImproperIntegral.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec78-NumericalIntegration.ptx" />
+
+</chapter>

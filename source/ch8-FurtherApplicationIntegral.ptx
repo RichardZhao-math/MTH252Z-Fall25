@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch8-FurtherApplicationIntegral" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Further Applications of the Integral</title>
+
+  <introduction>
+    <p> Blahblahblah. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec81-Probability.ptx" />
+
+  <!-- include sections -->
+  <xi:include href="sec82-ArcLength.ptx" />
+
+</chapter>
