@@ -101,7 +101,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.9';
+eBookConfig.runestone_version = '7.9.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -162,7 +162,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec55-FTCpartII.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Fundamental Theorem of Calculus, Part II</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig" class="internal"><span class="title">Integral formulas involving inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#ws-sec58" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -287,9 +293,8 @@ eBookConfig.enable_chatcodes =  false;
 <em class="emphasis">You should be able to find all these formulas in your calculus 1 notes.</em><div class="autopermalink" data-description="Paragraph"><a href="#sec53-IndefiniteIntegral-3-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Task 5.3.1.a"><a href="#sec53-IndefiniteIntegral-3-2" title="Copy heading and permalink for Task 5.3.1.a" aria-label="Copy heading and permalink for Task 5.3.1.a">🔗</a></div></article><article class="task exercise-like" id="sec53-IndefiniteIntegral-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec53-IndefiniteIntegral-3-3-1-1">What function will give a derivative of <span class="process-math">\(\sin(x)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec53-IndefiniteIntegral-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec53-IndefiniteIntegral-3-3-1">What function will give a derivative of <span class="process-math">\(\sin(x)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec53-IndefiniteIntegral-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
 <details id="sec53-IndefiniteIntegral-3-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para logical" id="sec53-IndefiniteIntegral-3-3-2-1">
 <div class="para">Recall a derivative formula in part (a) should say</div>
@@ -321,9 +326,7 @@ eBookConfig.enable_chatcodes =  false;
 <em class="alert">But...</em> Is this the only answer we can get?<div class="autopermalink" data-description="Paragraph"><a href="#sec53-IndefiniteIntegral-3-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 5.3.1.b.1"><a href="#sec53-IndefiniteIntegral-3-3-3" title="Copy heading and permalink for Solution 5.3.1.b.1" aria-label="Copy heading and permalink for Solution 5.3.1.b.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 5.3.1.b"><a href="#sec53-IndefiniteIntegral-3-3" title="Copy heading and permalink for Task 5.3.1.b" aria-label="Copy heading and permalink for Task 5.3.1.b">🔗</a></div></article><div class="autopermalink" data-description="Investigation 5.3.1"><a href="#sec53-IndefiniteIntegral-3" title="Copy heading and permalink for Investigation 5.3.1" aria-label="Copy heading and permalink for Investigation 5.3.1">🔗</a></div></article><div class="para" id="sec53-IndefiniteIntegral-4">We can consider <em class="emphasis">taking the derivative</em> as an operation we can perform on a function. A natural question to wonder is whether we can undo this operation (that is, we know the derivative of a function and we want to find the original function by undoing the derivative). We actually can and this is the main concept we will explore in this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec53-IndefiniteIntegral-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 5.3.1.b"><a href="#sec53-IndefiniteIntegral-3-3" title="Copy heading and permalink for Task 5.3.1.b" aria-label="Copy heading and permalink for Task 5.3.1.b">🔗</a></div></article><div class="autopermalink" data-description="Investigation 5.3.1"><a href="#sec53-IndefiniteIntegral-3" title="Copy heading and permalink for Investigation 5.3.1" aria-label="Copy heading and permalink for Investigation 5.3.1">🔗</a></div></article><div class="para" id="sec53-IndefiniteIntegral-4">We can consider <em class="emphasis">taking the derivative</em> as an operation we can perform on a function. A natural question to wonder is whether we can undo this operation (that is, we know the derivative of a function and we want to find the original function by undoing the derivative). We actually can and this is the main concept we will explore in this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec53-IndefiniteIntegral-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <section class="subsection" id="subsec-531-AntiderivativesANDIndefiniteIntegrals"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antiderivatives and Indefinite Integrals</span>
@@ -853,7 +856,36 @@ F'(x) \amp = \frac{d}{dx}\left(2x^2 - 6x^3 + C\right)\\
 </h4>
 <div class="para" id="subsec-532-IndefiniteIntegralFormulas-Basic-23-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \left(3e^{5x} + 3x^5\right) \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 5.3.16"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23" title="Copy heading and permalink for Example 5.3.16" aria-label="Copy heading and permalink for Example 5.3.16">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Some (basic) Indefinite Integral Formulas"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic" title="Copy heading and permalink for Subsection: Some (basic) Indefinite Integral Formulas" aria-label="Copy heading and permalink for Subsection: Some (basic) Indefinite Integral Formulas">🔗</a></div></section><section class="subsection" id="sec53-IndefiniteIntegral-7"><h3 class="heading hide-type">
+<details id="subsec-532-IndefiniteIntegralFormulas-Basic-23-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="subsec-532-IndefiniteIntegralFormulas-Basic-23-2-1">
+<div class="para">We of course can split up the terms by the linearity, so we obtain</div>
+<div class="displaymath process-math" id="subsec-532-IndefiniteIntegralFormulas-Basic-23-2-1-1">
+\begin{align*}
+\int \left(3e^{5x} + 3x^5\right) \amp= 3\int e^{5x}\, dx + 3\int x^5\, dx 
+\end{align*}
+</div>
+<div class="para">There are two little integrals we need to evaluate... which formula(s) do we need to use <em class="alert">and why</em>?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.3.16.1"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23-2" title="Copy heading and permalink for Hint 5.3.16.1" aria-label="Copy heading and permalink for Hint 5.3.16.1">🔗</a></div>
+</div></details><details id="subsec-532-IndefiniteIntegralFormulas-Basic-23-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-532-IndefiniteIntegralFormulas-Basic-23-3-1">Observe that <span class="process-math">\(y = x^5\)</span> is a power function so we can apply the power rule to integrate it.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-532-IndefiniteIntegralFormulas-Basic-23-3-2">
+<div class="para">Yet, <span class="process-math">\(y = e^{5x}\)</span> is NOT a power function since the power isn’t a constant (there is an <span class="process-math">\(x\)</span> on the power). We do have a formula in <a href="sec53-IndefiniteIntegral.html#thm-IntegralInvolvingExponential" class="xref" data-knowl="./knowl/xref/thm-IntegralInvolvingExponential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.15: Integrals Involving \boldsymbol{e^x}">Theorem 5.3.15</a> to deal with this integral. Hence, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-IntegralInvolvingExponential.html" id="subsec-532-IndefiniteIntegralFormulas-Basic-23-3-2-4">
+\begin{align*}
+\int \left(3e^{5x} + 3x^5\right) \amp= 3\int e^{5x}\, dx + 3\int x^5\, dx \\
+\amp= 3\cdot \frac{1}{5}e^{5x} + 3\cdot \frac{x^6}{6} + C\\
+\amp= \frac{3}{5}e^{5x} + \frac{1}{2}x^6 + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.3.16.1"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23-3" title="Copy heading and permalink for Solution 5.3.16.1" aria-label="Copy heading and permalink for Solution 5.3.16.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.3.16"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-23" title="Copy heading and permalink for Example 5.3.16" aria-label="Copy heading and permalink for Example 5.3.16">🔗</a></div></article><div class="para" id="subsec-532-IndefiniteIntegralFormulas-Basic-24">We will be developing more and more integral formulas throughout the term. It is a good strategy to organize all the formulas in an <em class="alert">integral formula sheet</em> since you will be using some of the formulas again and again and again and again in this class.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Some (basic) Indefinite Integral Formulas"><a href="#subsec-532-IndefiniteIntegralFormulas-Basic" title="Copy heading and permalink for Subsection: Some (basic) Indefinite Integral Formulas" aria-label="Copy heading and permalink for Subsection: Some (basic) Indefinite Integral Formulas">🔗</a></div></section><section class="subsection" id="sec53-IndefiniteIntegral-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differential Equations and IVP</span>
 </h3>
 <div class="para" id="sec53-IndefiniteIntegral-7-2">We know what an equation is. We dealt with equations where two sides of the equal sign are quantities (or numbers). We will briefly discuss <em class="alert">differential equations</em>, an equation that involves an unknown function and its first or higher derivatives. As you can imagine, the solution is, instead of number(s), function(s).<div class="autopermalink" data-description="Paragraph"><a href="#sec53-IndefiniteIntegral-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1046,7 +1078,7 @@ h(t) = -16t^2 + v_0t + h_0
 <div class="autopermalink" data-description="Subsection: Something to ponder on..."><a href="#sec53-IndefiniteIntegral-8" title="Copy heading and permalink for Subsection: Something to ponder on..." aria-label="Copy heading and permalink for Subsection: Something to ponder on...">🔗</a></div></section><section class="worksheet" id="ws-sec53" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
 <span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec53-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="introduction" id="ws-sec53-2"><div class="para" id="ws-sec53-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or even exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec53-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="ws-sec53-2"><div class="para" id="ws-sec53-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec53-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ws-sec53-2-2">I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec53-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="exercisegroup" id="ws-sec53-3">
