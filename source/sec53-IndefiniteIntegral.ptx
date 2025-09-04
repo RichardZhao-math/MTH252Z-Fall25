@@ -70,11 +70,9 @@
 
     <task>
 
-      <statement>
-        <p>
-          What function will give a derivative of <m>\sin(x)</m>? 
-        </p>
-      </statement>
+      <p>
+        What function will give a derivative of <m>\sin(x)</m>? 
+      </p>
 
       <hint>
         <p>
@@ -761,7 +759,39 @@
       <p>
         Evaluate the indefinite integral <m>\displaystyle \int \left(3e^{5x} + 3x^5\right) \, dx</m>
       </p>
+
+      <hint>
+        <p>
+          We of course can split up the terms by the linearity, so we obtain
+          <md>
+            <mrow>\int \left(3e^{5x} + 3x^5\right) \amp= 3\int e^{5x}\, dx + 3\int x^5\, dx </mrow>
+          </md>
+          There are two little integrals we need to evaluate... which formula(s) do we need to use <alert>and why</alert>? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Observe that <m>y = x^5</m> is a power function so we can apply the power rule to integrate it. 
+        </p>
+
+        <p>
+          Yet, <m>y = e^{5x}</m> is NOT a power function since the power isn't a constant (there is an <m>x</m> on the power). 
+          We do have a formula in <xref ref="thm-IntegralInvolvingExponential"/> to deal with this integral. 
+          Hence, we obtain
+          <md>
+            <mrow>\int \left(3e^{5x} + 3x^5\right) \amp= 3\int e^{5x}\, dx + 3\int x^5\, dx </mrow>
+            <mrow> \amp= 3\cdot \frac{1}{5}e^{5x} + 3\cdot \frac{x^6}{6} + C</mrow>
+            <mrow> \amp= \frac{3}{5}e^{5x} + \frac{1}{2}x^6 + C </mrow>
+          </md>
+        </p>
+      </solution>
     </example>
+
+    <p>
+      We will be developing more and more integral formulas throughout the term. 
+      It is a good strategy to organize all the formulas in an <alert>integral formula sheet</alert> since you will be using some of the formulas again and again and again and again in this class. 
+    </p>
     
   </subsection>
 
@@ -994,7 +1024,7 @@
       <p>
         I included some practice problems that cover some main concepts in this section. 
         You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
-        I may take problems here to be your in-class practice problems, homework problems, and/or even exam problems. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. 
         Reach out to Richard for help if you get stuck or have any questions. 
       </p>
 

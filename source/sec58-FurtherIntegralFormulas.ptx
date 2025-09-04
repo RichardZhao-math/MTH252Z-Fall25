@@ -3,6 +3,179 @@
 <section xml:id="sec58-FurtherIntegralFormulas" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Further Integral Formulas</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, you will undo even more derivative formulas you learned back in calculus 1 in terms of integrations. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            integrate using integral formulas involving inverse trigonometric functions
+          </p>
+        </li>
+      </ul>
+    </objectives>
+    
+  </introduction>
+
+  <investigation>
+    
+    <introduction>
+      <p>
+        Evaluate the indefinite integral <m> \displaystyle \int \frac{1}{2\sqrt{1 - x^2}}\, dx </m>
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Can we evaluate this integral using <m>u</m>-sub? 
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <p>
+        Evaluate this integral using the hint given below. 
+      </p>
+
+      <hint>
+        <p>
+          This may seem like a totally irrelevant hint but what is the derivative of <me>y = \arcsin(x)</me> 
+        </p>
+
+        <note>
+          <title>Clarifying the notation</title>
+          <p>
+            The function <m>y = \arcsin(x)</m> means the <alert>inverse</alert> sine of <m>x</m>. 
+          </p>
+
+          <p>
+            Another famous notation for inverse sine is <m>y = \sin^{-1}(x)</m>. 
+            Be careful with this exponent of <m>-1</m>. 
+            This doesn't mean the reciprocal of <m>\sin(x)</m>. 
+          </p>
+
+          <p>
+            I will use both notations interchangeably. 
+          </p>
+        </note>
+      </hint>
+
+      <solution>
+        <p>
+          Recall back in calculus 1, we learned about the derivative of inverse trigonometric function. 
+          One of the formulas is
+          <me>
+            \frac{d}{dx}\left(\arcsin(x)\right) = \frac{1}{\sqrt{1 - x^2}}
+          </me>
+          In other words, we can rewrite the above formula using integration as follows: 
+          <me>
+            \int \frac{1}{\sqrt{1 - x^2}}\, dx = \arcsin(x) + C
+          </me>
+          Hence, we can evaluate this integral as follows: 
+          <md>
+            <mrow> \int \frac{1}{2\sqrt{1 - x^2}}\, dx \amp= \int \frac{1}{2}\cdot \frac{1}{\sqrt{1 - x^2}}\, dx </mrow>
+            <mrow> \amp= \frac{1}{2}\int \frac{1}{\sqrt{1 - x^2}}\, dx </mrow>
+            <mrow> \amp= \frac{1}{2}\arcsin(x) + C </mrow>
+          </md>
+          
+        </p>
+      </solution>
+    </task>
+  </investigation>
+
+  <p>
+    Recall we learned a couple formulas about taking the derivative of the inverse trigonometric functions back in calculus 1. 
+    If we rewrite these formulas, we will obtain more formulas to help us evaluate integrals. 
+  </p>
+
+  <subsection xml:id="subsec-581-Integral-InverseTrig">
+    <title>Integral formulas involving inverse trigonometric functions</title>
+
+    <p>
+      Back in calculus 1, you learned the derivative of the six inverse trigonometric functions. 
+      Of course we can rewrite the six derivative formulas into the <alert>three</alert> integrals formulas in the following theorem. 
+    </p>
+
+    <theorem xml:id="thm-IntegralInvolvingInverseTrig">
+      <title>Integrals Involving Inverse Trigonometric Functions</title>
+      
+      <p></p>
+      
+      <statement>
+        <p>
+          <md>
+            <mrow> \amp \frac{d}{dx}\left(\sin^{-1}(x)\right) = \frac{1}{\sqrt{1 - x^2}} \amp\amp\int \frac{dx}{\sqrt{1 - x^2}} = \sin^{-1}(x) + C </mrow>
+            <mrow> \amp </mrow>
+            <mrow> \amp \frac{d}{dx}\left(\tan^{-1}(x)\right) = \frac{1}{1 + x^2} \amp\amp\int \frac{dx}{1 + x^2} = \tan^{-1}(x) + C </mrow>
+            <mrow> \amp </mrow>
+            <mrow> \amp \frac{d}{dx}\left(\sec^{-1}(x)\right) = \frac{1}{|x|\sqrt{x^2 - 1}} \amp\amp\int \frac{dx}{|x|\sqrt{x^2 - 1}} = \sec^{-1}(x) + C </mrow>
+          </md>
+        </p>
+      </statement>
+    </theorem>
+
+    <note>
+      <title>Why do we only rewrite three of the six derivative formulas? </title>
+      
+      
+    </note>
+    
+  </subsection>
+
+  <worksheet xml:id="ws-sec58">
+    <title>Some Exercises for this section</title>
+    
+    <introduction>
+      <p>
+        I included some practice problems that cover some main concepts in this section. 
+        You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. 
+        Reach out to Richard for help if you get stuck or have any questions. 
+      </p>
+
+      <p>
+        I will only include the final answer to some of the problems for you to check your result. 
+        If you want to check your work, talk to Richard and he is happy to discuss the process with you. 
+      </p>
+    </introduction>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Evaluate the following indefinite integral using methods covered in class so far. 
+          Note that the two problems are similar. 
+          Are the answer also similar? 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{\sin(2x)}{1 + \cos^2(x)}\, dx</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{\sin(x)}{1 + \cos^2(x)}\, dx</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+  </worksheet>
 
 </section>
