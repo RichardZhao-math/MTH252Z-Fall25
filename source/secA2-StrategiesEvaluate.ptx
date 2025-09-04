@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="secA2-StrategiesEvaluate" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>More Strategies to Evaluate Integrals</title>
+
+  <p> Text of section. </p>
+
+  <subsection xml:id="subsec-A21-TrigIntegral">
+    <title>Trigonometric Integrals</title>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-A22-TaylorPolynomial">
+    <title>Approximation using Taylor Polynomials</title>
+    
+  </subsection>
+
+</section>

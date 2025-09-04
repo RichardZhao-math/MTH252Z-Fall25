@@ -5,4 +5,121 @@
 
   <p> Text of section. </p>
 
+  <subsection xml:id="subsec-A11-StructureIntegral">
+    <title>Structure of the Integral</title>
+
+    <p>
+      The investigation tasks in this section will ask you to think about integrals in a different way. 
+      Recall the two major ways you think about integrals so far are: 
+      <ul>
+        <li>
+          <p>
+            Some signed area under the curve, and
+          </p>
+        </li>
+        <li>
+          <p>
+            Some general antiderivative of the integrand, plug some numbers in, and do the subtraction. 
+          </p>
+        </li>
+      </ul>
+      Well it turns out that neither of them are the <alert>actual</alert> meaning of integrals. 
+      The area aspect is a <alert>graphical</alert> interpretation of integrals and the antiderivative is just one <alert>method</alert> to evaluate integrals, guaranteed by the FTC. 
+      These two approaches are limited when applying integrals to real-world problems since (1) we don't always have a graph to work with, and (2) not all functions will have a nice antiderivatives we can work with. 
+    </p>
+
+    <subsubsection xml:id="subsubsec-A111-GorillaJump">
+      <title>The Great Gorilla Jump</title>
+
+      <introduction>
+        <p>
+          Imagine this: a gorilla, suited up with a parachute, climbs to the top of a tall city building as part of a special wildlife training experiment. 
+          After a brief moment of hesitation, the gorilla bravely leaps off the edge. 
+          As the parachute deploys and air resistance kicks in, you, as one of the researchers on the ground, begin recording data to study how the gorilla's velocity changes over time.
+          Using high-speed sensors, the team records the gorilla’s downward velocity every half-second as it falls. 
+          Note that the gorilla touched the ground just after 5 seconds. 
+          The recorded data is shown below.
+          <table>
+            <title>Data Table of Velocity every half-second</title>
+            <tabular halign="center" frame="all" rules="all">
+                <row header="yes" bottom="medium" >
+                <cell>Time (in seconds)</cell>
+                <cell>Velocity (in feet per second)</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>0</cell>
+                <cell>0</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>0.5</cell>
+                <cell>5</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>1.0</cell>
+                <cell>7</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>1.5</cell>
+                <cell>8</cell>
+                </row>
+
+                <row bottom="minor">
+                <cell>2.0</cell>
+                <cell>11</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>2.5</cell>
+                <cell>11.5</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>3.0</cell>
+                <cell>12</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>3.5</cell>
+                <cell>13</cell>
+                </row>
+
+                <row bottom="minor">
+                <cell>4.0</cell>
+                <cell>15.5</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>4.5</cell>
+                <cell>18</cell>
+                </row>
+                
+                <row bottom="minor">
+                <cell>5.0</cell>
+                <cell>19</cell>
+                </row>
+            </tabular>
+
+          </table>
+        </p>
+      </introduction>
+      
+      <task>
+        <p>
+          Testing
+        </p>
+      </task>
+
+    </subsubsection>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-A12-ProofFTC">
+    <title>Proof of the Fundamental Theorem of Calculus</title>
+    
+  </subsection>
+
 </section>

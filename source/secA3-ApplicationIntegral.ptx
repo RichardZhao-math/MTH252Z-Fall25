@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="secA3-ApplicationIntegral" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Some Famous Applications of Integrals</title>
+
+  <p> Text of section. </p>
+
+  <subsection xml:id="subsec-A31-PhysicsWork">
+    <title>A physics and engineering application -- Work</title>
+    
+  </subsection>
+
+  <subsection xml:id="sec-pdf-demo">
+  <title>Embedded PDF Example</title>
+
+  <p>
+    Below is a PDF you can scroll through directly in the page:
+  </p>
+
+  <html>
+    <div style="border: 2px solid #888; padding: 8px; margin: 10px 0;">
+      <p style="text-align: center; font-weight: bold;">MTH252 Final Exam (Summer 2025)</p>
+      <iframe src="MTH252_Su25_Final.pdf" width="100%" height="600px" style="display: block; margin: auto;">
+        Your browser does not support iframes.
+      </iframe>
+    </div>
+  </html>
+
+  <p>
+    You can scroll through the PDF above to review the exam.
+  </p>
+
+</subsection>
+
+
+</section>

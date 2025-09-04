@@ -3,6 +3,1073 @@
 <section xml:id="sec71-IntegrationByParts" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Integration by Parts</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, you will learn a method to evaluate integrals called the <alert>Integration by Parts</alert>, which is derived from the <em>Product Rule</em> from derivatives. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            apply the integration by parts formula to evaluate integrals. 
+          </p>
+        </li>
+        <li>
+          <p>
+            pick the <m>u</m> that will make the process easier. 
+          </p>
+        </li>
+      </ul>
+    </objectives>
+    
+  </introduction>
+
+  <investigation>
+    <introduction>
+      <p>
+        How would you evaluate the integral 
+        <me>
+          \int x\cos(x)\, dx
+        </me>
+      </p>
+    </introduction>
+
+    <task>
+      
+      <p>
+        Math would be so much easier if we could just take the integral of the two functions in the integrand separately. 
+        So let's do it! 
+        What would be the answer if we were to integrate each factor separately? 
+      </p>
+
+      <solution>
+        <p>
+          If we were to integrate each function separately, then we would obtain
+          <md>
+            <mrow>\int x\cos(x)\, dx \amp= \left(\int x\, dx\right)\left(\int \cos(x)\, dx\right) </mrow>
+            <mrow> \amp= \frac{x^2}{2}\cdot \sin(x) + C </mrow>
+          </md>
+        </p>
+      </solution>
+
+    </task>
+
+    <task>
+      
+      <p>
+        Now <em>check</em> the answer you got from part (a). 
+        Is this a correct antiderivative of <m>y = x\cos(x)</m>? 
+      </p>
+
+      <solution>
+        <p>
+          If <m>y = \dfrac{x^2}{2}\cdot \sin(x) + C</m> were the general antiderivative of <m>y = x\cos(x)</m>, then it would imply that
+          <me>
+            \frac{d}{dx}\left(\frac{x^2}{2}\cdot\sin(x)\right) = x\cos(x)
+          </me>
+          Yet, by the Product Rule of derivative, we know that
+          <md>
+            <mrow> \frac{d}{dx}\left(\frac{x^2}{2}\cdot\sin(x)\right) \amp= \frac{d}{dx}\left(\frac{x^2}{2}\right)\cdot \sin(x) + \frac{x^2}{2}\cdot \frac{d}{dx}\left(\sin(x)\right) </mrow>
+            <mrow> \amp= x\sin(x) + \frac{x^2}{2}\cos(x) </mrow>
+          </md>
+          See that the derivative of <m>y = \frac{x^2}{2}\cdot \sin(x) + C</m> clearly doesn't equal to the integrand. 
+          Hence, we know that <m>y = \frac{x^2}{2}\cdot \sin(x) + C</m> is NOT the general antiderivative of <m>y = x\cos(x)</m>. 
+        </p>
+
+        <p>
+          <alert>So we know that our method of integrating the function by integrating each factor separately is incorrect.</alert> 
+        </p>
+      </solution>
+
+    </task>
+
+    <task>
+
+      <p>
+        Then what is the correct answer to this integral? 
+      </p>
+
+      <hint>
+        <p>
+          This may seem like a totally irrelevant hint but what is the derivative of
+          <me>
+            y = x\sin(x) + \cos(x) + 1
+          </me>
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let's take the derivative of the function <m>y = x\sin(x) + \cos(x) + 1</m> given in the hint. 
+          <md>
+            <mrow> y' \amp= \left(x\sin(x) + \cos(x) + 1\right)' </mrow>
+            <mrow> \amp= \left(x\sin(x)\right)' + \left(\cos(x)\right)' + (1)' \amp\amp\text{by linearity} </mrow>
+            <mrow> \amp= (x)'\sin(x) + x\left(\sin(x)\right)' + \left(\cos(x)\right)' \amp\amp\text{by the Product Rule}</mrow>
+            <mrow> \amp= \sin(x) + x\cos(x) - \sin(x) </mrow>
+            <mrow> \amp= x\cos(x) </mrow>
+          </md>
+          This implies that <m>y = x\sin(x) + \cos(x) + 1</m> is an antiderivative of <m>y = x\cos(x)</m>. 
+        </p>
+
+        <p>
+          Recall that all antiderivatives of a function only differ by a constant (that is why we needed the <m>+C</m> to denote the general antiderivative). 
+          Hence, we know that
+          <me>
+            \int x\cos(x)\, dx = x\sin(x) + \cos(x) + C
+          </me>
+        </p>
+      </solution>
+
+    </task>
+
+  </investigation>
+
+  <p>
+    See that we can't just simply integrate each factor of the integrand when integrating a factor of two functions. 
+    We will need a new method that allows us to integrate a product of two functions. 
+  </p>
+
+  <subsection xml:id="subsec-711-DerivingFormula">
+    <title>Formula to integrate the product of two functions</title>
+    
+    <p>
+      Recall we learned a fancy formula, called the product rule, to take the derivative of a product of two functions back in calculus 1. 
+      For demonstration purposes, let's call these two functions <m>u</m> and <m>v</m>. 
+      If we wanted to take the derivative of <m>u v</m>, then the product rule tells us that
+      <me>
+        \frac{d}{dx}\left(uv\right) = \frac{du}{dx}\cdot v + u\cdot \frac{dv}{dx}
+      </me>
+      If we want to spin this around using calculus 2 language about antiderivatives, then we can say that <m>\dfrac{du}{dx}\cdot v + u\cdot \dfrac{dv}{dx}</m> is an antiderivative of <m>uv</m>. 
+      Symbolically, this means that
+      <me>
+        uv = \int\left(\frac{du}{dx}\cdot v + u\cdot \frac{dv}{dx} \right)\, dx
+      </me>
+      By the linearity of integral and a bit of the abuse of notation to treat the derivative symbols as fractions, we will obatin
+      <md>
+        <mrow> uv \amp= \int\left(\frac{du}{dx}\cdot v + u\cdot \frac{dv}{dx} \right)\, dx </mrow>
+        <mrow> \amp= \int \frac{du}{dx}\cdot v\, dx + \int u\cdot\frac{dv}{dx}\, dx </mrow>
+        <mrow> \amp= \int \frac{du}{\cancel{dx}}\cdot v\, \cancel{dx} + \int u\cdot\frac{dv}{\cancel{dx}}\, \cancel{dx} </mrow>
+        <mrow> \amp= \int v\, du + \int u\, dv </mrow>
+      </md>
+      This is the equation we obtained. 
+      <me>
+        \int v\, du + \int u\, dv = uv
+      </me>
+    </p>  
+    
+    <p>
+      You may be wondering... why talking about derivatives at all? 
+      Isn't the purpose of this section to come up with a way to integrate the product of two functions? 
+    </p>  
+
+    <p>
+      Well the magic comes when we subtract the <m>\int v\, du</m> on both sides of the equation. 
+      We will then obtain
+      <me>
+        \int u\, dv = uv - \int v\, du
+      </me>
+      This is our formula to integrate the product of two functions! 
+      The name of this formula is called the <alert>Integration by Parts</alert>! 
+    </p>
+
+    <theorem xml:id="thm-IntegrationByParts">
+      <title>Integration by Parts Formula (indefinite version)</title>
+      <statement>
+        <p>
+          <me>
+            \int u\, dv = uv - \int v\, du
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      You may also wonder why we call this formula "integration <em>by parts</em>". 
+      That is because we didn't fully integrate the integrand using this formula. 
+      After using this formula, there is still a resulting integral that needs to be evaluated. 
+      So technically speaking we only integrated parts of the integrand using this formula and we need to do more work to evaluate the resulting integral. 
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="subsec-712-Indefinite">
+    <title>Integration by Parts (Indefinite Version)</title>
+    
+    <p>
+      Now we have a fancy formula to help us integrate the product of two functions. 
+      Let's look at a couple examples on how to use this formula. 
+    </p>
+
+    <example>
+      
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int x\sin(x)\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          Notice that the left-hand side of the integration by parts formula says <m>\displaystyle \int u\, dv</m>. 
+          To use this formula, we will need to first determine what <m>u</m> and <m>dv</m> are. 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let's pick <m>u = x</m>, which is one of the factor in the integrand. 
+          Then the <m>dv</m> is forced to be <m>\sin(x)\, dx</m>. 
+        </p>
+
+        <p>
+          Observing the integration by parts formula, we also need to know what <m>du</m> and <m>v</m> are in order to use this formula. 
+        </p>
+
+        <p>
+          We can obtain <m>du</m> by taking the derivative of <m>u</m>. That is, 
+          <me>
+            u = x
+            \qquad \implies\qquad 
+            \frac{du}{dx} = 1
+            \qquad \implies\qquad
+            du = dx
+          </me>
+        </p>
+
+        <p>
+          To obtain <m>v</m>, we can integrate <m>dv</m>. That is, 
+          <me>
+            dv = \sin(x)\, dx
+            \quad \implies\quad
+            \frac{dv}{dx} = \sin(x)
+            \quad \implies\quad
+            v = -\cos(x)
+          </me>  
+        </p>
+
+        <p>
+          To sum up, we have the following components: 
+          <md>
+            <mrow> u \amp= x \amp\amp dv = \sin(x)\, dx </mrow>
+            <mrow> du \amp= dx \amp\amp \;\; v= -\cos(x) </mrow>
+          </md>
+        </p>
+
+        <p>
+          We can now put all the components together using the integration by parts formula. 
+          <md>
+            <mrow> \int x\sin(x)\, dx \amp = x\cdot -\cos(x) - \int -\cos(x)\, dx</mrow>
+            <mrow> \amp= -x\cos(x) + \int\cos(x)\, dx </mrow>
+          </md>
+          Using the integration by parts formula results in an easier integral that we can deal with! 
+        </p>
+
+        <p>
+          Now we put everything together, we can evaluate the integral as follows. 
+          <md>
+            <mrow>\int x\sin(x)\, dx \amp= -x\cos(x) + \int \cos(x)\, dx </mrow>
+            <mrow> \amp= -x\cos(x) + \sin(x) + C  </mrow>
+          </md>
+        </p>
+      </solution>
+
+    </example>
+
+    <p>
+      Notice that we will still end up with an integral to deal with after using the integration by parts formula. 
+      That is, this method is useful <alert>only if</alert> the resulting integral is easier to evaluate (or at least not more complicated than the original integral).  
+    </p>
+
+    <p>
+      Strategically speaking, we want to pick a <m>u</m> such that
+      <ul>
+        <li>
+          <p>
+            <m>\dfrac{du}{dx}</m> is simpler than <m>u</m> itself; and
+          </p>
+        </li>
+        <li>
+          <p>
+            we can actually integrate <m>dv</m>.  
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      But that doesn't really answer the question on how to pick the <m>u</m> strategically to make the process work out (and/or make the problem easier). 
+      There is a "LIPET" test to help us pick a good <m>u</m>.  
+      LIPET is an acronym that tells us how we should pick the <m>u</m> in the following order: 
+      <ul>
+        <li>
+          <p>
+            <alert>L</alert> stands for Logarithmic functions; 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>I</alert> stands for Inverse Trigonometric functions; 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>P</alert> stands for Power functions; 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>E</alert> stands for Exponential functions; 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>T</alert> stands for Trigonometric functions; 
+          </p>
+        </li>
+      </ul>
+      Well... Exponential and Trigonometric functions are equally complicated when picking them to be the <m>u</m>...  
+    </p>
+
+    <example>
+
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int x\ln(x)\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          We are in the section of integration by parts so this is probably the method we should use to evaluate this integral. 
+        </p>
+
+        <p>
+          In order to use the integration by parts formula, we will need to pick a <m>u</m> and let the rest of the integral be the <m>dv</m>. 
+          What type of functions are we seeing in the integrand and which one should we pick to be the <m>u</m> by the LIPET test? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Notice that there is a power function and a logarithmic function in the integrand. 
+          By the LIPET test, we should pick <m>u</m> to be the logarithmic function. 
+        </p>
+
+        <p>
+          Let <m>u = \ln(x)</m>. 
+          Then we have
+          <md>
+            <mrow> u \amp= \ln(x) \amp\amp dv = x \, dx </mrow>
+            <mrow> du \amp= \frac{1}{x}\, dx \amp\amp \;\; v= \frac{x^2}{2} </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow> \int x\ln(x)\, dx \amp= \ln(x)\cdot \frac{x^2}{2} - \int \frac{x^2}{2}\cdot \frac{1}{x}\, dx </mrow>
+            <mrow> \amp= \frac{x^2}{2}\ln(x) -\frac{1}{2}\int x\, dx </mrow>
+            <mrow> \amp=  \frac{x^2}{2}\ln(x) - \frac{1}{2}\cdot \frac{x^2}{2} + C</mrow>
+            <mrow> \amp= \frac{x^2}{2}\ln(x) - \frac{x^2}{4} + C </mrow>
+          </md>
+        </p>
+      </solution>
+
+    </example>
+
+    <p>
+      But... can we pick <m>u = x</m> if we are feeling a bit rebellious and don't want to follow the LIPET test in the previous example? 
+      The short answer is that it depends... If we pick <m>u = x</m> in the previous example, then the <m>dv</m> will be forced to be <m>\ln(x)\, dx</m> and we actually don't know what the indefinite integral of <m>\ln(x)</m> is yet (so we would get stuck in the setup when finding the <m>v</m>). 
+    </p>
+
+    <p>
+      We will integrate <m>\ln(x)</m> in the next example. 
+      When you know what the indefinite integral of <m>\ln(x)</m> is, I encourage you to try picking <m>u = x</m> in the previous example and see how much more work you need to deal with. 
+      Then you will realize that the LIPET test does save us a lot of work. 
+    </p>
+
+    <example>
+      
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int \ln(x)\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          Since we are in the section of integration by parts, this is probably going to be the method we are using in this problem. 
+        </p>
+
+        <p>
+          Yet there is only one single function in the integrand... We have to pick a function to be <m>u</m> and let the rest of the integral to be <m>dv</m>... 
+          What choice of the function do we have as our <m>u</m>? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Well there is only one function in the integrand so this is going to be our only choice of <m>u</m>...
+        </p>
+
+        <p>
+          Let <m>u = \ln(x)</m>. 
+          Then we have
+          <md>
+            <mrow> u \amp= \ln(x) \amp\amp dv = dx </mrow>
+            <mrow> du \amp= \frac{1}{x}\, dx \amp\amp \;\; v= x </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow> \int\ln(x)\, dx \amp= \ln(x)\cdot x - \int x\cdot \frac{1}{x}\, dx </mrow>
+            <mrow> \amp= x\ln(x) - \int \, dx </mrow>
+            <mrow> \amp= x\ln(x) - x + C </mrow>
+          </md>
+        </p>
+      </solution>
+
+    </example>
+
+    <p>
+      Now we have one more formula that can go into your integral formula sheet! 
+    </p>
+
+    <theorem xml:id="thm-Integral_NaturalLog">
+      <title>Integral of the Natural Logarithmic Function</title>
+      <statement>
+        <p>
+          <me>
+            \int \ln(x)\, dx = x\ln(x) - x + C
+          </me>  
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      A question you may have now is <alert>whether we can always evaluate the resulting integral easily</alert>. 
+    </p>
+
+    <p>
+      The short answer is no. 
+      The resulting integral is just another regular integral that may need to be evaluated using fancy methods. 
+    </p>
+
+    <p>
+      But a rule of thumb here is that <alert>the resulting integral should NOT be more complicated than the original integral</alert>. 
+      We don't want to make the problem even worse to deal with. 
+    </p>
+
+    <example>
+      
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int x^2\sin(x)\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          The method we should use to evaluate this integral will be integration by parts (we are covering this section now!). 
+          Then we will need to pick a <m>u</m> and let the rest of the integral be the <m>dv</m>. 
+          By the LIPET test, what should we pick for the <m>u</m>? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Notice that there is a power function and a trigonometric function in the integrand. 
+          By the LIPET test, we should pick <m>u</m> to be the power function. 
+        </p>
+
+        <p>
+          Let <m>u = x^2</m>. Then we have
+          <md>
+            <mrow> u \amp= x^2 \amp\amp dv = \sin(x)\, dx </mrow>
+            <mrow> du \amp= 2x\, dx \amp\amp \;\; v= -\cos(x) </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow>\int x^2\sin(x)\, dx \amp= x^2\cdot -\cos(x) - \int -\cos(x)\cdot 2x\, dx </mrow>
+            <mrow> \amp= -x^2\cos(x) + 2\int x\cos(x)\, dx </mrow>
+          </md>
+        </p>
+
+        <p>
+          Now let's observe the resulting integral <m>\int x\cos(x)\, dx</m>. 
+          This integral looks super familiar! 
+          We knew this indefinite integral equals to <m>x\sin(x) + \cos(x) + C</m> back from the investigation in this section!  
+        </p>
+
+        <p>
+          <em>If this observation isn't obvious, we can always evaluate this integral using integration by parts again. </em>
+        </p>
+
+        <p>
+          This implies that
+          <md>
+            <mrow> \int x^2\sin(x)\, dx \amp= -x^2\cos(x) + 2\int x\cos(x)\, dx </mrow>
+            <mrow> \amp= -x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C </mrow>
+          </md>
+        </p>
+
+      </solution>
+
+    </example>
+
+    <p>
+      In the above example, notice that the resulting integral is still a bit complicated in the sense that you need to use the integration by parts (if you didn't make the observation about the investigation). 
+      But the good news is that this resulting integral is <em>easier</em> compared to the original integral because we have successfully removed the square from it. 
+    </p>
+
+    <example>
+      
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int x^3\sin(x)\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          You may find a pattern here that using integration by parts will chip away the power one at a time. 
+          Then how many times do we need to use the integration by parts to evaluate this integral fully? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          We will need to use the integration by parts formula <em>three times</em> to fully evaluate this integral. 
+          It is kind of tedious to do the same thing three times in a row (feel free to try it out if this sounds like a good challenge for you!). 
+        </p>
+
+        <p>
+          Instead, we will evaluate this integral using a shortcut called the <alert>tabular method</alert>. 
+          As the name of this method suggests, this is a method that tracks the <m>u</m> (and its derivatives) and the <m>dv</m> (and its antiderivatives) in a table. 
+        </p>
+        
+        <p>
+          We will set up the table as follows: 
+          <ul>
+            <li>
+              <p>
+                The first column consists of alternating signs (mainly because of the minus sign in the formula); 
+              </p>
+            </li>
+            <li>
+              <p>
+                The secound column consists of <m>u</m> and its consecutive derivatives until it reaches <m>0</m>; 
+              </p>
+            </li>
+            <li>
+              <p>
+                The third column consists of <m>dv</m> and its consecutive antiderivatives until it reaches the row containing <m>0</m> as the consecutive derivatives of <m>u</m>. 
+              </p>
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          Then the answer will be the sum of the product of cells connecting by the arrows. 
+        </p>
+
+        <p>
+          As an example, below is the table constructed to evaluate the integral given in the prompt: 
+        </p>
+        
+        <sidebyside>
+          <tabular halign="center" frame="all" rules="all">
+            <row header="yes" bottom="medium">
+              <cell>Sign</cell>
+              <cell></cell> <!-- horizontal arrow col -->
+              <cell><m>\boldsymbol{u}</m></cell>
+              <cell></cell> <!-- diagonal arrow col -->
+              <cell><m>\boldsymbol{dv}</m></cell>
+            </row>
+
+            <row bottom="minor">
+              <cell><m>+</m></cell>
+              <cell><m>\rightarrow</m></cell>
+              <cell><m>x^3</m></cell>
+              <cell><m>\searrow</m></cell>
+              <cell><m>\sin(x)\,dx</m></cell>
+            </row>
+
+            <row bottom="minor">
+              <cell><m>-</m></cell>
+              <cell><m>\rightarrow</m></cell>
+              <cell><m>3x^2</m></cell>
+              <cell><m>\searrow</m></cell>
+              <cell><m>-\cos(x)</m></cell>
+            </row>
+
+            <row bottom="minor">
+              <cell><m>+</m></cell>
+              <cell><m>\rightarrow</m></cell>
+              <cell><m>6x</m></cell>
+              <cell><m>\searrow</m></cell>
+              <cell><m>-\sin(x)</m></cell>
+            </row>
+
+            <row bottom="minor">
+              <cell><m>-</m></cell>
+              <cell><m>\rightarrow</m></cell>
+              <cell><m>6</m></cell>
+              <cell><m>\searrow</m></cell>
+              <cell><m>\cos(x)</m></cell>
+            </row>
+
+            <row>
+              <cell><m>+</m></cell>
+              <cell></cell>
+              <cell><m>0</m></cell>
+              <cell></cell>
+              <cell><m>\sin(x)</m></cell>
+            </row>
+          </tabular>
+        </sidebyside>
+
+        <p>
+          Then the answer is
+          <md>
+            <mrow>\int x^3 \sin(x)\, dx \amp = x^3\cdot -\cos(x) - 3x^2\cdot -\sin(x) + 6x \cos(x) - 6 \sin(x) + C </mrow>
+            <mrow> \amp = -x^3 \cos(x) + 3x^2 \sin(x) + 6x \cos(x) - 6 \sin(x) + C </mrow>
+          </md>
+        </p>
+
+      </solution>
+
+    </example>
+    
+
+    <p>
+      <alert>But Richard...</alert> What if the resulting integral is <em>equally</em> complicated as the original integral... 
+      Well the good news is that we can sometimes deal with this case using a smart trick, which is to treat the evaluation process as an equation (this will allow us to <em>solve</em> for the integral). 
+    </p>
+
+    <example>
+      
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int e^x\sin(x)\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          Notice that there are two functions being multiplied together in the integrand, which is an exponential function and a trigonometric function. 
+          By the LIPET test, which one should we pick to be the <m>u</m> and what the <m>dv</m> is? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          It turns out that it doesn't matter which function we pick to be our <m>u</m> and the problem is equally complicated. 
+          For demonstration purposes, let's follow the LIPET test and pick <m>u</m> to be the exponential function. 
+          I will encourage you to solve this problem again by picking the <m>u</m> to be the trigonometric function. 
+          Then you can compare and contrast the work (they are mostly the same anyways). 
+        </p>
+
+        <p>
+          Let <m>u = e^x</m>. Then we have
+          <md>
+            <mrow> u \amp= e^x \amp\amp dv = \sin(x)\, dx </mrow>
+            <mrow> du \amp= e^x\, dx \amp\amp \;\; v= -\cos(x) </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow>\int e^x\sin(x)\, dx \amp= e^x\cdot -\cos(x) - \int -\cos(x)\cdot e^x\, dx </mrow>
+            <mrow> \amp= -e^x\cos(x) + \int e^x\cos(x)\, dx </mrow>
+          </md>
+        </p>
+
+        <p>
+          Hmm the resulting integral seems <em>equally</em> complicated in the sense that we still have an exponential function and an trigonometric function in it 
+          (but the only difference is that the <m>\sin(x)</m> became an <m>\cos(x)</m>). 
+        </p>
+
+        <p>
+          Let's try using the integration by parts formula again to the resulting integral and see if it will lead us somewhere. 
+        </p>
+
+        <p>
+          Let <m>\widetilde{u} = e^x</m>. Then we have
+          <md>
+            <mrow> \widetilde{u} \amp= e^x \amp\amp d\widetilde{v} = \cos(x)\, dx </mrow>
+            <mrow> d\widetilde{u} \amp= e^x\, dx \amp\amp \;\; \widetilde{v}= \sin(x) </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow>\int e^x\cos(x)\, dx \amp= e^x\sin(x) - \int e^x\sin(x) \, dx </mrow>
+          </md>
+        </p>
+
+        <p>
+          Let's put everything together, and we obtain the following
+          <me>
+            \int e^x\sin(x)\, dx = -e^x\cos(x) + e^x\sin(x) - \int e^x\sin(x)\, dx
+          </me>
+        </p>
+
+        <p>
+          Well the resulting integral ended up being the same as the original integral. 
+          So we are in a loop using the integration by parts. 
+          Does it mean this problem is unsolvable and we just have to give up? 
+        </p>
+
+        <p>
+          Of course not! 
+          Richard is coming to your rescue! 
+          Richard is feeling lazy and he doesn't want to keep on writing (or in this case, tying) the integral all the time, so he will just call it <m>I</m>. 
+          That is, let's define
+          <me>
+            I = \int e^x\sin(x)\, dx
+          </me>
+          Then the last line of our work will become the following <em>equation</em>: 
+          <me>
+            I = -e^x\cos(x) + e^x\sin(x) - I
+          </me>
+          Remember the goal here is to figure out what <m>I</m> is. 
+          This seems like an equation that we can totally solve for <m>I</m>. 
+        </p>
+
+        <p>
+          Adding <m>I</m> on both sides and then divide both sides of the equation by 2, we obtain
+          <me>
+            I = \frac{1}{2}\left(-e^x\cos(x) + e^x\sin(x)\right)
+          </me>
+          This implies that
+          <me>
+            \int e^x\sin(x)\, dx = \frac{1}{2}\left(-e^x\cos(x) + e^x\sin(x)\right) + C
+          </me>
+        </p>
+
+        <p>
+          Ha! We did it! We evaluated the integral! 
+        </p>
+        
+      </solution>
+
+    </example>
+
+    <p>
+      Observe that the trick in the previous example is to treat the integral as a variable and solve for it <alert>if the integration by pats loops you back to the same integral</alert>.  
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="subsec-714-Comparing_with_usub">
+    <title>Integration by parts OR <m>\boldsymbol{u}</m>-sub? </title>
+
+    <p>
+      Now that we have learned two fancy methods to evaluate integrals, integration by parts and <m>u</m>-sub. 
+      How do I know which one I should use when evaluating integrals? 
+    </p>
+
+    <example>
+      
+      <p>
+        Determine which method, integration by parts or <m>u</m>-sub, is applicable to the following indefinite integral
+        <me>
+          \int x\cos\left(x^2\right)\, dx
+        </me>
+      </p>
+
+      <hint>
+        <title>Probably not a very useful hint... </title>
+        
+        <p>
+          Trust your gut and just pick one! 
+          If the method you picked doesn't work, then try the other one! 
+          Be bold! 
+          This is just a math question, not a life or death situation! 
+        </p>
+
+      </hint>
+
+      <solution>
+        <p>
+          Let's try using the integration by parts first since we are covering this section now. 
+          I am seeing a power function and a trigonometric (ish) function being multiplied in the integrand. 
+          By the LIPET test, I will pick <m>u = x</m>, which implies that <m>dv = \cos\left(x^2\right)\, dx</m>. 
+        </p>
+
+        <p>
+          Hmm but I am stuck now since I don't know what <m>v</m> is... 
+          (and it turns out that we can't integrate <m>\cos\left(x^2\right)</m> anyways...). 
+          But that's okay! At least we can rule out a bad method! 
+        </p>
+
+        <p>
+          Now let's try using <m>u</m>-sub here. 
+          Let <m>u = x^2</m>. Then <m>du = 2x\, dx</m>, which implies that <m>x\, dx = \frac{du}{2}</m>. 
+          We obtain
+          <md>
+            <mrow>\int x\cos\left(x^2\right)\, dx \amp= \int \cos(u)\cdot \frac{du}{2} </mrow>
+            <mrow> \amp= \frac{1}{2}\cos(u)\, du </mrow>
+            <mrow> \amp= \frac{1}{2}\sin(u) + C </mrow>
+            <mrow> \amp= \frac{1}{2}\sin\left(x^2\right) + C </mrow>
+          </md>
+        </p>
+
+      </solution>
+
+    </example>
+
+    <example>
+      
+      <p>
+        Determine which method, integration by parts or <m>u</m>-sub, is applicable to the following indefinite integral
+        <me>
+          \int x^2\cos\left(x\right)\, dx
+        </me>
+      </p>
+
+      <solution>
+        <p>
+          I am going to be bold and try using the integration by parts again. 
+          By the LIPET test, we will pick <m>u</m> to be <m>x^2</m>. 
+        </p>
+
+        <p>
+          Let <m>u = x^2</m>. Then we have
+          <md>
+            <mrow> u \amp= x^2 \amp\amp dv = \cos(x)\, dx </mrow>
+            <mrow> du \amp= 2x\, dx \amp\amp \;\; v= \sin(x) </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow> \int x^2\cos(x)\, dx \amp= x^2\sin(x) - \int \sin(x)\cdot 2x\, dx </mrow>
+            <mrow> \amp= x^2\sin(x) - 2\int x\sin(x)\, dx </mrow>
+          </md>
+
+          Hey! The resulting integral is easier and we actually know what the integral of <m>x\sin(x)</m> is! 
+          We found it out in one of the previous examples. 
+          Using the result from that example, we obtain
+          <md>
+            <mrow>\int x^2\cos(x)\, dx \amp= x^2\sin(x) - 2\int x\sin(x) </mrow>
+            <mrow> \amp= x^2\sin(x) + x\cos(x) - \sin(x) + C </mrow>
+          </md>
+        </p>
+
+        <p>
+          We just picked a method and it works out after all! Yay! 
+        </p>
+      </solution>
+
+    </example>
+
+    <p>
+      I am sure some of you can find some patterns here. 
+      We will summarize all the methods and some strategies to evaluate integrals later in <xref ref="sec76-StrategiesIntegral"/> so I won't go too in dept in this section. 
+    </p>
+
+    <p>
+      The takeaway message here is to be bold and pick a method. 
+      Don't be afraid to switch methods if one doesn't work (or when you get stuck). 
+    </p>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-715-Definite">
+    <title>Integration by Parts (Definite Version) </title>
+    
+    <p>
+      There is not much to say in this part since the only additional step to do here is to plug in the limits of integration and do the subtraction... 
+    </p>
+
+    <p>
+      Remember that the variable doesn't change when using the integration by parts formula (the variable remains to be <m>x</m> throughout the whole process) so we don't need to adjust the limits of integration. 
+    </p>
+
+    <theorem xml:id="thm-IntegrationByParts-Definite">
+      <title>Integration by Parts Formula (definite version)</title>
+      <statement>
+        <p>
+          <me>
+            \int_a^b u\, dv = uv\bigg|_a^b - \int_a^b v\, du
+          </me>
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      We will wrap up this section by looking at an example of evaluating a definite integral using integration by parts. 
+    </p>
+
+    <example>
+      
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_0^1 \arctan(x)\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          This is similar to one of the previous examples that there is only one function in the integrand... 
+          So there is only one choice we have for our <m>u</m>... 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Our only choice of <m>u</m> is the <m>\arctan(x)</m>... 
+        </p>
+
+        <p>
+          Let <m>u = \arctan(x)</m>. 
+          Then we have
+          <md>
+            <mrow> u \amp= \arctan(x) \amp\amp dv = \, dx </mrow>
+            <mrow> du \amp= \frac{1}{1 + x^2}\, dx \amp\amp \;\; v= x </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow>\int_0^1 \arctan(x)\, dx \amp= x\arctan(x)\bigg|_0^1 - \int_0^1 \frac{x}{1 + x^2}\, dx </mrow>
+            <mrow> \amp= \frac{\pi}{4} - \int_0^1 \frac{x}{1 + x^2}\, dx </mrow>
+          </md>
+        </p>
+
+        <p>
+          Recall we evaluated the resulting integral back in <xref ref="sec58-FurtherIntegralFormulas"/> using <m>u</m>-sub. 
+          For your convenience, I will include the result below: 
+          <me>
+            \int \frac{x}{1 + x^2}\, dx = \frac{1}{2}\ln\left(1 + x^2\right) + C
+          </me>
+        </p>
+
+        <p>
+          This implies that
+          <md>
+            <mrow> \int_0^1\arctan(x)\, dx \amp= \frac{\pi}{4} - \frac{1}{2}\left(\ln\left(1 + x^2\right)\right)\bigg|_0^1 </mrow>
+            <mrow> \amp= \frac{\pi}{4} - \frac{1}{2}\ln(2) </mrow>
+          </md>
+        </p>
+
+      </solution>
+
+    </example>
+
+  </subsection>
+
+  <worksheet xml:id="ws-sec71">
+    <title>Some Exercises for this section</title>
+    
+    <introduction>
+      <p>
+        I included some practice problems that cover some main concepts in this section. 
+        You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or even exam problems. 
+        Reach out to Richard for help if you get stuck or have any questions. 
+      </p>
+
+      <p>
+        I will only include the final answer to some of the problems for you to check your result. 
+        If you want to check your work, talk to Richard and he is happy to discuss the process with you. 
+      </p>
+    </introduction>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Evaluate the following indefinite integral using <em>integration by parts</em>. 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int x^3\ln(x)\, dx</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{\ln(x)}{x^5}\, dx</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \arccos(x)\, dx</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int e^{3x}\cos(4x)\, dx</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Evaluate the following indefinite integral using multiple methods indicated in the hint below. 
+        </p>
+
+        <p>
+          <alert>P.S.:</alert> I encourage you to try evaluating the following integral in a different way (be rebellious and adventurous a bit). 
+          We will talk about strategies in evaluating integrals in <xref ref="sec76-StrategiesIntegral"/> where one of the important idea is that there may be multiple strategies to evaluate an integral. 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \left(\arcsin(x)\right)^2\, dx</m>
+          </p>
+
+          <hint>
+            <p>
+              Use integration by parts first and then <m>u</m>-sub. 
+            </p>
+          </hint>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{\left(\ln(x)\right)^2}{x^2}\, dx</m>
+          </p>
+
+          <hint>
+            <p>
+              Use <m>u</m>-sub first and then integration by parts. 
+            </p>
+          </hint>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup>
+  
+    <introduction>
+      <p>
+        Evaluate the following definite integral. 
+        Make sure your notation is clear and correct. 
+      </p>
+    </introduction>
+  
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int_0^{\frac{\pi}{4}} x\sin(2x)\, dx</m>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int_0^3 \ln \left(x^2 + 1\right)\, dx</m>
+        </p>
+      </statement>
+    </exercise>
+  
+  </exercisegroup>
+
+  </worksheet>
 
 </section>

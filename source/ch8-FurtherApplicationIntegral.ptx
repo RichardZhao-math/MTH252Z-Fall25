@@ -9,8 +9,7 @@
 
   <!-- include sections -->
   <xi:include href="sec81-Probability.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec82-ArcLength.ptx" />
+  <xi:include href="sec107-TaylorPolynomial.ptx" />
 
 </chapter>

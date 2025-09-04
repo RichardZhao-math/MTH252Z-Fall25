@@ -3,6 +3,31 @@
 <section xml:id="sec72-TrigIntegral" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Trigonometric Integrals</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, you will learn some common strategies to evaluate trigonometric integrals. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            blahblahblah
+          </p>
+        </li>
+        <li>
+          <p>
+            blahblahblah
+          </p>
+        </li>
+      </ul>
+    </objectives>
+    
+  </introduction>
 
 </section>

@@ -9,26 +9,12 @@
 
   <!-- include sections -->
   <xi:include href="sec71-IntegrationByParts.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec72-TrigIntegral.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec73-TrigSub.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec74-HyperbolicIntegral.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec75-PartialFraction.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec76-StrategiesIntegral.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec77-ImproperIntegral.ptx" />
-
-  <!-- include sections -->
   <xi:include href="sec78-NumericalIntegration.ptx" />
 
 </chapter>

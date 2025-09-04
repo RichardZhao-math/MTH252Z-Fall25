@@ -5,4 +5,23 @@
 
   <p> Text of section. </p>
 
+  <subsection>
+    <title>Something to ponder on... </title>
+    
+    <p>
+      Notice that the FTC, part I, has an assumption that says <m>f</m> is <alert>continuous</alert> on some <alert>closed</alert> interval <m>[a,b]</m>. 
+      Later in the class (likely towards the end of <xref ref="ch7-TechniquesIntegration"/>), Richard will make a BIG deal of this assumption (so he is cool if you don't pay attention to it now). 
+      But why is this assumption necessary? 
+    </p>
+
+    <p>
+      To give you an actual problem to think about, is it correct to evaluate the integral as follows? 
+      <me>
+        \int_{-1}^3 \frac{1}{x^2}\, dx = -\frac{1}{x}\bigg|_{-1}^3 = \left(-\frac{1}{3}\right) - \left(-\frac{1}{-1}\right) = -\frac{4}{3}
+      </me>
+      We will revisit this problem in <xref ref="sec77-ImproperIntegral"/> and point out what's wrong with this line of work. 
+    </p>
+
+  </subsection>
+
 </section>
