@@ -34,11 +34,58 @@
     </introduction>
 
     <task>
-      <statement>
+      <p>
+        Can we evaluate this integral using <m>u</m>-sub? 
+      </p>
+
+      <hint>
         <p>
-          Can we evaluate this integral using <m>u</m>-sub? 
+          We can certainly try using <m>u</m>-sub and see if it will work out. 
+          Recall <m>u</m>-sub undoes the chain rule for derivative, which is a method to differentiate a composite function. 
+          Typically, <m>u</m> is some inside function in some composite function. 
         </p>
-      </statement>
+
+        <p>
+          There are two choices of <m>u</m> as an inside function you can pick. Try them! Will they work out? If not, what seems to be the issue? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          We cannot use <m>u</m>-sub here. There are two issues depending on what your choice of <m>u</m> is (but these issues are essentially the same). 
+        </p>
+
+        <p>
+          If we pick <m>u = 1 - x^2</m>. Then <m>du = -2x\, dx</m>, which implies that <m>x\, dx = -\frac{du}{2}</m>. 
+          But there is no factor of <m>x</m> in the integrand that allows us substitute <m>x\, dx</m> with <m>-\frac{du}{2}</m>. 
+          So we will get stuck here... 
+        </p>
+
+        <p>
+          A possible solution to resolve this issue is to isolate <m>dx</m> entirely by dividing the <m>x</m> to the other side (and pretending <m>x</m> can never be zero). 
+          This implies that <m>dx = \frac{du}{-2x}</m>. 
+          By this substitution, we obtain
+          <me>
+            \int \frac{1}{2\sqrt{1 - x^2}}\, dx = \int \frac{1}{2\sqrt{u}}\cdot \frac{du}{-2x}
+          </me>
+          Okay... but there is still an <m>x</m> in the integrand. This is super confusing since the variable we are dealing with now is <m>u</m>. 
+          Given our substitution that <m>u = 1 - x^2</m>, we see that <m>x = \sqrt{1 - u}</m>. 
+          Then the integral becomes
+          <md>
+            <mrow> \int \frac{1}{2\sqrt{1 - x^2}}\, dx \amp= \int \frac{1}{2\sqrt{u}}\cdot \frac{du}{-2\sqrt{1 - u}} </mrow>
+            <mrow> \amp= -\frac{1}{4}\int \frac{du}{\sqrt{u}\sqrt{1 - u}} </mrow>
+          </md>
+          Omg... the work is much much much more complicated... 
+          If you want to continue with this line of work, the next step should be making another <m>u</m>-sub by letting <m>w = \sqrt{u}</m>. 
+          This should loop you back to the same(ish) integral. 
+        </p>
+
+        <p>
+          Another choice of <m>u</m> is <m>u = \sqrt{1 - x^2}</m>. 
+          Then <m>du = \frac{1}{2\sqrt{1 - x^2}}\cdot -2x\, dx</m>. 
+        </p>
+      </solution>
+      
     </task>
 
     <task>
@@ -113,11 +160,11 @@
       <statement>
         <p>
           <md>
-            <mrow> \amp \frac{d}{dx}\left(\sin^{-1}(x)\right) = \frac{1}{\sqrt{1 - x^2}} \amp\amp\int \frac{dx}{\sqrt{1 - x^2}} = \sin^{-1}(x) + C </mrow>
+            <mrow> \amp \frac{d}{dx}\left(\sin^{-1}(x)\right) = \frac{1}{\sqrt{1 - x^2}} \amp\amp\implies \qquad \int \frac{dx}{\sqrt{1 - x^2}} = \sin^{-1}(x) + C </mrow>
             <mrow> \amp </mrow>
-            <mrow> \amp \frac{d}{dx}\left(\tan^{-1}(x)\right) = \frac{1}{1 + x^2} \amp\amp\int \frac{dx}{1 + x^2} = \tan^{-1}(x) + C </mrow>
+            <mrow> \amp \frac{d}{dx}\left(\tan^{-1}(x)\right) = \frac{1}{1 + x^2} \amp\amp\implies \qquad \int \frac{dx}{1 + x^2} = \tan^{-1}(x) + C </mrow>
             <mrow> \amp </mrow>
-            <mrow> \amp \frac{d}{dx}\left(\sec^{-1}(x)\right) = \frac{1}{|x|\sqrt{x^2 - 1}} \amp\amp\int \frac{dx}{|x|\sqrt{x^2 - 1}} = \sec^{-1}(x) + C </mrow>
+            <mrow> \amp \frac{d}{dx}\left(\sec^{-1}(x)\right) = \frac{1}{|x|\sqrt{x^2 - 1}} \amp\amp\implies \qquad \int \frac{dx}{|x|\sqrt{x^2 - 1}} = \sec^{-1}(x) + C </mrow>
           </md>
         </p>
       </statement>
@@ -126,8 +173,90 @@
     <note>
       <title>Why do we only rewrite three of the six derivative formulas? </title>
       
+      <p>
+        
+      </p>
       
     </note>
+
+    <example>
+      
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int \frac{1 + x}{1 + x^2}\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          The bad news here is that we cannot simplify the fraction (there is nothing we can cancel here)...  
+        </p>
+
+        <p>
+          You may try using <m>u</m>-sub and it will work out if you use it smartly. 
+        </p>
+
+        <p>
+          Here is Richard's hint: before using <m>u</m>-sub, try splitting up the fraction as follows: 
+          <me>
+            \frac{1 + x}{1 + x^2} = \frac{1}{1 + x^2} + \frac{x}{1 + x^2}
+          </me>
+          Do we know how to integrate each term? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Using Richard's hint and linearity, we know that
+          <md>
+            <mrow> \int \frac{1 + x}{1 + x^2}\, dx \amp= \int\left(\frac{1}{1 + x^2} + \frac{x}{1 + x^2}\right)\, dx</mrow>
+            <mrow> \amp= \int \frac{1}{1 + x^2}\, dx + \int \frac{x}{1 + x^2}\, dx </mrow>
+          </md>
+        </p>
+
+        <p>
+          Observe that there is a formula in <xref ref="thm-IntegralInvolvingInverseTrig"/> we can use directly to evaluate the first integral. 
+          Hence, the first integral can be evaluated as follows: 
+          <md>
+            <mrow>\int \frac{1}{1 + x^2}\, dx \amp= \arctan(x) + C_1 </mrow>
+          </md>
+        </p>
+
+        <p>
+          For the second integral, we can evaluate it using <m>u</m>-sub. 
+          Let <m>u = 1 + x^2</m>. Then <m>du = 2x\, dx</m>, and hence <m>x\, dx = \frac{du}{2}</m>. 
+          This implies that
+          <md>
+            <mrow>\int \frac{x}{1 + x^2}\, dx \amp= \int\frac{\frac{du}{2}}{u} </mrow>
+            <mrow> \amp= \frac{1}{2}\int \frac{du}{u} </mrow>
+            <mrow> \amp= \frac{1}{2}\ln|u| + C_2 </mrow>
+            <mrow> \amp= \frac{1}{2}\ln\left(1 + x^2\right) + C_2 </mrow>
+          </md>
+        </p>
+
+        <p>
+          Putting these two pieces together, we obtain
+          <md>
+            <mrow> \int \frac{1 + x}{1 + x^2}\, dx \amp= \int \frac{1}{1 + x^2}\, dx + \int \frac{x}{1 + x^2}\, dx </mrow>
+            <mrow> \amp= \arctan(x) + \frac{1}{2}\ln\left(1 + x^2\right) + C </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      One thing you may notice from the previous example is that 
+    </p>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_0^\frac{3}{2} \frac{dx}{\sqrt{9 - 4x^2}}</m>
+      </p>
+      
+      <hint>
+        <p>
+          
+        </p>
+      </hint>
+    </example>
     
   </subsection>
 
