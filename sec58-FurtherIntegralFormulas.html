@@ -260,9 +260,40 @@ eBookConfig.enable_chatcodes =  false;
 <div class="introduction" id="sec58-FurtherIntegralFormulas-3-1"><div class="para" id="sec58-FurtherIntegralFormulas-3-1-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{1}{2\sqrt{1 - x^2}}\, dx \)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="sec58-FurtherIntegralFormulas-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec58-FurtherIntegralFormulas-3-2-1-1">Can we evaluate this integral using <span class="process-math">\(u\)</span>-sub?<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec58-FurtherIntegralFormulas-3-2-1">Can we evaluate this integral using <span class="process-math">\(u\)</span>-sub?<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.8.1.a"><a href="#sec58-FurtherIntegralFormulas-3-2" title="Copy heading and permalink for Task 5.8.1.a" aria-label="Copy heading and permalink for Task 5.8.1.a">🔗</a></div></article><article class="task exercise-like" id="sec58-FurtherIntegralFormulas-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<details id="sec58-FurtherIntegralFormulas-3-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec58-FurtherIntegralFormulas-3-2-2-1">We can certainly try using <span class="process-math">\(u\)</span>-sub and see if it will work out. Recall <span class="process-math">\(u\)</span>-sub undoes the chain rule for derivative, which is a method to differentiate a composite function. Typically, <span class="process-math">\(u\)</span> is some inside function in some composite function.<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec58-FurtherIntegralFormulas-3-2-2-2">There are two choices of <span class="process-math">\(u\)</span> as an inside function you can pick. Try them! Will they work out? If not, what seems to be the issue?<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.8.1.a.1"><a href="#sec58-FurtherIntegralFormulas-3-2-2" title="Copy heading and permalink for Hint 5.8.1.a.1" aria-label="Copy heading and permalink for Hint 5.8.1.a.1">🔗</a></div>
+</div></details><details id="sec58-FurtherIntegralFormulas-3-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec58-FurtherIntegralFormulas-3-2-3-1">We cannot use <span class="process-math">\(u\)</span>-sub here. There are two issues depending on what your choice of <span class="process-math">\(u\)</span> is (but these issues are essentially the same).<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec58-FurtherIntegralFormulas-3-2-3-2">If we pick <span class="process-math">\(u = 1 - x^2\text{.}\)</span> Then <span class="process-math">\(du = -2x\, dx\text{,}\)</span> which implies that <span class="process-math">\(x\, dx = -\frac{du}{2}\text{.}\)</span> But there is no factor of <span class="process-math">\(x\)</span> in the integrand that allows us substitute <span class="process-math">\(x\, dx\)</span> with <span class="process-math">\(-\frac{du}{2}\text{.}\)</span> So we will get stuck here...<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec58-FurtherIntegralFormulas-3-2-3-3">
+<div class="para">A possible solution to resolve this issue is to isolate <span class="process-math">\(dx\)</span> entirely by dividing the <span class="process-math">\(x\)</span> to the other side (and pretending <span class="process-math">\(x\)</span> can never be zero). This implies that <span class="process-math">\(dx = \frac{du}{-2x}\text{.}\)</span> By this substitution, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{2\sqrt{1 - x^2}}\, dx = \int \frac{1}{2\sqrt{u}}\cdot \frac{du}{-2x}
+\end{equation*}
+</div>
+<div class="para">Okay... but there is still an <span class="process-math">\(x\)</span> in the integrand. This is super confusing since the variable we are dealing with now is <span class="process-math">\(u\text{.}\)</span> Given our substitution that <span class="process-math">\(u = 1 - x^2\text{,}\)</span> we see that <span class="process-math">\(x = \sqrt{1 - u}\text{.}\)</span> Then the integral becomes</div>
+<div class="displaymath process-math" id="sec58-FurtherIntegralFormulas-3-2-3-3-10">
+\begin{align*}
+\int \frac{1}{2\sqrt{1 - x^2}}\, dx \amp= \int \frac{1}{2\sqrt{u}}\cdot \frac{du}{-2\sqrt{1 - u}} \\
+\amp= -\frac{1}{4}\int \frac{du}{\sqrt{u}\sqrt{1 - u}} 
+\end{align*}
+</div>
+<div class="para">Omg... the work is much much much more complicated... If you want to continue with this line of work, the next step should be making another <span class="process-math">\(u\)</span>-sub by letting <span class="process-math">\(w = \sqrt{u}\text{.}\)</span> This should loop you back to the same(ish) integral.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec58-FurtherIntegralFormulas-3-2-3-4">Another choice of <span class="process-math">\(u\)</span> is <span class="process-math">\(u = \sqrt{1 - x^2}\text{.}\)</span> Then <span class="process-math">\(du = \frac{1}{2\sqrt{1 - x^2}}\cdot -2x\, dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.8.1.a.1"><a href="#sec58-FurtherIntegralFormulas-3-2-3" title="Copy heading and permalink for Solution 5.8.1.a.1" aria-label="Copy heading and permalink for Solution 5.8.1.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 5.8.1.a"><a href="#sec58-FurtherIntegralFormulas-3-2" title="Copy heading and permalink for Task 5.8.1.a" aria-label="Copy heading and permalink for Task 5.8.1.a">🔗</a></div></article><article class="task exercise-like" id="sec58-FurtherIntegralFormulas-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec58-FurtherIntegralFormulas-3-3-1">Evaluate this integral using the hint given below.<div class="autopermalink" data-description="Paragraph"><a href="#sec58-FurtherIntegralFormulas-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="sec58-FurtherIntegralFormulas-3-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
@@ -323,16 +354,93 @@ y = \arcsin(x)
 <div class="para logical" id="thm-IntegralInvolvingInverseTrig-3-1">
 <div class="displaymath process-math" id="thm-IntegralInvolvingInverseTrig-3-1-1">
 \begin{align*}
-\amp \frac{d}{dx}\left(\sin^{-1}(x)\right) = \frac{1}{\sqrt{1 - x^2}} \amp\amp\int \frac{dx}{\sqrt{1 - x^2}} = \sin^{-1}(x) + C \\
+\amp \frac{d}{dx}\left(\sin^{-1}(x)\right) = \frac{1}{\sqrt{1 - x^2}} \amp\amp\implies \qquad \int \frac{dx}{\sqrt{1 - x^2}} = \sin^{-1}(x) + C \\
 \amp \\
-\amp \frac{d}{dx}\left(\tan^{-1}(x)\right) = \frac{1}{1 + x^2} \amp\amp\int \frac{dx}{1 + x^2} = \tan^{-1}(x) + C \\
+\amp \frac{d}{dx}\left(\tan^{-1}(x)\right) = \frac{1}{1 + x^2} \amp\amp\implies \qquad \int \frac{dx}{1 + x^2} = \tan^{-1}(x) + C \\
 \amp \\
-\amp \frac{d}{dx}\left(\sec^{-1}(x)\right) = \frac{1}{|x|\sqrt{x^2 - 1}} \amp\amp\int \frac{dx}{|x|\sqrt{x^2 - 1}} = \sec^{-1}(x) + C 
+\amp \frac{d}{dx}\left(\sec^{-1}(x)\right) = \frac{1}{|x|\sqrt{x^2 - 1}} \amp\amp\implies \qquad \int \frac{dx}{|x|\sqrt{x^2 - 1}} = \sec^{-1}(x) + C 
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-IntegralInvolvingInverseTrig-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.8.2: Integrals Involving Inverse Trigonometric Functions"><a href="#thm-IntegralInvolvingInverseTrig" title="Copy heading and permalink for Theorem 5.8.2: Integrals Involving Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Theorem 5.8.2: Integrals Involving Inverse Trigonometric Functions">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Integral formulas involving inverse trigonometric functions"><a href="#subsec-581-Integral-InverseTrig" title="Copy heading and permalink for Subsection: Integral formulas involving inverse trigonometric functions" aria-label="Copy heading and permalink for Subsection: Integral formulas involving inverse trigonometric functions">🔗</a></div></section><section class="worksheet" id="ws-sec58" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Theorem 5.8.2: Integrals Involving Inverse Trigonometric Functions"><a href="#thm-IntegralInvolvingInverseTrig" title="Copy heading and permalink for Theorem 5.8.2: Integrals Involving Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Theorem 5.8.2: Integrals Involving Inverse Trigonometric Functions">🔗</a></div></article><details id="subsec-581-Integral-InverseTrig-4" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Why do we only rewrite three of the six derivative formulas?</span>
+</h4></summary><article class="note remark-like knowl__content"><div class="para" id="subsec-581-Integral-InverseTrig-4-2"><div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Note 5.8.3: Why do we only rewrite three of the six derivative formulas?"><a href="#subsec-581-Integral-InverseTrig-4" title="Copy heading and permalink for Note 5.8.3: Why do we only rewrite three of the six derivative formulas?" aria-label="Copy heading and permalink for Note 5.8.3: Why do we only rewrite three of the six derivative formulas?">🔗</a></div></article></details><article class="example example-like" id="subsec-581-Integral-InverseTrig-5"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-581-Integral-InverseTrig-5-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{1 + x}{1 + x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-581-Integral-InverseTrig-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-581-Integral-InverseTrig-5-2-1">The bad news here is that we cannot simplify the fraction (there is nothing we can cancel here)...<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-581-Integral-InverseTrig-5-2-2">You may try using <span class="process-math">\(u\)</span>-sub and it will work out if you use it smartly.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-581-Integral-InverseTrig-5-2-3">
+<div class="para">Here is Richard’s hint: before using <span class="process-math">\(u\)</span>-sub, try splitting up the fraction as follows:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1 + x}{1 + x^2} = \frac{1}{1 + x^2} + \frac{x}{1 + x^2}
+\end{equation*}
+</div>
+<div class="para">Do we know how to integrate each term?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.8.4.1"><a href="#subsec-581-Integral-InverseTrig-5-2" title="Copy heading and permalink for Hint 5.8.4.1" aria-label="Copy heading and permalink for Hint 5.8.4.1">🔗</a></div>
+</div></details><details id="subsec-581-Integral-InverseTrig-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-581-Integral-InverseTrig-5-3-1">
+<div class="para">Using Richard’s hint and linearity, we know that</div>
+<div class="displaymath process-math" id="subsec-581-Integral-InverseTrig-5-3-1-1">
+\begin{align*}
+\int \frac{1 + x}{1 + x^2}\, dx \amp= \int\left(\frac{1}{1 + x^2} + \frac{x}{1 + x^2}\right)\, dx\\
+\amp= \int \frac{1}{1 + x^2}\, dx + \int \frac{x}{1 + x^2}\, dx 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-581-Integral-InverseTrig-5-3-2">
+<div class="para">Observe that there is a formula in <a href="sec58-FurtherIntegralFormulas.html#thm-IntegralInvolvingInverseTrig" class="xref" data-knowl="./knowl/xref/thm-IntegralInvolvingInverseTrig.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.8.2: Integrals Involving Inverse Trigonometric Functions">Theorem 5.8.2</a> we can use directly to evaluate the first integral. Hence, the first integral can be evaluated as follows:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-IntegralInvolvingInverseTrig.html" id="subsec-581-Integral-InverseTrig-5-3-2-2">
+\begin{align*}
+\int \frac{1}{1 + x^2}\, dx \amp= \arctan(x) + C_1 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-581-Integral-InverseTrig-5-3-3">
+<div class="para">For the second integral, we can evaluate it using <span class="process-math">\(u\)</span>-sub. Let <span class="process-math">\(u = 1 + x^2\text{.}\)</span> Then <span class="process-math">\(du = 2x\, dx\text{,}\)</span> and hence <span class="process-math">\(x\, dx = \frac{du}{2}\text{.}\)</span> This implies that</div>
+<div class="displaymath process-math" id="subsec-581-Integral-InverseTrig-5-3-3-5">
+\begin{align*}
+\int \frac{x}{1 + x^2}\, dx \amp= \int\frac{\frac{du}{2}}{u} \\
+\amp= \frac{1}{2}\int \frac{du}{u} \\
+\amp= \frac{1}{2}\ln|u| + C_2 \\
+\amp= \frac{1}{2}\ln\left(1 + x^2\right) + C_2 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-581-Integral-InverseTrig-5-3-4">
+<div class="para">Putting these two pieces together, we obtain</div>
+<div class="displaymath process-math" id="subsec-581-Integral-InverseTrig-5-3-4-1">
+\begin{align*}
+\int \frac{1 + x}{1 + x^2}\, dx \amp= \int \frac{1}{1 + x^2}\, dx + \int \frac{x}{1 + x^2}\, dx \\
+\amp= \arctan(x) + \frac{1}{2}\ln\left(1 + x^2\right) + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.8.4.1"><a href="#subsec-581-Integral-InverseTrig-5-3" title="Copy heading and permalink for Solution 5.8.4.1" aria-label="Copy heading and permalink for Solution 5.8.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.8.4"><a href="#subsec-581-Integral-InverseTrig-5" title="Copy heading and permalink for Example 5.8.4" aria-label="Copy heading and permalink for Example 5.8.4">🔗</a></div></article><div class="para" id="subsec-581-Integral-InverseTrig-6">One thing you may notice from the previous example is that<div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-581-Integral-InverseTrig-7"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-581-Integral-InverseTrig-7-1">Evaluate the definite integral <span class="process-math">\(\displaystyle \int_0^\frac{3}{2} \frac{dx}{\sqrt{9 - 4x^2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-581-Integral-InverseTrig-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-581-Integral-InverseTrig-7-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#subsec-581-Integral-InverseTrig-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Hint 5.8.5.1"><a href="#subsec-581-Integral-InverseTrig-7-2" title="Copy heading and permalink for Hint 5.8.5.1" aria-label="Copy heading and permalink for Hint 5.8.5.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.8.5"><a href="#subsec-581-Integral-InverseTrig-7" title="Copy heading and permalink for Example 5.8.5" aria-label="Copy heading and permalink for Example 5.8.5">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Integral formulas involving inverse trigonometric functions"><a href="#subsec-581-Integral-InverseTrig" title="Copy heading and permalink for Subsection: Integral formulas involving inverse trigonometric functions" aria-label="Copy heading and permalink for Subsection: Integral formulas involving inverse trigonometric functions">🔗</a></div></section><section class="worksheet" id="ws-sec58" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
 <span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec58-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
 <section class="introduction" id="ws-sec58-2"><div class="para" id="ws-sec58-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec58-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
