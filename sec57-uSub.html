@@ -161,7 +161,18 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec55-FTCpartII.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Fundamental Theorem of Calculus, Part II</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec57-uSub.html#subsec-571-Indefinite" class="internal"><span class="title">Substitution Method for Indefinite Integrals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsubsec-5711-sub-usingDifferential" class="internal"><span class="title">Substitution Using Differentials</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsec-572-limitation" class="internal"><span class="title">Limitation of <span class="process-math">\(\boldsymbol{u}\)</span>-sub</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsec-573-Definite" class="internal"><span class="title">Substitution Method for Definite Integrals</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec57-uSub.html#ws-sec57" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div>
 <ul class="structural toc-item-list">
@@ -244,9 +255,775 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec57-uSub"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Substitution Method</span>
 </h2>
-<div class="para" id="sec57-uSub-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec57-uSub-2"><div class="para" id="sec57-uSub-2-1">In this section, you will learn one technique of evaluating integrals, called the substitution method (also known as the <span class="process-math">\(u\)</span>-sub). This is one of the most important and widely used methods in this class.<div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 5.7: The Substitution Method"><a href="#sec57-uSub" title="Copy heading and permalink for Section 5.7: The Substitution Method" aria-label="Copy heading and permalink for Section 5.7: The Substitution Method">🔗</a></div></section></div>
+<article class="objectives goal-like" id="sec57-uSub-2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<div class="introduction" id="sec57-uSub-2-2-1"><div class="para" id="sec57-uSub-2-2-1-1">After this section, students will be able to:<div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul class="disc" id="sec57-uSub-2-2-2"><li id="sec57-uSub-2-2-2-1">
+<div class="para" id="sec57-uSub-2-2-2-1-1">integrate integrals using <span class="process-math">\(u\)</span>-sub.<div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec57-uSub-2-2-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Objectives"><a href="#sec57-uSub-2-2" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><article class="investigation project-like" id="sec57-uSub-3"><h3 class="heading">
+<span class="type">Investigation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction" id="sec57-uSub-3-1">
+<div class="para" id="sec57-uSub-3-1-1">Recall we learned the <em class="emphasis">chain rule</em> back in calculus 1, which is a method to differentiate <em class="emphasis">composite</em> functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec57-uSub-3-1-2">
+<div class="para">Let <span class="process-math">\(y = F(u(x))\)</span> be a composite function. We can see that <span class="process-math">\(y = F(x)\)</span> is the outside function and <span class="process-math">\(y = u(x)\)</span> is the inside function. The chain rule says that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dx}\left(F(u(x))\right) = F'(u(x))\cdot u'(x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec57-uSub-3-1-3">
+<em class="emphasis">Note: I know that this notation is different from the typical <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> you saw back in calculus 1. I am using <span class="process-math">\(F\)</span> and <span class="process-math">\(u\)</span> to match up the typical calculus 2 notation but the idea is the same.</em><div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="sec57-uSub-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec57-uSub-3-2-1">What is the derivative of of the function <span class="process-math">\(y = \sin\left(x^2\right)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.7.1.a"><a href="#sec57-uSub-3-2" title="Copy heading and permalink for Task 5.7.1.a" aria-label="Copy heading and permalink for Task 5.7.1.a">🔗</a></div></article><article class="task exercise-like" id="sec57-uSub-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec57-uSub-3-3-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int 2x\cos\left(x^2\right)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec57-uSub-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.7.1.b"><a href="#sec57-uSub-3-3" title="Copy heading and permalink for Task 5.7.1.b" aria-label="Copy heading and permalink for Task 5.7.1.b">🔗</a></div></article><div class="autopermalink" data-description="Investigation 5.7.1"><a href="#sec57-uSub-3" title="Copy heading and permalink for Investigation 5.7.1" aria-label="Copy heading and permalink for Investigation 5.7.1">🔗</a></div></article><section class="subsection" id="subsec-571-Indefinite"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Substitution Method for Indefinite Integrals</span>
+</h3>
+<article class="theorem theorem-like" id="thm-usub-indefinite"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Substitution Method for Indefinite Integrals.</span>
+</h4>
+<div class="para logical" id="thm-usub-indefinite-2-1">
+<div class="para">If <span class="process-math">\(F'(x) = f(x)\text{,}\)</span> and <span class="process-math">\(u\)</span> is a differentiable function whose range includes the domain of <span class="process-math">\(f\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int f\left(u(x)\right) u'(x)\, dx = F\left(u(x)\right) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-usub-indefinite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.7.1: Substitution Method for Indefinite Integrals"><a href="#thm-usub-indefinite" title="Copy heading and permalink for Theorem 5.7.1: Substitution Method for Indefinite Integrals" aria-label="Copy heading and permalink for Theorem 5.7.1: Substitution Method for Indefinite Integrals">🔗</a></div></article><article class="example example-like" id="subsec-571-Indefinite-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-571-Indefinite-3-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int 5x^4\sin\left(x^5\right)\, dx\)</span> using the formula in the above theorem.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-571-Indefinite-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="subsec-571-Indefinite-3-2-1">
+<div class="para">To use the formula, we need a <em class="emphasis">composite</em> function and the derivative of the <em class="emphasis">inside</em> function being multiplied as the integrand. So the two questions to consider here are:</div>
+<ol class="decimal" id="subsec-571-Indefinite-3-2-1-3">
+<li id="subsec-571-Indefinite-3-2-1-3-1">
+<div class="para" id="subsec-571-Indefinite-3-2-1-3-1-1">What is a <em class="emphasis">composite</em> function that stood out to you? After you have identified a composite function, what is the outside function and the <em class="emphasis">inside</em> function?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-3-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-571-Indefinite-3-2-1-3-1-2">Label the outside function as <span class="process-math">\(y = f(x)\)</span> and the inside function as <span class="process-math">\(y = u(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-3-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#subsec-571-Indefinite-3-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="subsec-571-Indefinite-3-2-1-3-3">
+<div class="para" id="subsec-571-Indefinite-3-2-1-3-3-1">What is the derivative of the inside function, <span class="process-math">\(y = u(x)\text{?}\)</span> Can we find <span class="process-math">\(u'(x)\)</span> as a factor in the integrand?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-3-2-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#subsec-571-Indefinite-3-2-1-3-3" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">After you found the components of the integrand and checked off the second question, try figuring out what <span class="process-math">\(y = F(x)\)</span> is and obtaining the answer by plugging in each component to the formula.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.2.1"><a href="#subsec-571-Indefinite-3-2" title="Copy heading and permalink for Hint 5.7.2.1" aria-label="Copy heading and permalink for Hint 5.7.2.1">🔗</a></div>
+</div></details><details id="subsec-571-Indefinite-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-571-Indefinite-3-3-1">
+<div class="para">There is only one <em class="emphasis">composite</em> function in the integrand, which is <span class="process-math">\(y = \sin\left(x^5\right)\text{.}\)</span> Then we can label</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-usub-indefinite.html">
+\begin{equation*}
+f(x) = \sin(x) \qquad\text{ and }\qquad u(x) = x^5
+\end{equation*}
+</div>
+<div class="para">Observe that <span class="process-math">\(u'(x) = 5x^4\text{,}\)</span> which is a factor in the integrand. Then this integral matches up with the left-hand side of the formula in <a href="sec57-uSub.html#thm-usub-indefinite" class="xref" data-knowl="./knowl/xref/thm-usub-indefinite.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.7.1: Substitution Method for Indefinite Integrals">Theorem 5.7.1</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-571-Indefinite-3-3-2">
+<div class="para">We know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(x) = \int f(x)\, dx = \int \sin(x)\, dx = -\cos(x) + C
+\end{equation*}
+</div>
+<div class="para">Then we can plug in all these components to the formula and obtain the answer:</div>
+<div class="displaymath process-math" id="subsec-571-Indefinite-3-3-2-2">
+\begin{align*}
+\int 5x^4\sin\left(x^5\right)\, dx \amp= F\left(u(x)\right) + C\\
+\amp= -\cos\left(x^5\right) + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.2.1"><a href="#subsec-571-Indefinite-3-3" title="Copy heading and permalink for Solution 5.7.2.1" aria-label="Copy heading and permalink for Solution 5.7.2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.7.2"><a href="#subsec-571-Indefinite-3" title="Copy heading and permalink for Example 5.7.2" aria-label="Copy heading and permalink for Example 5.7.2">🔗</a></div></article><div class="para" id="subsec-571-Indefinite-4">A common question here is where the <span class="process-math">\(5x^4\)</span> went in the process since we only integrated the sine function. This is a great question that leads us to develop a less-confusing method for <span class="process-math">\(u\)</span>-sub (using differentials).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-571-Indefinite-5">Richard can for sure answer this question now! Recall <span class="process-math">\(5x^4\)</span> is the derivative of the inside function, which appears out of no where in the chain rule for derivative. Of course this part should be disappearing if we undoes the derivative.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-571-Indefinite-6">We will next discuss another presentation of <span class="process-math">\(u\)</span>-sub using differentials. This presentation is also the reason why we call this method the <em class="alert"><span class="process-math">\(\boldsymbol{u}\)</span>-sub</em>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-571-Indefinite-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsubsection" id="subsubsec-5711-sub-usingDifferential"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Substitution Using Differentials</span>
+</h4>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-2">As the name of <span class="process-math">\(u\)</span>-sub suggested, we should be substituting <span class="process-math">\(u\)</span> for something. Let’s forget about the formula we learned above and try a problem using <em class="emphasis">only</em> substitution (so you can forget about the above formula for a while)!<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsubsec-5711-sub-usingDifferential-3"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-3-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \sin^5(x)\cos(x)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-5711-sub-usingDifferential-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsubsec-5711-sub-usingDifferential-3-2-1">Recall <span class="process-math">\(u\)</span> should be some inside function in a <em class="emphasis">composite</em> function. Then what is a <em class="emphasis">composite</em> function that stood out to you and what should the <span class="process-math">\(u\)</span> be?<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-3-2-2">After you determine what the <span class="process-math">\(u\)</span> is, try substituting <em class="alert">ALL</em> the <span class="process-math">\(x\)</span>’s in the indefinite integral with <span class="process-math">\(u\text{,}\)</span> including the differential <span class="process-math">\(dx\text{.}\)</span> The resulting integral should be <em class="emphasis">easier</em> than the original integral in the prompt.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.3.1"><a href="#subsubsec-5711-sub-usingDifferential-3-2" title="Copy heading and permalink for Hint 5.7.3.1" aria-label="Copy heading and permalink for Hint 5.7.3.1">🔗</a></div>
+</div></details><details id="subsubsec-5711-sub-usingDifferential-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsubsec-5711-sub-usingDifferential-3-3-1">
+<div class="para">The <em class="emphasis">composite</em> function in the integrand is <span class="process-math">\(y = \sin^5(x)\text{,}\)</span> with the inside function of <span class="process-math">\(u(x) = \sin(x)\text{.}\)</span> So let’s pick <span class="process-math">\(u = \sin(x)\text{.}\)</span> If we substitute <span class="process-math">\(u\)</span> for <span class="process-math">\(\sin(x)\text{,}\)</span> then the integral becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \sin^5(x)\cos(x)\, dx = \int u^5\cos(x)\, dx
+\end{equation*}
+</div>
+<div class="para">Sure the integral becomes a bit easier. But this is also a super confusing integral since it includes <em class="alert">TWO</em> different variables, <span class="process-math">\(x\)</span> and <span class="process-math">\(u\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-3-3-2">One way to resolve this confusion is to replace ALL the <span class="process-math">\(x\)</span>’s in terms of <span class="process-math">\(u\)</span>’s. The hardest substitution here is the differential, <span class="process-math">\(dx\text{...}\)</span> How do we replace the <span class="process-math">\(dx\)</span> in terms of <span class="process-math">\(u\text{...}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsubsec-5711-sub-usingDifferential-3-3-3">
+<div class="para">One expression that contains both <span class="process-math">\(dx\)</span> and <span class="process-math">\(u\)</span> is the <em class="alert">derivative</em> of <span class="process-math">\(u\)</span> with respect to <span class="process-math">\(x\text{.}\)</span> Recall we defined <span class="process-math">\(u = \sin(x)\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dx} = \cos(x)
+\end{equation*}
+</div>
+<div class="para">If we abuse the notation a bit by treating the derivative notation <span class="process-math">\(\frac{dy}{dx}\)</span> as a fraction, we can multiply the <span class="process-math">\(dx\)</span> on both sides of this equation. Then we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+du = \cos(x)\, dx
+\end{equation*}
+</div>
+<div class="para">Hmm the <span class="process-math">\(\cos(x)\, dx\)</span> looks super familiar... They are also part of the integral! Hence, we can substitute <span class="process-math">\(\cos(x)\, dx\)</span> with <span class="process-math">\(du\)</span> as follows:</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-3-3-3-14">
+\begin{align*}
+\int \sin^5(x)\cos(x)\, dx \amp= \int u^5 \cos(x)\, dx \\
+\amp= \int u^5\, du 
+\end{align*}
+</div>
+<div class="para">Now there is only one variable, <span class="process-math">\(u\text{,}\)</span> in the integral and we for sure know how to evaluate this integral! Using the power rule, we know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int u^5\, du = \frac{u^6}{6} + C
+\end{equation*}
+</div>
+<div class="para">Don’t forget that <span class="process-math">\(u\)</span> is essentially <span class="process-math">\(\sin(x)\text{.}\)</span> We can obtain the final answer by replacing back <span class="process-math">\(\sin(x)\)</span> for <span class="process-math">\(u\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-3-3-3-21">
+\begin{align*}
+\int \sin^5(x)\cos(x)\, dx \amp= \int u^5\, du \\
+\amp= \frac{u^6}{6} + C \\
+\amp= \frac{\sin^6(x)}{6} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.3.1"><a href="#subsubsec-5711-sub-usingDifferential-3-3" title="Copy heading and permalink for Solution 5.7.3.1" aria-label="Copy heading and permalink for Solution 5.7.3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.7.3"><a href="#subsubsec-5711-sub-usingDifferential-3" title="Copy heading and permalink for Example 5.7.3" aria-label="Copy heading and permalink for Example 5.7.3">🔗</a></div></article><div class="para logical" id="subsubsec-5711-sub-usingDifferential-4">
+<div class="para">Observe that the derivative of the inside function, <span class="process-math">\(u'(x)\text{,}\)</span> is being absorbed as part of the differential, <span class="process-math">\(du\text{.}\)</span> This is essentially the <em class="alert">change of variable</em> trick by treating <span class="process-math">\(u\)</span> as the new variable. Symbolically, we can adjust the formula in the above theorem as follows:</div>
+<div class="displaymath process-math" id="eqn-usub-differential">
+\begin{equation}
+\int \underbrace{f\big(u(x)\big)}_{f(u)} \hspace{4px}\underbrace{u'(x) \, dx}_{du} = \int f(u)\, du\tag{5.7.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-5">There is certainly an advantage of using this method. We don’t need to worry about matching up each component with the formula in the above theorem in order to use the formula. But the tradeoff here is that we need to substitute ALL the <span class="process-math">\(x\)</span>’s (or whatever the previous variable is) with <span class="process-math">\(u\)</span>’s (or whatever we call the new variable), including the differentials. Sometimes this is not an easy job (or sometimes it is just impossible).<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-6">Richard doesn’t like to memorize one more formula so he likes to do all of his <span class="process-math">\(u\)</span>-sub problems using the differential approach (there is one more reason why Richard likes this approach).<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsubsec-5711-sub-usingDifferential-7"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-7-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{t^3}{\left(4 - 2t^4\right)^{11}}\, dt\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-5711-sub-usingDifferential-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsubsec-5711-sub-usingDifferential-7-2-1">We are learning <span class="process-math">\(u\)</span>-sub so we probably can evaluate this integral using <span class="process-math">\(u\)</span>-sub. Recall we pick <span class="process-math">\(u\)</span> to be some inside function of a composite function. What is a <span class="process-math">\(u\)</span> we can pick here?<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.4.1"><a href="#subsubsec-5711-sub-usingDifferential-7-2" title="Copy heading and permalink for Hint 5.7.4.1" aria-label="Copy heading and permalink for Hint 5.7.4.1">🔗</a></div>
+</div></details><details id="subsubsec-5711-sub-usingDifferential-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsubsec-5711-sub-usingDifferential-7-3-1">There are more than one composite functions so there are more than one choice of <span class="process-math">\(u\)</span> we can pick.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-7-3-2">Richard will pick <span class="process-math">\(u = 4 - 2t^4\)</span> (and he has a good reason). He will work through the problem and let’s see if you can figure out what this good reason is.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-7-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsubsec-5711-sub-usingDifferential-7-3-3">
+<div class="para">Let <span class="process-math">\(u = 4 - 2t^4\text{.}\)</span> To find the <span class="process-math">\(du\text{,}\)</span> we will need to take the derivative of <span class="process-math">\(u\)</span> with respect to <span class="process-math">\(t\text{.}\)</span> Then we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dt} = -8t^3
+\qquad \implies \qquad 
+du = -8t^3\, dt
+\end{equation*}
+</div>
+<div class="para">Observe that we can find <span class="process-math">\(t^3\, dt\)</span> in the integral, which equals to <span class="process-math">\(\frac{du}{-8}\)</span> by the above equation. Substituting <span class="process-math">\(u = 4 - 2t^4\)</span> and <span class="process-math">\(t^3\, dt = \frac{du}{-8}\)</span> in the integral, we obtain</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-7-3-3-10">
+\begin{align*}
+\int \frac{t^3}{\left(4 - 2t^4\right)^{11}}\, dt \amp= \int \frac{1}{u^{11}}\cdot \frac{du}{-8}\\
+\amp= -\frac{1}{8}\int u^{-11}\, du \\
+\amp= -\frac{1}{8}\cdot \frac{u^{-10}}{-10} + C \\
+\amp= \frac{1}{80}\left(4 - 2t^4\right)^{-10} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-7-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.4.1"><a href="#subsubsec-5711-sub-usingDifferential-7-3" title="Copy heading and permalink for Solution 5.7.4.1" aria-label="Copy heading and permalink for Solution 5.7.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.7.4"><a href="#subsubsec-5711-sub-usingDifferential-7" title="Copy heading and permalink for Example 5.7.4" aria-label="Copy heading and permalink for Example 5.7.4">🔗</a></div></article><div class="para" id="subsubsec-5711-sub-usingDifferential-8">The reason why Richard knows picking <span class="process-math">\(u = 4 - 2t^4\)</span> will work out in the above example is because he noticed that <span class="process-math">\(t^3\text{,}\)</span> which is <span class="process-math">\(u'(x)\)</span> if we neglect the constant multiple, is a factor in the integrand. Observe that he can instantly replace <span class="process-math">\(t^3\, dt\)</span> by <span class="process-math">\(\frac{du}{-8}\)</span> quickly.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-9">In general, whatever <span class="process-math">\(u\)</span> we pick, we know this choice of <span class="process-math">\(u\)</span> will likely to work out if we can find <span class="process-math">\(u'\)</span> as a factor of the integrand (and we can neglect the constant multiple of <span class="process-math">\(u'\)</span>). We will elaborate this idea more in the section of the limitation of <span class="process-math">\(u\)</span>-sub.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="note-isolate-dx-usub" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Can we isolate <span class="process-math">\(\boldsymbol{dt}\)</span> in the above example?</span>
+</h5></summary><article class="note remark-like knowl__content"><div class="para logical" id="note-isolate-dx-usub-2">
+<div class="para">Recall the substitution Richard used in the previous example is to replace <span class="process-math">\(t^3\, dt\)</span> by <span class="process-math">\(\frac{du}{-8}\)</span> based on the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dt} = -8t^3
+\qquad \implies \qquad 
+du = -8t^3\, dt
+\qquad \implies \qquad
+\frac{du}{-8} = t^3\, dt
+\end{equation*}
+</div>
+<div class="para">A natural follow-up question here is whether we can isolate the <span class="process-math">\(dt\)</span> entirely and replace <span class="process-math">\(dt\)</span> to the integral as follows:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+dt = \frac{du}{-8t^3}
+\qquad\implies\qquad 
+\int \frac{t^3}{u^{11}}\cdot \frac{du}{-8t^3} = -\frac{1}{8}\int u^{-11}\, du
+\end{equation*}
+</div>
+<div class="para">It seems like this "divide-and-cancel" method will lead us to the same answer anyways, so is this a valid method?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#note-isolate-dx-usub-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="note-isolate-dx-usub-3">Well I guess it all depends on how much you care about the rigor in math. If all you care about is to obtain an answer, then by all means. This method will work 90% of the time (I know it sounds sarcastic but it is really not...).<div class="autopermalink" data-description="Paragraph"><a href="#note-isolate-dx-usub-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="note-isolate-dx-usub-4">But if you do care about the rigor in math (like Richard), then this method should be bugging you because <em class="alert">the divisor, <span class="process-math">\(\boldsymbol{-8t^3}\text{,}\)</span> could potentially be zero here</em> since <span class="process-math">\(0\)</span> is in the domain of the integrand. In math, we never want to divide something that could potentially be zero. So dividing a variable before verifying it can never be zero is a bad idea.<div class="autopermalink" data-description="Paragraph"><a href="#note-isolate-dx-usub-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="note-isolate-dx-usub-5">
+<div class="para">An example I always use if I am teaching algebra and precalculus at PCC is to solve the equation <span class="process-math">\(x(1 - x) = 0\)</span> by dividing an <span class="process-math">\(x\)</span> on both sides of the equation.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x(1 - x)}{x} = \frac{0}{x}
+\qquad \implies \qquad 
+1 - x = 0
+\qquad \implies \qquad 
+x = 1
+\end{equation*}
+</div>
+<div class="para">While we obtain a solution indeed through the division of <span class="process-math">\(x\text{,}\)</span> we also miss the solution of <span class="process-math">\(x = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#note-isolate-dx-usub-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="note-isolate-dx-usub-6">I probably won’t give you any questions in this extreme that the "divide-and-cancel" method will lead to the loss of some solution (because this isn’t a differential equation class). So I will leave it up to you if you want to use this "divide-and-cancel" method (at least there is no harm in this class).<div class="autopermalink" data-description="Paragraph"><a href="#note-isolate-dx-usub-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 5.7.5: Can we isolate \boldsymbol{dt} in the above example?"><a href="#note-isolate-dx-usub" title="Copy heading and permalink for Note 5.7.5: Can we isolate \boldsymbol{dt} in the above example?" aria-label="Copy heading and permalink for Note 5.7.5: Can we isolate \boldsymbol{dt} in the above example?">🔗</a></div></article></details><article class="example example-like" id="subsubsec-5711-sub-usingDifferential-11"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-11-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \sin\left(4\theta - 7\right)\, d\theta\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-5711-sub-usingDifferential-11-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsubsec-5711-sub-usingDifferential-11-2-1">Let’s evaluate this integral using <span class="process-math">\(u\)</span>-sub. Recall a good choice of <span class="process-math">\(u\)</span> is the ones that you can find its derivative as a factor of the integrand. So what is a good choice of <span class="process-math">\(u\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.6.1"><a href="#subsubsec-5711-sub-usingDifferential-11-2" title="Copy heading and permalink for Hint 5.7.6.1" aria-label="Copy heading and permalink for Hint 5.7.6.1">🔗</a></div>
+</div></details><details id="subsubsec-5711-sub-usingDifferential-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsubsec-5711-sub-usingDifferential-11-3-1">There is only one composite function in the integrand, which implies that the <span class="process-math">\(u\text{,}\)</span> aka the only inside function, should be <span class="process-math">\(4\theta - 7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsubsec-5711-sub-usingDifferential-11-3-2">
+<div class="para">Let <span class="process-math">\(u = 4\theta - 7\text{.}\)</span> To replace <span class="process-math">\(d\theta\)</span> in terms of <span class="process-math">\(u\text{,}\)</span> we will differentiate <span class="process-math">\(u\)</span> with respect to <span class="process-math">\(\theta\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{d\theta} = 4 
+\qquad\implies\qquad 
+du = 4\, d\theta
+\qquad\implies\qquad
+\frac{du}{4} = d\theta
+\end{equation*}
+</div>
+<div class="para">Then we obtain</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-11-3-2-7">
+\begin{align*}
+\int\sin\left(4\theta - 7\right)\, d\theta \amp= \int \sin(u)\cdot \frac{du}{4} \\
+\amp= \frac{1}{4}\int \sin(u)\, du \\
+\amp= \frac{1}{4}\cdot -\cos(u) + C \\
+\amp= -\frac{1}{4}\cos\left(4\theta - 7\right) + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-11-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.6.1"><a href="#subsubsec-5711-sub-usingDifferential-11-3" title="Copy heading and permalink for Solution 5.7.6.1" aria-label="Copy heading and permalink for Solution 5.7.6.1">🔗</a></div>
+</div></details><details id="Linear-usub" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h6 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear <span class="process-math">\(\boldsymbol{u}\)</span>-sub.</span>
+</h6></summary><article class="note remark-like knowl__content"><div class="para" id="Linear-usub-2">Recall (blahblahblah)<div class="autopermalink" data-description="Paragraph"><a href="#Linear-usub-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Linear-usub-3">Now let’s try the following problem and see if you can obtain the answer <em class="emphasis">quickly</em>.<div class="autopermalink" data-description="Paragraph"><a href="#Linear-usub-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="Linear-usub-4"><h6 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h6>
+<div class="para" id="Linear-usub-4-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \sec^2\left(5 - 15x\right)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Linear-usub-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="Linear-usub-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="Linear-usub-4-2-1">Observe that the inside function, which we can for sure call it <span class="process-math">\(u\text{,}\)</span> is a linear function. Then what is the slope and how can we obtain the answer quickly without going through all the work for <span class="process-math">\(u\)</span>-sub?<div class="autopermalink" data-description="Paragraph"><a href="#Linear-usub-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.8.1"><a href="#Linear-usub-4-2" title="Copy heading and permalink for Hint 5.7.8.1" aria-label="Copy heading and permalink for Hint 5.7.8.1">🔗</a></div>
+</div></details><details id="Linear-usub-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Linear-usub-4-3-1">
+<div class="para">Observe that the inside function, <span class="process-math">\(5 - 15x\text{,}\)</span> is a <em class="alert">linear</em> function with the slope of <span class="process-math">\(-15\text{.}\)</span> Then we can divide the slope, integrate the outside function, and plug in the inside function (and don’t forget the <span class="process-math">\(+C\)</span>).</div>
+<div class="displaymath process-math" id="Linear-usub-4-3-1-5">
+\begin{align*}
+\int \sec^2\left(5 - 15x\right)\, dx \amp= -\frac{1}{15}\tan\left(5 - 15x\right) + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Linear-usub-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Linear-usub-4-3-2">
+<em class="alert">If this line of work doesn’t convince you, then I would suggest you working out this problem using <span class="process-math">\(\boldsymbol{u}\)</span>-sub and observe how the answer can be obtained quickly.</em><div class="autopermalink" data-description="Paragraph"><a href="#Linear-usub-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.8.1"><a href="#Linear-usub-4-3" title="Copy heading and permalink for Solution 5.7.8.1" aria-label="Copy heading and permalink for Solution 5.7.8.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.7.8"><a href="#Linear-usub-4" title="Copy heading and permalink for Example 5.7.8" aria-label="Copy heading and permalink for Example 5.7.8">🔗</a></div></article><div class="autopermalink" data-description="Note 5.7.7: Linear \boldsymbol{u}-sub"><a href="#Linear-usub" title="Copy heading and permalink for Note 5.7.7: Linear \boldsymbol{u}-sub" aria-label="Copy heading and permalink for Note 5.7.7: Linear \boldsymbol{u}-sub">🔗</a></div></article></details><div class="autopermalink" data-description="Example 5.7.6"><a href="#subsubsec-5711-sub-usingDifferential-11" title="Copy heading and permalink for Example 5.7.6" aria-label="Copy heading and permalink for Example 5.7.6">🔗</a></div></article><div class="para" id="subsubsec-5711-sub-usingDifferential-12">Hmm but does <span class="process-math">\(u\)</span> have to be some inside function? The answer is no... Essentially we can pick whatever we want in the integrand to be <span class="process-math">\(u\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsubsec-5711-sub-usingDifferential-13"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-13-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \cot(x)\cdot \ln\left(\sin(x)\right)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-5711-sub-usingDifferential-13-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsubsec-5711-sub-usingDifferential-13-2-1">Observe that there is a composite function in the integrand with the inside function of <span class="process-math">\(u(x) = \sin(x)\text{.}\)</span> Based on our previous strategy, we should be calling it <span class="process-math">\(u\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-13-2-2">Let’s try picking <span class="process-math">\(u\)</span> to be the inside function <span class="process-math">\(\sin(x)\)</span> and see what will happen.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-13-2-3">If you are ready to give up or open to another method, try picking <span class="process-math">\(u = \ln\left(\sin(x)\right)\)</span> and see if it will work out nicely.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.9.1"><a href="#subsubsec-5711-sub-usingDifferential-13-2" title="Copy heading and permalink for Hint 5.7.9.1" aria-label="Copy heading and permalink for Hint 5.7.9.1">🔗</a></div>
+</div></details><details id="subsubsec-5711-sub-usingDifferential-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choice #1: Let <span class="process-math">\(u = \sin(x)\)</span></span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsubsec-5711-sub-usingDifferential-13-3-2">
+<em class="alert">This will work out but the work is a bit more complicated since you will need to <span class="process-math">\(\boldsymbol{u}\)</span>-sub it twice.</em><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsubsec-5711-sub-usingDifferential-13-3-3">
+<div class="para">Let <span class="process-math">\(u = \sin(x)\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dx} = \cos(x)
+\qquad \implies \qquad
+du = \cos(x)\, dx
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-13-3-3-3">
+\begin{align*}
+\int \cot(x)\cdot \ln\left(\sin(x)\right)\, dx \amp= \int \frac{\cos(x)}{\sin(x)} \cdot \ln\left(\sin(x)\right) \, dx \\
+\amp= \int \frac{1}{u}\cdot \ln(u)\, du 
+\end{align*}
+</div>
+<div class="para">Okay... we are able to replace all the <span class="process-math">\(x\)</span>’s with <span class="process-math">\(u\)</span>’s and the integral is a bit easier (see that there is no more trigonometric functions in the integrand). But this is kind of discouraging since there is no formula to help us integrate this function...</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsubsec-5711-sub-usingDifferential-13-3-4">
+<div class="para">To proceed, we will need to do another <span class="process-math">\(u\)</span>-sub by letting <span class="process-math">\(w = \ln(u)\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{du} = \frac{1}{u}
+\qquad \implies \qquad
+du = u\, dw
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-13-3-4-4">
+\begin{align*}
+\int \frac{1}{u}\cdot \ln(u)\, du \amp= \int w\, dw \\
+\amp= \frac{w^2}{2} + C 
+\end{align*}
+</div>
+<div class="para">Ha! We evaluated the integral! We will just need to put everything together and replace back the variable to <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-13-3-4-6">
+\begin{align*}
+\int \cot(x)\cdot \ln\left(\sin(x)\right)\, dx \amp= \int \frac{1}{u}\cdot \ln(u)\, du \\
+\amp= \int w\, dw \\
+\amp= \frac{w^2}{2} + C \\
+\amp= \frac{\left(\ln(u)\right)^2}{2} + C \\
+\amp= \frac{\left(\ln\left(\sin(x)\right)\right)^2}{2} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.9.1: Choice #1: Let u = \sin(x)"><a href="#subsubsec-5711-sub-usingDifferential-13-3" title="Copy heading and permalink for Solution 5.7.9.1: Choice #1: Let u = \sin(x)" aria-label="Copy heading and permalink for Solution 5.7.9.1: Choice #1: Let u = \sin(x)">🔗</a></div>
+</div></details><details id="subsubsec-5711-sub-usingDifferential-13-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choice #2: Let <span class="process-math">\(u = \ln\left(\sin(x)\right)\)</span></span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsubsec-5711-sub-usingDifferential-13-4-2">
+<div class="para">Let’s follow Richard’s hint and let <span class="process-math">\(u = \ln\left(\sin(x)\right)\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dx} = \frac{1}{\sin(x)}\cdot \cos(x) = \cot(x)
+\qquad \implies \qquad 
+du = \cot(x) \, dx
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsubsec-5711-sub-usingDifferential-13-4-2-3">
+\begin{align*}
+\int \cot(x)\cdot \ln\left(\sin(x)\right)\, dx \amp= \int u\, du \\
+\amp= \frac{u^2}{2} + C \\
+\amp= \frac{\left(\ln\left(\sin(x)\right)\right)^2}{2} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-5711-sub-usingDifferential-13-4-3">
+<em class="alert">Observe that this choice of <span class="process-math">\(\boldsymbol{u}\)</span> made the process a lot easier</em>.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-5711-sub-usingDifferential-13-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.9.2: Choice #2: Let u = \ln\left(\sin(x)\right)"><a href="#subsubsec-5711-sub-usingDifferential-13-4" title="Copy heading and permalink for Solution 5.7.9.2: Choice #2: Let u = \ln\left(\sin(x)\right)" aria-label="Copy heading and permalink for Solution 5.7.9.2: Choice #2: Let u = \ln\left(\sin(x)\right)">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.7.9"><a href="#subsubsec-5711-sub-usingDifferential-13" title="Copy heading and permalink for Example 5.7.9" aria-label="Copy heading and permalink for Example 5.7.9">🔗</a></div></article><details id="Strategy-Pick-u" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How do I know what is the <span class="process-math">\(\boldsymbol{u}\)</span> I should pick?</span>
+</h5></summary><article class="note remark-like knowl__content"><div class="para logical" id="Strategy-Pick-u-2">
+<div class="para">For starters, we can pick whatever in the integrand to be the <span class="process-math">\(u\text{.}\)</span> But whatever <span class="process-math">\(u\)</span> you pick, you want to make sure two things:</div>
+<ol class="decimal" id="Strategy-Pick-u-2-3">
+<li id="Strategy-Pick-u-2-3-1">
+<div class="para" id="Strategy-Pick-u-2-3-1-1">All the variables should be turned to <span class="process-math">\(u\)</span> (or whatever the new variable is), including the differential, and<div class="autopermalink" data-description="Paragraph"><a href="#Strategy-Pick-u-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Strategy-Pick-u-2-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="Strategy-Pick-u-2-3-2">
+<div class="para" id="Strategy-Pick-u-2-3-2-1">the new integral after the substitution should be <em class="alert">easier</em> to evaluate compared to the original integral.<div class="autopermalink" data-description="Paragraph"><a href="#Strategy-Pick-u-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Strategy-Pick-u-2-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">If your choice of <span class="process-math">\(u\)</span> doesn’t do the above two things, then this is a bad <span class="process-math">\(u\)</span> and you should either pick another <span class="process-math">\(u\)</span> or try a different method.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Strategy-Pick-u-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Strategy-Pick-u-3">
+<em class="alert">But there is a difference between picking a good <span class="process-math">\(\boldsymbol{u}\)</span> and picking the most efficient <span class="process-math">\(\boldsymbol{u}\)</span></em>...<div class="autopermalink" data-description="Paragraph"><a href="#Strategy-Pick-u-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Strategy-Pick-u-4">The above example should demonstrate the difference. The first choice of <span class="process-math">\(u = \sin(x)\)</span> is a good <span class="process-math">\(u\)</span> but is not the most efficient option, while the second choice of <span class="process-math">\(u = \ln\left(\sin(x)\right)\)</span> is the most efficient <span class="process-math">\(u\)</span> since we were able to evaluate the integral right after the substitution.<div class="autopermalink" data-description="Paragraph"><a href="#Strategy-Pick-u-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Strategy-Pick-u-5">So I guess the next question here is <em class="alert">how to pick the most efficient <span class="process-math">\(\boldsymbol{u}\)</span></em>... Well it actually takes a bit guess-and-check-ing and experience.<div class="autopermalink" data-description="Paragraph"><a href="#Strategy-Pick-u-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 5.7.10: How do I know what is the \boldsymbol{u} I should pick?"><a href="#Strategy-Pick-u" title="Copy heading and permalink for Note 5.7.10: How do I know what is the \boldsymbol{u} I should pick?" aria-label="Copy heading and permalink for Note 5.7.10: How do I know what is the \boldsymbol{u} I should pick?">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection: Substitution Using Differentials"><a href="#subsubsec-5711-sub-usingDifferential" title="Copy heading and permalink for Subsubsection: Substitution Using Differentials" aria-label="Copy heading and permalink for Subsubsection: Substitution Using Differentials">🔗</a></div></section><div class="autopermalink" data-description="Subsection: Substitution Method for Indefinite Integrals"><a href="#subsec-571-Indefinite" title="Copy heading and permalink for Subsection: Substitution Method for Indefinite Integrals" aria-label="Copy heading and permalink for Subsection: Substitution Method for Indefinite Integrals">🔗</a></div></section><section class="subsection" id="subsec-572-limitation"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limitation of <span class="process-math">\(\boldsymbol{u}\)</span>-sub</span>
+</h3>
+<div class="para" id="subsec-572-limitation-2">Recall we can take the derivative of <em class="emphasis">ALL</em> composite functions using the chain rule. Since we derived the <span class="process-math">\(u\)</span>-sub formula from the chain rule, does it mean we can integrate <em class="alert">ALL</em> the composite functions using this method of <span class="process-math">\(u\)</span>-sub? Let’s think about this question in the following example:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-572-limitation-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="introduction" id="subsec-572-limitation-3-1"><div class="para" id="subsec-572-limitation-3-1-1">Determine whether we can evaluate the following integral using <span class="process-math">\(u\)</span>-sub. If so, do it. If not, why not?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-572-limitation-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-572-limitation-3-2-1">
+<span class="process-math">\(\displaystyle \int e^{-t}\, dt\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-572-limitation-3-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-572-limitation-3-2-2-1">A good strategy is to pick the <span class="process-math">\(u\)</span> to be some inside function of a composite function. The outside function here is for sure <span class="process-math">\(y = e^t\text{,}\)</span> then what is the inside function we can pick for <span class="process-math">\(u\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.11.a.1"><a href="#subsec-572-limitation-3-2-2" title="Copy heading and permalink for Hint 5.7.11.a.1" aria-label="Copy heading and permalink for Hint 5.7.11.a.1">🔗</a></div>
+</div></details><details id="subsec-572-limitation-3-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-572-limitation-3-2-3-1">We <em class="alert">can</em> evaluate this integral using <span class="process-math">\(u\)</span>-sub (or even easier if you can observe that the inside function is a linear function).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-572-limitation-3-2-3-2">
+<div class="para">Let <span class="process-math">\(u = -t\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dt} = -1
+\qquad\implies\qquad
+dt = -du
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsec-572-limitation-3-2-3-2-3">
+\begin{align*}
+\int e^{-t}\, dt \amp= -\int e^u\, du \\
+\amp= -e^u + C \\
+\amp= -e^{-t} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.11.a.1"><a href="#subsec-572-limitation-3-2-3" title="Copy heading and permalink for Solution 5.7.11.a.1" aria-label="Copy heading and permalink for Solution 5.7.11.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 5.7.11.a"><a href="#subsec-572-limitation-3-2" title="Copy heading and permalink for Task 5.7.11.a" aria-label="Copy heading and permalink for Task 5.7.11.a">🔗</a></div></article><article class="task exercise-like" id="subsec-572-limitation-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-572-limitation-3-3-1">
+<span class="process-math">\(\displaystyle \int e^{-t^2}\, dt\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-572-limitation-3-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-572-limitation-3-3-2-1">A good strategy is to pick the <span class="process-math">\(u\)</span> to be some inside function of a composite function. The outside function here is for sure <span class="process-math">\(y = e^t\text{,}\)</span> then what is the inside function we can pick for <span class="process-math">\(u\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.11.b.1"><a href="#subsec-572-limitation-3-3-2" title="Copy heading and permalink for Hint 5.7.11.b.1" aria-label="Copy heading and permalink for Hint 5.7.11.b.1">🔗</a></div>
+</div></details><details id="subsec-572-limitation-3-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-572-limitation-3-3-3-1">We <em class="alert">cannot</em> evaluate this integral using <span class="process-math">\(u\)</span>-sub because we won’t be able to group the <span class="process-math">\(du = u'(x)\, dx\)</span> out of it. But let’s try using <span class="process-math">\(u\)</span>-sub nevertheless and see where we will get stuck.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-572-limitation-3-3-3-2">
+<div class="para">Let <span class="process-math">\(u = -t^2\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dt} = -2t
+\qquad\implies\qquad
+\frac{du}{-2} = t\, dt
+\end{equation*}
+</div>
+<div class="para">Yet there is no extra factor of <span class="process-math">\(t\)</span> in the integrand that we can group together with <span class="process-math">\(dt\)</span> to give us a <span class="process-math">\(du\)</span> out of it. So we are stuck...</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-572-limitation-3-3-3-3" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h6 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">if you are thinking of using the "divide-and-cancel" method....</span>
+</h6></summary><article class="note remark-like knowl__content"><div class="para logical" id="subsec-572-limitation-3-3-3-3-2">
+<div class="para">You may consider isolating the <span class="process-math">\(dt\)</span> as follows</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dt} = -2t
+\qquad\implies\qquad
+dt = \frac{du}{-2t}
+\end{equation*}
+</div>
+<div class="para">and substitute as follows:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int e^{-t^2}\, dt = \int e^u\, \frac{du}{-2t} = -\frac{1}{2} \int\frac{e^u}{t}\, du
+\end{equation*}
+</div>
+<div class="para">Well the resulting integral after the substitution still contains two variables (since there is not a factor of <span class="process-math">\(t\)</span> in the integrand to cancel the <span class="process-math">\(t\)</span> in the denominator with).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-3-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-572-limitation-3-3-3-3-3">Well one way to resolve this issue is to figure out what <span class="process-math">\(t\)</span> is in terms of <span class="process-math">\(u\)</span> (by isolating <span class="process-math">\(t\)</span> in the equation of <span class="process-math">\(u = -t^2\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-3-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-572-limitation-3-3-3-3-4">
+<div class="para">Observe that <span class="process-math">\(t = \pm \sqrt{-u}\text{.}\)</span> Then the resulting integral becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{2} \int \frac{e^u}{t}\, dt = -\frac{1}{2} \int \frac{e^u}{\pm \sqrt{-u}}\, du
+\end{equation*}
+</div>
+<div class="para">See that the integral doesn’t become easier... This should be a cue that <span class="process-math">\(u\)</span>-sub doesn’t work. We should give up and try something else.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-3-3-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description='Note 5.7.12: if you are thinking of using the "divide-and-cancel" method...'><a href="#subsec-572-limitation-3-3-3-3" title='Copy heading and permalink for Note 5.7.12: if you are thinking of using the "divide-and-cancel" method...' aria-label='Copy heading and permalink for Note 5.7.12: if you are thinking of using the "divide-and-cancel" method...'>🔗</a></div></article></details><div class="autopermalink" data-description="Solution 5.7.11.b.1"><a href="#subsec-572-limitation-3-3-3" title="Copy heading and permalink for Solution 5.7.11.b.1" aria-label="Copy heading and permalink for Solution 5.7.11.b.1">🔗</a></div>
+</div></details><details id="Intro-ErrorFunction" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h6 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fun fact about this integral.</span>
+</h6></summary><article class="note remark-like knowl__content"><div class="para" id="Intro-ErrorFunction-2">It turns out that there is no elementary function<div class="autopermalink" data-description="Paragraph"><a href="#Intro-ErrorFunction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 5.7.13: Fun fact about this integral"><a href="#Intro-ErrorFunction" title="Copy heading and permalink for Note 5.7.13: Fun fact about this integral" aria-label="Copy heading and permalink for Note 5.7.13: Fun fact about this integral">🔗</a></div></article></details><div class="autopermalink" data-description="Task 5.7.11.b"><a href="#subsec-572-limitation-3-3" title="Copy heading and permalink for Task 5.7.11.b" aria-label="Copy heading and permalink for Task 5.7.11.b">🔗</a></div></article><div class="autopermalink" data-description="Example 5.7.11"><a href="#subsec-572-limitation-3" title="Copy heading and permalink for Example 5.7.11" aria-label="Copy heading and permalink for Example 5.7.11">🔗</a></div></article><div class="para" id="subsec-572-limitation-4">We can make an observation from the above example about the <span class="process-math">\(u\)</span>-sub-ability of an integral. <em class="alert">If part of the <span class="process-math">\(\boldsymbol{u'(x)}\)</span> is missing in the integrand, and it is more than just a constant, then <span class="process-math">\(\boldsymbol{u}\)</span>-sub won’t work in general.</em><div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-572-limitation-5">We know <span class="process-math">\(u\)</span>-sub won’t work if part of <span class="process-math">\(u'(x)\)</span> is missing, and the missing part is a non-constant. But what if we go the other way. What if the integrand has an <em class="emphasis">extra</em> non-constant piece? Can we still <span class="process-math">\(u\)</span>-sub the integral?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-572-limitation-6"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-572-limitation-6-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int x\sqrt{x - 1}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-572-limitation-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-572-limitation-6-2-1">There is an inside function screaming to us, which is <span class="process-math">\(x - 1\text{.}\)</span> Let’s pick this as our <span class="process-math">\(u\text{.}\)</span> But what about the extra factor of <span class="process-math">\(x\text{...}\)</span> We for sure don’t want to have more than one variable in the integral...<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.14.1"><a href="#subsec-572-limitation-6-2" title="Copy heading and permalink for Hint 5.7.14.1" aria-label="Copy heading and permalink for Hint 5.7.14.1">🔗</a></div>
+</div></details><details id="subsec-572-limitation-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-572-limitation-6-3-1">
+<div class="para">Let <span class="process-math">\(u = x - 1\text{.}\)</span> Then we know that <span class="process-math">\(du = dx\text{.}\)</span> This implies that</div>
+<div class="displaymath process-math" id="subsec-572-limitation-6-3-1-3">
+\begin{align*}
+\int x\sqrt{x - 1}\, dx \amp= \int x\sqrt{u}\, du 
+\end{align*}
+</div>
+<div class="para">Hmm... there is an extra factor of <span class="process-math">\(x\)</span> in the integrand... This is not good... Is there anyway that we can replace it in terms of <span class="process-math">\(u\text{?}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-572-limitation-6-3-2">
+<div class="para">
+<em class="alert">Yes there is!</em> Recall we define <span class="process-math">\(u = x - 1\text{.}\)</span> This implies that <span class="process-math">\(x = u + 1\)</span> . We can now substitute <span class="process-math">\(x\)</span> with <span class="process-math">\(u + 1\text{!}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-572-limitation-6-3-2-6">
+\begin{align*}
+\int x\sqrt{u}\, du \amp= \int (u + 1)\sqrt{u}\, du \\
+\amp= \int (u + 1)\cdot u^{\frac{1}{2}}\, du \\
+\amp= \int \left(u^{\frac{3}{2}} + u^{\frac{1}{2}}\right)\, du 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-572-limitation-6-3-3">
+<div class="para">Ha! We do know how to evaluate this integral! Hence, we can still evaluate this integral with an extra factor of <span class="process-math">\(x\)</span> in the integrand!</div>
+<div class="displaymath process-math" id="subsec-572-limitation-6-3-3-2">
+\begin{align*}
+\int x\sqrt{x - 1}\, dx \amp= \int (u + 1)\sqrt{u}\, du \\
+\amp= \int \left(u^{\frac{3}{2}} + u^{\frac{1}{2}}\right)\, du \\
+\amp= \frac{2}{5}u^{\frac{5}{2}} + \frac{2}{3}u^{\frac{3}{2}} + C \\
+\amp= \frac{2}{5}(x - 1)^{\frac{5}{2}} + \frac{2}{3}(x - 1)^{\frac{3}{2}} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-572-limitation-6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.14.1"><a href="#subsec-572-limitation-6-3" title="Copy heading and permalink for Solution 5.7.14.1" aria-label="Copy heading and permalink for Solution 5.7.14.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.7.14"><a href="#subsec-572-limitation-6" title="Copy heading and permalink for Example 5.7.14" aria-label="Copy heading and permalink for Example 5.7.14">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Limitation of \boldsymbol{u}-sub"><a href="#subsec-572-limitation" title="Copy heading and permalink for Subsection: Limitation of \boldsymbol{u}-sub" aria-label="Copy heading and permalink for Subsection: Limitation of \boldsymbol{u}-sub">🔗</a></div></section><section class="subsection" id="subsec-573-Definite"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Substitution Method for Definite Integrals</span>
+</h3>
+<article class="theorem theorem-like" id="thm-usub-definite"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-usub-definite-1-1">
+<div class="para">If <span class="process-math">\(u'(x)\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> and <span class="process-math">\(f\)</span> is continuous on the range of <span class="process-math">\(u\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f\left(u(x)\right)u'(x)\, dx = \int_{u(a)}^{u(b)} f(u)\, du
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-usub-definite-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.7.15"><a href="#thm-usub-definite" title="Copy heading and permalink for Theorem 5.7.15" aria-label="Copy heading and permalink for Theorem 5.7.15">🔗</a></div></article><article class="example example-like" id="subsec-573-Definite-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-573-Definite-3-1">Evaluate the definite integral <span class="process-math">\(\displaystyle \int_{-1}^2 \sqrt{5x + 6}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-573-Definite-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-573-Definite-3-2-1">There are actually two ways of approaching this problem and we will try both methods!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-573-Definite-3-2-2">
+<em class="alert">Method #1</em> Observe that this is a linear <span class="process-math">\(u\)</span>-sub so we can find an antiderivative of the integrand quickly. Let’s use the FTC (find an antiderivative, plug in the limits of integration, and do the subtraction) and obtain the answer.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-573-Definite-3-2-3">
+<em class="alert">Method #2</em> Let’s try using <span class="process-math">\(u\)</span>-sub formally! Obviously, <span class="process-math">\(u = 5x + 6\)</span> here. The next step in <span class="process-math">\(u\)</span>-sub is to replace all the <span class="process-math">\(x\)</span>’s in terms of <span class="process-math">\(u\text{.}\)</span> So let’s do it! In addition to the inside function <span class="process-math">\(5x + 6\)</span> and the differential <span class="process-math">\(dx\)</span> that we need to replace in terms of <span class="process-math">\(u\text{,}\)</span> what else do we need to adjust?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.7.16.1"><a href="#subsec-573-Definite-3-2" title="Copy heading and permalink for Hint 5.7.16.1" aria-label="Copy heading and permalink for Hint 5.7.16.1">🔗</a></div>
+</div></details><details id="subsec-573-Definite-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method #1: Using FTC <em class="emphasis">directly</em></span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-573-Definite-3-3-2">
+<div class="para">Observe that the inside function is a linear function with the slope of <span class="process-math">\(5\text{.}\)</span> Then we can find an antiderivative of the integrand quickly:</div>
+<div class="displaymath process-math" id="subsec-573-Definite-3-3-2-2">
+\begin{align*}
+\int \sqrt{5x + 6}\, dx \amp= \frac{1}{5}\cdot \fra{2}{3}\left(5x + 6\right)^{\frac{3}{2}} + C \\
+\amp= \fra{2}{15}\left(5x + 6\right)^{\frac{3}{2}} + C
+\end{align*}
+</div>
+<div class="para">Then by the Fundamental Theorem of Calculus, we obtain</div>
+<div class="displaymath process-math" id="subsec-573-Definite-3-3-2-3">
+\begin{align*}
+\int_{-1}^2 \sqrt{5x + 6}\, dx \amp= \fra{2}{15}\left(5x + 6\right)^{\frac{3}{2}}\bigg|_{-1}^2 \\
+\amp= \frac{2}{15}\left((5\cdot 2 + 6)^{\frac{3}{2}} - (5\cdot -1 + 6)^{\frac{3}{2}} \right) \\
+\amp= \frac{2}{15}\left(16^{\frac{3}{2}} - 1^{\frac{3}{2}} \right) \\
+\amp= \frac{2}{15}(64 - 1) \\
+\amp= \frac{42}{5} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.16.1: Method #1: Using FTC directly"><a href="#subsec-573-Definite-3-3" title="Copy heading and permalink for Solution 5.7.16.1: Method #1: Using FTC directly" aria-label="Copy heading and permalink for Solution 5.7.16.1: Method #1: Using FTC directly">🔗</a></div>
+</div></details><details id="subsec-573-Definite-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method #2: Using <span class="process-math">\(u\)</span>-sub (and then FTC)</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-573-Definite-3-4-2">
+<div class="para">If we want to use <span class="process-math">\(u\)</span>-sub, then obviously we should pick <span class="process-math">\(u = 5x + 6\text{.}\)</span> This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dx} = 5
+\qquad\implies\qquad
+dx = \frac{du}{5}
+\end{equation*}
+</div>
+<div class="para">Then after substitution, the integral will become <span class="process-math">\(\displaystyle \int_{-1}^2 \sqrt{u} \, \frac{du}{5}\text{.}\)</span> Did we successfully replace <em class="alert">all</em> the <span class="process-math">\(x\)</span>’s in terms of <span class="process-math">\(u\text{?}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-573-Definite-3-4-3">
+<div class="para">The answer is no! There is one part that we forgot to adjust, which is the <em class="emphasis">limits of integration</em>! Remember the limits of integration, <span class="process-math">\(-1\)</span> and <span class="process-math">\(2\text{,}\)</span> are some <span class="process-math">\(x\)</span> values! Since our job now is to replace <em class="alert">ALL</em> the <span class="process-math">\(x\)</span>’s in terms of <span class="process-math">\(u\text{,}\)</span> this includes the limits of integration as well!</div>
+<ul class="disc" id="subsec-573-Definite-3-4-3-8">
+<li id="subsec-573-Definite-3-4-3-8-1">
+<div class="para" id="subsec-573-Definite-3-4-3-8-1-1">When <span class="process-math">\(x = 2\text{,}\)</span> <span class="process-math">\(u = 5(2) + 6 = 16\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-4-3-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-573-Definite-3-4-3-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-573-Definite-3-4-3-8-2">
+<div class="para" id="subsec-573-Definite-3-4-3-8-2-1">When <span class="process-math">\(x = -1\text{,}\)</span> <span class="process-math">\(u = 5(-1) + 6 = 1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-4-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-573-Definite-3-4-3-8-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Hence, the correct integral we should obtain after <span class="process-math">\(u\)</span>-sub is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{-1}^2 \sqrt{5x + 6}\, dx = int_{u(-1)}^{u(2)} \sqrt{u}\, \frac{du}{5} = \frac{1}{5}\int_1^{16} \sqrt{u}\, du
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-573-Definite-3-4-4">
+<div class="para">The resulting integral looks like something we can evaluate directly!</div>
+<div class="displaymath process-math" id="subsec-573-Definite-3-4-4-1">
+\begin{align*}
+\int_{-1}^2 \sqrt{5x + 6}\, dx \amp= \frac{1}{5}\int_1^{16} \sqrt{u}\, du \\
+\amp= \frac{1}{5}\cdot \frac{2}{3}u^{\frac{3}{2}}\bigg|_{u = 1}^{16} \\
+\amp= \frac{2}{15}\left(16^{\frac{3}{2} - 1^{\frac{3}{2}}}\right) \\
+\amp= \frac{2}{15}(64 - 1) \\
+\amp= \frac{42}{5} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-573-Definite-3-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.7.16.2: Method #2: Using u-sub (and then FTC)"><a href="#subsec-573-Definite-3-4" title="Copy heading and permalink for Solution 5.7.16.2: Method #2: Using u-sub (and then FTC)" aria-label="Copy heading and permalink for Solution 5.7.16.2: Method #2: Using u-sub (and then FTC)">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.7.16"><a href="#subsec-573-Definite-3" title="Copy heading and permalink for Example 5.7.16" aria-label="Copy heading and permalink for Example 5.7.16">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Substitution Method for Definite Integrals"><a href="#subsec-573-Definite" title="Copy heading and permalink for Subsection: Substitution Method for Definite Integrals" aria-label="Copy heading and permalink for Subsection: Substitution Method for Definite Integrals">🔗</a></div></section><section class="worksheet" id="ws-sec57" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec57-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="introduction" id="ws-sec57-2"><div class="para" id="ws-sec57-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ws-sec57-2-2">I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="exercisegroup" id="ws-sec57-3">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec57-3-1"><div class="para" id="ws-sec57-3-1-1">Evaluate the following indefinite integral using methods covered in class so far.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec57-3-2"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-3-2-1-1">
+<span class="process-math">\(\displaystyle \int \frac{\left(\ln(x)\right)^2}{x}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#ws-sec57-3-2" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec57-3-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-3-3-1-1">
+<span class="process-math">\(\displaystyle \int \left(x^2 + 1\right)\left(x^3 + 3x\right)^4 \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#ws-sec57-3-3" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec57-3-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-3-4-1-1">
+<span class="process-math">\(\displaystyle \int \frac{a + bx^2}{\sqrt{3ax + bx^3}}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 3"><a href="#ws-sec57-3-4" title="Copy heading and permalink for Worksheet Exercise 3" aria-label="Copy heading and permalink for Worksheet Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec57-3-5"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-3-5-1-1">
+<span class="process-math">\(\displaystyle \int \sec^2(x) e^{\tan(x)} \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 4"><a href="#ws-sec57-3-5" title="Copy heading and permalink for Worksheet Exercise 4" aria-label="Copy heading and permalink for Worksheet Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec57-3-6"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-3-6-1-1">
+<span class="process-math">\(\displaystyle \int \frac{\sec^2\left(\sqrt{x}\right)}{\sqrt{x}}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 5"><a href="#ws-sec57-3-6" title="Copy heading and permalink for Worksheet Exercise 5" aria-label="Copy heading and permalink for Worksheet Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec57-3-7"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-3-7-1-1">
+<span class="process-math">\(\displaystyle \int x^2\sqrt{2 + x} \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-3-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 6"><a href="#ws-sec57-3-7" title="Copy heading and permalink for Worksheet Exercise 6" aria-label="Copy heading and permalink for Worksheet Exercise 6">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1–6"><a href="#ws-sec57-3" title="Copy heading and permalink for Exercise Group 1–6" aria-label="Copy heading and permalink for Exercise Group 1–6">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ws-sec57-4">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec57-4-1"><div class="para" id="ws-sec57-4-1-1">Evaluate the following definite integral. Pay attention to the limits of integration if necessary.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec57-4-2"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-4-2-1-1">
+<span class="process-math">\(\displaystyle \int_0^1 \sqrt[3]{1 + 7x}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 7"><a href="#ws-sec57-4-2" title="Copy heading and permalink for Worksheet Exercise 7" aria-label="Copy heading and permalink for Worksheet Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec57-4-3"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec57-4-3-1-1">
+<span class="process-math">\(\displaystyle \int_{-1}^1 x^2\left(1 + 2x^3\right)^5 \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec57-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 8"><a href="#ws-sec57-4-3" title="Copy heading and permalink for Worksheet Exercise 8" aria-label="Copy heading and permalink for Worksheet Exercise 8">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 7–8"><a href="#ws-sec57-4" title="Copy heading and permalink for Exercise Group 7–8" aria-label="Copy heading and permalink for Exercise Group 7–8">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet: Some Exercises for this section"><a href="#ws-sec57" title="Copy heading and permalink for Worksheet: Some Exercises for this section" aria-label="Copy heading and permalink for Worksheet: Some Exercises for this section">🔗</a></div></section><div class="autopermalink" data-description="Section 5.7: The Substitution Method"><a href="#sec57-uSub" title="Copy heading and permalink for Section 5.7: The Substitution Method" aria-label="Copy heading and permalink for Section 5.7: The Substitution Method">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec56-NetChange.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec58-FurtherIntegralFormulas.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
