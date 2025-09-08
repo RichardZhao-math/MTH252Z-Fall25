@@ -51,8 +51,12 @@
       </hint>
 
       <solution>
+        <title>Choice #1: Let <m>u = 1 - x^2</m></title>
+
         <p>
-          We cannot use <m>u</m>-sub here. There are two issues depending on what your choice of <m>u</m> is (but these issues are essentially the same). 
+          We cannot use <m>u</m>-sub here. There are many issues that needs to be resolved in order to make progress... 
+          And
+        
         </p>
 
         <p>
@@ -62,27 +66,60 @@
         </p>
 
         <p>
-          A possible solution to resolve this issue is to isolate <m>dx</m> entirely by dividing the <m>x</m> to the other side (and pretending <m>x</m> can never be zero). 
+          A possible way to resolve this issue is to isolate the <m>dx</m> entirely by dividing the <m>x</m> to the other side (and pretending <m>x</m> can never be zero). 
           This implies that <m>dx = \frac{du}{-2x}</m>. 
           By this substitution, we obtain
           <me>
             \int \frac{1}{2\sqrt{1 - x^2}}\, dx = \int \frac{1}{2\sqrt{u}}\cdot \frac{du}{-2x}
           </me>
-          Okay... but there is still an <m>x</m> in the integrand. This is super confusing since the variable we are dealing with now is <m>u</m>. 
+          Okay... but there is still an <m>x</m> in the integrand. 
+          This is super confusing since the variable we are dealing with now is <m>u</m>, not <m>x</m>. 
           Given our substitution that <m>u = 1 - x^2</m>, we see that <m>x = \sqrt{1 - u}</m>. 
           Then the integral becomes
           <md>
             <mrow> \int \frac{1}{2\sqrt{1 - x^2}}\, dx \amp= \int \frac{1}{2\sqrt{u}}\cdot \frac{du}{-2\sqrt{1 - u}} </mrow>
             <mrow> \amp= -\frac{1}{4}\int \frac{du}{\sqrt{u}\sqrt{1 - u}} </mrow>
           </md>
-          Omg... the work is much much much more complicated... 
-          If you want to continue with this line of work, the next step should be making another <m>u</m>-sub by letting <m>w = \sqrt{u}</m>. 
-          This should loop you back to the same(ish) integral. 
+          Wow... the integral doesn't get easier after all this hard work... 
+          <alert> This should be an indicator to search for another method to evaluate this integral</alert>. 
+          <m>u</m>-sub should make the integral <em>easier</em> to deal with, not harder. 
         </p>
 
         <p>
-          Another choice of <m>u</m> is <m>u = \sqrt{1 - x^2}</m>. 
-          Then <m>du = \frac{1}{2\sqrt{1 - x^2}}\cdot -2x\, dx</m>. 
+          If you are feeling a bit adventurous and want to continue with this line of work (to see if it will work out eventually), the next step will be to make another substitution by letting <m>w = \sqrt{u}</m>. 
+          Then <m>dw = \frac{1}{2\sqrt{u}}</m> and <m>u = w^2 </m>. 
+          Then we obtain
+          <md>
+            <mrow> -\frac{1}{4}\int \frac{du}{\sqrt{u}\sqrt{1 - u}} \amp= -\frac{1}{4}\int \frac{2\, dw}{\sqrt{1 - w^2}} </mrow>
+            <mrow> \amp= -\frac{1}{2}\int \frac{dw}{\sqrt{1 - w^2}} </mrow>
+          </md>
+          Observe that this integral is almost the same as the integral given in the prompt, which means we looped back to the problem after all the hard work... 
+          Another way of saying this is that this method is inconclusive... 
+        </p>
+
+      </solution>
+
+      <solution>
+        <title>Choice #2: Let <m>u = \sqrt{1 - x^2}</m></title>
+        
+        <p>
+          Richard can tell right ahead that this choice of <m>u</m> is also inconclusive (it will loop you back to the problem as well) due to his awesome math skills. 
+          But just in case he didn't lose his mind, he will present the work (and also convince himself that he is still young and he can do the math in his head). 
+        </p>
+
+        <p>
+          Let <m>u = \sqrt{1 - x^2}</m>. 
+          Then <m>du = \dfrac{-x}{\sqrt{1 - x^2}}\, dx</m>, which implies that
+          <me>
+            dx = \frac{\sqrt{1 - x^2}}{-x}\, du = \frac{u}{-\sqrt{1 - u^2}}\, du
+          </me>
+          We obtain
+          <md>
+            <mrow> \int \frac{1}{2\sqrt{1 - x^2}}\, dx \amp= \int \frac{1}{2u}\cdot \frac{u}{-\sqrt{1 - u^2}}\, du </mrow>
+            <mrow> \amp= -\int \frac{1}{2\sqrt{1 - u^2}}\, du </mrow>
+          </md>
+          Observe that this integral is (again) almost the same as the integral given in the prompt.
+          We (again) looped back back to the problem after the hard work...  
         </p>
       </solution>
       
@@ -90,12 +127,13 @@
 
     <task>
       <p>
-        Evaluate this integral using the hint given below. 
+        Evaluate this integral <em>not</em> using <m>u</m>-sub, but using the hint given below. 
       </p>
 
       <hint>
         <p>
           This may seem like a totally irrelevant hint but what is the derivative of <me>y = \arcsin(x)</me> 
+          You learned this back in calculus 1 so feel free to look up your notes. 
         </p>
 
         <note>
