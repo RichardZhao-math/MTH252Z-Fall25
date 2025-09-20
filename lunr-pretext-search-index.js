@@ -1069,7 +1069,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "A.3",
   "title": "Some Famous Applications of Integrals",
-  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work    Inline Final PDF (Test)   Scroll the PDF below or use the download link.   Final Exam PDF (inline viewer + download)   <iframe src=\"external\/pdfs\/MTH252_Su25_Final.pdf\" width=\"100%\" height=\"800\" style=\"border:0\" title=\"Final Exam PDF\" ><\/iframe>  Download the PDF: Final Exam (PDF)      "
+  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work    Final Exam PDF (inline viewer + download)     Download the PDF: Final Exam (PDF)    "
 },
 {
   "id": "fig-final-exam",
@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "A.3.1",
   "title": "",
-  "body": " Final Exam PDF (inline viewer + download)   <iframe src=\"external\/pdfs\/MTH252_Su25_Final.pdf\" width=\"100%\" height=\"800\" style=\"border:0\" title=\"Final Exam PDF\" ><\/iframe>  Download the PDF: Final Exam (PDF)   "
+  "body": " Final Exam PDF (inline viewer + download)     Download the PDF: Final Exam (PDF)   "
 },
 {
   "id": "backmatter-2",
