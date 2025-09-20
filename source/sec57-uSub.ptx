@@ -18,7 +18,17 @@
       <ul>
         <li>
           <p>
-            integrate integrals using <m>u</m>-sub. 
+            evaluate indefinite integrals using <m>u</m>-sub and rewrite the final answer in terms of <m>x</m>.  
+          </p>
+        </li>
+        <li>
+          <p>
+            recognize which integrals can be evaluated using <m>u</m>-sub and which ones cannot be evaluated using <m>u</m>-sub. 
+          </p>
+        </li>
+        <li>
+          <p>
+            apply <m>u</m>-sub in definite integrals by changing the limits of integration to match the new variable. 
           </p>
         </li>
       </ul>
@@ -349,7 +359,8 @@
 
         <p>
           I probably won't give you any questions in this extreme that the "divide-and-cancel" method will lead to the loss of some solution (because this isn't a differential equation class). 
-          So I will leave it up to you if you want to use this "divide-and-cancel" method (at least there is no harm in this class). 
+          So I will leave it up to you if you want to use this "divide-and-cancel" method. 
+          At least there is no harm in this class (I think...). 
         </p>
       </note>
 
@@ -562,7 +573,8 @@
         <p>
           So I guess the next question here is <alert>how to pick the most efficient <m>\boldsymbol{u}</m></alert>... 
           Well it actually takes a bit guess-and-check-ing and experience. 
-          
+          I will encourage you to first practice on how to pick a <alert>good</alert> <m>u</m> to make sure at least you can solve the problem. 
+          When you are comfortable and proficient at using <m>u</m>-sub, then knowing what the most efficient <m>u</m> will come naturally. 
         </p>
       </note>
 
@@ -769,18 +781,6 @@
   <subsection xml:id="subsec-573-Definite">
     <title>Substitution Method for Definite Integrals</title>
 
-    <theorem xml:id="thm-usub-definite">
-      <statement>
-        <p>
-          If <m>u'(x)</m> is continuous on <m>[a,b]</m>, and <m>f</m> is continuous on the range of <m>u</m>, then
-          <me>
-            \int_a^b f\left(u(x)\right)u'(x)\, dx = \int_{u(a)}^{u(b)} f(u)\, du
-          </me>
-          
-        </p>
-      </statement>
-    </theorem>
-    
     <example>
       <p>
         Evaluate the definite integral <m>\displaystyle \int_{-1}^2 \sqrt{5x + 6}\, dx</m>
@@ -792,12 +792,12 @@
         </p>
 
         <p>
-          <alert>Method #1</alert> Observe that this is a linear <m>u</m>-sub so we can find an antiderivative of the integrand quickly. 
+          <alert>Method #1:</alert> Observe that this is a linear <m>u</m>-sub so we can find an antiderivative of the integrand quickly. 
           Let's use the FTC (find an antiderivative, plug in the limits of integration, and do the subtraction) and obtain the answer. 
         </p>
 
         <p>
-          <alert>Method #2</alert> Let's try using <m>u</m>-sub formally! 
+          <alert>Method #2:</alert> Let's try using <m>u</m>-sub formally! 
           Obviously, <m>u = 5x + 6</m> here. 
           The next step in <m>u</m>-sub is to replace all the <m>x</m>'s in terms of <m>u</m>. 
           So let's do it! 
@@ -811,12 +811,12 @@
           Observe that the inside function is a linear function with the slope of <m>5</m>. 
           Then we can find an antiderivative of the integrand quickly: 
           <md>
-            <mrow> \int \sqrt{5x + 6}\, dx \amp= \frac{1}{5}\cdot \fra{2}{3}\left(5x + 6\right)^{\frac{3}{2}} + C </mrow>
-            <mrow> \amp= \fra{2}{15}\left(5x + 6\right)^{\frac{3}{2}} + C</mrow>
+            <mrow> \int \sqrt{5x + 6}\, dx \amp= \frac{1}{5}\cdot \frac{2}{3}\left(5x + 6\right)^{\frac{3}{2}} + C </mrow>
+            <mrow> \amp= \frac{2}{15}\left(5x + 6\right)^{\frac{3}{2}} + C</mrow>
           </md>
           Then by the Fundamental Theorem of Calculus, we obtain
           <md>
-            <mrow> \int_{-1}^2 \sqrt{5x + 6}\, dx \amp= \fra{2}{15}\left(5x + 6\right)^{\frac{3}{2}}\bigg|_{-1}^2 </mrow>
+            <mrow> \int_{-1}^2 \sqrt{5x + 6}\, dx \amp= \frac{2}{15}\left(5x + 6\right)^{\frac{3}{2}}\bigg|_{-1}^2 </mrow>
             <mrow> \amp= \frac{2}{15}\left((5\cdot 2 + 6)^{\frac{3}{2}} - (5\cdot -1 + 6)^{\frac{3}{2}} \right) </mrow>
             <mrow> \amp= \frac{2}{15}\left(16^{\frac{3}{2}} - 1^{\frac{3}{2}} \right) </mrow>
             <mrow> \amp= \frac{2}{15}(64 - 1) </mrow>
@@ -844,7 +844,7 @@
           There is one part that we forgot to adjust, which is the <em>limits of integration</em>! 
           Remember the limits of integration, <m>-1</m> and <m>2</m>, are some <m>x</m> values! 
           Since our job now is to replace <alert>ALL</alert> the <m>x</m>'s in terms of <m>u</m>, this includes the limits of integration as well!
-          <ul name="">
+          <ul marker="">
             <li>
               <p>
                 When <m>x = 2</m>, <m>u = 5(2) + 6 = 16</m>
@@ -858,7 +858,7 @@
           </ul>
           Hence, the correct integral we should obtain after <m>u</m>-sub is
           <me>
-            \int_{-1}^2 \sqrt{5x + 6}\, dx = int_{u(-1)}^{u(2)} \sqrt{u}\, \frac{du}{5} = \frac{1}{5}\int_1^{16} \sqrt{u}\, du
+            \int_{-1}^2 \sqrt{5x + 6}\, dx = \int_{u(-1)}^{u(2)} \sqrt{u}\, \frac{du}{5} = \frac{1}{5}\int_1^{16} \sqrt{u}\, du
           </me>
         </p>
 
@@ -870,6 +870,79 @@
             <mrow> \amp= \frac{2}{15}\left(16^{\frac{3}{2} - 1^{\frac{3}{2}}}\right) </mrow>
             <mrow> \amp= \frac{2}{15}(64 - 1) </mrow>
             <mrow> \amp= \frac{42}{5} </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-usub-definite">
+      <statement>
+        <p>
+          If <m>u'(x)</m> is continuous on <m>[a,b]</m>, and <m>f</m> is continuous on the range of <m>u</m>, then
+          <me>
+            \int_a^b f\left(u(x)\right)u'(x)\, dx = \int_{u(a)}^{u(b)} f(u)\, du
+          </me>
+          
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      What the theorem emphasizes is <alert>to adjust the limits of integration when changing the variable</alert>. 
+      Observe in the above example that we don't need to plug back <m>x</m> if you adjust the limits of integration along with your <m>u</m>-sub. 
+      
+    </p>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_0^1 \frac{x}{\left(x^2 + 1\right)^3}\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          We are in the <m>u</m>-sub section so we probably can evaluate this integral using <m>u</m>-sub. 
+          Then we will need to pick a <m>u</m> first. 
+        </p>
+
+        <p>
+          Observe that the numerator of the integrand is <m>x</m>, which seems like the derivative of the inside function in the denominator, which is <m>x^2 + 1</m>, if we neglect the constant multiple. 
+          So what is a good <m>u</m> we can pick? 
+        </p>
+
+        <p>
+          Once you pick your <m>u</m>, make sure you replace all the <m>x</m>'s in terms of <m>u</m> and don't forget to adjust the limits of integration if you want to carry the <m>u</m> in your computation. 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let <m>u = x^2 + 1</m>. 
+          Then we have
+          <me>
+            \frac{du}{dx} = 2x
+            \qquad \implies \qquad
+            x\, dx = \frac{du}{2}
+          </me>
+          In addition, we also know that
+          <ul marker="">
+            <li>
+              <p>
+                when <m>x = 1</m>, <m>u = 1^2 + 1 = 2</m>;  
+              </p>
+            </li>
+            <li>
+              <p>
+                when <m>x = 0</m>, <m>u = 0^2 + 1 = 1</m>. 
+              </p>
+            </li>
+          </ul>
+          This implies that
+          <md>
+            <mrow> \int_0^1 \frac{x}{\left(x^2 + 1\right)^3}\, dx \amp= \int_{u(0)}^{u(1)} \frac{1}{u^3}\cdot \frac{du}{2} </mrow>
+            <mrow> \amp= \frac{1}{2}\int_1^2 u^{-3}\, du </mrow>
+            <mrow> \amp= \frac{1}{2} \cdot \frac{u^{-2}}{-2}\bigg|_{u = 1}^2 </mrow>
+            <mrow> \amp= -\frac{1}{4}\left(2^{-2} - 1^{-2}\right) </mrow>
+            <mrow> \amp= \frac{3}{16} </mrow>
           </md>
         </p>
       </solution>

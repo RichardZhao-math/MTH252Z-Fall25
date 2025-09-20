@@ -5,6 +5,16 @@
 
   <p> Text of section. </p>
 
+  <subsection xml:id="subsec-541-FTC-Corollary">
+    <title>A Corollary of the Fundamental Theorem of Calculus</title>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-542-Importance-FTC-Corollary">
+    <title>Why is this corollary important? </title>
+    
+  </subsection>
+
   <subsection>
     <title>Something to ponder on... </title>
     
