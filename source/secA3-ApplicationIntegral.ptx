@@ -13,31 +13,6 @@
   <subsection xml:id="sec-pdf-demo">
   <title>Embedded PDF Example</title>
 
-  <p>
-    Below is a PDF you can scroll through directly in the page:
-  </p>
-
-  <figure xml:id="fig-final-exam">
-  <caption>Final Exam PDF (inline viewer in HTML; downloadable everywhere)</caption>
-
-  <!-- Inline viewer for HTML builds -->
-  <raw format="html"><![CDATA[
-    <iframe
-      src="/assets/pdfs/MTH252_Su25_Final.pdf?v=1"
-      width="100%"
-      height="800"
-      style="border:0"
-    ></iframe>
-  ]]></raw>
-
-</figure>
-
-
-
-
-  <p>
-    You can scroll through the PDF above to review the exam.
-  </p>
 
 </subsection>
 
