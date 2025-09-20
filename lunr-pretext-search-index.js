@@ -1069,7 +1069,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "A.3",
   "title": "Some Famous Applications of Integrals",
-  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work    Embedded PDF Example  Below is a PDF you can scroll through directly in the page:   Final Exam PDF (inline viewer in HTML; downloadable everywhere)  <iframe src=\"assets\/pdfs\/MTH252_Su25_Final.pdf\" width=\"100%\" height=\"800\" style=\"border:0\" ><\/iframe>  If the embedded viewer doesn’t load, you can download the PDF here .   You can scroll through the PDF above to review the exam.   "
+  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work    Embedded PDF Example  Below is a PDF you can scroll through directly in the page:   Final Exam PDF (inline viewer in HTML; downloadable everywhere)   <iframe src=\"\/assets\/pdfs\/MTH252_Su25_Final.pdf?v=1\" width=\"100%\" height=\"800\" style=\"border:0\" ><\/iframe>   You can scroll through the PDF above to review the exam.   "
 },
 {
   "id": "fig-final-exam",
@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "A.3.1",
   "title": "",
-  "body": " Final Exam PDF (inline viewer in HTML; downloadable everywhere)  <iframe src=\"assets\/pdfs\/MTH252_Su25_Final.pdf\" width=\"100%\" height=\"800\" style=\"border:0\" ><\/iframe>  If the embedded viewer doesn’t load, you can download the PDF here .  "
+  "body": " Final Exam PDF (inline viewer in HTML; downloadable everywhere)   <iframe src=\"\/assets\/pdfs\/MTH252_Su25_Final.pdf?v=1\" width=\"100%\" height=\"800\" style=\"border:0\" ><\/iframe>  "
 },
 {
   "id": "backmatter-2",
