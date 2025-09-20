@@ -1069,7 +1069,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "A.3",
   "title": "Some Famous Applications of Integrals",
-  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work    Embedded PDF Example  Below is a PDF you can scroll through directly in the page:    MTH252 Final Exam (Summer 2025)  Your browser does not support iframes.    You can scroll through the PDF above to review the exam.   "
+  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work    Embedded PDF Example  Below is a PDF you can scroll through directly in the page:   Syllabus (inline viewer in HTML; downloadable everywhere)   <iframe src=\"assets\/pdfs\/MTH252_Su25_Final.pdf\" width=\"100%\" height=\"800\" style=\"border:0\" ><\/iframe>   If the embedded viewer doesn’t load, you can download the PDF here .   You can scroll through the PDF above to review the exam.   "
+},
+{
+  "id": "fig-syllabus",
+  "level": "2",
+  "url": "secA3-ApplicationIntegral.html#fig-syllabus",
+  "type": "Figure",
+  "number": "A.3.1",
+  "title": "",
+  "body": " Syllabus (inline viewer in HTML; downloadable everywhere)   <iframe src=\"assets\/pdfs\/MTH252_Su25_Final.pdf\" width=\"100%\" height=\"800\" style=\"border:0\" ><\/iframe>   If the embedded viewer doesn’t load, you can download the PDF here .  "
 },
 {
   "id": "backmatter-2",
