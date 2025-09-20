@@ -20,20 +20,19 @@
   <figure xml:id="fig-final-exam">
   <caption>Final Exam PDF (inline viewer in HTML; downloadable everywhere)</caption>
 
+  <!-- Inline viewer for HTML builds -->
   <raw format="html"><![CDATA[
     <iframe
-      src="assets/pdfs/MTH252_Su25_Final.pdf"
+      src="/assets/pdfs/MTH252_Su25_Final.pdf?v=1"
       width="100%"
       height="800"
       style="border:0"
     ></iframe>
   ]]></raw>
 
-  <p>
-    If the embedded viewer doesn’t load, you can
-    <url href="assets/pdfs/MTH252_Su25_Final.pdf">download the PDF here</url>.
-  </p>
 </figure>
+
+
 
 
   <p>
