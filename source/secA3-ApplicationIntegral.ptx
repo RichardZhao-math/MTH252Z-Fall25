@@ -17,14 +17,25 @@
     Below is a PDF you can scroll through directly in the page:
   </p>
 
-  <html>
-    <div style="border: 2px solid #888; padding: 8px; margin: 10px 0;">
-      <p style="text-align: center; font-weight: bold;">MTH252 Final Exam (Summer 2025)</p>
-      <iframe src="MTH252_Su25_Final.pdf" width="100%" height="600px" style="display: block; margin: auto;">
-        Your browser does not support iframes.
-      </iframe>
-    </div>
-  </html>
+  <figure xml:id="fig-syllabus">
+  <caption>Syllabus (inline viewer in HTML; downloadable everywhere)</caption>
+
+  <!-- HTML output: inline PDF viewer -->
+  <raw format="html"><![CDATA[
+    <iframe
+      src="assets/pdfs/MTH252_Su25_Final.pdf"
+      width="100%"
+      height="800"
+      style="border:0"
+    ></iframe>
+  ]]></raw>
+
+  <!-- Fallback note + download link (works in HTML and print/PDF outputs) -->
+  <p>
+    If the embedded viewer doesn’t load, you can
+    <url href="assets/pdfs/MTH252_Su25_Final.pdf">download the PDF here</url>.
+  </p>
+</figure>
 
   <p>
     You can scroll through the PDF above to review the exam.
