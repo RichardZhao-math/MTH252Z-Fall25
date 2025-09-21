@@ -63,6 +63,18 @@
       <p>
         What is the derivative of of the function <m>y = \sin\left(x^2\right)</m>? 
       </p>
+
+      <solution>
+        <p>
+          Observe that the outside function is <m>F(x) = \sin(x)</m> and the inside function is <m>u(x) = x^2</m>. 
+          Using the chain rule, we obtain
+          <md>
+            <mrow>y' = \frac{d}{dx}\left(\left( u(x)\right)\right) \amp = F'\left(u(x)\right)\cdot u'(x) \amp\amp\text{by Chain Rule}</mrow>
+            <mrow> \amp = \cos\left(x^2\right)\cdot 2x</mrow>
+            <mrow> \amp= 2x\cos\left(x^2\right)</mrow>
+          </md>
+        </p>
+      </solution>
     </task>
 
     <task>
