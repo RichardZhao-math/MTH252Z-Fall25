@@ -19,6 +19,7 @@
 
     <!-- Include Appendices -->
     <xi:include href="./appendixA-Investigation.ptx" /> 
+    <xi:include href="./appendixB-ExamReview.ptx" /> 
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />

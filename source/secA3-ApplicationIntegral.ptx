@@ -10,20 +10,4 @@
     
   </subsection>
 
-
-  <figure xml:id="fig-final-exam">
-  <caption>Final Exam PDF (inline viewer + download)</caption>
-
-  <!-- Native PreTeXt way: an <interactive> with an @iframe -->
-  <!-- NOTE: path is relative to the built "external/" folder, so DO NOT include "external/". -->
-  <interactive iframe="pdfs/MTH252_Su25_Final.pdf" width="100%" aspect="8.5:11" />
-
-  <p>
-    Download the PDF:
-    <url href="external/pdfs/MTH252_Su25_Final.pdf">Final Exam (PDF)</url>
-  </p>
-</figure>
-
-
-
 </section>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="secB2-FinalReview" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Final Exam Info</title>
+
+  <p> 
+    Our final exam will be <alert>cumulative</alert>, which means it is a fair shot for me to ask anything we covered this term on the exam. 
+    The final exam is scheduled on <alert>Tuesday, December 9, from 9:00am to 10:50am, in our classroom, VB 269</alert>. 
+  </p>
+
+  <p>
+    <strong>Remember that all work must be shown for full credits. </strong>
+  </p>
+
+  <p>
+    We have done a lot of practice in class and on your homework. 
+    There are also exercises at the end of each section in this note. 
+  </p>
+
+  <p>
+    A good tip to study for the exam is to make sure you know how to do all the problems in our class practice, homework, and the exercises at the end of each section. 
+  </p>
+
+  <subsection xml:id="subsec-QandA-Final">
+    <title>Some Q&amp;A's Regarding the Exam</title>
+
+    <p>
+      Below are some questions that I was asked a lot before regarding the final exam of a class. 
+      I hope this list also addresses some of your questions. 
+    </p>
+
+    <question>
+      <title>What is a good way to study for the final exam? </title>
+      
+      <p>
+        Review the
+      </p>
+    </question>
+
+    <question>
+      <title>If I have any questions, how can I get get help from Richard? </title>
+
+      <p>
+        Emailing your questions to Richard is an option. 
+        But make sure you are asking specific questions and include your work if you want him to help troubleshoot the issues
+        (so please don't email Richard things like... how do I do problem 1 on the homework. 
+        This is super vague and it is highly unlikely that Richard will solve the problem for you. 
+        Share some of your insights with him so he can build on it). 
+      </p>
+      
+      <p>
+        Richard's office hours are always a good choice to chat. 
+        He is usually super bored in his office if no student shows up... 
+      </p>
+
+      <p>
+        In addition, the last day of class on Thursday, December 4, is scheduled to be the final review (if we don't need to catch up any material) in the form of Q&amp;A. 
+        Make sure you bring your questions to the last day of class to ask Richard and/or your classmates! 
+      </p>
+
+      <p>
+        Potentially, Richard can host a study session for the final review on Monday, the day before our final exam. 
+        But he will need to check his schedule and see what his workload is for the week before deciding on this. 
+      </p>
+    </question>
+
+    <question>
+      <title>Do we need a (graphing) calculator on the exam? </title>
+      
+      <p>
+        I would say yes? 
+        It all depends on how comfortable you can to solve problems without the help of the technology. 
+        Having a calculator on the exam will definitely help you do some computations and visualize graphs. 
+      </p>
+
+      <p>
+        <alert>Yet, you will still need to show all work for full credits!</alert>
+      </p>
+
+      <p>
+        I will not give credits to responses like "the calculator showed that the answer is such and such". 
+        I can't see what was shown on your calculator while grading your exam and you can't recreate the <em>exact</em> graph on the exam accurately. 
+      </p>
+    </question>
+
+    <question>
+      <title>Does notation matters? Are notations worth any points? </title>
+      
+      <p>
+        <alert>YES!</alert>
+        Remember that I always point out the notation mistakes on your homework but never took point off it? 
+        Exams are the occasions that you show me what you have learned, including the proper use of notation! 
+        The better I can understand your work flow through the proper notation, the higher chance you will get more credits (and yes, I do give partial credits). 
+      </p>
+
+      <p>
+        <em>disclaimer:</em> it is NOT my responsibility to guess what you mean on the exam if I get confused when reading your work. 
+      </p>
+    </question>
+
+    <question>
+      <title>Is there any bonus problem on the exam? </title>
+      
+      <p>
+        There will be a bonus problem worth 10% of the exam score (usually 10 points out of a 100-point exam). 
+        However, the total exam score won't exceed 100% adding the bonus points. 
+      </p>
+
+      <p>
+        The bonus problem usually lands on the conceptual side... 
+      </p>
+    </question>
+
+    <p>
+      <alert>Keep the questions coming and I will address them to the class if necessary...</alert>
+    </p>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-PracticeFinal">
+    <title>Richard's Final Exam in Summer 2025</title>
+    
+    <p>
+      The final exam Richard gave last term (summer 2025) is made available for your study below. 
+      Feel free to use it as a trial run to see 
+    </p>
+
+    <figure xml:id="MTH252_Su25_Final">
+      <caption>MTH 252 Final Exam in Summer 2025</caption>
+
+      <!-- Native PreTeXt way: an <interactive> with an @iframe -->
+      <!-- NOTE: path is relative to the built "external/" folder, so DO NOT include "external/". -->
+      <interactive iframe="pdfs/MTH252_Su25_Final.pdf" width="120%" aspect="8.5:11" />
+    </figure>
+
+    <p>
+      If you tried the final exam I gave last term, here is the
+      <url href="external/pdfs/MTH252_Su25_Final_Solution.pdf">Final Exam Solution (PDF)</url>
+      for you to check your work. 
+      <alert>No peeking before you try solving the problems!</alert>
+      One illusion students often hold is that they can master the math concepts by simply reading it. 
+      No, it won't work! 
+      We learn math through doing! 
+    </p>
+
+  </subsection>
+
+
+
+
+
+
+</section>
