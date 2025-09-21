@@ -1069,16 +1069,70 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "A.3",
   "title": "Some Famous Applications of Integrals",
-  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work    Final Exam PDF (inline viewer + download)     Download the PDF: Final Exam (PDF)    "
+  "body": " Some Famous Applications of Integrals  Text of section.   A physics and engineering application -- Work   "
 },
 {
-  "id": "fig-final-exam",
+  "id": "secB2-FinalReview",
+  "level": "1",
+  "url": "secB2-FinalReview.html",
+  "type": "Section",
+  "number": "B.1",
+  "title": "Final Exam Info",
+  "body": " Final Exam Info  Our final exam will be cumulative , which means it is a fair shot for me to ask anything we covered this term on the exam. The final exam is scheduled on Tuesday, December 9, from 9:00am to 10:50am, in our classroom, VB 269 .   Remember that all work must be shown for full credits.   We have done a lot of practice in class and on your homework. There are also exercises at the end of each section in this note.  A good tip to study for the exam is to make sure you know how to do all the problems in our class practice, homework, and the exercises at the end of each section.   Some Q&A's Regarding the Exam  Below are some questions that I was asked a lot before regarding the final exam of a class. I hope this list also addresses some of your questions.   What is a good way to study for the final exam?  Review the    If I have any questions, how can I get get help from Richard?  Emailing your questions to Richard is an option. But make sure you are asking specific questions and include your work if you want him to help troubleshoot the issues (so please don't email Richard things like... how do I do problem 1 on the homework. This is super vague and it is highly unlikely that Richard will solve the problem for you. Share some of your insights with him so he can build on it).  Richard's office hours are always a good choice to chat. He is usually super bored in his office if no student shows up...  In addition, the last day of class on Thursday, December 4, is scheduled to be the final review (if we don't need to catch up any material) in the form of Q&A. Make sure you bring your questions to the last day of class to ask Richard and\/or your classmates!  Potentially, Richard can host a study session for the final review on Monday, the day before our final exam. But he will need to check his schedule and see what his workload is for the week before deciding on this.    Do we need a (graphing) calculator on the exam?  I would say yes? It all depends on how comfortable you can to solve problems without the help of the technology. Having a calculator on the exam will definitely help you do some computations and visualize graphs.   Yet, you will still need to show all work for full credits!   I will not give credits to responses like \"the calculator showed that the answer is such and such\". I can't see what was shown on your calculator while grading your exam and you can't recreate the exact graph on the exam accurately.    Does notation matters? Are notations worth any points?   YES! Remember that I always point out the notation mistakes on your homework but never took point off it? Exams are the occasions that you show me what you have learned, including the proper use of notation! The better I can understand your work flow through the proper notation, the higher chance you will get more credits (and yes, I do give partial credits).   disclaimer: it is NOT my responsibility to guess what you mean on the exam if I get confused when reading your work.    Is there any bonus problem on the exam?  There will be a bonus problem worth 10% of the exam score (usually 10 points out of a 100-point exam). However, the total exam score won't exceed 100% adding the bonus points.  The bonus problem usually lands on the conceptual side...    Keep the questions coming and I will address them to the class if necessary...     Richard's Final Exam in Summer 2025  The final exam Richard gave last term (summer 2025) is made available for your study below. Feel free to use it as a trial run to see   MTH 252 Final Exam in Summer 2025      If you tried the final exam I gave last term, here is the Final Exam Solution (PDF) for you to check your work. No peeking before you try solving the problems! One illusion students often hold is that they can master the math concepts by simply reading it. No, it won't work! We learn math through doing!   "
+},
+{
+  "id": "subsec-QandA-Final-3",
   "level": "2",
-  "url": "secA3-ApplicationIntegral.html#fig-final-exam",
+  "url": "secB2-FinalReview.html#subsec-QandA-Final-3",
+  "type": "Question",
+  "number": "B.1.1",
+  "title": "What is a good way to study for the final exam?",
+  "body": " What is a good way to study for the final exam?  Review the  "
+},
+{
+  "id": "subsec-QandA-Final-4",
+  "level": "2",
+  "url": "secB2-FinalReview.html#subsec-QandA-Final-4",
+  "type": "Question",
+  "number": "B.1.2",
+  "title": "If I have any questions, how can I get get help from Richard?",
+  "body": " If I have any questions, how can I get get help from Richard?  Emailing your questions to Richard is an option. But make sure you are asking specific questions and include your work if you want him to help troubleshoot the issues (so please don't email Richard things like... how do I do problem 1 on the homework. This is super vague and it is highly unlikely that Richard will solve the problem for you. Share some of your insights with him so he can build on it).  Richard's office hours are always a good choice to chat. He is usually super bored in his office if no student shows up...  In addition, the last day of class on Thursday, December 4, is scheduled to be the final review (if we don't need to catch up any material) in the form of Q&A. Make sure you bring your questions to the last day of class to ask Richard and\/or your classmates!  Potentially, Richard can host a study session for the final review on Monday, the day before our final exam. But he will need to check his schedule and see what his workload is for the week before deciding on this.  "
+},
+{
+  "id": "subsec-QandA-Final-5",
+  "level": "2",
+  "url": "secB2-FinalReview.html#subsec-QandA-Final-5",
+  "type": "Question",
+  "number": "B.1.3",
+  "title": "Do we need a (graphing) calculator on the exam?",
+  "body": " Do we need a (graphing) calculator on the exam?  I would say yes? It all depends on how comfortable you can to solve problems without the help of the technology. Having a calculator on the exam will definitely help you do some computations and visualize graphs.   Yet, you will still need to show all work for full credits!   I will not give credits to responses like \"the calculator showed that the answer is such and such\". I can't see what was shown on your calculator while grading your exam and you can't recreate the exact graph on the exam accurately.  "
+},
+{
+  "id": "subsec-QandA-Final-6",
+  "level": "2",
+  "url": "secB2-FinalReview.html#subsec-QandA-Final-6",
+  "type": "Question",
+  "number": "B.1.4",
+  "title": "Does notation matters? Are notations worth any points?",
+  "body": " Does notation matters? Are notations worth any points?   YES! Remember that I always point out the notation mistakes on your homework but never took point off it? Exams are the occasions that you show me what you have learned, including the proper use of notation! The better I can understand your work flow through the proper notation, the higher chance you will get more credits (and yes, I do give partial credits).   disclaimer: it is NOT my responsibility to guess what you mean on the exam if I get confused when reading your work.  "
+},
+{
+  "id": "subsec-QandA-Final-7",
+  "level": "2",
+  "url": "secB2-FinalReview.html#subsec-QandA-Final-7",
+  "type": "Question",
+  "number": "B.1.5",
+  "title": "Is there any bonus problem on the exam?",
+  "body": " Is there any bonus problem on the exam?  There will be a bonus problem worth 10% of the exam score (usually 10 points out of a 100-point exam). However, the total exam score won't exceed 100% adding the bonus points.  The bonus problem usually lands on the conceptual side...  "
+},
+{
+  "id": "MTH252_Su25_Final",
+  "level": "2",
+  "url": "secB2-FinalReview.html#MTH252_Su25_Final",
   "type": "Figure",
-  "number": "A.3.1",
+  "number": "B.1.6",
   "title": "",
-  "body": " Final Exam PDF (inline viewer + download)     Download the PDF: Final Exam (PDF)   "
+  "body": " MTH 252 Final Exam in Summer 2025     "
 },
 {
   "id": "backmatter-2",
