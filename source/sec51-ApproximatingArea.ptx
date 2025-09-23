@@ -5,9 +5,10 @@
 
   <p> Text of section. </p>
 
-  <figure>
-    <image source="images/Riemann_sum_left_box.gif" width="60%" />
-    <caption>An animated illustration</caption>
+  <figure xml:id="fig-left-riemann">
+    <image source="images/riemann_sum_left_box.gif" width="60%" />
+    <caption>Riemann sum (left boxes).</caption>
   </figure>
+
 
 </section>

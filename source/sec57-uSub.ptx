@@ -81,12 +81,61 @@
       <p>
         Evaluate the indefinite integral <m>\displaystyle \int 2x\cos\left(x^2\right)\, dx</m>
       </p>
+
+      <hint>
+        <p>
+          Recall that this expression tells us to find the <em>general antiderivative</em> of the function <m>y = 2x\cos\left(x^2\right)</m>. 
+          So what functions will give the derivative of <m>y = \sin\left(x^2\right)</m>? 
+        </p>
+
+        <p>
+          Maybe part (a) in this investigation will give you an idea...
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Observing from part (a) of the investigation, we know that
+          <me>
+            \frac{d}{dx}\left(\sin\left(x^2\right)\right) = 2x\cos\left(x^2\right)
+          </me>
+          This implies that
+          <me>
+            \int 2x\cos\left(x^2\right)\, dx = \sin\left(x^2\right) + C
+          </me>
+        </p>
+
+        <p>
+          <alert>Observe that we don't simply integrate each factor of the integrand and multiply the results... </alert>
+        </p>
+      </solution>
     </task>
 
   </investigation>
 
+  <p>
+    See that we can’t just simply integrate each factor of the integrand when integrating a factor of two functions, especially when one of the factors is a composite function. 
+    Rather than guessing and checking (and relying on Richard providing the answers occasionally), it will be so nice for us to learn how to integrate product of functions when one of the factors is a composite function. 
+  </p>
+
+  <p>
+    You can kind of get a feeling that chain rule is probably important in this section. 
+    It turns out that we can come up with a new fancy method of integration by undoing the chain rule. 
+  </p>
+
   <subsection xml:id="subsec-571-Indefinite">
     <title>Substitution Method for Indefinite Integrals</title>
+
+    <p>
+      Suppose we have a composite function <m>y = F(u(x))</m> where <m>F</m> is the outside function and <m>u</m> is the inside function. 
+      By the chain rule, we know that
+      <md>
+        <mrow> \frac{d}{dx}\left(F(u(x))\right) \amp= F'(u(x))\cdot u'(x) </mrow>
+        <mrow> \amp= f(u(x))\cdot u'(x) </mrow>
+      </md>
+      if we are assuming the derivative of <m>F</m> is <m>f</m>. 
+      Recall we can rewrite a derivative formula using integration so we can rewrite the chain rule using integration. 
+    </p>
 
     <theorem xml:id="thm-usub-indefinite">
       <title>Substitution Method for Indefinite Integrals</title>
@@ -99,6 +148,11 @@
         </p>
       </statement>
     </theorem>
+
+    <p>
+      We can use this formula <alert>IF</alert> the format of the integrand stays exactly the same as the one in the formula. 
+      That is, the formula is useful when we are integrating the product of a composite function and the derivative of the inside function. 
+    </p>
 
     <example>
       
@@ -158,7 +212,7 @@
 
     <p>
       A common question here is where the <m>5x^4</m> went in the process since we only integrated the sine function. 
-      This is a great question that leads us to develop a less-confusing method for <m>u</m>-sub (using differentials). 
+      This is a great question that leads us to develop a less-confusing notation presentation for <m>u</m>-sub (using differentials). 
     </p>
 
     <p>
@@ -325,7 +379,7 @@
       </p>
 
       <note xml:id="note-isolate-dx-usub">
-        <title>Can we isolate <m>\boldsymbol{dt}</m> in the above example? </title>
+        <title>Can I isolate <m>\boldsymbol{dt}</m> in the above example? </title>
         
         <p>
           Recall the substitution Richard used in the previous example is to replace <m>t^3\, dt</m> by <m>\frac{du}{-8}</m> based on the equation 
@@ -418,7 +472,24 @@
           <title>Linear <m>\boldsymbol{u}</m>-sub</title>
           
           <p>
-            Recall (blahblahblah) 
+            Back in calculus 1, recall that we can simply multiply the slope of the inside function when taking the derivative <em>if the inside function is a linear function</em>. 
+            This skill transfers to <m>u</m>-sub too if the inside function, <m>u</m>, is a linear function. 
+            Instead of multiplying the slope, we will divide the slope. 
+          </p>
+
+          <p>
+            To justify this division process, we can assume that <m>u = mx + b</m>, a typical linear function. 
+            Then we obtain
+            <me>
+              \frac{du}{dx} = k
+              \qquad\implies\qquad
+              dx = \frac{du}{k}
+            </me>
+            See that if we replace the <m>dx</m> with the <m>\dfrac{du}{k}</m>, we essentially divide the answer by <m>k</m>. 
+          </p>
+
+          <p>
+            This is a quick little shortcut you can take to boost up the proficiency of <m>u</m>-sub, especially since this is one of the most widely-used methods among the other methods we will talk about in this class. 
           </p>
 
           <p>
@@ -457,7 +528,7 @@
       <p>
         Hmm but does <m>u</m> have to be some inside function? 
         The answer is no... 
-        Essentially we can pick whatever we want in the integrand to be <m>u</m>. 
+        Essentially we can pick whatever we want in the integrand to be <m>u</m>, but you want to make sure you are able to replace all the <m>x</m>'s with <m>u</m>'s. 
       </p>
 
       <example>
@@ -574,19 +645,19 @@
         </p>
 
         <p>
-          <alert>But there is a difference between picking a good <m>\boldsymbol{u}</m> and picking the most efficient <m>\boldsymbol{u}</m></alert>... 
+          <alert>But there is a difference between picking a good <m>\boldsymbol{u}</m> and picking the best <m>\boldsymbol{u}</m></alert>... 
         </p>
 
         <p>
           The above example should demonstrate the difference. 
-          The first choice of <m>u = \sin(x)</m> is a good <m>u</m> but is not the most efficient option, while the second choice of <m>u = \ln\left(\sin(x)\right)</m> is the most efficient <m>u</m> since we were able to evaluate the integral right after the substitution. 
+          The first choice of <m>u = \sin(x)</m> is a good <m>u</m> but is not the most efficient option, while the second choice of <m>u = \ln\left(\sin(x)\right)</m> is the best <m>u</m> since we were able to evaluate the integral right after the substitution. 
         </p>
 
         <p>
-          So I guess the next question here is <alert>how to pick the most efficient <m>\boldsymbol{u}</m></alert>... 
+          So I guess the next question here is <alert>how to pick the best <m>\boldsymbol{u}</m></alert>... 
           Well it actually takes a bit guess-and-check-ing and experience. 
           I will encourage you to first practice on how to pick a <alert>good</alert> <m>u</m> to make sure at least you can solve the problem. 
-          When you are comfortable and proficient at using <m>u</m>-sub, then knowing what the most efficient <m>u</m> will come naturally. 
+          Once you are comfortable and proficient at using <m>u</m>-sub, then knowing what the best <m>u</m> may be will come naturally. 
         </p>
       </note>
 
@@ -682,7 +753,7 @@
             <title>if you are thinking of using the "divide-and-cancel" method...</title>
             
             <p>
-              You may consider isolating the <m>dt</m> as follows
+              You may consider isolating the <m>dt</m> as follows (the hidden assumption here is that <m>t\neq 0</m>...)
               <me>
                 \frac{du}{dt} = -2t
                 \qquad\implies\qquad
@@ -717,8 +788,100 @@
           <title>Fun fact about this integral</title>
           
           <p>
-            It turns out that there is no elementary function 
+            It turns out that there is no elementary function we can use to express the general antiderivative of <m>y = e^{-t^2}</m>.
+            Yet we often need to deal with this integral in many applications of probability and statistics (we will look at an example in section 8.1) so we defined a whole function based on it, called the <term>error function</term>.  
           </p>
+          <p>
+            <definition xml:id="def-ErrorFunction">
+              <title>Error Functions</title>
+              <statement>
+                <p>
+                  The <term>error function</term> is defined as 
+                  <men xml:id="eqn-def-ErrorFunction">
+                    \operatorname{erf}(x) := \frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2}\, dt
+                  </men>
+                </p>
+              </statement>
+            </definition>
+          </p>
+
+          <p>
+            The graph of <m>y=\operatorname{erf}(x)</m> is shown below.
+          </p>
+
+          <figure xml:id="fig-erf-graph">
+            <caption>The graph of the error function <m>y = \operatorname{erf}(x)</m>.</caption>
+            <image alt="Graph of y = erf(x) with horizontal asymptotes at y=±1">
+              <asymptote><![CDATA[
+                import graph;
+
+                size(300);
+
+                // Curve using built-in erf
+                guide G = graph(erf, -3, 3, n=400);
+                draw(G, red+0.4bp, Arrows);
+                draw(G, red+1.2bp);
+
+                // Bounds
+                xlimits(-3.2, 3.2);
+                ylimits(-1.2, 1.2, Crop);
+
+                // Axes THROUGH THE ORIGIN (replaces the xaxis/yaxis lines) 
+                draw((-3.5,0)--(3.5,0), black+0.4bp, Arrow);
+                draw((0,-1.5)--(0,1.5), black+0.4bp, Arrow);
+                
+                label("$x$", (3.4,0), S);
+                label("$y$", (0,1.4), W);
+
+                label("$-3$", (-3,0), S);
+                label("$-2$", (-2,0), S);
+                label("$-1$", (-1,0), S);
+                label("$1$", (1,0), S);
+                label("$2$", (2,0), S);
+                label("$3$", (3,0), S);
+
+                label("$-1$", (0,-1), W);
+                label("$1$", (0,1), W);
+
+                // Horizontal asymptotes y=±1
+                draw((-3.5, 1) -- (3.5, 1), gray + dashed);
+                draw((-3.5,-1) -- (3.5,-1), gray + dashed);
+              ]]></asymptote>
+            </image>
+          </figure>
+
+          <p>
+            There are a couple properties we can observe directly from the graph: 
+            <ul>
+              <li>
+                <p>
+                  <m>\operatorname{erf}(0) = 0</m> since the graph passes the origin. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  The error function is an <alert>odd</alert> function, which means the graph is symmetric about the origin. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  There are two horizontal asymptotes at <m>y = \pm 1</m>. 
+                  In other words, 
+                  <me>
+                    \lim_{x\to -\infty} \operatorname{erf}(x) = -1
+                    \quad\text{ and }\quad
+                    \lim_{x\to \infty} \operatorname{erf}(x) = 1
+                  </me>
+                </p>
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            The error function is closely related to the normal distribution as it is obtained by integrating the Gaussian distribution of mean <m>0</m> and variance <m>\frac{1}{2}</m>. 
+            We will briefly elaborate it a bit in section 8.1 when we talk about the normal distribution. 
+          </p>
+            
         </note>
 
       </task>
@@ -792,6 +955,12 @@
 
   <subsection xml:id="subsec-573-Definite">
     <title>Substitution Method for Definite Integrals</title>
+
+    <p>
+      After we are fluent at finding the indefinite integral using <m>u</m>-sub, then evaluating the definite integral using <m>u</m>-sub should be straightforward since the only additional steps are plugging in the upper and lower limits to some antiderivative and do the subtraction, guaranteed by the Fundamental Theorem of calculus. 
+      Yet things are a little bit more complicated as it appears. 
+      The process of changing the variable complicates the notation. 
+    </p>
 
     <example>
       <p>
@@ -879,12 +1048,62 @@
           <md>
             <mrow>\int_{-1}^2 \sqrt{5x + 6}\, dx \amp= \frac{1}{5}\int_1^{16} \sqrt{u}\, du </mrow>
             <mrow> \amp= \frac{1}{5}\cdot \frac{2}{3}u^{\frac{3}{2}}\bigg|_{u = 1}^{16} </mrow>
-            <mrow> \amp= \frac{2}{15}\left(16^{\frac{3}{2} - 1^{\frac{3}{2}}}\right) </mrow>
+            <mrow> \amp= \frac{2}{15}\left(16^{\frac{3}{2}} - 1^{\frac{3}{2}}\right) </mrow>
             <mrow> \amp= \frac{2}{15}(64 - 1) </mrow>
             <mrow> \amp= \frac{42}{5} </mrow>
           </md>
         </p>
       </solution>
+
+      <note>
+        <title>Why splitting hairs and calling them two different methods?</title>
+        
+        <p>
+          You may be wondering about this: <alert>aren't the two methods essentially the same? </alert>
+          Why making this distinction on the limits of integration... 
+        </p>
+
+        <p>
+          The answer is to avoid confusion and ambiguity of the work. 
+          Imagine someone mixed up the notation of the two methods in this example by writing the work like this: 
+          <md>
+            <mrow>\int_{-1}^2 \sqrt{5x + 6}\, dx \amp= \frac{1}{5} \int_{-1}^2 \sqrt{u}\, du </mrow>
+            <mrow> \amp= \frac{1}{5} \cdot\frac{2}{3}u^{\frac{3}{2}}\bigg|_{-1}^2</mrow>
+            <mrow> \amp= \frac{2}{15}\left((5x + 6)^{\frac{3}{2}}\right)\bigg|_{-1}^2 </mrow>
+            <mrow> \amp= \frac{2}{15}\left(16^{\frac{3}{2}} - 1^{\frac{3}{2}} \right) </mrow>
+            <mrow> \amp= \frac{42}{5} </mrow>
+          </md>
+        </p>
+
+        <p>
+          Well the limits of integration isn't consistent going across the first equal sign. 
+          What we think the first line should be is really
+          <me>
+            \int_{x = -1}^{x = 2} \sqrt{5x + 6}\, dx = \frac{1}{5} \int_{x = -1}^{x = 2} \sqrt{u}\, du
+          </me>
+          Observe that we didn't fully replace all the <m>x</m>'s in terms of <m>u</m>'s n step 1. 
+          This is bad. 
+        </p>
+
+        <p>
+          Even if you can try to remember to replace all the <m>u</m>'s back with <m>x</m>'s before you plug in the limits of integration (a lot of the students can't, by the way), not everything are equal in the work... 
+        </p>
+
+        <p>
+          We don't interpret <m>\displaystyle \frac{1}{5} \int_{-1}^2 \sqrt{u}\, du</m> as <m>\displaystyle \frac{1}{5} \int_{x = -1}^{x = 2} \sqrt{u}\, du</m> in general... 
+        </p>
+
+        <p>
+          If you put <m>\frac{1}{5} \int_{-1}^2 \sqrt{u}\, du</m> to Desmos and let it do the calculation for you, then the answer returned is <em>undefined</em>, not <m>\frac{42}{5}</m>. 
+          The reason is because most calculators (and we should too!) will directly plug in the limits of integrations to the specific variable used in the integral (so Desmos interpreted the limits of integration as some <m>u</m> values). 
+          This implies that our work suggests <em>underfine</em><m> = \frac{42}{5}</m>... Hmm but this is wrong. 
+        </p>
+
+        <p>
+          <alert>Keeping a clear and correct notation will not only help you keep track of the work in writing, but also to make sure the work you produced is mathematically correct. </alert>
+          This is why Richard emphasizes the different notations as two different methods. 
+        </p>
+      </note>
     </example>
 
     <theorem xml:id="thm-usub-definite">
@@ -902,7 +1121,6 @@
     <p>
       What the theorem emphasizes is <alert>to adjust the limits of integration when changing the variable</alert>. 
       Observe in the above example that we don't need to plug back <m>x</m> if you adjust the limits of integration along with your <m>u</m>-sub. 
-      
     </p>
 
     <example>
@@ -961,6 +1179,12 @@
     </example>
     
   </subsection>
+
+  <p>
+    Later in the term, we will be dealing with integrals with trig in it (trigonometric integrals). 
+    We can evaluate a lot of trigonometric integrals using <m>u</m>-sub since the derivative or sine and cosine are just each other (if we neglect the coefficient). 
+    If you need more practice of <m>u</m>-sub, jumping to section 7.2 is a good idea. 
+  </p>
 
   <worksheet xml:id="ws-sec57">
     <title>Some Exercises for this section</title>
