@@ -755,16 +755,85 @@
 
   <p>
     Using the summation notation, we can rewrite the formulas for <m>L_N</m>, <m>R_N</m>, and <m>M_N</m> more briefly. 
-    <me>
-      L_N = \Delta x \sum_{i = 0}^{N - 1} f\left(x_i\right)
-    </me>
-    <me>
-      R_N = \Delta x \sum_{i = 1}^N f\left(x_i\right)
-    </me>
-    <me>
-      M_N = \Delta x \sum_{i = 0}^{N-1} f\left(\frac{x_i + x_{i + 1}}{2}\right)
-    </me>
+    <md>
+      <mrow>L_N \amp= \Delta x\bigg(f\left(x_0\right) + f\left(x_1\right) + f\left(x_2\right) + \cdots + f\left(x_{N-1}\right)\bigg)</mrow>
+      <mrow> \amp= \Delta x \sum_{i = 0}^{N - 1} f\left(x_i\right)</mrow>
+      <mrow> \amp = \Delta x \sum_{i = 0}^{N-1} f(a + i\cdot \Delta x)</mrow>
+    </md>
   </p>
+  <p>
+    <md>
+      <mrow>R_N \amp= \Delta x\bigg(f\left(x_1\right) + f\left(x_2\right) + f\left(x_3\right) + \cdots + f\left(x_N\right)\bigg)</mrow>
+      <mrow> \amp= \Delta x \sum_{i = 1}^N f\left(x_i\right)</mrow>
+      <mrow> \amp = \Delta x \sum_{i = 1}^{N} f(a + i\cdot \Delta x)</mrow>
+    </md>
+  </p>
+  <p>
+    <md>
+      <mrow>M_N \amp= \Delta x\bigg(f\left(\frac{x_0 + x_1}{2}\right) + f\left(\frac{x_1 + x_2}{2}\right) + \cdots + f\left(\frac{x_{N-1} +x_N}{2}\right)\bigg)</mrow>
+      <mrow> \amp= \Delta x \sum_{i = 0}^{N-1} f\left(\frac{x_i + x_{i + 1}}{2}\right)</mrow>
+      <mrow> \amp = \Delta x \sum_{i = 0}^{N-1} f\left(a + \left(\frac{1}{2} + i\right)\cdot \Delta x\right)</mrow>
+    </md>
+  </p>
+
+  <p>
+    <alert>But Richard...</alert> why introducing another fancy symbol of <m>\Sigma</m> to make the formulas even more fancier-looking? 
+    Well there are several reasons... One of the reasons we care about in this section is that we can actually insert this <m>\Sigma</m> to Desmos calculator and let it do the work for you (as opposed to you figuring out all the area of the rectangle stripes... not that you can't do it this way). 
+  </p>
+
+  <p>
+    Another reason is that we can actually do some manipulation with it (e.g., find the limit of it when we have infinitely many rectangles!) if we want to increase the precision of our apprpoximation. 
+    This is <alert> A BIG IDEA</alert> in integral calculus that we will discuss in the next section! 
+  </p>
+
+  <p>
+    This is just a quick preview. For those of you who are thinking about taking MTH 253Z Sequences and Series. Guess what a series is! Series, roughly speaking, is the <em>sum</em> of a bunch of things so you will definitely see the <m>\Sigma</m> all over the place in MTH 253Z. 
+  </p>
+
+  <example>
+    <p>
+      Using <url href="https://www.desmos.com/calculator">Desmos</url>, 
+      approximate the area under the graph of <m>g(x) = \sqrt{6x + 2}</m> on the intevral <m>[1,3]</m> using <m>L_6</m>, <m>R_6</m>, and <m>M_6</m>. 
+    </p>
+
+    <hint>
+      <p>
+        I will help out with the set up! 
+      </p>
+
+      <p>
+        We will first need a function, so let's type "g(x)=sqrt(6x+2)" in the first line. 
+      </p>
+
+      <p>
+        We will also need to know the value of <m>a</m>, <m>N</m>, and <m>\Delta x</m> in order to use the formula... So what are they? 
+      </p>
+
+      <p>
+        If we want to find <m>L_6</m>, then, in the next line, type "L_6=sum". Then you should see a <m>\Sigma</m> popping out on the screen. 
+      </p>
+
+      <p>
+        Now you can put in the result of the formula (of course, with the actual value of <m>a</m>, <m>N</m>, and <m>\Delta x</m>) in this line. 
+      </p>
+
+      <p>
+        <em>Quick Note:</em> You also want to change the index to <m>i</m> instead of <m>n</m> since this is what the formulas say (or you can replace all the <m>i</m>'s with <m>n</m>'s in the formulas). 
+        Just make sure that the index notation is consistent. 
+      </p>
+    </hint>
+
+    <solution>
+      <figure>
+        <caption>Desmos Demo</caption>
+        <image source="external/images/desmos_calculation_demo.png" width="60%" />
+      </figure>
+
+      <p>
+        Direct link: <url href="https://drive.google.com/uc?export=view&amp;id=1lJpdp9AEgrROGBeZQ6lIvEkcsWu3fo54">open image</url>
+      </p>
+    </solution>
+  </example>
   
 </subsection>
 
@@ -775,6 +844,8 @@
     Now that we know how to approximate the area under the curve using rectangles. 
     Then the next question here is how to make our approximation better and better. 
   </p>
+
+  
 </subsection>
 
 
