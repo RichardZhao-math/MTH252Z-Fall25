@@ -733,7 +733,7 @@
     </example>
 
     <p>
-      Later in the term, we will develop more strategies to integrate trigonometric integrals (mainly in <xref ref="sec72-TrigIntegral"/>) so stay tuned! 
+      Later in the term, we will develop more strategies to integrate trigonometric integrals (mainly in section 7.2) so stay tuned! 
     </p>
 
     <p>
@@ -795,7 +795,7 @@
     
   </subsection>
 
-  <subsection xm3:id="subsec-533-DifferentialEquationsANDIVP">
+  <subsection xml:id="subsec-533-DifferentialEquationsANDIVP">
     <title>Differential Equations and IVP</title>
     
     <p>

@@ -808,47 +808,7 @@
           <p>
             The graph of <m>y=\operatorname{erf}(x)</m> is shown below.
           </p>
-
-          <figure xml:id="fig-erf-graph">
-            <caption>The graph of the error function <m>y = \operatorname{erf}(x)</m>.</caption>
-            <image alt="Graph of y = erf(x) with horizontal asymptotes at y=±1">
-              <asymptote><![CDATA[
-                import graph;
-
-                size(300);
-
-                // Curve using built-in erf
-                guide G = graph(erf, -3, 3, n=400);
-                draw(G, red+0.4bp, Arrows);
-                draw(G, red+1.2bp);
-
-                // Bounds
-                xlimits(-3.2, 3.2);
-                ylimits(-1.2, 1.2, Crop);
-
-                // Axes THROUGH THE ORIGIN (replaces the xaxis/yaxis lines) 
-                draw((-3.5,0)--(3.5,0), black+0.4bp, Arrow);
-                draw((0,-1.5)--(0,1.5), black+0.4bp, Arrow);
-                
-                label("$x$", (3.4,0), S);
-                label("$y$", (0,1.4), W);
-
-                label("$-3$", (-3,0), S);
-                label("$-2$", (-2,0), S);
-                label("$-1$", (-1,0), S);
-                label("$1$", (1,0), S);
-                label("$2$", (2,0), S);
-                label("$3$", (3,0), S);
-
-                label("$-1$", (0,-1), W);
-                label("$1$", (0,1), W);
-
-                // Horizontal asymptotes y=±1
-                draw((-3.5, 1) -- (3.5, 1), gray + dashed);
-                draw((-3.5,-1) -- (3.5,-1), gray + dashed);
-              ]]></asymptote>
-            </image>
-          </figure>
+          
 
           <p>
             There are a couple properties we can observe directly from the graph: 
