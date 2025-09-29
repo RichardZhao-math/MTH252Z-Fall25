@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -149,9 +150,19 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">Approximating Area by Rectangles</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-512-SummationNotation" class="internal"><span class="title">Summation Notation</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-513-Compute_Limit_Approximation" class="internal"><span class="title">Computing Area as the Limit of Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-514-LimitSummation" class="internal"><span class="title">Limit of the approximation algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#ws-sec51" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-521-RiemannSum" class="internal"><span class="title">Riemann Sum and Definite Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-522-SignedArea" class="internal"><span class="title">Definite Integral and Signed Area</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-523-Properties_DefiniteIntegral" class="internal"><span class="title">Properties of Definite Integral</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#ws-sec52" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -189,11 +200,74 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Objectives"><a href="#sec51-ApproximatingArea-2-2" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><article class="investigation project-like" id="sec51-ApproximatingArea-3"><h3 class="heading">
 <span class="type">Investigation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="sec51-ApproximatingArea-3-1"><div class="para" id="sec51-ApproximatingArea-3-1-1">text text text...<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="sec51-ApproximatingArea-3-1"><div class="para" id="sec51-ApproximatingArea-3-1-1">Let’s find the area under the curve of some simple functions!<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="sec51-ApproximatingArea-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec51-ApproximatingArea-3-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Task 5.1.1.a"><a href="#sec51-ApproximatingArea-3-2" title="Copy heading and permalink for Task 5.1.1.a" aria-label="Copy heading and permalink for Task 5.1.1.a">🔗</a></div></article><div class="autopermalink" data-description="Investigation 5.1.1"><a href="#sec51-ApproximatingArea-3" title="Copy heading and permalink for Investigation 5.1.1" aria-label="Copy heading and permalink for Investigation 5.1.1">🔗</a></div></article><section class="subsection" id="subsec-511-Approximate_Rectangle"><h3 class="heading hide-type">
+<div class="para" id="sec51-ApproximatingArea-3-2-1">Find the area of the function <span class="process-math">\(y = 2\)</span> on the interval <span class="process-math">\([1,3]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec51-ApproximatingArea-3-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec51-ApproximatingArea-3-2-2-1">Graph it out! Label the region of interest! What shape is it?<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.1.1.a.1"><a href="#sec51-ApproximatingArea-3-2-2" title="Copy heading and permalink for Hint 5.1.1.a.1" aria-label="Copy heading and permalink for Hint 5.1.1.a.1">🔗</a></div>
+</div></details><details id="sec51-ApproximatingArea-3-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec51-ApproximatingArea-3-2-3-1">Let’s first graph the function and highlight the region of interest<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec51-ApproximatingArea-3-2-3-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec51-ApproximatingArea-3-2-3-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y = 2\)</span> with the region under the curve on <span class="process-math">\([1,3]\)</span> shaded.<div class="autopermalink" data-description="Figure 5.1.1"><a href="#sec51-ApproximatingArea-3-2-3-2" title="Copy heading and permalink for Figure 5.1.1" aria-label="Copy heading and permalink for Figure 5.1.1">🔗</a></div></figcaption></figure><div class="para logical" id="sec51-ApproximatingArea-3-2-3-3">
+<div class="para">Observe that the region is a <em class="alert">rectangle</em> with the width of <span class="process-math">\(3\)</span> and height of <span class="process-math">\(2\text{.}\)</span> Hence, the area under the curve is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Area} = 3\cdot 2 = 6
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1.1.a.1"><a href="#sec51-ApproximatingArea-3-2-3" title="Copy heading and permalink for Solution 5.1.1.a.1" aria-label="Copy heading and permalink for Solution 5.1.1.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 5.1.1.a"><a href="#sec51-ApproximatingArea-3-2" title="Copy heading and permalink for Task 5.1.1.a" aria-label="Copy heading and permalink for Task 5.1.1.a">🔗</a></div></article><article class="task exercise-like" id="sec51-ApproximatingArea-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec51-ApproximatingArea-3-3-1">Find the area of the function <span class="process-math">\(y = 2x\)</span> on the interval <span class="process-math">\([0,3]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec51-ApproximatingArea-3-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec51-ApproximatingArea-3-3-2-1">Graph it out! Label the region of interest! What shape is it?<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.1.1.b.1"><a href="#sec51-ApproximatingArea-3-3-2" title="Copy heading and permalink for Hint 5.1.1.b.1" aria-label="Copy heading and permalink for Hint 5.1.1.b.1">🔗</a></div>
+</div></details><details id="sec51-ApproximatingArea-3-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec51-ApproximatingArea-3-3-3-1">Let’s first graph the function and highlight the region of interest<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec51-ApproximatingArea-3-3-3-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec51-ApproximatingArea-3-3-3-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y = 2x\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded.<div class="autopermalink" data-description="Figure 5.1.2"><a href="#sec51-ApproximatingArea-3-3-3-2" title="Copy heading and permalink for Figure 5.1.2" aria-label="Copy heading and permalink for Figure 5.1.2">🔗</a></div></figcaption></figure><div class="para logical" id="sec51-ApproximatingArea-3-3-3-3">
+<div class="para">Observe that the region is a <em class="alert">triangle</em> with the side of <span class="process-math">\(2\text{.}\)</span> Hence, the area under the curve is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Area} = \frac{1}{2}\cdot 3 \cdot 6 = 9
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1.1.b.1"><a href="#sec51-ApproximatingArea-3-3-3" title="Copy heading and permalink for Solution 5.1.1.b.1" aria-label="Copy heading and permalink for Solution 5.1.1.b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 5.1.1.b"><a href="#sec51-ApproximatingArea-3-3" title="Copy heading and permalink for Task 5.1.1.b" aria-label="Copy heading and permalink for Task 5.1.1.b">🔗</a></div></article><article class="task exercise-like" id="sec51-ApproximatingArea-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec51-ApproximatingArea-3-4-1">Find the area of the function <span class="process-math">\(y = 2x\)</span> on the interval <span class="process-math">\([1,3]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec51-ApproximatingArea-3-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec51-ApproximatingArea-3-4-2-1">Graph it out! Label the region of interest! What shape is it?<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.1.1.c.1"><a href="#sec51-ApproximatingArea-3-4-2" title="Copy heading and permalink for Hint 5.1.1.c.1" aria-label="Copy heading and permalink for Hint 5.1.1.c.1">🔗</a></div>
+</div></details><details id="sec51-ApproximatingArea-3-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec51-ApproximatingArea-3-4-3-1">Let’s first graph the function and highlight the region of interest<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec51-ApproximatingArea-3-4-3-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec51-ApproximatingArea-3-4-3-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y = 2x\)</span> with the region under the curve on <span class="process-math">\([1,3]\)</span> shaded.<div class="autopermalink" data-description="Figure 5.1.3"><a href="#sec51-ApproximatingArea-3-4-3-2" title="Copy heading and permalink for Figure 5.1.3" aria-label="Copy heading and permalink for Figure 5.1.3">🔗</a></div></figcaption></figure><div class="para logical" id="sec51-ApproximatingArea-3-4-3-3">
+<div class="para">Observe that the region is a <em class="alert">trapezoid</em>. Hence, the area under the curve is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Area} = \frac{2(2 + 6)}{2} = 8
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-3-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1.1.c.1"><a href="#sec51-ApproximatingArea-3-4-3" title="Copy heading and permalink for Solution 5.1.1.c.1" aria-label="Copy heading and permalink for Solution 5.1.1.c.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 5.1.1.c"><a href="#sec51-ApproximatingArea-3-4" title="Copy heading and permalink for Task 5.1.1.c" aria-label="Copy heading and permalink for Task 5.1.1.c">🔗</a></div></article><div class="autopermalink" data-description="Investigation 5.1.1"><a href="#sec51-ApproximatingArea-3" title="Copy heading and permalink for Investigation 5.1.1" aria-label="Copy heading and permalink for Investigation 5.1.1">🔗</a></div></article><div class="para" id="sec51-ApproximatingArea-4">These problems are easy if the region of interest is a known geometric figure... But things are not always so nice... We will need a way to find (or at least approximate) the area under the curve of any function.<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="subsec-511-Approximate_Rectangle"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Approximating Area by Rectangles</span>
 </h3>
 <div class="para" id="subsec-511-Approximate_Rectangle-2">If the region under the curve doesn’t look like a known geometric figure, then we can’t find the area by searching an area formula we learned before. Before thinking about finding the <em class="emphasis">precise</em> area under the curve, let’s come up with a method to <em class="alert">approximate</em> the area.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -201,7 +275,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-511-Approximate_Rectangle-3">One tool we have in our toolkit is to split the region into a bunch of rectangular strips and we can approximate the area by summing the area of these rectangular strips.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="subsec-511-Approximate_Rectangle-4"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="subsec-511-Approximate_Rectangle-4-1">
 <div class="para">Approximate the area under the graph of <span class="process-math">\(f(x) = x^2 + 1\)</span> on the interval <span class="process-math">\([0,3]\)</span> using <em class="emphasis">three</em> rectangles in the following steps:</div>
@@ -227,19 +301,19 @@ eBookConfig.enable_chatcodes =  false;
 <details id="subsec-511-Approximate_Rectangle-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para" id="subsec-511-Approximate_Rectangle-4-2-1">The first two steps should be straightforward. But how do we determine what the height of each rectangle is... (or does it matter?)<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.1.1.1"><a href="#subsec-511-Approximate_Rectangle-4-2" title="Copy heading and permalink for Hint 5.1.1.1" aria-label="Copy heading and permalink for Hint 5.1.1.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 5.1.4.1"><a href="#subsec-511-Approximate_Rectangle-4-2" title="Copy heading and permalink for Hint 5.1.4.1" aria-label="Copy heading and permalink for Hint 5.1.4.1">🔗</a></div>
 </div></details><details id="subsec-511-Approximate_Rectangle-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="subsec-511-Approximate_Rectangle-4-3-1">Let’s first graph the function and highlight the region of interest in green.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="subsec-511-Approximate_Rectangle-4-3-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-511-Approximate_Rectangle-4-3-2-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span><div class="autopermalink" data-description="Figure 5.1.2"><a href="#subsec-511-Approximate_Rectangle-4-3-2" title="Copy heading and permalink for Figure 5.1.2" aria-label="Copy heading and permalink for Figure 5.1.2">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-4-3-3">Now we want to partition <span class="process-math">\([0,3]\)</span> into <em class="alert">three equal parts</em>. This implies that the three parts are: <span class="process-math">\([0,1]\text{,}\)</span> <span class="process-math">\([1,2]\text{,}\)</span> and <span class="process-math">\([2,3]\text{.}\)</span> Observe that the length of each part is <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span><div class="autopermalink" data-description="Figure 5.1.5"><a href="#subsec-511-Approximate_Rectangle-4-3-2" title="Copy heading and permalink for Figure 5.1.5" aria-label="Copy heading and permalink for Figure 5.1.5">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-4-3-3">Now we want to partition <span class="process-math">\([0,3]\)</span> into <em class="alert">three equal parts</em>. This implies that the three parts are: <span class="process-math">\([0,1]\text{,}\)</span> <span class="process-math">\([1,2]\text{,}\)</span> and <span class="process-math">\([2,3]\text{.}\)</span> Observe that the length of each part is <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-4-3-4">We will next construct three rectangles using these parts as the width. <em class="alert">Then what about the height of each rectangle?</em><div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-4-3-5">You can actually pick the height of each rectangle that makes sense. For demonstration purposes, Richard constructed his three rectangles by <em class="emphasis">aligning the upper left corner of each rectangle on the graph</em>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="subsec-511-Approximate_Rectangle-4-3-6"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-511-Approximate_Rectangle-4-3-6-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three left-endpoint rectangles (upper-left corners marked).<div class="autopermalink" data-description="Figure 5.1.3"><a href="#subsec-511-Approximate_Rectangle-4-3-6" title="Copy heading and permalink for Figure 5.1.3" aria-label="Copy heading and permalink for Figure 5.1.3">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-4-3-7">Observe that the area of the orange region is an <em class="emphasis">approximation</em> of the area of the region of interest (the green region). We can actually find the height of each of the three rectangles, which allows us to compute the area of the rectangles.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three left-endpoint rectangles (upper-left corners marked).<div class="autopermalink" data-description="Figure 5.1.6"><a href="#subsec-511-Approximate_Rectangle-4-3-6" title="Copy heading and permalink for Figure 5.1.6" aria-label="Copy heading and permalink for Figure 5.1.6">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-4-3-7">Observe that the area of the orange region is an <em class="emphasis">approximation</em> of the area of the region of interest (the green region). We can actually find the height of each of the three rectangles, which allows us to compute the area of the rectangles.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-4-3-8">The height of each rectangle is the <em class="alert">function value</em> of the left-endpoint of each partition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -258,13 +332,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-511-Approximate_Rectangle-4-3-10">
 <em class="alert">Observe that this is just an approximation of the area under the curve. This is not the actual area under the curve.</em> We can observe, from the diagram above, that <span class="process-math">\(8\)</span> is an <em class="alert">under-estimate</em> of the actual area.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-4-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.1.1"><a href="#subsec-511-Approximate_Rectangle-4-3" title="Copy heading and permalink for Solution 5.1.1.1" aria-label="Copy heading and permalink for Solution 5.1.1.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.1"><a href="#subsec-511-Approximate_Rectangle-4" title="Copy heading and permalink for Example 5.1.1" aria-label="Copy heading and permalink for Example 5.1.1">🔗</a></div></article><div class="para" id="subsec-511-Approximate_Rectangle-5">Observe that Richard made a choice of aligning the <em class="alert">upper left</em> corner of each rectangle on the curve when he constructed his three rectangles. Let’s give this method of approximation a fancy name! This is called the <em class="alert">left-endpoint approximation</em>. Notationally speaking, we can represent this approximation by <span class="process-math">\(L_3\)</span> (left-endpoint approximation using three rectangles).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 5.1.4.1"><a href="#subsec-511-Approximate_Rectangle-4-3" title="Copy heading and permalink for Solution 5.1.4.1" aria-label="Copy heading and permalink for Solution 5.1.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.4"><a href="#subsec-511-Approximate_Rectangle-4" title="Copy heading and permalink for Example 5.1.4" aria-label="Copy heading and permalink for Example 5.1.4">🔗</a></div></article><div class="para" id="subsec-511-Approximate_Rectangle-5">Observe that Richard made a choice of aligning the <em class="alert">upper left</em> corner of each rectangle on the curve when he constructed his three rectangles. Let’s give this method of approximation a fancy name! This is called the <em class="alert">left-endpoint approximation</em>. Notationally speaking, we can represent this approximation by <span class="process-math">\(L_3\)</span> (left-endpoint approximation using three rectangles).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-6">You may be wondering if we can align the <em class="emphasis">upper right</em> corner of each rectangle on the curve when you construct the rectangle... We certainly can! Let’s try the same problem but with a slightly different way of constructing the rectangles!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="subsec-511-Approximate_Rectangle-7"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="subsec-511-Approximate_Rectangle-7-1">Approximate the area under the graph of <span class="process-math">\(f(x) = x^2 + 1\)</span> on the interval <span class="process-math">\([0,3]\)</span> using <em class="emphasis">three</em> rectangles with equal-width and the <em class="alert">upper right</em> corner of each rectangle is on the curve.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -273,12 +347,12 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-7-2-2">What is the <em class="emphasis">height</em> of each rectangle?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.1.4.1"><a href="#subsec-511-Approximate_Rectangle-7-2" title="Copy heading and permalink for Hint 5.1.4.1" aria-label="Copy heading and permalink for Hint 5.1.4.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 5.1.7.1"><a href="#subsec-511-Approximate_Rectangle-7-2" title="Copy heading and permalink for Hint 5.1.7.1" aria-label="Copy heading and permalink for Hint 5.1.7.1">🔗</a></div>
 </div></details><details id="subsec-511-Approximate_Rectangle-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="subsec-511-Approximate_Rectangle-7-3-1">Below is the diagram of three equal-width rectangles and each of the <em class="alert">upper right</em> corner is on the curve.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="subsec-511-Approximate_Rectangle-7-3-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-511-Approximate_Rectangle-7-3-2-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three right-endpoint rectangles (upper-right corners marked).<div class="autopermalink" data-description="Figure 5.1.5"><a href="#subsec-511-Approximate_Rectangle-7-3-2" title="Copy heading and permalink for Figure 5.1.5" aria-label="Copy heading and permalink for Figure 5.1.5">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-7-3-3">Observe that the height of each rectangle is the <em class="alert">function value</em> of the right-endpoint of each partition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-7-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three right-endpoint rectangles (upper-right corners marked).<div class="autopermalink" data-description="Figure 5.1.8"><a href="#subsec-511-Approximate_Rectangle-7-3-2" title="Copy heading and permalink for Figure 5.1.8" aria-label="Copy heading and permalink for Figure 5.1.8">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-7-3-3">Observe that the height of each rectangle is the <em class="alert">function value</em> of the right-endpoint of each partition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-7-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-511-Approximate_Rectangle-7-3-4">
 <div class="para">Hence, an approximation of the area under the curve, using these three rectangles, is</div>
@@ -295,25 +369,25 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-511-Approximate_Rectangle-7-3-5">
 <em class="alert">Remember that this is just another approximation of the area under the curve. This is not the actual area under the curve.</em> We can observe, from the diagram above, that <span class="process-math">\(17\)</span> is an <em class="alert">over-estimate</em> of the actual area.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-7-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.4.1"><a href="#subsec-511-Approximate_Rectangle-7-3" title="Copy heading and permalink for Solution 5.1.4.1" aria-label="Copy heading and permalink for Solution 5.1.4.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.4"><a href="#subsec-511-Approximate_Rectangle-7" title="Copy heading and permalink for Example 5.1.4" aria-label="Copy heading and permalink for Example 5.1.4">🔗</a></div></article><div class="para" id="subsec-511-Approximate_Rectangle-8">Similarly, we can name this method the <em class="alert">right-endpoint approximation</em>! Notationally speaking, we can represent this approximation by <span class="process-math">\(R_3\)</span> (right-endpoint approximation using three rectangles).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 5.1.7.1"><a href="#subsec-511-Approximate_Rectangle-7-3" title="Copy heading and permalink for Solution 5.1.7.1" aria-label="Copy heading and permalink for Solution 5.1.7.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.7"><a href="#subsec-511-Approximate_Rectangle-7" title="Copy heading and permalink for Example 5.1.7" aria-label="Copy heading and permalink for Example 5.1.7">🔗</a></div></article><div class="para" id="subsec-511-Approximate_Rectangle-8">Similarly, we can name this method the <em class="alert">right-endpoint approximation</em>! Notationally speaking, we can represent this approximation by <span class="process-math">\(R_3\)</span> (right-endpoint approximation using three rectangles).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-9">We can actually make it even more fancier by aligning the <em class="emphasis">midpoint</em> of each rectangle on the curve when you construct the rectangle! There are pros and cons to make the method fancier. Let’s try the same problem with this slightly fancier method and see what the pros and cons are!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="subsec-511-Approximate_Rectangle-10"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="subsec-511-Approximate_Rectangle-10-1">Approximate the area under the graph of <span class="process-math">\(f(x) = x^2 + 1\)</span> on the interval <span class="process-math">\([0,3]\)</span> using <em class="emphasis">three</em> rectangles with equal-width and the <em class="alert">midpoint</em> of each rectangle is on the curve.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="subsec-511-Approximate_Rectangle-10-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para" id="subsec-511-Approximate_Rectangle-10-2-1">Again, diagrams are our friend! Making a pretty diagram will help you determine what the height of each rectangle is so we can compute the area of the rectangles!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.1.6.1"><a href="#subsec-511-Approximate_Rectangle-10-2" title="Copy heading and permalink for Hint 5.1.6.1" aria-label="Copy heading and permalink for Hint 5.1.6.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 5.1.9.1"><a href="#subsec-511-Approximate_Rectangle-10-2" title="Copy heading and permalink for Hint 5.1.9.1" aria-label="Copy heading and permalink for Hint 5.1.9.1">🔗</a></div>
 </div></details><details id="subsec-511-Approximate_Rectangle-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="subsec-511-Approximate_Rectangle-10-3-1">Below is the diagram of three equal-width rectangles and each of the <em class="alert">midpoint</em> is on the curve.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="subsec-511-Approximate_Rectangle-10-3-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-511-Approximate_Rectangle-10-3-2-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three midpoint rectangles (midpoints marked).<div class="autopermalink" data-description="Figure 5.1.7"><a href="#subsec-511-Approximate_Rectangle-10-3-2" title="Copy heading and permalink for Figure 5.1.7" aria-label="Copy heading and permalink for Figure 5.1.7">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-10-3-3">Observe that the height of each rectangle is the <em class="alert">function value</em> of the midpoint of each partition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-10-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three midpoint rectangles (midpoints marked).<div class="autopermalink" data-description="Figure 5.1.10"><a href="#subsec-511-Approximate_Rectangle-10-3-2" title="Copy heading and permalink for Figure 5.1.10" aria-label="Copy heading and permalink for Figure 5.1.10">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-10-3-3">Observe that the height of each rectangle is the <em class="alert">function value</em> of the midpoint of each partition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-10-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-511-Approximate_Rectangle-10-3-4">
 <div class="para">Hence, an approximation of the area under the curve, using these three rectangles, is</div>
@@ -330,26 +404,26 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-511-Approximate_Rectangle-10-3-5">
 <em class="alert">Again, this is just one more approximation of the area under the curve. This is not the actual area under the curve.</em> We actually don’t know if this is an under- or over-estimate. Yet, we can observe, from the diagram above, that <span class="process-math">\(11.75\)</span> is a <em class="emphasis">better</em> approximation compared to <span class="process-math">\(L_3\)</span> and <span class="process-math">\(R_3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-10-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.6.1"><a href="#subsec-511-Approximate_Rectangle-10-3" title="Copy heading and permalink for Solution 5.1.6.1" aria-label="Copy heading and permalink for Solution 5.1.6.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.6"><a href="#subsec-511-Approximate_Rectangle-10" title="Copy heading and permalink for Example 5.1.6" aria-label="Copy heading and permalink for Example 5.1.6">🔗</a></div></article><div class="para" id="subsec-511-Approximate_Rectangle-11">Again, we can name this even fancier method the <em class="alert">midpoint</em> approximation! You can imagine that we can represent this approximation by <span class="process-math">\(M_3\)</span> (midpoint approximation using three rectangles).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 5.1.9.1"><a href="#subsec-511-Approximate_Rectangle-10-3" title="Copy heading and permalink for Solution 5.1.9.1" aria-label="Copy heading and permalink for Solution 5.1.9.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.9"><a href="#subsec-511-Approximate_Rectangle-10" title="Copy heading and permalink for Example 5.1.9" aria-label="Copy heading and permalink for Example 5.1.9">🔗</a></div></article><div class="para" id="subsec-511-Approximate_Rectangle-11">Again, we can name this even fancier method the <em class="alert">midpoint</em> approximation! You can imagine that we can represent this approximation by <span class="process-math">\(M_3\)</span> (midpoint approximation using three rectangles).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-12">You can observe that the midpoint approximation will give a <em class="emphasis">better</em> approximation compared to the left- and the right- endpoint approximation (this is a pro). But the tradeoff here is that the height of each rectangle is a bit more complicated to obtain (this is a con).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-13">When you are approximating something, you usually will need to make a choice between <em class="emphasis">computational power</em> and the <em class="emphasis">accuracy of the approximation</em>. Easier methods will give a less-accurate approximation and more-complicated methods will give a more-accurate approximation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="subsec-511-Approximate_Rectangle-14" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Why do I have to approximate the area using rectangles?</span>
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Why do I have to approximate the area using rectangles?</span>
 </h4></summary><article class="note remark-like knowl__content"><div class="para" id="subsec-511-Approximate_Rectangle-14-2">You may have an even better way of approximating the area if you are not using rectangles. As an example, you may want to approximate the area using <em class="emphasis">trapezoids</em> as follows:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="subsec-511-Approximate_Rectangle-14-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-511-Approximate_Rectangle-14-3-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three trapezoids.<div class="autopermalink" data-description="Figure 5.1.9"><a href="#subsec-511-Approximate_Rectangle-14-3" title="Copy heading and permalink for Figure 5.1.9" aria-label="Copy heading and permalink for Figure 5.1.9">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-14-4">This approximation seems to give us an even better approximation... So <em class="alert">why using rectangles at all</em>?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-14-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(y = x^2 + 1\)</span> with the region under the curve on <span class="process-math">\([0,3]\)</span> shaded and three trapezoids.<div class="autopermalink" data-description="Figure 5.1.12"><a href="#subsec-511-Approximate_Rectangle-14-3" title="Copy heading and permalink for Figure 5.1.12" aria-label="Copy heading and permalink for Figure 5.1.12">🔗</a></div></figcaption></figure><div class="para" id="subsec-511-Approximate_Rectangle-14-4">This approximation seems to give us an even better approximation... So <em class="alert">why using rectangles at all</em>?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-14-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-14-5">This goes back to the idea of choosing between <em class="emphasis">computational power</em> and <em class="emphasis">accuracy of the approximation</em>. The reason why Richard wanted you to approximate the area using rectangles in this section is because <em class="alert">we can find the area of a rectangle easily</em> (so Richard picked the <em class="emphasis">computational power</em> over the <em class="emphasis">accuracy of approximation</em> so far, of course, for a good reason).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-14-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-14-6">You are more than welcome to approximate the area using other shapes other than rectangles. This is just a preview that we will approximate the area using <em class="emphasis">trapezoids</em> and even <em class="emphasis">parabolas</em> in section 7.8.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-14-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Note 5.1.8: Why do I have to approximate the area using rectangles?"><a href="#subsec-511-Approximate_Rectangle-14" title="Copy heading and permalink for Note 5.1.8: Why do I have to approximate the area using rectangles?" aria-label="Copy heading and permalink for Note 5.1.8: Why do I have to approximate the area using rectangles?">🔗</a></div></article></details><article class="example example-like" id="subsec-511-Approximate_Rectangle-15"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Note 5.1.11: Why do I have to approximate the area using rectangles?"><a href="#subsec-511-Approximate_Rectangle-14" title="Copy heading and permalink for Note 5.1.11: Why do I have to approximate the area using rectangles?" aria-label="Copy heading and permalink for Note 5.1.11: Why do I have to approximate the area using rectangles?">🔗</a></div></article></details><article class="example example-like" id="subsec-511-Approximate_Rectangle-15"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="subsec-511-Approximate_Rectangle-15-1">Approximate the area under the graph of <span class="process-math">\(g(x) = \sqrt{6x + 2}\)</span> on the interval <span class="process-math">\([1,3]\)</span> using <span class="process-math">\(L_6\text{,}\)</span> <span class="process-math">\(R_6\text{,}\)</span> and <span class="process-math">\(M_6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -380,10 +454,10 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="subsec-511-Approximate_Rectangle-15-2-2">Remember that diagrams are our friends! In addition, let’s see if we can come up with some formulas to compute these approximations so we don’t have to graph the function each time.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-15-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.1.10.1"><a href="#subsec-511-Approximate_Rectangle-15-2" title="Copy heading and permalink for Hint 5.1.10.1" aria-label="Copy heading and permalink for Hint 5.1.10.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 5.1.13.1"><a href="#subsec-511-Approximate_Rectangle-15-2" title="Copy heading and permalink for Hint 5.1.13.1" aria-label="Copy heading and permalink for Hint 5.1.13.1">🔗</a></div>
 </div></details><details id="subsec-511-Approximate_Rectangle-15-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="subsec-511-Approximate_Rectangle-15-3-1">Let’s graph the function and highlight the region of interest first. <figure class="figure figure-like" id="subsec-511-Approximate_Rectangle-15-3-1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-511-Approximate_Rectangle-15-3-1-1-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(g(x) = \sqrt{6x+2}\)</span> with the area under the curve on <span class="process-math">\([1,3]\)</span> shaded.<div class="autopermalink" data-description="Figure 5.1.11"><a href="#subsec-511-Approximate_Rectangle-15-3-1-1" title="Copy heading and permalink for Figure 5.1.11" aria-label="Copy heading and permalink for Figure 5.1.11">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Graph of <span class="process-math">\(g(x) = \sqrt{6x+2}\)</span> with the area under the curve on <span class="process-math">\([1,3]\)</span> shaded.<div class="autopermalink" data-description="Figure 5.1.14"><a href="#subsec-511-Approximate_Rectangle-15-3-1-1" title="Copy heading and permalink for Figure 5.1.14" aria-label="Copy heading and permalink for Figure 5.1.14">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-511-Approximate_Rectangle-15-3-2">
 <div class="para">We want six rectangles with equal widths so we want to split <span class="process-math">\([1,3]\)</span> into six equal parts. If we call the number of rectangles <span class="process-math">\(N\text{,}\)</span> then we know that</div>
@@ -451,8 +525,8 @@ M_6 \amp= \frac{1}{3}\cdot g\left(\frac{1 + \frac{4}{3}}{2}\right) + \frac{1}{3}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-15-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.10.1"><a href="#subsec-511-Approximate_Rectangle-15-3" title="Copy heading and permalink for Solution 5.1.10.1" aria-label="Copy heading and permalink for Solution 5.1.10.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.10"><a href="#subsec-511-Approximate_Rectangle-15" title="Copy heading and permalink for Example 5.1.10" aria-label="Copy heading and permalink for Example 5.1.10">🔗</a></div></article><div class="para logical" id="subsec-511-Approximate_Rectangle-16">
+<div class="autopermalink" data-description="Solution 5.1.13.1"><a href="#subsec-511-Approximate_Rectangle-15-3" title="Copy heading and permalink for Solution 5.1.13.1" aria-label="Copy heading and permalink for Solution 5.1.13.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.13"><a href="#subsec-511-Approximate_Rectangle-15" title="Copy heading and permalink for Example 5.1.13" aria-label="Copy heading and permalink for Example 5.1.13">🔗</a></div></article><div class="para logical" id="subsec-511-Approximate_Rectangle-16">
 <div class="para">Let’s generalize the process! Let’s say we want to approximate the area under the graph of <span class="process-math">\(y= f(x)\)</span> on the interval <span class="process-math">\([a,b]\)</span> using <span class="process-math">\(N\)</span> equal-width rectangles. Then the width of each rectangle is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -478,13 +552,11 @@ M_N = \Delta x\bigg(f\left(\frac{x_0 + x_1}{2}\right) + f\left(\frac{x_1 + x_2}{
 <div class="para">We can approximate the area once we can partition the interval and figure out the values of all the <span class="process-math">\(x_i\)</span>’s, where <span class="process-math">\(i\)</span> is the index. Then we don’t have to graph the functions and construct all the rectangles.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-511-Approximate_Rectangle-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection: Approximating Area by Rectangles"><a href="#subsec-511-Approximate_Rectangle" title="Copy heading and permalink for Subsection: Approximating Area by Rectangles" aria-label="Copy heading and permalink for Subsection: Approximating Area by Rectangles">🔗</a></div></section><div class="para" id="sec51-ApproximatingArea-5">text goes here...<div class="autopermalink" data-description="Paragraph"><a href="#sec51-ApproximatingArea-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<iframe src="https://www.desmos.com/calculator/faoedm1isn?embed&amp;lang=en&amp;noexpressions=1" id="sec51-ApproximatingArea-6" width="600" height="337"></iframe><section class="subsection" id="subsec-512-SummationNotation"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Subsection: Approximating Area by Rectangles"><a href="#subsec-511-Approximate_Rectangle" title="Copy heading and permalink for Subsection: Approximating Area by Rectangles" aria-label="Copy heading and permalink for Subsection: Approximating Area by Rectangles">🔗</a></div></section><section class="subsection" id="subsec-512-SummationNotation"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summation Notation</span>
 </h3>
 <div class="para" id="subsec-512-SummationNotation-2">You may get the feeling that there is a pattern in the formulas above. We are adding similar things together. Sometimes it is kind of tedious to write out all the addends when the addends are similar with a pattern. Actually we have a special notation in math we can use to add things up with a pattern. <article class="definition definition-like" id="def-SummationNotation"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="def-SummationNotation-1-1">
 <div class="para">The <dfn class="terminology">sum</dfn> of numbers <span class="process-math">\(a_m, \ldots, a_n\)</span> (<span class="process-math">\(m\leq n\)</span>) is denoted</div>
@@ -497,10 +569,10 @@ M_N = \Delta x\bigg(f\left(\frac{x_0 + x_1}{2}\right) + f\left(\frac{x_1 + x_2}{
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-SummationNotation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 5.1.12"><a href="#def-SummationNotation" title="Copy heading and permalink for Definition 5.1.12" aria-label="Copy heading and permalink for Definition 5.1.12">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 5.1.15"><a href="#def-SummationNotation" title="Copy heading and permalink for Definition 5.1.15" aria-label="Copy heading and permalink for Definition 5.1.15">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="subsec-512-SummationNotation-3"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="subsec-512-SummationNotation-3-1">Expand the summation notation <span class="process-math">\(\displaystyle \sum_{i = 0}^5 i(i - 1)\text{.}\)</span> Then evaluate this expression.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -509,7 +581,7 @@ M_N = \Delta x\bigg(f\left(\frac{x_0 + x_1}{2}\right) + f\left(\frac{x_1 + x_2}{
 </div>
 <div class="para" id="subsec-512-SummationNotation-3-2-2">Furthermore, we know the value of <span class="process-math">\(i\)</span> is the index that starts at <span class="process-math">\(0\)</span> and ends at <span class="process-math">\(5\text{...}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.1.13.1"><a href="#subsec-512-SummationNotation-3-2" title="Copy heading and permalink for Hint 5.1.13.1" aria-label="Copy heading and permalink for Hint 5.1.13.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 5.1.16.1"><a href="#subsec-512-SummationNotation-3-2" title="Copy heading and permalink for Hint 5.1.16.1" aria-label="Copy heading and permalink for Hint 5.1.16.1">🔗</a></div>
 </div></details><details id="subsec-512-SummationNotation-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="subsec-512-SummationNotation-3-3-1">
 <div class="para">We will add all the <span class="process-math">\(i(i - 1)\)</span>’s together where <span class="process-math">\(i\)</span> starts at <span class="process-math">\(0\)</span> and ends at <span class="process-math">\(5\text{.}\)</span> Hence, we obtain</div>
@@ -522,8 +594,8 @@ M_N = \Delta x\bigg(f\left(\frac{x_0 + x_1}{2}\right) + f\left(\frac{x_1 + x_2}{
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.13.1"><a href="#subsec-512-SummationNotation-3-3" title="Copy heading and permalink for Solution 5.1.13.1" aria-label="Copy heading and permalink for Solution 5.1.13.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.13"><a href="#subsec-512-SummationNotation-3" title="Copy heading and permalink for Example 5.1.13" aria-label="Copy heading and permalink for Example 5.1.13">🔗</a></div></article><div class="para logical" id="subsec-512-SummationNotation-4">
+<div class="autopermalink" data-description="Solution 5.1.16.1"><a href="#subsec-512-SummationNotation-3-3" title="Copy heading and permalink for Solution 5.1.16.1" aria-label="Copy heading and permalink for Solution 5.1.16.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.16"><a href="#subsec-512-SummationNotation-3" title="Copy heading and permalink for Example 5.1.16" aria-label="Copy heading and permalink for Example 5.1.16">🔗</a></div></article><div class="para logical" id="subsec-512-SummationNotation-4">
 <div class="para">Using the summation notation, we can rewrite the formulas for <span class="process-math">\(L_N\text{,}\)</span> <span class="process-math">\(R_N\text{,}\)</span> and <span class="process-math">\(M_N\)</span> more briefly.</div>
 <div class="displaymath process-math" id="subsec-512-SummationNotation-4-4">
 \begin{align*}
@@ -562,7 +634,7 @@ M_N \amp= \Delta x\bigg(f\left(\frac{x_0 + x_1}{2}\right) + f\left(\frac{x_1 + x
 <div class="para" id="subsec-512-SummationNotation-9">This is just a quick preview. For those of you who are thinking about taking MTH 253Z Sequences and Series. Guess what a series is! Series, roughly speaking, is the <em class="emphasis">sum</em> of a bunch of things so you will definitely see the <span class="process-math">\(\Sigma\)</span> all over the place in MTH 253Z.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="subsec-512-SummationNotation-10"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="subsec-512-SummationNotation-10-1">Using <a class="external" href="https://www.desmos.com/calculator" target="_blank">Desmos</a>, approximate the area under the graph of <span class="process-math">\(g(x) = \sqrt{6x + 2}\)</span> on the intevral <span class="process-math">\([1,3]\)</span> using <span class="process-math">\(L_6\text{,}\)</span> <span class="process-math">\(R_6\text{,}\)</span> and <span class="process-math">\(M_6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -580,18 +652,314 @@ M_N \amp= \Delta x\bigg(f\left(\frac{x_0 + x_1}{2}\right) + f\left(\frac{x_1 + x
 <div class="para" id="subsec-512-SummationNotation-10-2-6">
 <em class="emphasis">Quick Note:</em> You also want to change the index to <span class="process-math">\(i\)</span> instead of <span class="process-math">\(n\)</span> since this is what the formulas say (or you can replace all the <span class="process-math">\(i\)</span>’s with <span class="process-math">\(n\)</span>’s in the formulas). Just make sure that the index notation is consistent.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-10-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.1.14.1"><a href="#subsec-512-SummationNotation-10-2" title="Copy heading and permalink for Hint 5.1.14.1" aria-label="Copy heading and permalink for Hint 5.1.14.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 5.1.17.1"><a href="#subsec-512-SummationNotation-10-2" title="Copy heading and permalink for Hint 5.1.17.1" aria-label="Copy heading and permalink for Hint 5.1.17.1">🔗</a></div>
 </div></details><details id="subsec-512-SummationNotation-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <figure class="figure figure-like" id="subsec-512-SummationNotation-10-3-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/external/images/desmos_calculation_demo.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Desmos Demo<div class="autopermalink" data-description="Figure 5.1.15"><a href="#subsec-512-SummationNotation-10-3-1" title="Copy heading and permalink for Figure 5.1.15" aria-label="Copy heading and permalink for Figure 5.1.15">🔗</a></div></figcaption></figure><div class="para" id="subsec-512-SummationNotation-10-3-2">Direct link: <a class="external" href="https://drive.google.com/uc?export=view&amp;id=1lJpdp9AEgrROGBeZQ6lIvEkcsWu3fo54" target="_blank">open image</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-10-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Desmos Demo<div class="autopermalink" data-description="Figure 5.1.18"><a href="#subsec-512-SummationNotation-10-3-1" title="Copy heading and permalink for Figure 5.1.18" aria-label="Copy heading and permalink for Figure 5.1.18">🔗</a></div></figcaption></figure><div class="para" id="subsec-512-SummationNotation-10-3-2">Direct link: <a class="external" href="https://drive.google.com/uc?export=view&amp;id=1lJpdp9AEgrROGBeZQ6lIvEkcsWu3fo54" target="_blank">open image</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-512-SummationNotation-10-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.14.1"><a href="#subsec-512-SummationNotation-10-3" title="Copy heading and permalink for Solution 5.1.14.1" aria-label="Copy heading and permalink for Solution 5.1.14.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 5.1.14"><a href="#subsec-512-SummationNotation-10" title="Copy heading and permalink for Example 5.1.14" aria-label="Copy heading and permalink for Example 5.1.14">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Summation Notation"><a href="#subsec-512-SummationNotation" title="Copy heading and permalink for Subsection: Summation Notation" aria-label="Copy heading and permalink for Subsection: Summation Notation">🔗</a></div></section><section class="subsection" id="subsec-513-Compute_Limit_Approximation"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Solution 5.1.17.1"><a href="#subsec-512-SummationNotation-10-3" title="Copy heading and permalink for Solution 5.1.17.1" aria-label="Copy heading and permalink for Solution 5.1.17.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.17"><a href="#subsec-512-SummationNotation-10" title="Copy heading and permalink for Example 5.1.17" aria-label="Copy heading and permalink for Example 5.1.17">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Summation Notation"><a href="#subsec-512-SummationNotation" title="Copy heading and permalink for Subsection: Summation Notation" aria-label="Copy heading and permalink for Subsection: Summation Notation">🔗</a></div></section><section class="subsection" id="subsec-513-Compute_Limit_Approximation"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Computing Area as the Limit of Approximation</span>
 </h3>
-<div class="para" id="subsec-513-Compute_Limit_Approximation-2">Now that we know how to approximate the area under the curve using rectangles. Then the next question here is how to make our approximation better and better.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-513-Compute_Limit_Approximation-2">Now that we know how to approximate the area under the curve using rectangles. Then the next natural question here is how to make our approximation better and better.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection: Computing Area as the Limit of Approximation"><a href="#subsec-513-Compute_Limit_Approximation" title="Copy heading and permalink for Subsection: Computing Area as the Limit of Approximation" aria-label="Copy heading and permalink for Subsection: Computing Area as the Limit of Approximation">🔗</a></div></section><div class="autopermalink" data-description="Section 5.1: Approximating and Computing Area"><a href="#sec51-ApproximatingArea" title="Copy heading and permalink for Section 5.1: Approximating and Computing Area" aria-label="Copy heading and permalink for Section 5.1: Approximating and Computing Area">🔗</a></div></section></div>
+<div class="para logical" id="subsec-513-Compute_Limit_Approximation-3">
+<div class="para">One thing we can do is to <em class="alert">increase the number of rectangle strips</em>. That is, we want to increase the value of <span class="process-math">\(N\)</span> in the approximation methods. As <span class="process-math">\(N\)</span> is getting larger, this will force the width of each rectangle, <span class="process-math">\(Delta x\text{,}\)</span> to be smaller and smaller. In other words,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta x\to 0 \qquad\text{ as } \qquad N\to \infty
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-513-Compute_Limit_Approximation-4">In the following applet, you can see that the apprpoximation is closer and closer to the actual area if we increase the <span class="process-math">\(N\)</span> values, <em class="emphasis">regarless of which approximation methods we used</em>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<iframe src="https://www.desmos.com/calculator/hm6zunlaa2?embed&amp;lang=en&amp;noexpressions=1" id="subsec-513-Compute_Limit_Approximation-5" width="651" height="488"></iframe><div class="para" id="subsec-513-Compute_Limit_Approximation-6">That is, the actual area can be computed using the <em class="alert">limit</em> of our approximation. Let’s make it a cool theorem!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-513-Compute_Limit_Approximation-7">
+<article class="theorem theorem-like" id="thm-Area-LimitofApproximation"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-Area-LimitofApproximation-1-1">
+<div class="para">If <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> then the left-endpoint, right-endpoint, and the midpoint approximation approches the same limit as <span class="process-math">\(N\to \infty\text{.}\)</span> In other words, there is a value of <span class="process-math">\(L\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{N\to\infty} L_N = \lim_{N\to\infty} R_N = \lim_{N\to\infty} M_N = L
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(f(x) \geq 0\)</span> on <span class="process-math">\([a,b]\text{,}\)</span> then <span class="process-math">\(L\)</span> is the area under the graph of <span class="process-math">\(y = f(x)\)</span> on <span class="process-math">\([a,b]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-Area-LimitofApproximation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.1.19"><a href="#thm-Area-LimitofApproximation" title="Copy heading and permalink for Theorem 5.1.19" aria-label="Copy heading and permalink for Theorem 5.1.19">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-513-Compute_Limit_Approximation-8">
+<em class="alert">But Richard...</em> how can we actually split up the region into <em class="emphasis">infinite</em> number of rectangle strips and find the area of all the strips... This seems impossible to do in practice...<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-513-Compute_Limit_Approximation-9">You are correct that this is impossible to achieve in practice... The best we can do is to make our approximation better and better until we are happy about the value (life isn’t perfect. how surprising...).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-513-Compute_Limit_Approximation-10">But this is a math class (so we are living in an ideal world where we can assume a lot of things!). If we are given the function, then we actually can compute the actual value of the area under the curve within some interval. This is a central idea of this class.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-513-Compute_Limit_Approximation-11">
+<em class="alert">We are actually ready to formalize these approximation methods in the next section.</em> But if you are feeling a bit of adventurous and devoted to figuring out this limit idea <em class="emphasis">algebraically</em>, feel free to keep reading the next part.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-513-Compute_Limit_Approximation-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Computing Area as the Limit of Approximation"><a href="#subsec-513-Compute_Limit_Approximation" title="Copy heading and permalink for Subsection: Computing Area as the Limit of Approximation" aria-label="Copy heading and permalink for Subsection: Computing Area as the Limit of Approximation">🔗</a></div></section><section class="subsection" id="subsec-514-LimitSummation"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limit of the approximation algebraically</span>
+</h3>
+<div class="para" id="subsec-514-LimitSummation-2">Recall we can express the sum using the <dfn class="terminology">summation notation</dfn>. Let’s do some quick practice to remind us of how it works.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-514-LimitSummation-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-514-LimitSummation-3-1">Write out the following summation notation and evaluate it.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha ol-marker-1" id="subsec-514-LimitSummation-3-2">
+<li id="subsec-514-LimitSummation-3-2-1">
+<div class="para" id="subsec-514-LimitSummation-3-2-1-1">
+<span class="process-math">\(\displaystyle \displaystyle \sum_{i = 1}^5 (i + 1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-514-LimitSummation-3-2-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-514-LimitSummation-3-2-1-2-1">
+<div class="displaymath process-math" id="subsec-514-LimitSummation-3-2-1-2-1-1">
+\begin{align*}
+\sum_{i = 1}^5 (i + 1) \amp= (1 + 1) + (2 + 1) + (3 + 1) + (4 + 1) + (5 + 1)\\
+\amp= (1 + 2 + 3 + 4 + 5) + (1 + 1 + 1 + 1 + 1) \\
+\amp= 15 + 5 \\
+\amp= 20 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution a.1"><a href="#subsec-514-LimitSummation-3-2-1-2" title="Copy heading and permalink for Solution a.1" aria-label="Copy heading and permalink for Solution a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item a"><a href="#subsec-514-LimitSummation-3-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="subsec-514-LimitSummation-3-2-2">
+<div class="para" id="subsec-514-LimitSummation-3-2-2-1">
+<span class="process-math">\(\displaystyle \displaystyle \sum_{j = 1}^5 3j\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-514-LimitSummation-3-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-514-LimitSummation-3-2-2-2-1">
+<div class="displaymath process-math" id="subsec-514-LimitSummation-3-2-2-2-1-1">
+\begin{align*}
+\sum_{j = 1}^5 3j \amp= 3\cdot 1 + 3\cdot 2 + 3\cdot 3 + 3\cdot 4 + 3\cdot 5 \\
+\amp= 3\left(1 + 2 + 3 + 4 + 5\right) \\
+\amp= 3(15) \\
+\amp= 45
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-3-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution b.1"><a href="#subsec-514-LimitSummation-3-2-2-2" title="Copy heading and permalink for Solution b.1" aria-label="Copy heading and permalink for Solution b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item b"><a href="#subsec-514-LimitSummation-3-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="subsec-514-LimitSummation-3-2-3">
+<div class="para" id="subsec-514-LimitSummation-3-2-3-1">
+<span class="process-math">\(\displaystyle \displaystyle \sum_{k = 1}^5 10\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-514-LimitSummation-3-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-514-LimitSummation-3-2-3-2-1">
+<div class="displaymath process-math" id="subsec-514-LimitSummation-3-2-3-2-1-1">
+\begin{align*}
+\sum_{k = 1}^5 10 \amp= 10 + 10 + 10 + 10 + 10 \\
+\amp= 5\cdot 10 \\
+\amp= 50 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-3-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution c.1"><a href="#subsec-514-LimitSummation-3-2-3-2" title="Copy heading and permalink for Solution c.1" aria-label="Copy heading and permalink for Solution c.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item c"><a href="#subsec-514-LimitSummation-3-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Example 5.1.20"><a href="#subsec-514-LimitSummation-3" title="Copy heading and permalink for Example 5.1.20" aria-label="Copy heading and permalink for Example 5.1.20">🔗</a></div></article><div class="para" id="subsec-514-LimitSummation-4">There are some properties of the summation notation we can use to make our computation easier.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-514-LimitSummation-5">
+<article class="theorem theorem-like" id="thm-Property-SummationNotation"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Properties of Summation Notation.</span>
+</h4>
+<div class="para logical" id="thm-Property-SummationNotation-2-1">
+<ol class="lower-alpha ol-marker-1" id="thm-Property-SummationNotation-2-1-1">
+<li id="thm-Property-SummationNotation-2-1-1-1">
+<div class="para" id="thm-Property-SummationNotation-2-1-1-1-1">
+<span class="process-math">\(\displaystyle \displaystyle \sum_{i = m}^n \left(a_i + b_i\right) = \sum_{i = m}^n a_i + \sum_{i = m}^n b_i\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-Property-SummationNotation-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#thm-Property-SummationNotation-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="thm-Property-SummationNotation-2-1-1-2">
+<div class="para" id="thm-Property-SummationNotation-2-1-1-2-1">
+<span class="process-math">\(\displaystyle \sum_{i = m}^n C\cdot a_i = C\cdot \sum_{i = m}^n\)</span> for any constant <span class="process-math">\(C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-Property-SummationNotation-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#thm-Property-SummationNotation-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="thm-Property-SummationNotation-2-1-1-3">
+<div class="para" id="thm-Property-SummationNotation-2-1-1-3-1">
+<span class="process-math">\(\displaystyle \sum_{i = 1}^n C = nC\)</span> for any constant <span class="process-math">\(C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-Property-SummationNotation-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#thm-Property-SummationNotation-2-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-Property-SummationNotation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.1.21: Properties of Summation Notation"><a href="#thm-Property-SummationNotation" title="Copy heading and permalink for Theorem 5.1.21: Properties of Summation Notation" aria-label="Copy heading and permalink for Theorem 5.1.21: Properties of Summation Notation">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-514-LimitSummation-6">Using these above properties, we can break down a complicated summation notation into smaller pieces (so we can deal with one piece at a time).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-514-LimitSummation-7">There are also three well-known formulas, called the <dfn class="terminology">power sums</dfn> formulas, that tells us the summation of the first <span class="process-math">\(N\)</span> integers with powers.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-514-LimitSummation-8">
+<article class="theorem theorem-like" id="thm-PowerSum"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Sum Formulas.</span>
+</h4>
+<div class="para logical" id="thm-PowerSum-2-1">
+<div class="para">Let <span class="process-math">\(N\)</span> be a natural number. Then</div>
+<ol class="lower-alpha ol-marker-1" id="thm-PowerSum-2-1-2">
+<li id="thm-PowerSum-2-1-2-1">
+<div class="para" id="thm-PowerSum-2-1-2-1-1">
+<span class="process-math">\(\displaystyle \displaystyle \sum_{k = 1}^N k = 1 + 2 + \cdots + N = \frac{N(N+1)}{2} = \frac{N^2}{2} + \frac{N}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-PowerSum-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#thm-PowerSum-2-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="thm-PowerSum-2-1-2-2">
+<div class="para" id="thm-PowerSum-2-1-2-2-1">
+<span class="process-math">\(\displaystyle \displaystyle \sum_{k = 1}^N k^2 = 1^2 + 2^2 + \cdots + N^2 = \frac{N(N+1)(2N+1)}{6} = \frac{N^3}{3} + \frac{N^2}{2} + \frac{N}{6}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-PowerSum-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#thm-PowerSum-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="thm-PowerSum-2-1-2-3">
+<div class="para" id="thm-PowerSum-2-1-2-3-1">
+<span class="process-math">\(\displaystyle \displaystyle \sum_{k = 1}^N k^3 = 1^3 + 2^3 + \cdots + N^3 = \frac{N^2(N+1)^2}{4} = \frac{N^4}{4} + \frac{N^3}{2} + \frac{N^2}{4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-PowerSum-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#thm-PowerSum-2-1-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-PowerSum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.1.22: Power Sum Formulas"><a href="#thm-PowerSum" title="Copy heading and permalink for Theorem 5.1.22: Power Sum Formulas" aria-label="Copy heading and permalink for Theorem 5.1.22: Power Sum Formulas">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-514-LimitSummation-9">There are more <a class="external" href="https://mathworld.wolfram.com/PowerSum.html" target="_blank">power sum formulas</a> but they are the most famous three. Rather than actually adding up the numbers, these formulas allow us to compute the sum by plugging in <span class="process-math">\(N\)</span> directly.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-514-LimitSummation-10">Let’s compute the actual area of some functions <em class="emphasis">algebraically</em> using the summation notation!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="exp-Riemann_Square"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="exp-Riemann_Square-1">Let <span class="process-math">\(f(x) = x^2\text{.}\)</span> Find the actual area under the graph of <span class="process-math">\(y = f(x)\)</span> over the interval <span class="process-math">\([0,b]\text{,}\)</span> where <span class="process-math">\(b &gt; 0\)</span> algebraically.<div class="autopermalink" data-description="Paragraph"><a href="#exp-Riemann_Square-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="exp-Riemann_Square-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exp-Riemann_Square-2-1">By <a href="sec51-ApproximatingArea.html#thm-Area-LimitofApproximation" class="xref" data-knowl="./knowl/xref/thm-Area-LimitofApproximation.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.19">Theorem 5.1.19</a>, we know that the actual area can be computed by taking the limit of <span class="process-math">\(R_N\)</span> as <span class="process-math">\(N\to \infty\text{.}\)</span> Then what is <span class="process-math">\(R_N\)</span> using summation notation?<div class="autopermalink" data-description="Paragraph"><a href="#exp-Riemann_Square-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exp-Riemann_Square-2-2">After you figure out what <span class="process-math">\(R_N\)</span> is, take the limit of it as <span class="process-math">\(N\to \infty\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exp-Riemann_Square-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.1.23.1"><a href="#exp-Riemann_Square-2" title="Copy heading and permalink for Hint 5.1.23.1" aria-label="Copy heading and permalink for Hint 5.1.23.1">🔗</a></div>
+</div></details><details id="exp-Riemann_Square-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exp-Riemann_Square-3-1">
+<div class="para">We will let <span class="process-math">\(N\)</span> to be the number of rectangle strips. Then the width of each rectangle is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta x = \frac{b - 0}{N} = \frac{b}{N}
+\end{equation*}
+</div>
+<div class="para">Using the summation notation formula for <span class="process-math">\(R_N\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math" id="exp-Riemann_Square-3-1-4">
+\begin{align*}
+R_N \amp= \frac{b}{N} \sum_{i = 1}^N f\left(0 + i\cdot \frac{b}{N}\right)\\
+\amp= \frac{b}{N} \sum_{i = 1}^N \left(i\cdot \frac{b}{N}\right)^2 \\
+\amp= \frac{b}{N} \sum_{i = 1}^N i^2\cdot \frac{b^2}{N^2} \\
+\amp= \frac{b}{N} \cdot \frac{b^2}{N^2}\sum_{i = 1}^N i^2 \amp\amp\text{Summation Notation Property (b)} \\
+\amp= \frac{b^3}{N^3}\sum_{i = 1}^N i^2 \\
+\amp= \frac{b^3}{N^3}\left(\frac{N^3}{3} + \frac{N^2}{2} + \frac{N}{6}\right) \amp\amp\text{Power Sum Formula (b)}\\
+\amp= \frac{b^3}{3} + \frac{b^3}{2N} + \frac{b^3}{6N^2} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exp-Riemann_Square-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exp-Riemann_Square-3-2">
+<div class="para">To obtain the actual area, we want to take the limit of <span class="process-math">\(R_N\)</span> as <span class="process-math">\(N\to \infty\text{.}\)</span> Then we obtain</div>
+<div class="displaymath process-math" id="exp-Riemann_Square-3-2-3">
+\begin{align*}
+\lim_{N\to \infty} R_N \amp= \lim_{N\to\infty}\left( \frac{b^3}{3} + \frac{b^3}{2N} + \frac{b^3}{6N^2} \right) \\
+\amp= \frac{b^3}{3} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exp-Riemann_Square-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exp-Riemann_Square-3-3">What this tells us here is that the area under the graph of <span class="process-math">\(f(x) = x^2\)</span> over the interval <span class="process-math">\([0,b]\)</span> is <span class="process-math">\(\dfrac{b^3}{3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exp-Riemann_Square-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1.23.1"><a href="#exp-Riemann_Square-3" title="Copy heading and permalink for Solution 5.1.23.1" aria-label="Copy heading and permalink for Solution 5.1.23.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 5.1.23"><a href="#exp-Riemann_Square" title="Copy heading and permalink for Example 5.1.23" aria-label="Copy heading and permalink for Example 5.1.23">🔗</a></div></article><div class="para" id="subsec-514-LimitSummation-12">Later in the term, we will derive these formulas to compute the area more efficiently (thanks to FTC!).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-514-LimitSummation-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Limit of the approximation algebraically"><a href="#subsec-514-LimitSummation" title="Copy heading and permalink for Subsection: Limit of the approximation algebraically" aria-label="Copy heading and permalink for Subsection: Limit of the approximation algebraically">🔗</a></div></section><section class="worksheet" id="ws-sec51" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec51-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="introduction" id="ws-sec51-2"><div class="para" id="ws-sec51-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ws-sec51-2-2">I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="ws-sec51-3"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ws-sec51-3-1-1">
+<div class="para">Consider the function <span class="process-math">\(f(x) = \cos(x)\)</span> on the interval <span class="process-math">\(\left[0,\frac{\pi}{2}\right]\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-1" id="ws-sec51-3-1-1-3">
+<li id="ws-sec51-3-1-1-3-1">
+<div class="para" id="ws-sec51-3-1-1-3-1-1">Graph the function <span class="process-math">\(y = f(x)\)</span> and highlight the region of interest.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-3-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.a"><a href="#ws-sec51-3-1-1-3-1" title="Copy heading and permalink for Item 1.a" aria-label="Copy heading and permalink for Item 1.a">🔗</a></div>
+</li>
+<li id="ws-sec51-3-1-1-3-2">
+<div class="para" id="ws-sec51-3-1-1-3-2-1">Approximate the area of the region using <span class="process-math">\(R_3\text{.}\)</span> Do we know if this is an under-estimate or over-estimate?<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-3-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.b"><a href="#ws-sec51-3-1-1-3-2" title="Copy heading and permalink for Item 1.b" aria-label="Copy heading and permalink for Item 1.b">🔗</a></div>
+</li>
+<li id="ws-sec51-3-1-1-3-3">
+<div class="para" id="ws-sec51-3-1-1-3-3-1">Approximate the area of the region using <span class="process-math">\(L_3\text{.}\)</span> Do we know if this is an under-estimate or over-estimate?<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-3-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.c"><a href="#ws-sec51-3-1-1-3-3" title="Copy heading and permalink for Item 1.c" aria-label="Copy heading and permalink for Item 1.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#ws-sec51-3" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec51-4"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ws-sec51-4-1-1">Approximate the area under the graph of the function <span class="process-math">\(f(x) = x - 2\ln(x)\)</span> from <span class="process-math">\(x = 1\)</span> to <span class="process-math">\(x = 5\)</span> using <span class="process-math">\(M_4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#ws-sec51-4" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec51-5"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ws-sec51-5-1-1">Let <span class="process-math">\(f(x) = \sqrt{x}\text{.}\)</span> Find <span class="process-math">\(R_4\text{,}\)</span> <span class="process-math">\(L_4\text{,}\)</span> and <span class="process-math">\(M_4\)</span> on the interval <span class="process-math">\([3,5]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 3"><a href="#ws-sec51-5" title="Copy heading and permalink for Worksheet Exercise 3" aria-label="Copy heading and permalink for Worksheet Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec51-6"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ws-sec51-6-1-1">Approximate the <em class="alert">area</em> under the curve on <span class="process-math">\([0,8]\)</span> using <em class="alert">four</em> subintervals. The graph of the curve is given below.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="ws-sec51-6-1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ws-sec51-6-1-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of the curve<div class="autopermalink" data-description="Figure 5.1.24"><a href="#ws-sec51-6-1-2" title="Copy heading and permalink for Figure 5.1.24" aria-label="Copy heading and permalink for Figure 5.1.24">🔗</a></div></figcaption></figure> <ol class="lower-alpha ol-marker-1" id="ws-sec51-6-1-3">
+<li id="ws-sec51-6-1-3-1">
+<div class="para" id="ws-sec51-6-1-3-1-1">What is the <span class="process-math">\(N\)</span> and <span class="process-math">\(\Delta x\)</span> in this problem?<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-6-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.a"><a href="#ws-sec51-6-1-3-1" title="Copy heading and permalink for Item 4.a" aria-label="Copy heading and permalink for Item 4.a">🔗</a></div>
+</li>
+<li id="ws-sec51-6-1-3-2">
+<div class="para" id="ws-sec51-6-1-3-2-1">Approximate the area using the right-endpoint approximation.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-6-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.b"><a href="#ws-sec51-6-1-3-2" title="Copy heading and permalink for Item 4.b" aria-label="Copy heading and permalink for Item 4.b">🔗</a></div>
+</li>
+<li id="ws-sec51-6-1-3-3">
+<div class="para" id="ws-sec51-6-1-3-3-1">Approximate the area using the left-endpoint approximation.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-6-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.c"><a href="#ws-sec51-6-1-3-3" title="Copy heading and permalink for Item 4.c" aria-label="Copy heading and permalink for Item 4.c">🔗</a></div>
+</li>
+<li id="ws-sec51-6-1-3-4">
+<div class="para" id="ws-sec51-6-1-3-4-1">Approximate the area using the midpoint approximation.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-6-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.d"><a href="#ws-sec51-6-1-3-4" title="Copy heading and permalink for Item 4.d" aria-label="Copy heading and permalink for Item 4.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Worksheet Exercise 4"><a href="#ws-sec51-6" title="Copy heading and permalink for Worksheet Exercise 4" aria-label="Copy heading and permalink for Worksheet Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec51-7"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="ws-sec51-7-1-1">
+<div class="para">Explain <em class="alert">graphically</em> that if <span class="process-math">\(f\)</span> is linear on the interval <span class="process-math">\([a,b]\text{,}\)</span> then the area under the graph <span class="process-math">\(y = f(x)\)</span> on <span class="process-math">\([a,b]\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \frac{1}{2}\left(R_N + L_N\right)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(N\text{.}\)</span> Don’t forget to explain in words what your diagram tells us.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec51-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 5"><a href="#ws-sec51-7" title="Copy heading and permalink for Worksheet Exercise 5" aria-label="Copy heading and permalink for Worksheet Exercise 5">🔗</a></div></article><div class="autopermalink" data-description="Worksheet: Some Exercises for this section"><a href="#ws-sec51" title="Copy heading and permalink for Worksheet: Some Exercises for this section" aria-label="Copy heading and permalink for Worksheet: Some Exercises for this section">🔗</a></div></section><div class="autopermalink" data-description="Section 5.1: Approximating and Computing Area"><a href="#sec51-ApproximatingArea" title="Copy heading and permalink for Section 5.1: Approximating and Computing Area" aria-label="Copy heading and permalink for Section 5.1: Approximating and Computing Area">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch5-Integration.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec52-DefiniteIntegral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
