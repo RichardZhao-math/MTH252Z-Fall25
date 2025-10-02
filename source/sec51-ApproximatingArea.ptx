@@ -6,7 +6,7 @@
   <introduction>
     <p>
       The big question in this section is <alert>how to approximate the area under the curve of a function</alert>. 
-      You will learn some methods to approximate the area and also how to make the approximation more and more precise. 
+      We will learn some methods to approximate the area and also how to make the approximation more and more precise. 
     </p>
 
     <objectives>
@@ -44,7 +44,7 @@
   <investigation>
     <introduction>
       <p>
-        Let's find the area under the curve of some simple functions! 
+        Let's find the area under the curve of some simple-looking functions! 
       </p>
     </introduction>
 
@@ -157,7 +157,7 @@
         </figure>
 
         <p>
-          Observe that the region is a <alert>triangle</alert> with the side of <m>2</m>. 
+          Observe that the region is a <alert>triangle</alert> with the base of <m>3</m> and height of <m>6</m>. 
           Hence, the area under the curve is 
           <me>
             \text{Area} = \frac{1}{2}\cdot 3 \cdot 6 = 9
@@ -228,7 +228,7 @@
 
   <p>
     These problems are easy if the region of interest is a known geometric figure... But things are not always so nice... 
-    We will need a way to find (or at least approximate) the area under the curve of any function. 
+    We will need a way to find (or at least approximate) the area under the graph of any function. 
   </p>
 
   <subsection xml:id="subsec-511-Approximate_Rectangle">
@@ -240,7 +240,7 @@
     </p>
 
     <p>
-      One tool we have in our toolkit is to split the region into a bunch of rectangular strips and we can approximate the area by summing the area of these rectangular strips.  
+      One tool we have in our toolkit is to split the region into a bunch of rectangle strips and we can approximate the area by summing the area of these rectangle strips.  
     </p>
 
     <example>
@@ -872,8 +872,11 @@
     <p>
       You may get the feeling that there is a pattern in the formulas above.  
       We are adding similar things together. 
-      Sometimes it is kind of tedious to write out all the addends when the addends are similar with a pattern. 
+      Sometimes it is kind of tedious to write out all the -- addends when the addends are similar with a pattern. 
       Actually we have a special notation in math we can use to add things up with a pattern. 
+    </p>
+
+    <p>
       <definition xml:id="def-SummationNotation">
         <statement>
           <p>

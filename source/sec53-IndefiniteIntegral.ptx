@@ -131,9 +131,25 @@
       Let <m>f</m> be a function and <m>F</m> be its antiderivative, then its relation is captured in the following diagram: 
     </p>
 
-    <p align="center">
-      <alert>Insert the diagram here</alert>
-    </p>
+    <figure xml:id="fig-fundamental-cycle" width="50%" align="center">
+      <caption>Relationship between Derivative and Anti-derivative.</caption>
+      <image width="70%">
+        <latex-image>
+          \begin{tikzpicture}[>=stealth, scale=1, every node/.style={font=\small}]
+          \def\R{2.6}
+          \draw[line width=2.6pt, cyan!70!black, ->] (\R*cos{160},\R*sin{160}) arc (160:20:\R);
+          \draw[line width=1.6pt, gray!60, ->] (\R*cos{200},\R*sin{200}) arc (200:340:\R);
+          \node[anchor=north east] at (-\R-0.15,-0.15) {$\;y = f(x)\;$};
+          \node[anchor=north west] at (\R+0.15,-0.15) {$\;y = F(x)\;$};
+          \node[font=\large] at (0,1.35) {Integration};
+          \node[font=\large] at (0,-1.35) {Differentiation};
+          \node at (0,1.95) {$\displaystyle A(t)=\int_0^t f(x)\,dx$};
+          \node at (0,-1.95) {$\displaystyle \dfrac{dA}{dt}$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
 
     <example>
       
@@ -143,7 +159,7 @@
 
       <hint>
         <p>
-          What we are asked to find is a mystery function <m>y = F(x)</m> whose derivative is <m>f(x) = e^{kx}</m>. 
+          What we are tasked to find is a mystery function <m>y = F(x)</m> whose derivative is <m>f(x) = e^{kx}</m>. 
           In other words, what is a function <m>y = F(x)</m> such that
           <me>
             F'(x) = e^{kx}
@@ -298,7 +314,7 @@
 
     <p>
       <alert>But Richard...</alert>
-      Isn't integral some sort of area under the curve? Why on earth we are using the same(ish) notation to represent the general antiderivative?
+      Isn't integral some sort of area under the curve? Why on earth are we using the same(ish) notation to represent the general antiderivative?
     </p>
 
     <p>
@@ -315,7 +331,7 @@
       <hint>
         <p>
           Recall the notation of indefinite integral means that we want to find the general antiderivative of the function in the integrand. 
-          So what function will give the derivative of <m>3x^2</m>? 
+          So what function will give the derivative of <m>4x^2</m>? 
         </p>
       </hint>
 
@@ -404,7 +420,7 @@
     </theorem>
 
     <p>
-      We will look at the <alert>power rule</alert> since this is the mostly commonly used rule back in calculus 1.  
+      We will next look at the <alert>power rule</alert> since this is the mostly commonly used rule back in calculus 1.  
     </p>
 
     <theorem xml:id="thm-PowerRule-Integrals">
@@ -559,7 +575,15 @@
     <p>
       A big assumption in the power rule is that the power itself cannot be <m>-1</m> (this should be clear). 
       The what should we do when the power is <m>-1</m>? 
+    </p>
+
+    <p>
       We have another formula to deal with this special case. 
+      Recall we learned the following derivative formula back in calculus 1: 
+      <me>
+        \frac{d}{dx}\left(\ln(x)\right) = \frac{1}{x} \qquad\text{ if } x &gt; 0
+      </me>
+      If we rewrite this formula (with a bit of an adjustment to take care of a domain issue), then we can obtain a formula to find the indefinite integral of <m>x^{-1}</m>! 
     </p>
 
     <theorem xml:id="thm-Antiderivative-Reciprocal">
@@ -567,11 +591,16 @@
       <statement>
         <p>
           <me>
-            \int \frac{1}{x}\, dx = \ln|x| + C
+            \int \frac{1}{x}\, dx = \ln|x| + C \qquad \text{ if } x\neq 0
           </me>
         </p>
       </statement>
     </theorem>
+
+    <p>
+      Now that we have two formulas to find the indefinite integral of a power function, depending on their power. 
+      Make sure you pay extra attention to when the power function has a power of <m>-1</m>. 
+    </p>
     
     <example>
       <p>
@@ -671,7 +700,7 @@
     </p>
 
     <p>
-      We also learned the derivative of the trigonometric function. 
+      We also learned about the derivative of the six trigonometric functions. 
       Of course we can rewrite them to obtain the following batch of the integral formulas. 
     </p>
 
@@ -691,12 +720,13 @@
 
     <p>
       <alert>But Richard... </alert> some of the integrands seem complicated in the formulas above. 
-      How do I know when I need to use these formula? The short answer is you don't know really when you encounter a problem. 
-      While the integral formula for sine and cosine are really common and wide-used, 
+      How do I know when I need to use these formula? 
+      The short answer is you don't really know when you encounter a problem... 
+      While the integral formula for sine and cosine are really common and wide-used, you will need to pay special attention to when you obtain the integrand in those special forms. 
+      So having those formulas handy is a great idea so you can always check in these formulas will be useful for a problem. 
     </p>
 
     <example>
-      
       <p>
         Evaluate the indefinite integral <m>\displaystyle \int \sec(\theta)\left(\sec(\theta) + \tan(\theta)\right)\, d\theta</m>
       </p>
@@ -755,7 +785,6 @@
     </theorem>
     
     <example>
-      
       <p>
         Evaluate the indefinite integral <m>\displaystyle \int \left(3e^{5x} + 3x^5\right) \, dx</m>
       </p>
@@ -906,7 +935,7 @@
           See that this is a quadratic function. 
           But why on earth can we model the projectile motion using a quadratic function? 
           We will derive this model in this investigation. 
-          We will formalize this idea more in <xref ref="sec56-NetChange"/>. 
+          We will formalize this idea more in section 5.6. 
         </p>
       </introduction>
       
