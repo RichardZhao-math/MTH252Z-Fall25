@@ -131,20 +131,35 @@
       Let <m>f</m> be a function and <m>F</m> be its antiderivative, then its relation is captured in the following diagram: 
     </p>
 
-    <figure xml:id="fig-fundamental-cycle" width="50%" align="center">
-      <caption>Relationship between Derivative and Anti-derivative.</caption>
-      <image width="70%">
+    <figure xml:id="fig-Derivative-to-Antiderivative" width="50%" align="center">
+    <caption>Relationship between Derivative and Anti-derivative.</caption>
+      <image width="60%">
         <latex-image>
           \begin{tikzpicture}[>=stealth, scale=1, every node/.style={font=\small}]
-          \def\R{2.6}
-          \draw[line width=2.6pt, cyan!70!black, ->] (\R*cos{160},\R*sin{160}) arc (160:20:\R);
-          \draw[line width=1.6pt, gray!60, ->] (\R*cos{200},\R*sin{200}) arc (200:340:\R);
-          \node[anchor=north east] at (-\R-0.15,-0.15) {$\;y = f(x)\;$};
-          \node[anchor=north west] at (\R+0.15,-0.15) {$\;y = F(x)\;$};
-          \node[font=\large] at (0,1.35) {Integration};
-          \node[font=\large] at (0,-1.35) {Differentiation};
-          \node at (0,1.95) {$\displaystyle A(t)=\int_0^t f(x)\,dx$};
-          \node at (0,-1.95) {$\displaystyle \dfrac{dA}{dt}$};
+            \def\R{2.6}
+
+            % ---------- tweakable vertical shifts ----------
+            \def\yBlue{0.4cm}   % shift for blue (integration) group
+            \def\yRed{1.5cm}    % shift for red (differentiation) group
+            \def\yFunc{0.2cm}   % shift for function group (y=f, y=F)
+            % ------------------------------------------------
+
+            % --------- Red group (differentiation) ----------
+            \begin{scope}[yshift=\yRed]
+              \draw[line width=1.6pt, red!80!black, ->]
+                ({\R*cos(340)},{\R*sin(340)}) arc (340:200:\R)
+                node[midway, sloped, below] {\small$\displaystyle \dfrac{d}{dx}(F(x))$};
+              % Differentiation heading (moves with red group)
+              \node[font=\normalsize] at (0,-1.55) {Take the Derivative};
+            \end{scope}
+
+            % --------- Function group (only y labels) ----------
+            \begin{scope}[yshift=\yFunc]
+              % place the function labels closer to the circular path
+              \node at (160:{\R*0.78}) [anchor=east] {$\;y=f(x)\;$};
+              \node at (20:{\R*0.78})  [anchor=west] {$\;y=F(x)\;$};
+            \end{scope}
+
           \end{tikzpicture}
         </latex-image>
       </image>
@@ -313,6 +328,54 @@
     </definition>
 
     <p>
+      Now we can capture the relationship between derivatives and anti-derivatives using indefinite integrals. 
+    </p>
+
+    <figure xml:id="fig-Derivative-Antiderivative-cycle" width="50%" align="center">
+    <caption>Relationship between Derivative and Anti-derivative.</caption>
+      <image width="70%">
+        <latex-image>
+          \begin{tikzpicture}[>=stealth, scale=1, every node/.style={font=\small}]
+            \def\R{2.6}
+
+            % ---------- tweakable vertical shifts ----------
+            \def\yBlue{0.4cm}   % shift for blue (integration) group
+            \def\yRed{1.5cm}    % shift for red (differentiation) group
+            \def\yFunc{0.2cm}   % shift for function group (y=f, y=F)
+            % ------------------------------------------------
+
+            % --------- Blue group (integration) ----------
+            \begin{scope}[yshift=\yBlue]
+              \draw[line width=2.6pt, cyan!70!black, ->]
+                ({\R*cos(160)},{\R*sin(160)}) arc (160:20:\R)
+                node[midway, sloped, above] {\small$\displaystyle \int f(x)\, dx$};
+              % Integration heading (moves with blue group)
+              \node[font=\normalsize] at (0,1.35) {Find the Anti-derivative};
+            \end{scope}
+
+            % --------- Red group (differentiation) ----------
+            \begin{scope}[yshift=\yRed]
+              \draw[line width=1.6pt, red!80!black, ->]
+                ({\R*cos(340)},{\R*sin(340)}) arc (340:200:\R)
+                node[midway, sloped, below] {\small$\displaystyle \dfrac{d}{dx}(F(x))$};
+              % Differentiation heading (moves with red group)
+              \node[font=\normalsize] at (0,-1.55) {Take the Derivative};
+            \end{scope}
+
+            % --------- Function group (only y labels) ----------
+            \begin{scope}[yshift=\yFunc]
+              % place the function labels closer to the circular path
+              \node at (160:{\R*0.78}) [anchor=east] {$\;y=f(x)\;$};
+              \node at (20:{\R*0.78})  [anchor=west] {$\;y=F(x) + C\;$};
+            \end{scope}
+
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+
+    <p>
       <alert>But Richard...</alert>
       Isn't integral some sort of area under the curve? Why on earth are we using the same(ish) notation to represent the general antiderivative?
     </p>
@@ -322,8 +385,7 @@
       What we can do in this section is to forget about the area and interpret indefinite integrals as some general antiderivatives. 
     </p>
 
-    <example>
-      
+    <example>  
       <p>
         Evaluate the indefinite integral <m>\displaystyle \int 4x^2\, dx</m>
       </p>
@@ -548,7 +610,7 @@
       <solution>
         <title>An acceptable solution in a proof class but NOT in an integral calculus class</title>
         <p>
-          <alert>The below solution is technically correct but Richard will not accept it since he teaches integral calculus, not a proof class</alert>
+          <alert>The solution below is technically correct but Richard will not accept it since he teaches integral calculus, not a proof class</alert>
         </p>
 
         <p>
@@ -599,7 +661,7 @@
 
     <p>
       Now that we have two formulas to find the indefinite integral of a power function, depending on their power. 
-      Make sure you pay extra attention to when the power function has a power of <m>-1</m>. 
+      Make sure you pay extra attention to which formula to use when the power function has a power of <m>-1</m>. 
     </p>
     
     <example>
@@ -721,9 +783,12 @@
     <p>
       <alert>But Richard... </alert> some of the integrands seem complicated in the formulas above. 
       How do I know when I need to use these formula? 
-      The short answer is you don't really know when you encounter a problem... 
-      While the integral formula for sine and cosine are really common and wide-used, you will need to pay special attention to when you obtain the integrand in those special forms. 
-      So having those formulas handy is a great idea so you can always check in these formulas will be useful for a problem. 
+    </p>
+
+    <p>
+      The short answer is that... you don't really know when you encounter a problem... 
+      While the integral formula for sine and cosine are really common and widely used, you will need to pay special attention to when you obtain the integrand in those special forms. 
+      So having those formulas handy is a great idea and you can always check in to see if these formulas will be useful for a problem. 
     </p>
 
     <example>
@@ -829,7 +894,7 @@
     
     <p>
       We know what an equation is. We dealt with equations where two sides of the equal sign are quantities (or numbers). 
-      We will briefly discuss <alert>differential equations</alert>, an equation that involves an unknown function and its first or higher derivatives. 
+      We will briefly discuss <alert>differential equations</alert>, a type of equation that involves an unknown function and its first or higher derivatives. 
       As you can imagine, the solution is, instead of number(s), function(s). 
     </p>
 
@@ -837,6 +902,14 @@
       <p>
         Solve the differential equation <m>\dfrac{dy}{dx} = 8x^3 + 3x^2</m>. 
       </p>
+
+      <hint>
+        <p>
+          While there are a lot of the letters in this equation, the true variable is <m>y</m>, as a function of <m>x</m>. 
+
+          So what does the <m>\dfrac{d}{dx}</m> stands for and how can we undo it? 
+        </p>
+      </hint>
 
       <solution>
         <p>
@@ -956,6 +1029,15 @@
           </p>
         </hint>
 
+        <solution>
+          <p>
+            Since <m>h''(t)</m> represents the height of the object, its second derivative represents the <alert>acceleration</alert>, which is always <m>32 \text{ ft/sec}^2</m> on earth. 
+          </p>
+
+          <p>
+            Also, we consider going downwards the negative direction vertically, so <m>h''(t) = -32</m> tells us that the acceleration of the object is <m>32 \text{ ft/sec}^2</m> going downwards. 
+          </p>
+        </solution>
       </task>
 
       <task>
@@ -966,6 +1048,17 @@
         <p>
           Remember that <m>v_0</m> and <m>h_0</m> are two constants denoting the initial velocity and the initial height of the object, respectively. 
         </p>
+
+        <hint>
+          <p>
+            Observe that the differential equation contains the second derivative, which is obtained by taking the derivative of a function twice in a row. 
+          </p>
+
+          <p>
+            The solution should be the original function before taking the derivative, which is <m>h(t)</m> here. 
+            So what operation will undo the derivative and how many times we should apply this operation to cancel the second derivative? 
+          </p>
+        </hint>
 
         <solution>
         <p>
@@ -1038,11 +1131,11 @@
         </li>
       </ol>
       These are both very good questions to ponder on! This is one of the reasons why calculus symbols are confusing, that the integral notation (<m>\int</m>) is being used to denote two <em>different</em> concepts here. 
-      You will find the answer to the first question in <xref ref="sec55-FTCpartII"/> and the answer to the second question in <xref ref="sec54-FTCpartI"/>. 
+      You will find the answer to the first question in Section 5.5 and the answer to the second question in Section 5.4. 
     </p>
 
     <p>
-      <alert>P.S.:</alert> Yes we will cover <xref ref="sec55-FTCpartII"/> first and then <xref ref="sec54-FTCpartI"/>. 
+      <alert>P.S.:</alert> Yes we will cover Section 5.5 first and then Section 5.4. 
     </p>
   </subsection>
 
