@@ -3,7 +3,41 @@
 <section xml:id="sec54-FTCpartI" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Fundamental Theorem of Calculus, Part I</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p> 
+      In this section, we will investigate the Fundamental Theorem of Calculus (FTC), part I, which states that we could evaluate the definite integral (aka the signed area under the curve) using indefinite integral (aka the general antiderivative).  
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            state and explain the Fundamental Theorem of Calculus, part I.
+          </p>
+        </li>
+        <li>
+          <p>
+            evaluate definite integrals using FTC. 
+          </p>
+        </li>
+        <li>
+          <p>
+            evaluate definite integrals of piecewise functions using FTC. 
+          </p>
+        </li>
+      </ul>
+    </objectives>
+  </introduction>
+
+  <p>
+    <alert>P.S.:</alert> We will cover <xref ref="sec55-FTCpartII"/> before this section. 
+    Some of the results in this section will be built upon the concepts covered in <xref ref="sec55-FTCpartII"/>. 
+  </p>
 
   <subsection xml:id="subsec-541-FTC-Corollary">
     <title>A Corollary of the Fundamental Theorem of Calculus</title>
@@ -517,6 +551,14 @@
       <exercise>
         <statement>
           <p>
+            <m>\displaystyle \int_1^4 \left(\frac{5t^2 + 4}{3t}\right)\, dt</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
             <m>\displaystyle \int_1^{27} \frac{t + 1}{\sqrt{t}}\, dt</m>
           </p>
         </statement>
@@ -542,6 +584,14 @@
         <statement>
           <p>
             <m>\displaystyle\int_2^3 e^{4x}\, dx </m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int_0^\frac{\pi}{6} \sec(\theta)\tan(\theta)\, d\theta</m>
           </p>
         </statement>
       </exercise>

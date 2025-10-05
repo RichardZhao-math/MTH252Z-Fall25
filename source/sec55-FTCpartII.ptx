@@ -3,7 +3,40 @@
 <section xml:id="sec55-FTCpartII" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Fundamental Theorem of Calculus, Part II</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p> 
+      In this section, we will learn the Fundamental Theorem of Calculus (FTC), part II, which states that integration and differentiation are inverse process (so they cancel each other).  
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            understand the concept of accumulation function. 
+          </p>
+        </li>
+        <li>
+          <p>
+            understand the Fundamental Theorem of Calculus, part II and apply it to relevant problems. 
+          </p>
+        </li>
+        <li>
+          <p>
+            analyze the graph of the accumulation function. 
+          </p>
+        </li>
+      </ul>
+    </objectives>
+  </introduction>
+
+  <p>
+    <alert>P.S.:</alert> We will cover this section before <xref ref="sec54-FTCpartI"/>. Some of the results in <xref ref="sec54-FTCpartI"/> will be built upon the concepts covered in this section. 
+  </p>
 
   <subsection xml:id="subsec-551-AccumulationFunction">
     <title>Accumulation Functions</title>
@@ -331,7 +364,7 @@
     </p>
 
     <note>
-      <title>Why is there two variables in the function...</title>
+      <title>Why are there two variables in the function...</title>
       
       <p>
         Notice that there are two variables in the accumulation function, <m>x</m> and <m>t</m>. 
@@ -759,7 +792,6 @@
             <me>
               \frac{d}{dx}\int_{u(x)}^{v(x)} f(t)\, dt = f\left(v(x)\right)\cdot v'(x) - f\left(u(x)\right)\cdot u'(x)
             </me>
-            
           </p>
         </statement>
       </theorem>
@@ -768,7 +800,262 @@
 
   <subsection xml:id="subsec-554-Graph-AccumulationFunction">
     <title>The Graph of the Accumulation Function</title>
+
+    <p>
+      We investigated the accumulation function earlier in this section. 
+      Recall the accumulation function takes the input of the upper limit of the definite integral and spits out the output of the area under the curve. 
+      We are now investigating the <em>graph</em> of the accumulation function. 
+    </p>
+
+    <p>
+      One characteristics of a graph, as you learned back in calculus 1, are the local extrema (peaks and valleys on the graph). 
+      Can we predict where the peaks and valleys of the accumulation function are at given a graph of a function? 
+    </p>
+
+    <example>
+      <p>
+        Let <m>A</m> be the accumulation function defined as
+        <me>
+          A(x) = \int_0^x f(t)\, dt
+        </me>
+        where <m>y = f(t)</m> is a function whose graph is shown below. 
+      </p>
+
+      <figure>
+        <caption>The graph of <m>y = f(t)</m></caption>
+        <image width="50%">
+          <latex-image>
+            \begin{tikzpicture}
+              \begin{axis}[
+                axis lines=middle,
+                xlabel={$x$},
+                ylabel={$y$},
+                xmin=-0.5, xmax=12.5,
+                ymin=-1.5, ymax=3.5,
+                xtick={0,2,4,6,8,10,12},
+                minor xtick={1,3,5,7,9,11},
+                ytick=\empty,
+                samples=200
+              ]
+                % Segment 1: -0.75*x(x-4) on [0,4]
+                \addplot[ultra thick, blue, domain=0:4] {-0.75*x*(x - 4)};
+
+                % Segment 2: -sin(pi/4*x - pi) on [4,12]
+                \addplot[ultra thick, blue, domain=4:12.5] {-sin(45*x - 180)};
+
+                % Label
+                \node at (axis cs:4,3) {$y = f(t)$}; 
+
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+
+      <p>
+        <ol marker="(a)">
+          <li>
+            <p>
+              Determine the intervals on which the accumulation function, <m>A</m> is increasing (and decreasing)
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the value of <m>x</m> where the accumulation function, <m>A</m>, has a peak (and valley). 
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <hint>
+        <p>
+          Recall that the accumulation function <em>accumulates</em> the signed area under the curve starting from <m>x = 0</m>. 
+          The region above the <m>x</m>-axis should have a positive signed area and the region below the <m>x</m>-axis should have a negative signed area. 
+        </p>
+
+        <p>
+          So do we know at which point(s) we starts <em>accumulating</em> positive area (which makes the overall area greater) and negative area (which makes the overall area smaller)? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Observe that the enclosed region is above the <m>x</m>-axis on <m>(0,4)</m> and <m>(8,12)</m>. 
+          This implies that we are <em>accumulating</em> positive area in these two regions, making the value of the accumulation function <m>A</m> increasing. 
+        </p>
+
+        <p>
+          Similarly, the region on <m>(4,8)</m> is below the <m>x</m>-axis, so we are <em>accumulating</em> negative area in this region, making the value of the accumulation function <m>A</m> decreasing. 
+        </p>
+
+        <p>
+          Hence, <m>A</m> is increasing in the interval <m>(0,4)\cup (8,12)</m> and decreasing in the interval <m>(4,8)</m>. 
+        </p>
+
+        <p>
+          Now let's think about the peaks and valleys. 
+          At the point of <m>x = 4</m>, we start to <em>accumulate</em> negative area, which makes the overall area smaller. 
+          This implies that there is a peak at <m>x = 4</m>.  
+        </p>
+
+        <p>
+          Similarly, at the point of <m>x = 8</m>, we start to <em>accumulate</em> positive area, which makes the overall area greater. 
+          This implies that there is a valley at <m>x = 8</m>. 
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The above example shows an intuitive sense of reasoning about the graph of the accumulation function by imagining how the overall area is changing. 
+    </p>
+
+    <p>
+      If you want to be fancier, recall the accumulation function, <m>A</m>, is an antiderivative of the function <m>f</m>, guaranteed by FTC. 
+      We can reverse-engineer the first derivative test you learned back in calculus 1. 
+      That is, the critical points (in this problem, peaks and valley) of the accumulation function will occur at the point where the derivative of the accumulation function, aka <m>f</m> is <m>0</m>. 
+      The accumulation function is increasing if its derivative, aka <m>f</m>, is positive, and decreasing if its derivative, <m>f</m>, is negative. 
+    </p>
     
   </subsection>
+
+  <worksheet xml:id="ws-sec55">
+    <title>Some Exercises for this section</title>
+    
+    <introduction>
+      <p>
+        I included some practice problems that cover some main concepts in this section. 
+        You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. 
+        Reach out to Richard for help if you get stuck or have any questions. 
+      </p>
+
+      <p>
+        I will only include the final answer to some of the problems for you to check your result. 
+        If you want to check your work, talk to Richard and he is happy to discuss the process with you. 
+      </p>
+    </introduction>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Calculate the following derivative. 
+        </p>
+      </introduction>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \frac{d}{dx}\int_4^x e^{3t}\, dt</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \frac{d}{dx}\int_x^{-\frac{\pi}{4}} \sec^2\left(\theta\right)\, d\theta</m>
+          </p>
+        </statement>
+      </exercise>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \frac{d}{dx}\int_1^\frac{1}{x} \cos^3(t)\, dt</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \frac{d}{du}\int_{-u}^{3u} \sqrt{x^2 + 1} \, dx</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove the formula
+          <me>
+            \frac{d}{dx}\int_{u(x)}^{v(x)} f(t)\, dt = f\left(v(x)\right)\cdot v'(x) - f\left(u(x)\right)\cdot u'(x)
+          </me>
+        </p>
+
+        <p>
+          <em>Note:</em> By saying "prove", Richard means to justify this formula informally. 
+          The goal here is to make sure you know how the formula is derived and why each component is necessary. 
+          Richard will never look for a technical mathematical proof in this class, but you are certainly more than welcome to try coming up with a proof-y proof and Richard is always happy to chat about it. 
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>A</m> be the accumulation function defined as 
+          <me>
+            A(x) = \int_0^x t\sin(t)\, dt
+          </me>
+          Below is the graph of <m>f(t) = t\sin(t)</m> on <m>[0,3\pi]</m>. 
+        </p>
+
+        <figure xml:id="fig-xsin-x-0-3pi">
+          <caption>The graph of <m>f(t) = t\sin(t)</m></caption>
+
+          <image width="70%">
+            <latex-image><![CDATA[
+              \pgfplotsset{compat=1.18}
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines=middle,
+                  axis line style={->},
+                  xlabel={$t$},
+                  ylabel={$y$},
+                  xmin=-0.5, xmax=10,
+                  ymin=-5.5, ymax=8.5,
+                  samples=400,
+                  domain=0:9.425, % 3*pi ≈ 9.425
+                  width=13cm, height=6cm,
+                  xtick={0,1.571,3.142,4.712,6.283,7.854,9.425},
+                  xticklabels={$0$,$\tfrac{\pi}{2}$,$\pi$,$\tfrac{3\pi}{2}$,$2\pi$,$\tfrac{5\pi}{2}$,$3\pi$},
+                  ytick={-8,-4,0,4,8},
+                  every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west},
+                  every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south}
+                ]
+                  % Graph of y = x*sin(x)
+                  \addplot[blue, ultra thick, smooth] {x*sin(deg(x))};
+
+                  % label
+                  \node[anchor=west] at (axis cs:5,7) {\(f(t) = t\sin(t)\)};
+                \end{axis}
+              \end{tikzpicture}
+            ]]></latex-image>
+          </image>
+        </figure>
+
+        <p>
+        <ol marker="(a)">
+          <li>
+            <p>
+              Determine the intervals on which the accumulation function, <m>A</m> is increasing (and decreasing)
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the value of <m>x</m> where the accumulation function, <m>A</m>, has a peak (and valley). 
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+    </exercise>
+
+
+  </worksheet>
 
 </section>

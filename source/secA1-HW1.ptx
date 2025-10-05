@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xml:id="secA1-HW1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="secA1-HW1" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Written Homework #1</title>
 
     <assemblage>
@@ -24,133 +24,135 @@
         </p>
     </assemblage>
 
-    <exercise>
-        <statement>
-            <p>
-                Approximate the area of the region under the curve of <me>y = \frac{4 - x}{1 + x^2}</me> by <alert>calculating the area the area of the shaded rectangles</alert> shown in the diagram below. 
-                Which approximation method do these rectangles represent? 
-            </p>
-
-            <figure>
-            <caption>The Graph of <m>y = \dfrac{4 - x}{1 + x^2}</m> with the region under the curve on <m>[-3,3]</m></caption>
-            <image width="50%">
-                <latex-image>
-                \begin{tikzpicture}
-                \begin{axis}[
-                    axis lines=middle,
-                    xlabel={$x$},
-                    ylabel={$y$},
-                    xmin=-3.5, xmax=3.5,
-                    ymin=-0.5, ymax=4.5,
-                    xtick={-3,-2,-1,0,1,2,3},
-                    ytick=\empty,
-                    samples=200
-                ]
-
-                % Shaded region
-                \addplot [draw=none, fill=green!50, opacity=0.6, domain=-3:3] {(4-x)/(1+x^2)} \closedcycle;
-
-                % Midpoint rectangles
-                \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
-                    coordinates {(-3,0) (-3,0.9) (-2,0.9) (-2,0)} -- cycle;
-                \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
-                    coordinates {(-2,0) (-2,1.69) (-1,1.69) (-1,0)} -- cycle;
-                \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
-                    coordinates {(-1,0) (-1,3.6) (0,3.6) (0,0)} -- cycle;
-                \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
-                    coordinates {(0,0) (0,2.8) (1,2.8) (1,0)} -- cycle;
-                \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
-                    coordinates {(1,0) (1,0.77) (2,0.77) (2,0)} -- cycle;
-                \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
-                    coordinates {(2,0) (2,0.21) (3,0.21) (3,0)} -- cycle;
-
-                % Curve
-                \addplot[blue, ultra thick, smooth, domain=-3.5:3.5] {(4-x)/(1+x^2)};
-
-                \end{axis}
-                \end{tikzpicture}
-                </latex-image>
-            </image>
-            </figure>
-        </statement>
-    </exercise>
-
-    <exercise>
-        <statement>
-            <p>
-            Justify grapically, with pretty pictures and explanation that
-            <ol marker="(a)">
-                <li>
+    <worksheet>
+        <title> </title>
+        
+        <exercise>
+            <statement>
                 <p>
-                    If <m>f</m> is a continuous <alert>odd</alert> function, then <m>\displaystyle \int_{-a}^a f(x)\, dx = 0</m>
+                    Approximate the area of the region under the curve of <me>y = \frac{4 - x}{1 + x^2}</me> by <alert>calculating the area the area of the shaded rectangles</alert> shown in the diagram below. 
+                    Which approximation method do these rectangles represent? 
                 </p>
-                </li>
-                <li>
-                <p>
-                    If <m>g</m> is a continuous <alert>even</alert> function, then <m>\displaystyle \int_{-a}^a g(x)\, dx = 2\int_0^a g(x)\, dx</m>
-                </p>
-                </li>
-            </ol>
-            </p>
-        </statement>
 
-        <hint>
-            <p>
-                Recall that
-                <ul>
+                <figure>
+                    <caption>The Graph of <m>y = \dfrac{4 - x}{1 + x^2}</m> with the region under the curve on <m>[-3,3]</m></caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis lines=middle,
+                                xlabel={$x$},
+                                ylabel={$y$},
+                                xmin=-3.5, xmax=3.5,
+                                ymin=-0.5, ymax=4.5,
+                                xtick={-3,-2,-1,0,1,2,3},
+                                ytick=\empty,
+                                samples=200,
+                                clip=false
+                            ]
+
+                            % Shaded region (note: no extra parenthesis)
+                            \addplot [draw=none, fill=green!50, opacity=0.6, domain=-3:3] {(4-x)/(1+x^2)} \closedcycle;
+
+                            % Midpoint rectangles (explicit coordinates)
+                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-3,0) (-3,0.9) (-2,0.9) (-2,0)} -- cycle;
+                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-2,0) (-2,1.69) (-1,1.69) (-1,0)} -- cycle;
+                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-1,0) (-1,3.6) (0,3.6) (0,0)} -- cycle;
+                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(0,0) (0,2.8) (1,2.8) (1,0)} -- cycle;
+                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(1,0) (1,0.77) (2,0.77) (2,0)} -- cycle;
+                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(2,0) (2,0.21) (3,0.21) (3,0)} -- cycle;
+
+                            % Curve on top
+                            \addplot[blue, ultra thick, smooth, domain=-3.5:3.5] {(4-x)/(1+x^2)};
+
+                            % Label
+                            \node at (axis cs:1.25,3.75) {$y = \dfrac{4 - x}{1 + x^2}$}; 
+
+                            \end{axis}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                Justify grapically, with pretty pictures and explanation that
+                <ol marker="(a)">
                     <li>
-                        <p>
-                            <m>f</m> is an <em>odd</em> function if its graph is <alert>symmetric across the origin</alert>. 
-                        </p>
+                    <p>
+                        If <m>f</m> is a continuous <alert>odd</alert> function, then <m>\displaystyle \int_{-a}^a f(x)\, dx = 0</m>
+                    </p>
                     </li>
                     <li>
-                        <p>
-                            <m>g</m> is an <em>even</em> function if its graph is <alert>symmetric about the <m>\boldsymbol{y}</m>-axis</alert>. 
-                        </p>
+                    <p>
+                        If <m>g</m> is a continuous <alert>even</alert> function, then <m>\displaystyle \int_{-a}^a g(x)\, dx = 2\int_0^a g(x)\, dx</m>
+                    </p>
                     </li>
-                </ul>
-            </p>
-        </hint>
-    </exercise>
+                </ol>
+                </p>
+            </statement>
 
-    <exercise>
-        <statement>
-            <p>
-                Find <alert>constants</alert> <m>c_1</m> and <m>c_2</m> such that
-                <me>
-                    F(x) = c_1\sin(3x) + c_2x\cos(3x)
-                </me>
-                is an antiderivative of <m>f(x) = 2x\sin(3x)</m>. 
-            </p>
-        </statement>
+            <hint>
+                <p>
+                    Recall that
+                    <ul>
+                        <li>
+                            <p>
+                                <m>f</m> is an <em>odd</em> function if its graph is <alert>symmetric across the origin</alert>. 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>g</m> is an <em>even</em> function if its graph is <alert>symmetric about the <m>\boldsymbol{y}</m>-axis</alert>. 
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </hint>
+        </exercise>
 
-        <hint>
-            <p>
-                Recall that <m>F</m> is an antiderivative of <m>f</m> <alert>IF</alert> <m>F'(x) = f(x)</m>. 
-            </p>
+        <exercise>
+            <statement>
+                <p>
+                    Find <alert>constants</alert> <m>c_1</m> and <m>c_2</m> such that
+                    <me>
+                        F(x) = c_1\sin(3x) + c_2x\cos(3x)
+                    </me>
+                    is an antiderivative of <m>f(x) = 2x\sin(3x)</m>. 
+                </p>
+            </statement>
 
-            <p>
-                Don't try to evaluate <m>\int f(x)\, dx</m> as we need to build up more concepts to be able to evaluate this integral. 
-                Instead, take the derivative of <m>F(x)</m> and match it up with <m>f(x)</m>. 
-            </p>
+            <hint>
+                <p>
+                    Recall that <m>F</m> is an antiderivative of <m>f</m> <alert>IF</alert> <m>F'(x) = f(x)</m>. 
+                </p>
 
-            <p>
-                We want to find <m>c_1</m> and <m>c_2</m> such that <m>F'(x)</m> and <m>f(x)</m> look <em>exactly</em> the same. 
-            </p>
-        </hint>
-    </exercise>
+                <p>
+                    Don't try to evaluate <m>\int f(x)\, dx</m> as we need to build up more concepts to be able to evaluate this integral. 
+                    Instead, take the derivative of <m>F(x)</m> and match it up with <m>f(x)</m>. 
+                </p>
 
-    <exercise>
-        <statement>
-            <p>
-                Find <m>f'</m> and <m>f</m> using the following conditions: 
-                <me>
-                    f''(x) = x - \cos(x), \qquad f'(0) = 2, \qquad f(0) = -2
-                </me>
-                
-            </p>
-        </statement>
-    </exercise>
+                <p>
+                    We want to find <m>c_1</m> and <m>c_2</m> such that <m>F'(x)</m> and <m>f(x)</m> look <em>exactly</em> the same. 
+                </p>
+            </hint>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Find <m>f'</m> and <m>f</m> using the following conditions: 
+                    <me>
+                        f''(x) = x - \cos(x), \qquad f'(0) = 2, \qquad f(0) = -2
+                    </me>
+                    
+                </p>
+            </statement>
+        </exercise>
+    </worksheet>
 
     <assemblage>
         <p>
@@ -162,4 +164,4 @@
         </p>
     </assemblage>
 
-</worksheet>
+</section>
