@@ -838,6 +838,51 @@ var ptx_lunr_docs = [
   "body": "   given that and    "
 },
 {
+  "id": "secA1-HW1",
+  "level": "1",
+  "url": "secA1-HW1.html",
+  "type": "Worksheet",
+  "number": "A.1",
+  "title": "Written Homework #1",
+  "body": " Written Homework #1   You are encouraged to work on this assignment collaboratively with your peers in class. You can also ask Richard for hints if you are stuck. Yet, you should write up your own work and submit it on Canvas in one single PDF file . Show all of your work for full credits, and your work should be clearly written and organized.  The written homework #1 is due on October 12, 2025 .  You can find a printable PDF copy of the homework here: Written Homework 1   This homework assignment cover some important concepts in section 5.1, 5.2, and 5.3.     Approximate the area of the region under the curve of by calculating the area the area of the shaded rectangles shown in the diagram below. Which approximation method do these rectangles represent?   The Graph of with the region under the curve on          Justify grapically, with pretty pictures and explanation that   If is a continuous odd function, then     If is a continuous even function, then        Recall that    is an odd function if its graph is symmetric across the origin .     is an even function if its graph is symmetric about the -axis .         Find constants  and such that is an antiderivative of .    Recall that is an antiderivative of  IF  .  Don't try to evaluate as we need to build up more concepts to be able to evaluate this integral. Instead, take the derivative of and match it up with .  We want to find and such that and look exactly the same.      Find and using the following conditions:      When you finished the homework assignment, format it in one single PDF file and submit it in Written Homework 1 Assignment Portal .  After the due dates, Richard will post the solution here on the same page so make sure to check back this page!   "
+},
+{
+  "id": "secA1-HW1-3",
+  "level": "2",
+  "url": "secA1-HW1.html#secA1-HW1-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.1",
+  "title": "",
+  "body": "  Approximate the area of the region under the curve of by calculating the area the area of the shaded rectangles shown in the diagram below. Which approximation method do these rectangles represent?   The Graph of with the region under the curve on       "
+},
+{
+  "id": "secA1-HW1-4",
+  "level": "2",
+  "url": "secA1-HW1.html#secA1-HW1-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.2",
+  "title": "",
+  "body": "  Justify grapically, with pretty pictures and explanation that   If is a continuous odd function, then     If is a continuous even function, then        Recall that    is an odd function if its graph is symmetric across the origin .     is an even function if its graph is symmetric about the -axis .      "
+},
+{
+  "id": "secA1-HW1-5",
+  "level": "2",
+  "url": "secA1-HW1.html#secA1-HW1-5",
+  "type": "Worksheet Exercise",
+  "number": "A.1.3",
+  "title": "",
+  "body": "  Find constants  and such that is an antiderivative of .    Recall that is an antiderivative of  IF  .  Don't try to evaluate as we need to build up more concepts to be able to evaluate this integral. Instead, take the derivative of and match it up with .  We want to find and such that and look exactly the same.   "
+},
+{
+  "id": "secA1-HW1-6",
+  "level": "2",
+  "url": "secA1-HW1.html#secA1-HW1-6",
+  "type": "Worksheet Exercise",
+  "number": "A.1.4",
+  "title": "",
+  "body": "  Find and using the following conditions:    "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
