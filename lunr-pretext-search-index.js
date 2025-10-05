@@ -838,45 +838,423 @@ var ptx_lunr_docs = [
   "body": "   given that and    "
 },
 {
+  "id": "sec54-FTCpartI",
+  "level": "1",
+  "url": "sec54-FTCpartI.html",
+  "type": "Section",
+  "number": "5.4",
+  "title": "The Fundamental Theorem of Calculus, Part I",
+  "body": " The Fundamental Theorem of Calculus, Part I   In this section, we will investigate the Fundamental Theorem of Calculus (FTC), part I, which states that we could evaluate the definite integral (aka the signed area under the curve) using indefinite integral (aka the general antiderivative).    After this section, students will be able to:     state and explain the Fundamental Theorem of Calculus, part I.    evaluate definite integrals using FTC.    evaluate definite integrals of piecewise functions using FTC.       P.S.: We will cover before this section. Some of the results in this section will be built upon the concepts covered in .   A Corollary of the Fundamental Theorem of Calculus  Well the Fundamental Theorem of Calculus, Part II, in , isn't the theorem we use a lot. Instead, we use the Fundamental Theorem of Calculus, Part I, a lot to help us evaluate definite integrals. This is actually a (most useful) corollary of the Fundamental Theorem of Calculus. The theorem is presented in your textbook page 318. I also included it below:    Assume that and that is continuous on . If is an antiderivative of on , then      Corollary , in math, means a result that follows immediately from a big theorem. So we should be able to prove this theorem quickly if we know how the Fundamental Theorem of Calculus works.  Let be a continuous function. By the Fundamental Theorem of Calculus, we know that its accumulation function, , is an antiderivative of (since ). Furthermore, we know that ALL antiderivatives of a function should only differ by a constant. That is, if is an arbitrary antiderivative of , then .  We will prove this corollary through the accumulation function. Your textbook approaches the proof using the Mean Value Theorem, which is a different approach. Feel free to read through it if you want a different perspective of why this corollary is true.  Let's define the accumulation function The reason why we used as the lower limit here is because is taken for something else. In math, we don't want to label two different thing using the same letter to avoid confusion. I, again, coded a pretty picture to help you visualize the situation.       Using colors, we know that represents the area of the region on , which is the area of the green and orange regions combined. represents the area of the region on , which is the area of the green region.  We know that represents the area of the region on , which is the area of the orange region. A simple subtraction tells us that This result is super close to the corollary already!  Recall . Then we obtain We proved another big result in calculus!  The last step in our proof is another reason why we don't need a when evaluating definite integral. The will be canceled!    Why is this corollary important?  Note that the definite integrals allow us to compute the area under the curve. But finding the Riemann sum is a painful process, especially without the help of the technology.  Whereas we can find the indefinite integral (or the general antiderivative) of a function. But it has nothing to do with the area.  This corollary gives us a practical way to connect these two ideas together! We can evaluate the definite integral by (1) find the antiderivative of the integrand, and (2) plug in the limits of integration and do the subtraction. In fact, some textbooks call this result the evaluation theorem to emphasize the fact that we can evaluate definite integral using this result.  In notation, we have We will be using this idea to evaluate the definite integrals mostly in this class.    Examples on Applying FTC Corollary  We will work through many examples to evaluate definite integrals using the corollary of FTC. Make sure you are comfortable with this way of evaluating definite integrals!  In the following examples, I will show all the steps. Make sure you understand why each step is being done (either using properties of definite integral, FTC, purely algebra, or purely arithmetic).   Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?          Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?          Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?          Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?          What if I forgot the ... Is it a big deal?  Observe that the didn't contribute to the work at all... Is it okay to drop the ?  The short answer is no... Dropping the will make the answer (ish...).  Remember the definite integral is defined using the limit of Riemann sum, where the is the infinitesimally small width of the rectangles. Without multiplying the with the function value (aka the height of the rectangle), we don't get the area of the rectangles out of it. We would be just adding up infinite number of function values together, resulting in .  Make sure you have the in all the definite integrals to make sure you are indeed finding the area under the curve, rather than simply adding all the functions values together.   Now that we have an idea on how to evaluate definite integrals with the integrand being a single-piece functions. What about evaluating definite integrals with the integrand being a piecewise function? Let's try two of them!   Evaluate the definite integral , where    Observe that we have a different function formulas before hits and after hits . So we don't know which formula to use to represent the function on the entire interval of .  It would be so nice if we could split up the region at this transition point of so we can use the first formula on and the second formula on ... Is there a property of definite integral that will allow us to split up the definite integral?    One of the properties of definite integral allows us to split up the definite integrals at as follows: Ha! We know that on the interval and on the interval ! Then we can plug in the corresponding function formulas and let FTC to do the rest of the work!      Evaluate the definite integral    What makes this problem difficult is the absolute value... We don't have any integral formula to help us find the antiderivative of the absolute value function.  It would be so nice if there is a way to remove the absolute value...  There is actually a way to do so! Remember absolute value function is essentially a piecewise function as follows: In other words, the absolute value turns all the negative values to positive.  So do we know where, within , the sine function takes on negative value?    Recall that the value of the sine function is positive on and negative on (if this fact doesn't click instantly, graphing out the sine function on and observe the graph). Then we can remove the absolute value by rewriting the integrand as a piecewise function as follows: Then we can split up the integral at this transition point of and plug in the corresponding function formulas. The FTC will do the rest!     Again, make sure you are comfortable with evaluating definite integrals in this way. We will be developing more and more fancy methods to evaluate definite integrals using FTC. A good basic understanding and fluency in this way will make the later sections easier!  There is a saying \"practice makes perfect\". A good way of practicing the FTC is to go back to all the examples we did and see if you can solve them without looking at my solution. I will also include some practice problems at the end you can work on.    Something to ponder on...  Notice that the FTC, part I, has an assumption that says is continuous on some closed interval . Later in the class (likely towards the end of chapter 7), Richard will make a BIG deal of this assumption (so he is cool if you don't pay attention to it now). But why is this assumption necessary?  To give you an actual problem to think about, is it correct to evaluate the integral as follows? We will revisit this problem in section 7.7 and point out what's wrong with this line of work.    Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     Evaluate the following definite integrals using the FTC.                                                              Evaluate the definite integral where       Rewrite the definite integral as a sum of integrals without the absolute value and evaluate it.                   "
+},
+{
+  "id": "sec54-FTCpartI-2-2",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#sec54-FTCpartI-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     state and explain the Fundamental Theorem of Calculus, part I.    evaluate definite integrals using FTC.    evaluate definite integrals of piecewise functions using FTC.    "
+},
+{
+  "id": "cor-FTC",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#cor-FTC",
+  "type": "Corollary",
+  "number": "5.4.1",
+  "title": "",
+  "body": "  Assume that and that is continuous on . If is an antiderivative of on , then    "
+},
+{
+  "id": "subsec-541-FTC-Corollary-4",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-541-FTC-Corollary-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Corollary "
+},
+{
+  "id": "fig-Proof-FTC-Cor",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#fig-Proof-FTC-Cor",
+  "type": "Figure",
+  "number": "5.4.2",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "subsec-543-Examples-FTC-Corollary-4",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary-4",
+  "type": "Example",
+  "number": "5.4.3",
+  "title": "",
+  "body": " Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?        "
+},
+{
+  "id": "subsec-543-Examples-FTC-Corollary-5",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary-5",
+  "type": "Example",
+  "number": "5.4.4",
+  "title": "",
+  "body": " Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?        "
+},
+{
+  "id": "subsec-543-Examples-FTC-Corollary-6",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary-6",
+  "type": "Example",
+  "number": "5.4.5",
+  "title": "",
+  "body": " Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?        "
+},
+{
+  "id": "subsec-543-Examples-FTC-Corollary-7",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary-7",
+  "type": "Example",
+  "number": "5.4.6",
+  "title": "",
+  "body": " Evaluate the definite integral    By the FTC, we will need to first find an antiderivative of the integrand, and then plug in the limits of integration and do the subtraction.  So what is an antiderivative of the integrand ?        "
+},
+{
+  "id": "subsec-543-Examples-FTC-Corollary-8",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary-8",
+  "type": "Note",
+  "number": "5.4.7",
+  "title": "What if I forgot the <span class=\"process-math\">\\(\\boldsymbol{dx}\\text{...}\\)<\/span> Is it a big deal?",
+  "body": " What if I forgot the ... Is it a big deal?  Observe that the didn't contribute to the work at all... Is it okay to drop the ?  The short answer is no... Dropping the will make the answer (ish...).  Remember the definite integral is defined using the limit of Riemann sum, where the is the infinitesimally small width of the rectangles. Without multiplying the with the function value (aka the height of the rectangle), we don't get the area of the rectangles out of it. We would be just adding up infinite number of function values together, resulting in .  Make sure you have the in all the definite integrals to make sure you are indeed finding the area under the curve, rather than simply adding all the functions values together.  "
+},
+{
+  "id": "subsec-543-Examples-FTC-Corollary-10",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary-10",
+  "type": "Example",
+  "number": "5.4.8",
+  "title": "",
+  "body": " Evaluate the definite integral , where    Observe that we have a different function formulas before hits and after hits . So we don't know which formula to use to represent the function on the entire interval of .  It would be so nice if we could split up the region at this transition point of so we can use the first formula on and the second formula on ... Is there a property of definite integral that will allow us to split up the definite integral?    One of the properties of definite integral allows us to split up the definite integrals at as follows: Ha! We know that on the interval and on the interval ! Then we can plug in the corresponding function formulas and let FTC to do the rest of the work!    "
+},
+{
+  "id": "subsec-543-Examples-FTC-Corollary-11",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary-11",
+  "type": "Example",
+  "number": "5.4.9",
+  "title": "",
+  "body": " Evaluate the definite integral    What makes this problem difficult is the absolute value... We don't have any integral formula to help us find the antiderivative of the absolute value function.  It would be so nice if there is a way to remove the absolute value...  There is actually a way to do so! Remember absolute value function is essentially a piecewise function as follows: In other words, the absolute value turns all the negative values to positive.  So do we know where, within , the sine function takes on negative value?    Recall that the value of the sine function is positive on and negative on (if this fact doesn't click instantly, graphing out the sine function on and observe the graph). Then we can remove the absolute value by rewriting the integrand as a piecewise function as follows: Then we can split up the integral at this transition point of and plug in the corresponding function formulas. The FTC will do the rest!    "
+},
+{
+  "id": "ws-sec54-3-2",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-3-3",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-3",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-3-4",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-4",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-3-5",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-5",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-3-6",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-6",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-3-7",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-7",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-3-8",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-8",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-3-9",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-3-9",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-4",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-4",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Evaluate the definite integral where    "
+},
+{
+  "id": "ws-sec54-5-2",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-5-2",
+  "type": "Worksheet Exercise",
+  "number": "10",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec54-5-3",
+  "level": "2",
+  "url": "sec54-FTCpartI.html#ws-sec54-5-3",
+  "type": "Worksheet Exercise",
+  "number": "11",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "sec55-FTCpartII",
+  "level": "1",
+  "url": "sec55-FTCpartII.html",
+  "type": "Section",
+  "number": "5.5",
+  "title": "The Fundamental Theorem of Calculus, Part II",
+  "body": " The Fundamental Theorem of Calculus, Part II   In this section, we will learn the Fundamental Theorem of Calculus (FTC), part II, which states that integration and differentiation are inverse process (so they cancel each other).    After this section, students will be able to:     understand the concept of accumulation function.    understand the Fundamental Theorem of Calculus, part II and apply it to relevant problems.    analyze the graph of the accumulation function.       P.S.: We will cover this section before . Some of the results in will be built upon the concepts covered in this section.   Accumulation Functions  Let's first define what the accumulation function is!    Let be a continuous function on an open interval and let be in . We define the accumulation function as     Using our knowledge of function notation, we know that the name of the accumulation function is , with the input of and the output of .  This function takes in a complicated formula, so let's work on an example to see what it does!   Let and . Then we can define the accumulation function here to be Find the value of , , , and . Then graph the function and indicate what these values represent on the graph.   Let's plug in the values to the function. Then the output is some sort of definite integral.  Recall definite integral represents some sort of signed area of the region under the curve. Can we find the (signed) area of the region under the curve geometrically?    Below is the graph of .   The Graph of       represents the area under the line from to . Graphically speaking, the area is 0, shown in the diagram below.   The Diagram of       represents the area under the line from to . Graphically speaking, the enclosed region is a trapezoid, with the area of The diagram is shown below.   The Diagram of       represents the area under the line from to . Graphically speaking, the enclosed region is a trapezoid, with the area of The diagram is shown below.   The Diagram of       represents the area under the line from to . Graphically speaking, the enclosed region is a trapezoid, with the area of The diagram is shown below.   The Diagram of        Notice that the variable appears to be in the place of the upper limit of integration in the integral. This implies that the input of the accumulation function, , represents the upper limit of integration . It tells us how \"far\" we are integrating from the starting point of .  The outout of the accumulation function, , represents the signed area under the curve of from to .  We call the accumulation function because it accumulates the signed area under the curve as we move from the starting point of to some later point . Your textbook actually call it the area function but this idea of area can be generalized. The accumulation function accumulates some quantity (and it doesn't have to be some area) between two points.   Why are there two variables in the function...  Notice that there are two variables in the accumulation function, and . Why do we need both the and the to define the accumulation function...  Well long story short, these two variables are doing two different jobs since there are two types of functions here:    is the input variable of the accumulation function, which represents the upper limit of integration of the integral.     is what we called the dummy variable we use to represent the input of the function .     Then the next natural question to ask here is why wouldn't it make sense to use ONLY one variable to do both jobs (like only using as the variable)? Wouldn't it make the function easier?  Well we can do a quick experiment to see if it works to use only as the variable in the accumulation function. Let's define the accumulation function like this: Let's say we want to evaluate , then we will need to replace ALL the 's with . Then we obtain   Wel... is a constant (the output of the function with an input of ), so we are really integrating a number here (boring). Also, what is ... Well we know that the symbol here represents the infinitesimally small amount of change. But is a constant and the value of will never change... So doesn't really make sense mathematically...   Now that we know what the accumulation function is, we can investigate the Fundamental Theorem of Calculus in the next section! As the name of the theorem suggested, this theorem is really fundamental in the study of calculus.    THE Fundamental Theorem of Calculus  It turns out that THE fundamental theorem of calculus says the integration and differentiation are inverse processes. That is, they will cancel each other. This relation (at least half of it) is captured in the Fundamental Theorem of Calculus, Part II, in your textbook page 326. I also included it below:   The Fundamental Theorem of Calculus   Let be a continuous function on an open interval and let be in . Then the definite integral of from to , aka the accumulation function, is an antiderivative of on . That is, Equivalently,     You may be wondering why differentiation will cancel the integration. Well your textbook provided a technical proof in this section using the fancy Squeeze Theorem. We will come up with the (same-ish) argument but in a more intuitive sense.  Observe that we need to take the derivative of the accumulation function. Then using the definition of derivative (the one with the limits), we obtain   Hmm let's simplify the average rate of change of the accumulation function from to first (the fraction without the limit). I made a pretty picture below to help you visualize the situation.   Average Rate of Change of      In this pretty picture, observe that    represents the area on , which is the area of the green and the orange regions combined.     represents the area on , which is the area of the green region.   This implies that should give us the area on , which is the area of the orange region. Hence, we know that the average rate of change is the area of the orange region over .  To obtain the derivative, aka the instantaneous rate of change , we want to be a super very really small number, so the orange region should be a super skinny region whose area can be approximated using one skinny rectangle strip.  We learned about approximating the area using rectangles in ! The two easier approximation methods are the left-endpoint approximation and the right endpoint approximation. Then which method should we use to approximate the area of the orange region?  It turns out that it doesn't matter (because of the Squeeze theorem... if you want a more rigorous argument, ask Richard or read the proof in the textbook). For demonstration purposes, let's use the right-endpoint approximation to approximate the area of the orange region. Then the height of the skinny rectangle strip is . So we know   Putting all these pieces to the definition of the derivative (the one with the limit), we obtain Ha! We did it! We proved the Fundamental Theorem of Calculus!    To apply the FTC...  To apply the Fundamental Theorem of Calculus, make sure the format of the question will match the left-hand side of the equation in the theorem. Let's start with the easy ones where we can simply apply the Fundamental Theorem of Calculus without any slick tricks!   Calculate the following derivative    Does the expression match up with the left-hand side of the equation in the Fundamental Theorem of Calculus? If so, then what does the Fundamental Theorem of Calculus tell us?    Observe that format matches up perfectly! So we are taking the derivative of the accumulation function with . By the Fundamental Theorem of Calculus, we obtain      Calculate the following derivative    Does the expression match up with the left-hand side of the equation in the Fundamental Theorem of Calculus? If not, how can we manipulate the definite integral to make it match up with the equation?    Observe that the expression doesn't quite match up... We want the variable of the accumulation function to be on the upper limit and the number to be on the lower limit. It would be so nice if there is a way for us to reverse the upper and the lower limits...  There is actually a way to do so! Richard came to our rescue and direct us to the !  By a property of definite integral, we obtain Ha! we can now calculate the derivative using the Fundamental Theorem of Calculus!     Let's kick things up a notch and see how the Fundamental Theorem of Theorem can be applied to more tricky problems.   Calculate the following derivative    Does the expression match up with the left-hand side of the equation in the Fundamental Theorem of Calculus? What seems to be the mismatch?  A good advice is to find out what the accumulation function is in this case...    The integrand is . Then we can define its accumulation function to be Well we are not really tasked to take the derivative of , but more like ... This is a composite function with the outside function of and inside function of . Do we know how to take the derivative of a composite function?  We do! We can take the derivative of a composite function using the chain rule back in calculus 1! By the chain rule, we know that   The last question to resolve here is about the derivative of the accumulation function. By the Fundamental Theorem of Calculus, .  Putting these two pieces together, we obtain     Now we know how to deal with the case where one of the limits of integration contains a variable. What about the case where both the limits of integration contain a variable? Let's look at an example of this.   Calculate the following derivative    Obviously, we can't use the Fundamental Theorem of Calculus directly since the lower limit of this integral is not a constant.  Dealing with non-constant upper and lower limits are kind of a lot at once... It would be so nice if there is a property of definite integral that allows us to split the integral into two pieces, so we can deal with one of the non-constant limit of integration at a time...    We can actually split the integral into two pieces by one of the properties in . where is a constant within the domain of .  Ha! We know how to deal with the two pieces of the integrals! We will need the chain rule for both pieces of the integrals!  Let's again define the accumulation function to be Then we obtain     Observe that the two tricks that we are using are:   Properties of definite integral to split up the integral AND put the non-constant part to the upper limit; and    Chain rule to find the derivative.   In fact, we can generalize this to obtain a fancy formula we can use to solve similar problems once and for all!           The Graph of the Accumulation Function  We investigated the accumulation function earlier in this section. Recall the accumulation function takes the input of the upper limit of the definite integral and spits out the output of the area under the curve. We are now investigating the graph of the accumulation function.  One characteristics of a graph, as you learned back in calculus 1, are the local extrema (peaks and valleys on the graph). Can we predict where the peaks and valleys of the accumulation function are at given a graph of a function?   Let be the accumulation function defined as where is a function whose graph is shown below.   The graph of         Determine the intervals on which the accumulation function, is increasing (and decreasing)    Determine the value of where the accumulation function, , has a peak (and valley).      Recall that the accumulation function accumulates the signed area under the curve starting from . The region above the -axis should have a positive signed area and the region below the -axis should have a negative signed area.  So do we know at which point(s) we starts accumulating positive area (which makes the overall area greater) and negative area (which makes the overall area smaller)?    Observe that the enclosed region is above the -axis on and . This implies that we are accumulating positive area in these two regions, making the value of the accumulation function increasing.  Similarly, the region on is below the -axis, so we are accumulating negative area in this region, making the value of the accumulation function decreasing.  Hence, is increasing in the interval and decreasing in the interval .  Now let's think about the peaks and valleys. At the point of , we start to accumulate negative area, which makes the overall area smaller. This implies that there is a peak at .  Similarly, at the point of , we start to accumulate positive area, which makes the overall area greater. This implies that there is a valley at .    The above example shows an intuitive sense of reasoning about the graph of the accumulation function by imagining how the overall area is changing.  If you want to be fancier, recall the accumulation function, , is an antiderivative of the function , guaranteed by FTC. We can reverse-engineer the first derivative test you learned back in calculus 1. That is, the critical points (in this problem, peaks and valley) of the accumulation function will occur at the point where the derivative of the accumulation function, aka is . The accumulation function is increasing if its derivative, aka , is positive, and decreasing if its derivative, , is negative.    Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     Calculate the following derivative.                                  Prove the formula    Note: By saying \"prove\", Richard means to justify this formula informally. The goal here is to make sure you know how the formula is derived and why each component is necessary. Richard will never look for a technical mathematical proof in this class, but you are certainly more than welcome to try coming up with a proof-y proof and Richard is always happy to chat about it.      Let be the accumulation function defined as Below is the graph of on .   The graph of         Determine the intervals on which the accumulation function, is increasing (and decreasing)    Determine the value of where the accumulation function, , has a peak (and valley).        "
+},
+{
+  "id": "sec55-FTCpartII-2-2",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#sec55-FTCpartII-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     understand the concept of accumulation function.    understand the Fundamental Theorem of Calculus, part II and apply it to relevant problems.    analyze the graph of the accumulation function.    "
+},
+{
+  "id": "def-AccumulationFunction",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#def-AccumulationFunction",
+  "type": "Definition",
+  "number": "5.5.1",
+  "title": "",
+  "body": "  Let be a continuous function on an open interval and let be in . We define the accumulation function as    "
+},
+{
+  "id": "subsec-551-AccumulationFunction-6",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#subsec-551-AccumulationFunction-6",
+  "type": "Example",
+  "number": "5.5.2",
+  "title": "",
+  "body": " Let and . Then we can define the accumulation function here to be Find the value of , , , and . Then graph the function and indicate what these values represent on the graph.   Let's plug in the values to the function. Then the output is some sort of definite integral.  Recall definite integral represents some sort of signed area of the region under the curve. Can we find the (signed) area of the region under the curve geometrically?    Below is the graph of .   The Graph of       represents the area under the line from to . Graphically speaking, the area is 0, shown in the diagram below.   The Diagram of       represents the area under the line from to . Graphically speaking, the enclosed region is a trapezoid, with the area of The diagram is shown below.   The Diagram of       represents the area under the line from to . Graphically speaking, the enclosed region is a trapezoid, with the area of The diagram is shown below.   The Diagram of       represents the area under the line from to . Graphically speaking, the enclosed region is a trapezoid, with the area of The diagram is shown below.   The Diagram of       "
+},
+{
+  "id": "subsec-551-AccumulationFunction-10",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#subsec-551-AccumulationFunction-10",
+  "type": "Note",
+  "number": "5.5.8",
+  "title": "Why are there two variables in the function....",
+  "body": " Why are there two variables in the function...  Notice that there are two variables in the accumulation function, and . Why do we need both the and the to define the accumulation function...  Well long story short, these two variables are doing two different jobs since there are two types of functions here:    is the input variable of the accumulation function, which represents the upper limit of integration of the integral.     is what we called the dummy variable we use to represent the input of the function .     Then the next natural question to ask here is why wouldn't it make sense to use ONLY one variable to do both jobs (like only using as the variable)? Wouldn't it make the function easier?  Well we can do a quick experiment to see if it works to use only as the variable in the accumulation function. Let's define the accumulation function like this: Let's say we want to evaluate , then we will need to replace ALL the 's with . Then we obtain   Wel... is a constant (the output of the function with an input of ), so we are really integrating a number here (boring). Also, what is ... Well we know that the symbol here represents the infinitesimally small amount of change. But is a constant and the value of will never change... So doesn't really make sense mathematically...  "
+},
+{
+  "id": "thm-FTC",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#thm-FTC",
+  "type": "Theorem",
+  "number": "5.5.9",
+  "title": "The Fundamental Theorem of Calculus.",
+  "body": " The Fundamental Theorem of Calculus   Let be a continuous function on an open interval and let be in . Then the definite integral of from to , aka the accumulation function, is an antiderivative of on . That is, Equivalently,    "
+},
+{
+  "id": "fig-Proof-FTC",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#fig-Proof-FTC",
+  "type": "Figure",
+  "number": "5.5.10",
+  "title": "",
+  "body": " Average Rate of Change of     "
+},
+{
+  "id": "subsec-553-UsingFTC-3",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#subsec-553-UsingFTC-3",
+  "type": "Example",
+  "number": "5.5.11",
+  "title": "",
+  "body": " Calculate the following derivative    Does the expression match up with the left-hand side of the equation in the Fundamental Theorem of Calculus? If so, then what does the Fundamental Theorem of Calculus tell us?    Observe that format matches up perfectly! So we are taking the derivative of the accumulation function with . By the Fundamental Theorem of Calculus, we obtain    "
+},
+{
+  "id": "subsec-553-UsingFTC-4",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#subsec-553-UsingFTC-4",
+  "type": "Example",
+  "number": "5.5.12",
+  "title": "",
+  "body": " Calculate the following derivative    Does the expression match up with the left-hand side of the equation in the Fundamental Theorem of Calculus? If not, how can we manipulate the definite integral to make it match up with the equation?    Observe that the expression doesn't quite match up... We want the variable of the accumulation function to be on the upper limit and the number to be on the lower limit. It would be so nice if there is a way for us to reverse the upper and the lower limits...  There is actually a way to do so! Richard came to our rescue and direct us to the !  By a property of definite integral, we obtain Ha! we can now calculate the derivative using the Fundamental Theorem of Calculus!    "
+},
+{
+  "id": "subsec-553-UsingFTC-6",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#subsec-553-UsingFTC-6",
+  "type": "Example",
+  "number": "5.5.13",
+  "title": "",
+  "body": " Calculate the following derivative    Does the expression match up with the left-hand side of the equation in the Fundamental Theorem of Calculus? What seems to be the mismatch?  A good advice is to find out what the accumulation function is in this case...    The integrand is . Then we can define its accumulation function to be Well we are not really tasked to take the derivative of , but more like ... This is a composite function with the outside function of and inside function of . Do we know how to take the derivative of a composite function?  We do! We can take the derivative of a composite function using the chain rule back in calculus 1! By the chain rule, we know that   The last question to resolve here is about the derivative of the accumulation function. By the Fundamental Theorem of Calculus, .  Putting these two pieces together, we obtain    "
+},
+{
+  "id": "subsec-553-UsingFTC-8",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#subsec-553-UsingFTC-8",
+  "type": "Example",
+  "number": "5.5.14",
+  "title": "",
+  "body": " Calculate the following derivative    Obviously, we can't use the Fundamental Theorem of Calculus directly since the lower limit of this integral is not a constant.  Dealing with non-constant upper and lower limits are kind of a lot at once... It would be so nice if there is a property of definite integral that allows us to split the integral into two pieces, so we can deal with one of the non-constant limit of integration at a time...    We can actually split the integral into two pieces by one of the properties in . where is a constant within the domain of .  Ha! We know how to deal with the two pieces of the integrals! We will need the chain rule for both pieces of the integrals!  Let's again define the accumulation function to be Then we obtain    "
+},
+{
+  "id": "thm-Generalized-FTC",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#thm-Generalized-FTC",
+  "type": "Theorem",
+  "number": "5.5.15",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "subsec-554-Graph-AccumulationFunction-4",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#subsec-554-Graph-AccumulationFunction-4",
+  "type": "Example",
+  "number": "5.5.16",
+  "title": "",
+  "body": " Let be the accumulation function defined as where is a function whose graph is shown below.   The graph of         Determine the intervals on which the accumulation function, is increasing (and decreasing)    Determine the value of where the accumulation function, , has a peak (and valley).      Recall that the accumulation function accumulates the signed area under the curve starting from . The region above the -axis should have a positive signed area and the region below the -axis should have a negative signed area.  So do we know at which point(s) we starts accumulating positive area (which makes the overall area greater) and negative area (which makes the overall area smaller)?    Observe that the enclosed region is above the -axis on and . This implies that we are accumulating positive area in these two regions, making the value of the accumulation function increasing.  Similarly, the region on is below the -axis, so we are accumulating negative area in this region, making the value of the accumulation function decreasing.  Hence, is increasing in the interval and decreasing in the interval .  Now let's think about the peaks and valleys. At the point of , we start to accumulate negative area, which makes the overall area smaller. This implies that there is a peak at .  Similarly, at the point of , we start to accumulate positive area, which makes the overall area greater. This implies that there is a valley at .   "
+},
+{
+  "id": "ws-sec55-3-2",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#ws-sec55-3-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec55-3-3",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#ws-sec55-3-3",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec55-3-4",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#ws-sec55-3-4",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec55-3-5",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#ws-sec55-3-5",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec55-4",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#ws-sec55-4",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Prove the formula    Note: By saying \"prove\", Richard means to justify this formula informally. The goal here is to make sure you know how the formula is derived and why each component is necessary. Richard will never look for a technical mathematical proof in this class, but you are certainly more than welcome to try coming up with a proof-y proof and Richard is always happy to chat about it.   "
+},
+{
+  "id": "ws-sec55-5",
+  "level": "2",
+  "url": "sec55-FTCpartII.html#ws-sec55-5",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Let be the accumulation function defined as Below is the graph of on .   The graph of         Determine the intervals on which the accumulation function, is increasing (and decreasing)    Determine the value of where the accumulation function, , has a peak (and valley).      "
+},
+{
   "id": "secA1-HW1",
   "level": "1",
   "url": "secA1-HW1.html",
-  "type": "Worksheet",
+  "type": "Section",
   "number": "A.1",
   "title": "Written Homework #1",
-  "body": " Written Homework #1   You are encouraged to work on this assignment collaboratively with your peers in class. You can also ask Richard for hints if you are stuck. Yet, you should write up your own work and submit it on Canvas in one single PDF file . Show all of your work for full credits, and your work should be clearly written and organized.  The written homework #1 is due on October 12, 2025 .  You can find a printable PDF copy of the homework here: Written Homework 1   This homework assignment cover some important concepts in section 5.1, 5.2, and 5.3.     Approximate the area of the region under the curve of by calculating the area the area of the shaded rectangles shown in the diagram below. Which approximation method do these rectangles represent?   The Graph of with the region under the curve on          Justify grapically, with pretty pictures and explanation that   If is a continuous odd function, then     If is a continuous even function, then        Recall that    is an odd function if its graph is symmetric across the origin .     is an even function if its graph is symmetric about the -axis .         Find constants  and such that is an antiderivative of .    Recall that is an antiderivative of  IF  .  Don't try to evaluate as we need to build up more concepts to be able to evaluate this integral. Instead, take the derivative of and match it up with .  We want to find and such that and look exactly the same.      Find and using the following conditions:      When you finished the homework assignment, format it in one single PDF file and submit it in Written Homework 1 Assignment Portal .  After the due dates, Richard will post the solution here on the same page so make sure to check back this page!   "
+  "body": " Written Homework #1   You are encouraged to work on this assignment collaboratively with your peers in class. You can also ask Richard for hints if you are stuck. Yet, you should write up your own work and submit it on Canvas in one single PDF file . Show all of your work for full credits, and your work should be clearly written and organized.  The written homework #1 is due on October 12, 2025 .  You can find a printable PDF copy of the homework here: Written Homework 1   This homework assignment cover some important concepts in section 5.1, 5.2, and 5.3.        Approximate the area of the region under the curve of by calculating the area the area of the shaded rectangles shown in the diagram below. Which approximation method do these rectangles represent?   The Graph of with the region under the curve on          Justify grapically, with pretty pictures and explanation that   If is a continuous odd function, then     If is a continuous even function, then        Recall that    is an odd function if its graph is symmetric across the origin .     is an even function if its graph is symmetric about the -axis .         Find constants  and such that is an antiderivative of .    Recall that is an antiderivative of  IF  .  Don't try to evaluate as we need to build up more concepts to be able to evaluate this integral. Instead, take the derivative of and match it up with .  We want to find and such that and look exactly the same.      Find and using the following conditions:       When you finished the homework assignment, format it in one single PDF file and submit it in Written Homework 1 Assignment Portal .  After the due dates, Richard will post the solution here on the same page so make sure to check back this page!   "
 },
 {
-  "id": "secA1-HW1-3",
+  "id": "secA1-HW1-3-2",
   "level": "2",
-  "url": "secA1-HW1.html#secA1-HW1-3",
+  "url": "secA1-HW1.html#secA1-HW1-3-2",
   "type": "Worksheet Exercise",
   "number": "A.1.1",
   "title": "",
   "body": "  Approximate the area of the region under the curve of by calculating the area the area of the shaded rectangles shown in the diagram below. Which approximation method do these rectangles represent?   The Graph of with the region under the curve on       "
 },
 {
-  "id": "secA1-HW1-4",
+  "id": "secA1-HW1-3-3",
   "level": "2",
-  "url": "secA1-HW1.html#secA1-HW1-4",
+  "url": "secA1-HW1.html#secA1-HW1-3-3",
   "type": "Worksheet Exercise",
   "number": "A.1.2",
   "title": "",
   "body": "  Justify grapically, with pretty pictures and explanation that   If is a continuous odd function, then     If is a continuous even function, then        Recall that    is an odd function if its graph is symmetric across the origin .     is an even function if its graph is symmetric about the -axis .      "
 },
 {
-  "id": "secA1-HW1-5",
+  "id": "secA1-HW1-3-4",
   "level": "2",
-  "url": "secA1-HW1.html#secA1-HW1-5",
+  "url": "secA1-HW1.html#secA1-HW1-3-4",
   "type": "Worksheet Exercise",
   "number": "A.1.3",
   "title": "",
   "body": "  Find constants  and such that is an antiderivative of .    Recall that is an antiderivative of  IF  .  Don't try to evaluate as we need to build up more concepts to be able to evaluate this integral. Instead, take the derivative of and match it up with .  We want to find and such that and look exactly the same.   "
 },
 {
-  "id": "secA1-HW1-6",
+  "id": "secA1-HW1-3-5",
   "level": "2",
-  "url": "secA1-HW1.html#secA1-HW1-6",
+  "url": "secA1-HW1.html#secA1-HW1-3-5",
   "type": "Worksheet Exercise",
   "number": "A.1.4",
   "title": "",
