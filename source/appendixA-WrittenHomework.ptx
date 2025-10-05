@@ -37,8 +37,14 @@
           </p>
         </li>
       </ul>
-      Richard reserves the right to reject any submission that does not follow these formatting requirements. 
-      Taking a moment to follow these policies will help you receive the most helpful feedback. 
+      <ul marker="">
+        <li>
+          <p>
+            Richard reserves the right to reject any submission that does not follow these formatting requirements. 
+            Taking a moment to follow these requirements will help you receive the most helpful feedback. 
+          </p>
+        </li>
+      </ul>
     </p>
 
     <p>
@@ -60,13 +66,17 @@
 
     <p>
       <alert>Collaboration &amp; Academic Honesty</alert>
+      <ul marker="">
+        <li>
+          <p>
+            You are <alert>encouraged to discuss problems</alert> with your classmates. 
+            However, <alert>the final work you submit must be your own</alert>. 
+            I may ask you to explain or defend your method/work to ensure the work is your own and that you understand the concepts. 
+          </p>
+        </li>
+      </ul>
     </p>
-    <p>
-      You are <alert>encouraged to discuss problems</alert> with your classmates. 
-      However, <alert>the final work you submit must be your own</alert>. 
-      I may ask you to explain or defend your method/work to ensure the work is your own and that you understand the concepts. 
-    </p>
-
+    
     <p>
       <alert>Late Work &amp; Extensions</alert>
       <ul>
@@ -88,6 +98,10 @@
       </ul>
     </p>
 
+    <p>
+      Below are the written homework assignments for the term. 
+      <alert>Make sure to check on the assignment pages after the due dates</alert>, as Richard will post the solution here as well!
+    </p>
   </introduction>
 
   <!-- include sections -->
