@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appendix xml:id="appendixA-WrittenHomework" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Written Homework</title>
+
+  <introduction>
+    <p> 
+      Written homework is a key part of your learning process. 
+      It is a chance to practice important concepts and receive feedback from Richard on your work and the use of math notation, helping you to solidify the concepts and prepare for upcoming exams. 
+    </p>
+
+    <p>
+      <alert>Submission &amp; Formatting</alert>
+      <ul>
+        <li>
+          <p>
+            <alert>One PDF File:</alert> All homework must be submitted as a <alert>single, multi-page PDF file</alert> to the appropriate assignment folder. 
+            I cannot grade submissions with multiple files or unsupported formats like .heic. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Clarity:</alert> Your solution should be <alert>clearly written</alert> and <alert>well-organized</alert>. 
+            Please leave some space between problems so Richard has room to provide feedback directly on your work. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Show Your Work:</alert> You must <alert>Show all of your work</alert> and use only methods we have discussed in class. 
+            Having a correct final answer alone will not be sufficient for full credit, as things may happen by chance. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Use Proper Notation:</alert> It is essential to use the correct math notation. 
+            It will help you keep a clean trail of your work and it is easy for Richard to understand your thought process. 
+          </p>
+        </li>
+      </ul>
+      Richard reserves the right to reject any submission that does not follow these formatting requirements. 
+      Taking a moment to follow these policies will help you receive the most helpful feedback. 
+    </p>
+
+    <p>
+      <alert>Grading &amp; Feedback</alert>
+      <ul>
+        <li>
+          <p>
+            Each problem will be graded on a scale of 5 based on both <alert>mathematical correctness</alert> and the <alert>proper use of notation</alert>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Richard will provide feedback on your work, even if the mistakes are minor and do not result in a loss of points. 
+            Please make sure to review the feedback and let Richard know if you have any questions, as the homework and the feedback is meant to help you learn and improve for future assignments/exams. 
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      <alert>Collaboration &amp; Academic Honesty</alert>
+    </p>
+    <p>
+      You are <alert>encouraged to discuss problems</alert> with your classmates. 
+      However, <alert>the final work you submit must be your own</alert>. 
+      I may ask you to explain or defend your method/work to ensure the work is your own and that you understand the concepts. 
+    </p>
+
+    <p>
+      <alert>Late Work &amp; Extensions</alert>
+      <ul>
+        <li>
+          <p>
+            Written homework is typically due on <alert>Sunday at 11:59 PM</alert>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>No late work will be accepted</alert> once the solution has been made available to the class. 
+          </p>
+        </li>
+        <li>
+          <p>
+            If you need an extension due to unexpected circumstances, you <alert>must contact Richard</alert> (with a good reason) and <alert>make an arrangement with him BEFORE the due date</alert>. 
+          </p>
+        </li>
+      </ul>
+    </p>
+
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="secA1-HW1.ptx" />
+
+  <!--
+  <xi:include href="secA2-StrategiesEvaluate.ptx" />
+  <xi:include href="secA3-ApplicationIntegral.ptx" />
+  -->
+
+</appendix>
