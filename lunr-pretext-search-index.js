@@ -1261,6 +1261,51 @@ var ptx_lunr_docs = [
   "body": "  Find and using the following conditions:    "
 },
 {
+  "id": "secA2-HW2",
+  "level": "1",
+  "url": "secA2-HW2.html",
+  "type": "Section",
+  "number": "A.2",
+  "title": "Written Homework #2",
+  "body": " Written Homework #2   You are encouraged to work on this assignment collaboratively with your peers in class. You can also ask Richard for hints if you are stuck. Yet, you should write up your own work and submit it on Canvas in one single PDF file . Show all of your work for full credits, and your work should be clearly written and organized.  The written homework #2 is due on October 19, 2025 .  You can find a printable PDF copy of the homework here: Written Homework 2   This homework assignment cover some important concepts in section 5.4, 5.5, 5.7, and 5.8.      Evaluate the following definite integrals using the FTC part I.       A trigonometric identity you may find helpful here is          This is more like a checking point. What is ?  Richard can tell you right now that exponents do not distribute across the sum\/difference, so         If and , find .   Find the relationship between these two functions and first. Is the derivative or antiderivative of ?     A particle moves in a straight lin with the velocity Find the displacement and the total distance traveled over the interval .    Wind engineers have found that wind speed (in m\/s) at a given location follows a Rayleigh distribution of the type This means that at a given moment in time, the probability that lies between and is equal to the shaded area in the figure below.   the shaded area is the probability that lies between and        Show that the probability that lies between and is .    Calculate the probability that lies between and .       When you finished the homework assignment, format it in one single PDF file and submit it in Written Homework 2 Assignment Portal .  After the due dates, Richard will post the solution here on the same page so make sure to check back this page!   "
+},
+{
+  "id": "secA2-HW2-3-2",
+  "level": "2",
+  "url": "secA2-HW2.html#secA2-HW2-3-2",
+  "type": "Worksheet Exercise",
+  "number": "A.2.1",
+  "title": "",
+  "body": " Evaluate the following definite integrals using the FTC part I.       A trigonometric identity you may find helpful here is          This is more like a checking point. What is ?  Richard can tell you right now that exponents do not distribute across the sum\/difference, so       "
+},
+{
+  "id": "secA2-HW2-3-3",
+  "level": "2",
+  "url": "secA2-HW2.html#secA2-HW2-3-3",
+  "type": "Worksheet Exercise",
+  "number": "A.2.2",
+  "title": "",
+  "body": " If and , find .   Find the relationship between these two functions and first. Is the derivative or antiderivative of ?   "
+},
+{
+  "id": "secA2-HW2-3-4",
+  "level": "2",
+  "url": "secA2-HW2.html#secA2-HW2-3-4",
+  "type": "Worksheet Exercise",
+  "number": "A.2.3",
+  "title": "",
+  "body": " A particle moves in a straight lin with the velocity Find the displacement and the total distance traveled over the interval .  "
+},
+{
+  "id": "secA2-HW2-3-5",
+  "level": "2",
+  "url": "secA2-HW2.html#secA2-HW2-3-5",
+  "type": "Worksheet Exercise",
+  "number": "A.2.4",
+  "title": "",
+  "body": " Wind engineers have found that wind speed (in m\/s) at a given location follows a Rayleigh distribution of the type This means that at a given moment in time, the probability that lies between and is equal to the shaded area in the figure below.   the shaded area is the probability that lies between and        Show that the probability that lies between and is .    Calculate the probability that lies between and .    "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
