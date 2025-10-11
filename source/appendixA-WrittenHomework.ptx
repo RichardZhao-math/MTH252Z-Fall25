@@ -106,6 +106,7 @@
 
   <!-- include sections -->
   <xi:include href="secA1-HW1.ptx" />
+  <xi:include href="secA2-HW2.ptx" />
 
   <!--
   <xi:include href="secA2-StrategiesEvaluate.ptx" />
