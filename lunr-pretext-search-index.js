@@ -1216,6 +1216,492 @@ var ptx_lunr_docs = [
   "body": "  Let be the accumulation function defined as Below is the graph of on .   The graph of         Determine the intervals on which the accumulation function, is increasing (and decreasing)    Determine the value of where the accumulation function, , has a peak (and valley).      "
 },
 {
+  "id": "sec56-NetChange",
+  "level": "1",
+  "url": "sec56-NetChange.html",
+  "type": "Section",
+  "number": "5.6",
+  "title": "Net Change as the Integral of a Rate of Change",
+  "body": " Net Change as the Integral of a Rate of Change     In this section, we will learn our first type of application of integration --- Net Change!    After this section, students will be able to:     interpret integral as Adding-up-Pieces.    find the displacement and total distance traveled of an object given the velocity function.    find the net change of some quantity given the rate function.        Imagine this: a gorilla, suited up with a parachute, climbs to the top of a tall city building as part of a special wildlife training experiment. After a brief moment of hesitation, the gorilla bravely leaps off the edge. As the parachute deploys and air resistance kicks in, you, as one of the researchers on the ground, begin recording data to study how the gorilla's velocity changes over time. Using high-speed sensors, the team records the gorilla’s downward velocity every half-second as it falls. Note that the gorilla touched the ground just after 5 seconds. The recorded data is shown below.    Time (in seconds)  Velocity (in feet per second)    0  0    0.5  5    1.0  7    1.5  8    2.0  11    2.5  11.5    3.0  12    3.5  13    4.0  15.5    4.5  18    5.0  19        Approximate the total distance the gorilla fell from the time he jumped off the building until the time he landed on the ground.   Rather than approximating the total distance, we can look at how far the gorilla fell during each half-second interval. The table below should help you track the distance.      Time (in seconds)  Approximate distance traveled (in feet)    0 -- 0.5     0.5 -- 1.0     1.0 -- 1.5     1.5 -- 2.0     2.0 -- 2.5     2.5 -- 3.0     3.0 -- 3.5     3.5 -- 4.0     4.0 -- 4.5     4.5 -- 5.0         There are multiple ways to approximate the distance as long as you can make an argument that the velocity you picked for each time interval is reasonable. For demonstration purposes, Richard will approximate the distance using the left-endpoint approximation .      Time  Approximate distance    0 -- 0.5     0.5 -- 1.0     1.0 -- 1.5     1.5 -- 2.0     2.0 -- 2.5     2.5 -- 3.0     3.0 -- 3.5     3.5 -- 4.0     4.0 -- 4.5     4.5 -- 5.0       To find the total distance traveled, we just add up all the pieces of distance we found in the above table.    There is no \"right\" answer to an approximation. The only difference between answers are how good the approximation is.      We know that the total distance traveled we found in part (a) is an approximation, not the exact value (this should be obvious). How can we make the approximation better? What changes could we make to the way we collect the data to make the approximation better?   While it is (highly) unlikely for the velocity to remain constant within a fixed interval of time, it is more and more likely for the velocity to stay constant when the elapsed time is smaller and smaller. That is, to make our approximation better, we want to record more and more data on the velocity, which forces the elapsed time to be smaller and smaller (for example, as opposed to recording the velocity every 0.5 seconds, recording the velocity every 0.1 seconds will make our approximation better).      Relationship between Displacement and Velocity  Recall back in calculus 1, we learned that the derivative of the displacement function gives us the velocity function. To rephrase it using integrals, we know that the antiderivative (or indefinite integral) of the velocity function should give us the displacement function.  But this argument relies on differential calculus (we can't make sense of why the integral of the velocity function gives us the displacement function if we didn't learn about what derivative is). There is a way to make sense of it without relying on derivatives.  Let's call the elapsed time (and it is typically 0.5 seconds) and the velocity of the gorilla at a certain point, where is the index to indicate which piece we are referring to. If we call each piece of the distance , then it can be obtained by We also found out that we can find the total distance by adding up the pieces together. By using the fancy sigma notation you learned before, the total distance traveled is where denotes the number of pieces.  We know that the approximation is better and better if we recorded more and more velocity as that will force the elapsed time to become smaller and smaller. Symbolically speaking, the total distance travel can be computed by   Ha! This looks super familiar! This is exactly how we define the definite integral back in ! Then we have If we are matching components, then   The symbol \" \" is just a fancy cursive S that represents Summation . The and the are the initial and the final value of the time in this context.    The here denotes the velocity of the gorilla at a certain timestamp .    The here represents the elapsed time where the gap is infinitesimal small (so is just a fancy way of representing as the gap approaches ).    The is a representative of one piece of the distance (we multiplied the velocity at time with the elapsed time ), and the symbol tells us to add all the pieces of distance together to obtain the total distance traveled.     This is why the displacement function can be obtained by integrating the velocity function. The integral of velocity function implies that we are adding up pieces of the product of the velocity and the infinitesimally small change in time. This idea of the integral is called the Adding up Pieces .    Displacement vs. Distance Traveled  Given the velocity function , then the net change in position, which is defined as the displacement of an object, over the time interval , is denoted as What about the distance? The terms \"distance\" and \"displacement\" are not necessarily the same concepts...   A particle moves in a straight line with the velocity modeled by the function     Graph the velocity function . Then describe the motion.   See below the graph of    The Graph of      Observe that the graph is positive in , meaning the particle is moving forward; the graph hit zero at , meaning the particle stopped seconds after; and the graph is negative in , meaning the particle is moving backward.     Find the displacement over the first seconds.   For displacement , we don't care what is going on in the middle of the motion, but only the initial and final position. If we call the displacement function , then displacement is simply . FTC is telling us that      Find the total distance traveled over the first seconds.   When finding the total distance traveled , the \"distance\" is always positive, regardless of the direction. But this idea doesn't match up with the integral since the integral of the velocity function on will return a \"negative\" distance. The easiest way to fix the sign is to put on the absolute value to make the \"negative\" distance positive.        Integral of Velocity   For an object in linear motion with velocity ,      A cat falls from a tree (with zero initial velocity) at time . How far does the cat fall between seconds and second? The velocity function is m\/s.   By saying \"how far\", it usually means the total distance traveled.       General Net Change  In general, we can use this trick to compute the net change of some quantity if the rate of change is given.   The traffic flow rate past a certain point on a highway is where is at AM. How many cars pass by from to AM?         Water flows into an empty reservoir at a rate of L per hour ( in hours). What is the quantity of water in the reservoir in the first hours?        The last type of the example is about the marginal cost . Let represent a manufacturer's cost to product units of a particular product or commodity. The derivative is called the marginal cost , the cost of producing one additional unit. The cost of increasing production from units to units is the net change  , which is equal to the integral of the marginal cost.    The marginal cost of producing tablet computers is    What is the production cost of producing units?         What is the additional cost of producing additional units?             Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     A particle moves in a straight line with the velocity Find the displacement and the total distance traveled over the time interval .      Find the net change in velocity over of an object with       Show that a particle, located at the origin at and moving along the -axis with velocity will never pass the point .      A population of insects increases at a rate of insects per day. Find the insect population after days, assuming that there are insects at .     "
+},
+{
+  "id": "sec56-NetChange-3-2",
+  "level": "2",
+  "url": "sec56-NetChange.html#sec56-NetChange-3-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     interpret integral as Adding-up-Pieces.    find the displacement and total distance traveled of an object given the velocity function.    find the net change of some quantity given the rate function.    "
+},
+{
+  "id": "sec56-NetChange-4",
+  "level": "2",
+  "url": "sec56-NetChange.html#sec56-NetChange-4",
+  "type": "Investigation",
+  "number": "5.6.1",
+  "title": "",
+  "body": "  Imagine this: a gorilla, suited up with a parachute, climbs to the top of a tall city building as part of a special wildlife training experiment. After a brief moment of hesitation, the gorilla bravely leaps off the edge. As the parachute deploys and air resistance kicks in, you, as one of the researchers on the ground, begin recording data to study how the gorilla's velocity changes over time. Using high-speed sensors, the team records the gorilla’s downward velocity every half-second as it falls. Note that the gorilla touched the ground just after 5 seconds. The recorded data is shown below.    Time (in seconds)  Velocity (in feet per second)    0  0    0.5  5    1.0  7    1.5  8    2.0  11    2.5  11.5    3.0  12    3.5  13    4.0  15.5    4.5  18    5.0  19        Approximate the total distance the gorilla fell from the time he jumped off the building until the time he landed on the ground.   Rather than approximating the total distance, we can look at how far the gorilla fell during each half-second interval. The table below should help you track the distance.      Time (in seconds)  Approximate distance traveled (in feet)    0 -- 0.5     0.5 -- 1.0     1.0 -- 1.5     1.5 -- 2.0     2.0 -- 2.5     2.5 -- 3.0     3.0 -- 3.5     3.5 -- 4.0     4.0 -- 4.5     4.5 -- 5.0         There are multiple ways to approximate the distance as long as you can make an argument that the velocity you picked for each time interval is reasonable. For demonstration purposes, Richard will approximate the distance using the left-endpoint approximation .      Time  Approximate distance    0 -- 0.5     0.5 -- 1.0     1.0 -- 1.5     1.5 -- 2.0     2.0 -- 2.5     2.5 -- 3.0     3.0 -- 3.5     3.5 -- 4.0     4.0 -- 4.5     4.5 -- 5.0       To find the total distance traveled, we just add up all the pieces of distance we found in the above table.    There is no \"right\" answer to an approximation. The only difference between answers are how good the approximation is.      We know that the total distance traveled we found in part (a) is an approximation, not the exact value (this should be obvious). How can we make the approximation better? What changes could we make to the way we collect the data to make the approximation better?   While it is (highly) unlikely for the velocity to remain constant within a fixed interval of time, it is more and more likely for the velocity to stay constant when the elapsed time is smaller and smaller. That is, to make our approximation better, we want to record more and more data on the velocity, which forces the elapsed time to be smaller and smaller (for example, as opposed to recording the velocity every 0.5 seconds, recording the velocity every 0.1 seconds will make our approximation better).    "
+},
+{
+  "id": "subsec-562-DisplacementDistance-3",
+  "level": "2",
+  "url": "sec56-NetChange.html#subsec-562-DisplacementDistance-3",
+  "type": "Example",
+  "number": "5.6.4",
+  "title": "",
+  "body": " A particle moves in a straight line with the velocity modeled by the function     Graph the velocity function . Then describe the motion.   See below the graph of    The Graph of      Observe that the graph is positive in , meaning the particle is moving forward; the graph hit zero at , meaning the particle stopped seconds after; and the graph is negative in , meaning the particle is moving backward.     Find the displacement over the first seconds.   For displacement , we don't care what is going on in the middle of the motion, but only the initial and final position. If we call the displacement function , then displacement is simply . FTC is telling us that      Find the total distance traveled over the first seconds.   When finding the total distance traveled , the \"distance\" is always positive, regardless of the direction. But this idea doesn't match up with the integral since the integral of the velocity function on will return a \"negative\" distance. The easiest way to fix the sign is to put on the absolute value to make the \"negative\" distance positive.      "
+},
+{
+  "id": "thm-IntegralVelocity",
+  "level": "2",
+  "url": "sec56-NetChange.html#thm-IntegralVelocity",
+  "type": "Theorem",
+  "number": "5.6.6",
+  "title": "Integral of Velocity.",
+  "body": " Integral of Velocity   For an object in linear motion with velocity ,    "
+},
+{
+  "id": "subsec-562-DisplacementDistance-5",
+  "level": "2",
+  "url": "sec56-NetChange.html#subsec-562-DisplacementDistance-5",
+  "type": "Example",
+  "number": "5.6.7",
+  "title": "",
+  "body": " A cat falls from a tree (with zero initial velocity) at time . How far does the cat fall between seconds and second? The velocity function is m\/s.   By saying \"how far\", it usually means the total distance traveled.    "
+},
+{
+  "id": "subsec-563-NetChange-3",
+  "level": "2",
+  "url": "sec56-NetChange.html#subsec-563-NetChange-3",
+  "type": "Example",
+  "number": "5.6.8",
+  "title": "",
+  "body": " The traffic flow rate past a certain point on a highway is where is at AM. How many cars pass by from to AM?       "
+},
+{
+  "id": "subsec-563-NetChange-4",
+  "level": "2",
+  "url": "sec56-NetChange.html#subsec-563-NetChange-4",
+  "type": "Example",
+  "number": "5.6.9",
+  "title": "",
+  "body": " Water flows into an empty reservoir at a rate of L per hour ( in hours). What is the quantity of water in the reservoir in the first hours?       "
+},
+{
+  "id": "subsec-563-NetChange-6",
+  "level": "2",
+  "url": "sec56-NetChange.html#subsec-563-NetChange-6",
+  "type": "Example",
+  "number": "5.6.10",
+  "title": "",
+  "body": " The marginal cost of producing tablet computers is    What is the production cost of producing units?         What is the additional cost of producing additional units?          "
+},
+{
+  "id": "ws-sec56-3",
+  "level": "2",
+  "url": "sec56-NetChange.html#ws-sec56-3",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  A particle moves in a straight line with the velocity Find the displacement and the total distance traveled over the time interval .   "
+},
+{
+  "id": "ws-sec56-4",
+  "level": "2",
+  "url": "sec56-NetChange.html#ws-sec56-4",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Find the net change in velocity over of an object with    "
+},
+{
+  "id": "ws-sec56-5",
+  "level": "2",
+  "url": "sec56-NetChange.html#ws-sec56-5",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Show that a particle, located at the origin at and moving along the -axis with velocity will never pass the point .   "
+},
+{
+  "id": "ws-sec56-6",
+  "level": "2",
+  "url": "sec56-NetChange.html#ws-sec56-6",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  A population of insects increases at a rate of insects per day. Find the insect population after days, assuming that there are insects at .   "
+},
+{
+  "id": "sec57-uSub",
+  "level": "1",
+  "url": "sec57-uSub.html",
+  "type": "Section",
+  "number": "5.7",
+  "title": "The Substitution Method",
+  "body": " The Substitution Method   In this section, you will learn one technique of evaluating integrals, called the substitution method (also known as the -sub). This is one of the most important and widely used methods in this class.    After this section, students will be able to:     evaluate indefinite integrals using -sub and rewrite the final answer in terms of .    recognize which integrals can be evaluated using -sub and which ones cannot be evaluated using -sub.    apply -sub in definite integrals by changing the limits of integration to match the new variable.        Recall we learned the chain rule back in calculus 1, which is a method to differentiate composite functions.  Let be a composite function. We can see that is the outside function and is the inside function. The chain rule says that    Note: I know that this notation is different from the typical and you saw back in calculus 1. I am using and to match up the typical calculus 2 notation but the idea is the same.     What is the derivative of of the function ?   Observe that the outside function is and the inside function is . Using the chain rule, we obtain      Evaluate the indefinite integral    Recall that this expression tells us to find the general antiderivative of the function . So what functions will give the derivative of ?  Maybe part (a) in this investigation will give you an idea...    Observing from part (a) of the investigation, we know that This implies that    Observe that we don't simply integrate each factor of the integrand and multiply the results...      See that we can’t just simply integrate each factor of the integrand when integrating a factor of two functions, especially when one of the factors is a composite function. Rather than guessing and checking (and relying on Richard providing the answers occasionally), it will be so nice for us to learn how to integrate product of functions when one of the factors is a composite function.  You can kind of get a feeling that chain rule is probably important in this section. It turns out that we can come up with a new fancy method of integration by undoing the chain rule.   Substitution Method for Indefinite Integrals  Suppose we have a composite function where is the outside function and is the inside function. By the chain rule, we know that if we are assuming the derivative of is . Recall we can rewrite a derivative formula using integration so we can rewrite the chain rule using integration.   Substitution Method for Indefinite Integrals   If , and is a differentiable function whose range includes the domain of , then     We can use this formula IF the format of the integrand stays exactly the same as the one in the formula. That is, the formula is useful when we are integrating the product of a composite function and the derivative of the inside function.   Evaluate the indefinite integral using the formula in the above theorem.   To use the formula, we need a composite function and the derivative of the inside function being multiplied as the integrand. So the two questions to consider here are:   What is a composite function that stood out to you? After you have identified a composite function, what is the outside function and the inside function?  Label the outside function as and the inside function as .     What is the derivative of the inside function, ? Can we find as a factor in the integrand?   After you found the components of the integrand and checked off the second question, try figuring out what is and obtaining the answer by plugging in each component to the formula.    There is only one composite function in the integrand, which is . Then we can label Observe that , which is a factor in the integrand. Then this integral matches up with the left-hand side of the formula in .  We know that Then we can plug in all these components to the formula and obtain the answer:     A common question here is where the went in the process since we only integrated the sine function. This is a great question that leads us to develop a less-confusing notation presentation for -sub (using differentials).  Richard can for sure answer this question now! Recall is the derivative of the inside function, which appears out of no where in the chain rule for derivative. Of course this part should be disappearing if we undoes the derivative.  We will next discuss another presentation of -sub using differentials. This presentation is also the reason why we call this method the -sub .   Substitution Using Differentials  As the name of -sub suggested, we should be substituting for something. Let's forget about the formula we learned above and try a problem using only substitution (so you can forget about the above formula for a while)!   Evaluate the indefinite integral    Recall should be some inside function in a composite function. Then what is a composite function that stood out to you and what should the be?  After you determine what the is, try substituting ALL the 's in the indefinite integral with , including the differential . The resulting integral should be easier than the original integral in the prompt.    The composite function in the integrand is , with the inside function of . So let's pick . If we substitute for , then the integral becomes Sure the integral becomes a bit easier. But this is also a super confusing integral since it includes TWO different variables, and .  One way to resolve this confusion is to replace ALL the 's in terms of 's. The hardest substitution here is the differential, ... How do we replace the in terms of ...  One expression that contains both and is the derivative of with respect to . Recall we defined . Then If we abuse the notation a bit by treating the derivative notation as a fraction, we can multiply the on both sides of this equation. Then we obtain Hmm the looks super familiar... They are also part of the integral! Hence, we can substitute with as follows: Now there is only one variable, , in the integral and we for sure know how to evaluate this integral! Using the power rule, we know that Don't forget that is essentially . We can obtain the final answer by replacing back for .     Observe that the derivative of the inside function, , is being absorbed as part of the differential, . This is essentially the change of variable trick by treating as the new variable. Symbolically, we can adjust the formula in the above theorem as follows:   There is certainly an advantage of using this method. We don't need to worry about matching up each component with the formula in the above theorem in order to use the formula. But the tradeoff here is that we need to substitute ALL the 's (or whatever the previous variable is) with 's (or whatever we call the new variable), including the differentials. Sometimes this is not an easy job (or sometimes it is just impossible).  Richard doesn't like to memorize one more formula so he likes to do all of his -sub problems using the differential approach (there is one more reason why Richard likes this approach).   Evaluate the indefinite integral    We are learning -sub so we probably can evaluate this integral using -sub. Recall we pick to be some inside function of a composite function. What is a we can pick here?    There are more than one composite functions so there are more than one choice of we can pick.  Richard will pick (and he has a good reason). He will work through the problem and let's see if you can figure out what this good reason is.  Let . To find the , we will need to take the derivative of with respect to . Then we obtain Observe that we can find in the integral, which equals to by the above equation. Substituting and in the integral, we obtain     The reason why Richard knows picking will work out in the above example is because he noticed that , which is if we neglect the constant multiple, is a factor in the integrand. Observe that he can instantly replace by quickly.  In general, whatever we pick, we know this choice of will likely to work out if we can find as a factor of the integrand (and we can neglect the constant multiple of ). We will elaborate this idea more in the section of the limitation of -sub.   Can I isolate in the above example?  Recall the substitution Richard used in the previous example is to replace by based on the equation A natural follow-up question here is whether we can isolate the entirely and replace to the integral as follows: It seems like this \"divide-and-cancel\" method will lead us to the same answer anyways, so is this a valid method?  Well I guess it all depends on how much you care about the rigor in math. If all you care about is to obtain an answer, then by all means. This method will work 90% of the time (I know it sounds sarcastic but it is really not...).  But if you do care about the rigor in math (like Richard), then this method should be bugging you because the divisor, , could potentially be zero here since is in the domain of the integrand. In math, we never want to divide something that could potentially be zero. So dividing a variable before verifying it can never be zero is a bad idea.  An example I always use if I am teaching algebra and precalculus at PCC is to solve the equation by dividing an on both sides of the equation. While we obtain a solution indeed through the division of , we also miss the solution of .  I probably won't give you any questions in this extreme that the \"divide-and-cancel\" method will lead to the loss of some solution (because this isn't a differential equation class). So I will leave it up to you if you want to use this \"divide-and-cancel\" method. At least there is no harm in this class (I think...).    Evaluate the indefinite integral    Let's evaluate this integral using -sub. Recall a good choice of is the ones that you can find its derivative as a factor of the integrand. So what is a good choice of ?    There is only one composite function in the integrand, which implies that the , aka the only inside function, should be .  Let . To replace in terms of , we will differentiate with respect to . Then we obtain     Linear -sub  Back in calculus 1, recall that we can simply multiply the slope of the inside function when taking the derivative if the inside function is a linear function . This skill transfers to -sub too if the inside function, , is a linear function. Instead of multiplying the slope, we will divide the slope.  To justify this division process, we can assume that , a typical linear function. Then we obtain See that if we replace the with the , we essentially divide the answer by .  This is a quick little shortcut you can take to boost up the proficiency of -sub, especially since this is one of the most widely-used methods among the other methods we will talk about in this class.  Now let's try the following problem and see if you can obtain the answer quickly .   Evaluate the indefinite integral    Observe that the inside function, which we can for sure call it , is a linear function. Then what is the slope and how can we obtain the answer quickly without going through all the work for -sub?    Observe that the inside function, , is a linear function with the slope of . Then we can divide the slope, integrate the outside function, and plug in the inside function (and don't forget the ).    If this line of work doesn't convince you, then I would suggest you working out this problem using -sub and observe how the answer can be obtained quickly.       Hmm but does have to be some inside function? The answer is no... Essentially we can pick whatever we want in the integrand to be , but you want to make sure you are able to replace all the 's with 's.   Evaluate the indefinite integral    Observe that there is a composite function in the integrand with the inside function of . Based on our previous strategy, we should be calling it .  Let's try picking to be the inside function and see what will happen.  If you are ready to give up or open to another method, try picking and see if it will work out nicely.    Choice #1: Let   This will work out but the work is a bit more complicated since you will need to -sub it twice.   Let . Then we have This implies that Okay... we are able to replace all the 's with 's and the integral is a bit easier (see that there is no more trigonometric functions in the integrand). But this is kind of discouraging since there is no formula to help us integrate this function...  To proceed, we will need to do another -sub by letting . Then This implies that Ha! We evaluated the integral! We will just need to put everything together and replace back the variable to .     Choice #2: Let  Let's follow Richard's hint and let . Then we have This implies that    Observe that this choice of made the process a lot easier .     How do I know what is the I should pick?  For starters, we can pick whatever in the integrand to be the . But whatever you pick, you want to make sure two things:   All the variables should be turned to (or whatever the new variable is), including the differential, and    the new integral after the substitution should be easier to evaluate compared to the original integral.   If your choice of doesn't do the above two things, then this is a bad and you should either pick another or try a different method.   But there is a difference between picking a good and picking the best ...  The above example should demonstrate the difference. The first choice of is a good but is not the most efficient option, while the second choice of is the best since we were able to evaluate the integral right after the substitution.  So I guess the next question here is how to pick the best ... Well it actually takes a bit guess-and-check-ing and experience. I will encourage you to first practice on how to pick a good  to make sure at least you can solve the problem. Once you are comfortable and proficient at using -sub, then knowing what the best may be will come naturally.      Limitation of -sub  Recall we can take the derivative of ALL composite functions using the chain rule. Since we derived the -sub formula from the chain rule, does it mean we can integrate ALL the composite functions using this method of -sub? Let's think about this question in the following example:    Determine whether we can evaluate the following integral using -sub. If so, do it. If not, why not?        A good strategy is to pick the to be some inside function of a composite function. The outside function here is for sure , then what is the inside function we can pick for ?    We can evaluate this integral using -sub (or even easier if you can observe that the inside function is a linear function).  Let . Then we have This implies that          A good strategy is to pick the to be some inside function of a composite function. The outside function here is for sure , then what is the inside function we can pick for ?    We cannot evaluate this integral using -sub because we won't be able to group the out of it. But let's try using -sub nevertheless and see where we will get stuck.  Let . Then we have Yet there is no extra factor of in the integrand that we can group together with to give us a out of it. So we are stuck...   if you are thinking of using the \"divide-and-cancel\" method...  You may consider isolating the as follows (the hidden assumption here is that ...) and substitute as follows: Well the resulting integral after the substitution still contains two variables (since there is not a factor of in the integrand to cancel the in the denominator with).  Well one way to resolve this issue is to figure out what is in terms of (by isolating in the equation of ).  Observe that . Then the resulting integral becomes See that the integral doesn't become easier... This should be a cue that -sub doesn't work. We should give up and try something else.       We can make an observation from the above example about the -sub-ability of an integral. If part of the is missing in the integrand, and it is more than just a constant, then -sub won't work in general.   We know -sub won't work if part of is missing, and the missing part is a non-constant. But what if we go the other way. What if the integrand has an extra non-constant piece? Can we still -sub the integral?   Evaluate the indefinite integral    There is an inside function screaming to us, which is . Let's pick this as our . But what about the extra factor of ... We for sure don't want to have more than one variable in the integral...    Let . Then we know that . This implies that Hmm... there is an extra factor of in the integrand... This is not good... Is there anyway that we can replace it in terms of ?   Yes there is! Recall we define . This implies that . We can now substitute with !   Ha! We do know how to evaluate this integral! Hence, we can still evaluate this integral with an extra factor of in the integrand!       Substitution Method for Definite Integrals  After we are fluent at finding the indefinite integral using -sub, then evaluating the definite integral using -sub should be straightforward since the only additional steps are plugging in the upper and lower limits to some antiderivative and do the subtraction, guaranteed by the Fundamental Theorem of calculus. Yet things are a little bit more complicated as it appears. The process of changing the variable complicates the notation.   Evaluate the definite integral    There are actually two ways of approaching this problem and we will try both methods!   Method #1: Observe that this is a linear -sub so we can find an antiderivative of the integrand quickly. Let's use the FTC (find an antiderivative, plug in the limits of integration, and do the subtraction) and obtain the answer.   Method #2: Let's try using -sub formally! Obviously, here. The next step in -sub is to replace all the 's in terms of . So let's do it! In addition to the inside function and the differential that we need to replace in terms of , what else do we need to adjust?    Method #1: Using FTC directly  Observe that the inside function is a linear function with the slope of . Then we can find an antiderivative of the integrand quickly: Then by the Fundamental Theorem of Calculus, we obtain     Method #2: Using -sub (and then FTC)  If we want to use -sub, then obviously we should pick . This implies that Then after substitution, the integral will become . Did we successfully replace all the 's in terms of ?  The answer is no! There is one part that we forgot to adjust, which is the limits of integration ! Remember the limits of integration, and , are some values! Since our job now is to replace ALL the 's in terms of , this includes the limits of integration as well!   When ,     When ,    Hence, the correct integral we should obtain after -sub is   The resulting integral looks like something we can evaluate directly!     Why splitting hairs and calling them two different methods?  You may be wondering about this: aren't the two methods essentially the same? Why making this distinction on the limits of integration...  The answer is to avoid confusion and ambiguity of the work. Imagine someone mixed up the notation of the two methods in this example by writing the work like this:   Well the limits of integration isn't consistent going across the first equal sign. What we think the first line should be is really Observe that we didn't fully replace all the 's in terms of 's n step 1. This is bad.  Even if you can try to remember to replace all the 's back with 's before you plug in the limits of integration (a lot of the students can't, by the way), not everything are equal in the work...  We don't interpret as in general...  If you put to Desmos and let it do the calculation for you, then the answer returned is undefined , not . The reason is because most calculators (and we should too!) will directly plug in the limits of integrations to the specific variable used in the integral (so Desmos interpreted the limits of integration as some values). This implies that our work suggests underfine ... Hmm but this is wrong.   Keeping a clear and correct notation will not only help you keep track of the work in writing, but also to make sure the work you produced is mathematically correct. This is why Richard emphasizes the different notations as two different methods.      If is continuous on , and is continuous on the range of , then     What the theorem emphasizes is to adjust the limits of integration when changing the variable . Observe in the above example that we don't need to plug back if you adjust the limits of integration along with your -sub.   Evaluate the definite integral    We are in the -sub section so we probably can evaluate this integral using -sub. Then we will need to pick a first.  Observe that the numerator of the integrand is , which seems like the derivative of the inside function in the denominator, which is , if we neglect the constant multiple. So what is a good we can pick?  Once you pick your , make sure you replace all the 's in terms of and don't forget to adjust the limits of integration if you want to carry the in your computation.    Let . Then we have In addition, we also know that   when , ;    when , .   This implies that      Later in the term, we will be dealing with integrals with trig in it (trigonometric integrals). We can evaluate a lot of trigonometric integrals using -sub since the derivative or sine and cosine are just each other (if we neglect the coefficient). If you need more practice of -sub, jumping to section 7.2 is a good idea.   Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     Evaluate the following indefinite integral using methods covered in class so far.                                                Evaluate the following definite integral. Pay attention to the limits of integration if necessary.                   "
+},
+{
+  "id": "sec57-uSub-2-2",
+  "level": "2",
+  "url": "sec57-uSub.html#sec57-uSub-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     evaluate indefinite integrals using -sub and rewrite the final answer in terms of .    recognize which integrals can be evaluated using -sub and which ones cannot be evaluated using -sub.    apply -sub in definite integrals by changing the limits of integration to match the new variable.    "
+},
+{
+  "id": "sec57-uSub-3",
+  "level": "2",
+  "url": "sec57-uSub.html#sec57-uSub-3",
+  "type": "Investigation",
+  "number": "5.7.1",
+  "title": "",
+  "body": "  Recall we learned the chain rule back in calculus 1, which is a method to differentiate composite functions.  Let be a composite function. We can see that is the outside function and is the inside function. The chain rule says that    Note: I know that this notation is different from the typical and you saw back in calculus 1. I am using and to match up the typical calculus 2 notation but the idea is the same.     What is the derivative of of the function ?   Observe that the outside function is and the inside function is . Using the chain rule, we obtain      Evaluate the indefinite integral    Recall that this expression tells us to find the general antiderivative of the function . So what functions will give the derivative of ?  Maybe part (a) in this investigation will give you an idea...    Observing from part (a) of the investigation, we know that This implies that    Observe that we don't simply integrate each factor of the integrand and multiply the results...     "
+},
+{
+  "id": "thm-usub-indefinite",
+  "level": "2",
+  "url": "sec57-uSub.html#thm-usub-indefinite",
+  "type": "Theorem",
+  "number": "5.7.1",
+  "title": "Substitution Method for Indefinite Integrals.",
+  "body": " Substitution Method for Indefinite Integrals   If , and is a differentiable function whose range includes the domain of , then    "
+},
+{
+  "id": "subsec-571-Indefinite-5",
+  "level": "2",
+  "url": "sec57-uSub.html#subsec-571-Indefinite-5",
+  "type": "Example",
+  "number": "5.7.2",
+  "title": "",
+  "body": " Evaluate the indefinite integral using the formula in the above theorem.   To use the formula, we need a composite function and the derivative of the inside function being multiplied as the integrand. So the two questions to consider here are:   What is a composite function that stood out to you? After you have identified a composite function, what is the outside function and the inside function?  Label the outside function as and the inside function as .     What is the derivative of the inside function, ? Can we find as a factor in the integrand?   After you found the components of the integrand and checked off the second question, try figuring out what is and obtaining the answer by plugging in each component to the formula.    There is only one composite function in the integrand, which is . Then we can label Observe that , which is a factor in the integrand. Then this integral matches up with the left-hand side of the formula in .  We know that Then we can plug in all these components to the formula and obtain the answer:    "
+},
+{
+  "id": "subsubsec-5711-sub-usingDifferential-3",
+  "level": "2",
+  "url": "sec57-uSub.html#subsubsec-5711-sub-usingDifferential-3",
+  "type": "Example",
+  "number": "5.7.3",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Recall should be some inside function in a composite function. Then what is a composite function that stood out to you and what should the be?  After you determine what the is, try substituting ALL the 's in the indefinite integral with , including the differential . The resulting integral should be easier than the original integral in the prompt.    The composite function in the integrand is , with the inside function of . So let's pick . If we substitute for , then the integral becomes Sure the integral becomes a bit easier. But this is also a super confusing integral since it includes TWO different variables, and .  One way to resolve this confusion is to replace ALL the 's in terms of 's. The hardest substitution here is the differential, ... How do we replace the in terms of ...  One expression that contains both and is the derivative of with respect to . Recall we defined . Then If we abuse the notation a bit by treating the derivative notation as a fraction, we can multiply the on both sides of this equation. Then we obtain Hmm the looks super familiar... They are also part of the integral! Hence, we can substitute with as follows: Now there is only one variable, , in the integral and we for sure know how to evaluate this integral! Using the power rule, we know that Don't forget that is essentially . We can obtain the final answer by replacing back for .    "
+},
+{
+  "id": "subsubsec-5711-sub-usingDifferential-7",
+  "level": "2",
+  "url": "sec57-uSub.html#subsubsec-5711-sub-usingDifferential-7",
+  "type": "Example",
+  "number": "5.7.4",
+  "title": "",
+  "body": " Evaluate the indefinite integral    We are learning -sub so we probably can evaluate this integral using -sub. Recall we pick to be some inside function of a composite function. What is a we can pick here?    There are more than one composite functions so there are more than one choice of we can pick.  Richard will pick (and he has a good reason). He will work through the problem and let's see if you can figure out what this good reason is.  Let . To find the , we will need to take the derivative of with respect to . Then we obtain Observe that we can find in the integral, which equals to by the above equation. Substituting and in the integral, we obtain    "
+},
+{
+  "id": "note-isolate-dx-usub",
+  "level": "2",
+  "url": "sec57-uSub.html#note-isolate-dx-usub",
+  "type": "Note",
+  "number": "5.7.5",
+  "title": "Can I isolate <span class=\"process-math\">\\(\\boldsymbol{dt}\\)<\/span> in the above example?",
+  "body": " Can I isolate in the above example?  Recall the substitution Richard used in the previous example is to replace by based on the equation A natural follow-up question here is whether we can isolate the entirely and replace to the integral as follows: It seems like this \"divide-and-cancel\" method will lead us to the same answer anyways, so is this a valid method?  Well I guess it all depends on how much you care about the rigor in math. If all you care about is to obtain an answer, then by all means. This method will work 90% of the time (I know it sounds sarcastic but it is really not...).  But if you do care about the rigor in math (like Richard), then this method should be bugging you because the divisor, , could potentially be zero here since is in the domain of the integrand. In math, we never want to divide something that could potentially be zero. So dividing a variable before verifying it can never be zero is a bad idea.  An example I always use if I am teaching algebra and precalculus at PCC is to solve the equation by dividing an on both sides of the equation. While we obtain a solution indeed through the division of , we also miss the solution of .  I probably won't give you any questions in this extreme that the \"divide-and-cancel\" method will lead to the loss of some solution (because this isn't a differential equation class). So I will leave it up to you if you want to use this \"divide-and-cancel\" method. At least there is no harm in this class (I think...).  "
+},
+{
+  "id": "subsubsec-5711-sub-usingDifferential-11",
+  "level": "2",
+  "url": "sec57-uSub.html#subsubsec-5711-sub-usingDifferential-11",
+  "type": "Example",
+  "number": "5.7.6",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Let's evaluate this integral using -sub. Recall a good choice of is the ones that you can find its derivative as a factor of the integrand. So what is a good choice of ?    There is only one composite function in the integrand, which implies that the , aka the only inside function, should be .  Let . To replace in terms of , we will differentiate with respect to . Then we obtain     Linear -sub  Back in calculus 1, recall that we can simply multiply the slope of the inside function when taking the derivative if the inside function is a linear function . This skill transfers to -sub too if the inside function, , is a linear function. Instead of multiplying the slope, we will divide the slope.  To justify this division process, we can assume that , a typical linear function. Then we obtain See that if we replace the with the , we essentially divide the answer by .  This is a quick little shortcut you can take to boost up the proficiency of -sub, especially since this is one of the most widely-used methods among the other methods we will talk about in this class.  Now let's try the following problem and see if you can obtain the answer quickly .   Evaluate the indefinite integral    Observe that the inside function, which we can for sure call it , is a linear function. Then what is the slope and how can we obtain the answer quickly without going through all the work for -sub?    Observe that the inside function, , is a linear function with the slope of . Then we can divide the slope, integrate the outside function, and plug in the inside function (and don't forget the ).    If this line of work doesn't convince you, then I would suggest you working out this problem using -sub and observe how the answer can be obtained quickly.      "
+},
+{
+  "id": "subsubsec-5711-sub-usingDifferential-13",
+  "level": "2",
+  "url": "sec57-uSub.html#subsubsec-5711-sub-usingDifferential-13",
+  "type": "Example",
+  "number": "5.7.9",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Observe that there is a composite function in the integrand with the inside function of . Based on our previous strategy, we should be calling it .  Let's try picking to be the inside function and see what will happen.  If you are ready to give up or open to another method, try picking and see if it will work out nicely.    Choice #1: Let   This will work out but the work is a bit more complicated since you will need to -sub it twice.   Let . Then we have This implies that Okay... we are able to replace all the 's with 's and the integral is a bit easier (see that there is no more trigonometric functions in the integrand). But this is kind of discouraging since there is no formula to help us integrate this function...  To proceed, we will need to do another -sub by letting . Then This implies that Ha! We evaluated the integral! We will just need to put everything together and replace back the variable to .     Choice #2: Let  Let's follow Richard's hint and let . Then we have This implies that    Observe that this choice of made the process a lot easier .   "
+},
+{
+  "id": "Strategy-Pick-u",
+  "level": "2",
+  "url": "sec57-uSub.html#Strategy-Pick-u",
+  "type": "Note",
+  "number": "5.7.10",
+  "title": "How do I know what is the <span class=\"process-math\">\\(\\boldsymbol{u}\\)<\/span> I should pick?",
+  "body": " How do I know what is the I should pick?  For starters, we can pick whatever in the integrand to be the . But whatever you pick, you want to make sure two things:   All the variables should be turned to (or whatever the new variable is), including the differential, and    the new integral after the substitution should be easier to evaluate compared to the original integral.   If your choice of doesn't do the above two things, then this is a bad and you should either pick another or try a different method.   But there is a difference between picking a good and picking the best ...  The above example should demonstrate the difference. The first choice of is a good but is not the most efficient option, while the second choice of is the best since we were able to evaluate the integral right after the substitution.  So I guess the next question here is how to pick the best ... Well it actually takes a bit guess-and-check-ing and experience. I will encourage you to first practice on how to pick a good  to make sure at least you can solve the problem. Once you are comfortable and proficient at using -sub, then knowing what the best may be will come naturally.  "
+},
+{
+  "id": "subsec-572-limitation-3",
+  "level": "2",
+  "url": "sec57-uSub.html#subsec-572-limitation-3",
+  "type": "Example",
+  "number": "5.7.11",
+  "title": "",
+  "body": "  Determine whether we can evaluate the following integral using -sub. If so, do it. If not, why not?        A good strategy is to pick the to be some inside function of a composite function. The outside function here is for sure , then what is the inside function we can pick for ?    We can evaluate this integral using -sub (or even easier if you can observe that the inside function is a linear function).  Let . Then we have This implies that          A good strategy is to pick the to be some inside function of a composite function. The outside function here is for sure , then what is the inside function we can pick for ?    We cannot evaluate this integral using -sub because we won't be able to group the out of it. But let's try using -sub nevertheless and see where we will get stuck.  Let . Then we have Yet there is no extra factor of in the integrand that we can group together with to give us a out of it. So we are stuck...   if you are thinking of using the \"divide-and-cancel\" method...  You may consider isolating the as follows (the hidden assumption here is that ...) and substitute as follows: Well the resulting integral after the substitution still contains two variables (since there is not a factor of in the integrand to cancel the in the denominator with).  Well one way to resolve this issue is to figure out what is in terms of (by isolating in the equation of ).  Observe that . Then the resulting integral becomes See that the integral doesn't become easier... This should be a cue that -sub doesn't work. We should give up and try something else.      "
+},
+{
+  "id": "subsec-572-limitation-6",
+  "level": "2",
+  "url": "sec57-uSub.html#subsec-572-limitation-6",
+  "type": "Example",
+  "number": "5.7.13",
+  "title": "",
+  "body": " Evaluate the indefinite integral    There is an inside function screaming to us, which is . Let's pick this as our . But what about the extra factor of ... We for sure don't want to have more than one variable in the integral...    Let . Then we know that . This implies that Hmm... there is an extra factor of in the integrand... This is not good... Is there anyway that we can replace it in terms of ?   Yes there is! Recall we define . This implies that . We can now substitute with !   Ha! We do know how to evaluate this integral! Hence, we can still evaluate this integral with an extra factor of in the integrand!    "
+},
+{
+  "id": "subsec-573-Definite-3",
+  "level": "2",
+  "url": "sec57-uSub.html#subsec-573-Definite-3",
+  "type": "Example",
+  "number": "5.7.14",
+  "title": "",
+  "body": " Evaluate the definite integral    There are actually two ways of approaching this problem and we will try both methods!   Method #1: Observe that this is a linear -sub so we can find an antiderivative of the integrand quickly. Let's use the FTC (find an antiderivative, plug in the limits of integration, and do the subtraction) and obtain the answer.   Method #2: Let's try using -sub formally! Obviously, here. The next step in -sub is to replace all the 's in terms of . So let's do it! In addition to the inside function and the differential that we need to replace in terms of , what else do we need to adjust?    Method #1: Using FTC directly  Observe that the inside function is a linear function with the slope of . Then we can find an antiderivative of the integrand quickly: Then by the Fundamental Theorem of Calculus, we obtain     Method #2: Using -sub (and then FTC)  If we want to use -sub, then obviously we should pick . This implies that Then after substitution, the integral will become . Did we successfully replace all the 's in terms of ?  The answer is no! There is one part that we forgot to adjust, which is the limits of integration ! Remember the limits of integration, and , are some values! Since our job now is to replace ALL the 's in terms of , this includes the limits of integration as well!   When ,     When ,    Hence, the correct integral we should obtain after -sub is   The resulting integral looks like something we can evaluate directly!     Why splitting hairs and calling them two different methods?  You may be wondering about this: aren't the two methods essentially the same? Why making this distinction on the limits of integration...  The answer is to avoid confusion and ambiguity of the work. Imagine someone mixed up the notation of the two methods in this example by writing the work like this:   Well the limits of integration isn't consistent going across the first equal sign. What we think the first line should be is really Observe that we didn't fully replace all the 's in terms of 's n step 1. This is bad.  Even if you can try to remember to replace all the 's back with 's before you plug in the limits of integration (a lot of the students can't, by the way), not everything are equal in the work...  We don't interpret as in general...  If you put to Desmos and let it do the calculation for you, then the answer returned is undefined , not . The reason is because most calculators (and we should too!) will directly plug in the limits of integrations to the specific variable used in the integral (so Desmos interpreted the limits of integration as some values). This implies that our work suggests underfine ... Hmm but this is wrong.   Keeping a clear and correct notation will not only help you keep track of the work in writing, but also to make sure the work you produced is mathematically correct. This is why Richard emphasizes the different notations as two different methods.   "
+},
+{
+  "id": "thm-usub-definite",
+  "level": "2",
+  "url": "sec57-uSub.html#thm-usub-definite",
+  "type": "Theorem",
+  "number": "5.7.16",
+  "title": "",
+  "body": "  If is continuous on , and is continuous on the range of , then    "
+},
+{
+  "id": "subsec-573-Definite-6",
+  "level": "2",
+  "url": "sec57-uSub.html#subsec-573-Definite-6",
+  "type": "Example",
+  "number": "5.7.17",
+  "title": "",
+  "body": " Evaluate the definite integral    We are in the -sub section so we probably can evaluate this integral using -sub. Then we will need to pick a first.  Observe that the numerator of the integrand is , which seems like the derivative of the inside function in the denominator, which is , if we neglect the constant multiple. So what is a good we can pick?  Once you pick your , make sure you replace all the 's in terms of and don't forget to adjust the limits of integration if you want to carry the in your computation.    Let . Then we have In addition, we also know that   when , ;    when , .   This implies that    "
+},
+{
+  "id": "ws-sec57-3-2",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-3-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec57-3-3",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-3-3",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec57-3-4",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-3-4",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec57-3-5",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-3-5",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec57-3-6",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-3-6",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec57-3-7",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-3-7",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec57-4-2",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-4-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec57-4-3",
+  "level": "2",
+  "url": "sec57-uSub.html#ws-sec57-4-3",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "sec58-FurtherIntegralFormulas",
+  "level": "1",
+  "url": "sec58-FurtherIntegralFormulas.html",
+  "type": "Section",
+  "number": "5.8",
+  "title": "Further Integral Formulas",
+  "body": " Further Integral Formulas   In this section, you will undo even more derivative formulas you learned back in calculus 1 in terms of integrations.    After this section, students will be able to:     integrate using integral formulas involving inverse trigonometric functions.    integrate using integral formulas involving exponential functions.        Evaluate the indefinite integral     Can we evaluate this integral using -sub?   We can certainly try using -sub and see if it will work out. Recall -sub undoes the chain rule for derivative, which is a method to differentiate a composite function. Typically, is some inside function in some composite function.  There are two choices of as an inside function you can pick. Try them! Will they work out? If not, what seems to be the issue?    Choice #1: Let  We cannot use -sub here. There are many issues that needs to be resolved in order to make progress... And  If we pick . Then , which implies that . But there is no factor of in the integrand that allows us substitute with . So we will get stuck here...  A possible way to resolve this issue is to isolate the entirely by dividing the to the other side (and pretending can never be zero). This implies that . By this substitution, we obtain Okay... but there is still an in the integrand. This is super confusing since the variable we are dealing with now is , not . Given our substitution that , we see that . Then the integral becomes Wow... the integral doesn't get easier after all this hard work... This should be an indicator to search for another method to evaluate this integral . -sub should make the integral easier to deal with, not harder.  If you are feeling a bit adventurous and want to continue with this line of work (to see if it will work out eventually), the next step will be to make another substitution by letting . Then and . Then we obtain Observe that this integral is almost the same as the integral given in the prompt, which means we looped back to the problem after all the hard work... Another way of saying this is that this method is inconclusive...    Choice #2: Let  Richard can tell right ahead that this choice of is also inconclusive (it will loop you back to the problem as well) due to his awesome math skills. But just in case he didn't lose his mind, he will present the work (and also convince himself that he is still young and he can do the math in his head).  Let . Then , which implies that We obtain Observe that this integral is (again) almost the same as the integral given in the prompt. We (again) looped back back to the problem after the hard work...     Evaluate this integral not using -sub, but using the hint given below.   This may seem like a totally irrelevant hint but what is the derivative of You learned this back in calculus 1 so feel free to look up your notes.   Clarifying the notation  The function means the inverse sine of .  Another famous notation for inverse sine is . Be careful with this exponent of . This doesn't mean the reciprocal of .  I will use both notations interchangeably.     Recall back in calculus 1, we learned about the derivative of inverse trigonometric function. One of the formulas is In other words, we can rewrite the above formula using integration as follows: Hence, we can evaluate this integral as follows:      Recall we learned a couple formulas about taking the derivative of the inverse trigonometric functions back in calculus 1. If we rewrite these formulas, we will obtain more formulas to help us evaluate integrals.   Integral formulas involving inverse trigonometric functions  Back in calculus 1, you learned the derivative of the six inverse trigonometric functions. Of course we can rewrite the six derivative formulas into the three integrals formulas in the following theorem.   Integrals Involving Inverse Trigonometric Functions          Why do we only rewrite three of the six derivative formulas?  Recall we have six inverse trigonometric functions. Why do we only have three integral formulas in the above theorem?  That is because of the \"co-\" in cosine, cotangent, and cosecant.  Recall the prefix \"co-\" in trigonometry means \"complementary angles\", meaning angles that add up to (or in radian). That is, given a ratio , we have the following identities: See that the three inverse trigonometric functions that has the \"co-\" in their names can be converted to the other three trigonometric functions. So that is why we only focus on three of the six inverse trigonometric functions when undoing the integral formulas (the other three are only differ by the signs).    Evaluate the indefinite integral    The bad news here is that we cannot simplify the fraction (there is nothing we can cancel here)...  You may try using -sub and it will work out if you use it smartly.  Here is Richard's hint: before using -sub, try splitting up the fraction as follows: Do we know how to integrate each term?    Using Richard's hint and linearity, we know that   Observe that there is a formula in we can use directly to evaluate the first integral. Hence, the first integral can be evaluated as follows:   For the second integral, we can evaluate it using -sub. Let . Then , and hence . This implies that   Putting these two pieces together, we obtain     One thing you may notice from the previous example is that similar integrals can lead to very different result. Then how do we know which method, -sub or applying the integral formulas involving inverse trigonometric function, should I use?  Richard would suggest you always try -sub first. If -sub works out, then great! If -sub doesn't work out, then we can consider using a more complicated integral formula.  Also, we will develop a more fancy method (a special type of substitution) to evaluate more complicated integrals instead of using the complicated formulas. If you don't like to use the integral formulas involving inverse trigonometric functions. Hang tight, and we will approach these types of integral differently.   Evaluate the definite integral    Observe that there are some inside functions in the integrand, so -sub may be a good way to go.  Let's try -sub first! Does -sub work out? Why or why not?  If you are open to another route to evaluate this integral, Richard will give a hint that the following formula may be helpful because of the resemblance.     You can verify it quickly that -sub doesn't work here. So Richard will try using the formula he gave in the hint.  To use the formula in the hint, observe that the constant term in the square root must be a . To make it happen, the trick to do here is factoring.   Now we made the constant term in the square root to be ! In order to use the formula, we need a perfect square after the subtraction in the square root. This is an easy fix since is a perfect square (a simple -sub here will make the problem matching up even more with the formula).  Let . Then , which implies that . Furthermore, when , ; when , Now we obtain   Observe that the integral now matches up perfectly with the formula! We can now evaluate this integral using FTC.       Integrals Involving Exponential Functions  This section also mentioned the integral formula involving exponential functions. Recall back in calculus 1, we learned about the derivative of the exponential functions as follows: Now we can rewrite this formula using integrals!   Integrals Involving Exponential Functions        Now that we have learned a lot of the integral formulas. Make sure to write them down on one sheet of paper so you can always look up the formulas in one place.  We will finish this section by looking at one more example.   Evaluate the definite integral    There is clearly a composite function in the integrand. What method can we consider trying?    There is an inside function of in the integrand. This is a cue that -sub may work.  Let . Then , and hence . This implies that       Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     Evaluate the following integral using methods covered in class so far.                                  Evaluate the following indefinite integral using methods covered in class so far. Note that the two problems are similar. Are the answer also similar?                    Evaluate the following indefinite integral using methods covered in class so far. Note that the two problems are similar. Are the answer also similar?                   "
+},
+{
+  "id": "sec58-FurtherIntegralFormulas-2-2",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#sec58-FurtherIntegralFormulas-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     integrate using integral formulas involving inverse trigonometric functions.    integrate using integral formulas involving exponential functions.    "
+},
+{
+  "id": "sec58-FurtherIntegralFormulas-3",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#sec58-FurtherIntegralFormulas-3",
+  "type": "Investigation",
+  "number": "5.8.1",
+  "title": "",
+  "body": "  Evaluate the indefinite integral     Can we evaluate this integral using -sub?   We can certainly try using -sub and see if it will work out. Recall -sub undoes the chain rule for derivative, which is a method to differentiate a composite function. Typically, is some inside function in some composite function.  There are two choices of as an inside function you can pick. Try them! Will they work out? If not, what seems to be the issue?    Choice #1: Let  We cannot use -sub here. There are many issues that needs to be resolved in order to make progress... And  If we pick . Then , which implies that . But there is no factor of in the integrand that allows us substitute with . So we will get stuck here...  A possible way to resolve this issue is to isolate the entirely by dividing the to the other side (and pretending can never be zero). This implies that . By this substitution, we obtain Okay... but there is still an in the integrand. This is super confusing since the variable we are dealing with now is , not . Given our substitution that , we see that . Then the integral becomes Wow... the integral doesn't get easier after all this hard work... This should be an indicator to search for another method to evaluate this integral . -sub should make the integral easier to deal with, not harder.  If you are feeling a bit adventurous and want to continue with this line of work (to see if it will work out eventually), the next step will be to make another substitution by letting . Then and . Then we obtain Observe that this integral is almost the same as the integral given in the prompt, which means we looped back to the problem after all the hard work... Another way of saying this is that this method is inconclusive...    Choice #2: Let  Richard can tell right ahead that this choice of is also inconclusive (it will loop you back to the problem as well) due to his awesome math skills. But just in case he didn't lose his mind, he will present the work (and also convince himself that he is still young and he can do the math in his head).  Let . Then , which implies that We obtain Observe that this integral is (again) almost the same as the integral given in the prompt. We (again) looped back back to the problem after the hard work...     Evaluate this integral not using -sub, but using the hint given below.   This may seem like a totally irrelevant hint but what is the derivative of You learned this back in calculus 1 so feel free to look up your notes.   Clarifying the notation  The function means the inverse sine of .  Another famous notation for inverse sine is . Be careful with this exponent of . This doesn't mean the reciprocal of .  I will use both notations interchangeably.     Recall back in calculus 1, we learned about the derivative of inverse trigonometric function. One of the formulas is In other words, we can rewrite the above formula using integration as follows: Hence, we can evaluate this integral as follows:     "
+},
+{
+  "id": "thm-IntegralInvolvingInverseTrig",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#thm-IntegralInvolvingInverseTrig",
+  "type": "Theorem",
+  "number": "5.8.2",
+  "title": "Integrals Involving Inverse Trigonometric Functions.",
+  "body": " Integrals Involving Inverse Trigonometric Functions        "
+},
+{
+  "id": "subsec-581-Integral-InverseTrig-4",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig-4",
+  "type": "Note",
+  "number": "5.8.3",
+  "title": "Why do we only rewrite three of the six derivative formulas?",
+  "body": " Why do we only rewrite three of the six derivative formulas?  Recall we have six inverse trigonometric functions. Why do we only have three integral formulas in the above theorem?  That is because of the \"co-\" in cosine, cotangent, and cosecant.  Recall the prefix \"co-\" in trigonometry means \"complementary angles\", meaning angles that add up to (or in radian). That is, given a ratio , we have the following identities: See that the three inverse trigonometric functions that has the \"co-\" in their names can be converted to the other three trigonometric functions. So that is why we only focus on three of the six inverse trigonometric functions when undoing the integral formulas (the other three are only differ by the signs).  "
+},
+{
+  "id": "subsec-581-Integral-InverseTrig-5",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig-5",
+  "type": "Example",
+  "number": "5.8.4",
+  "title": "",
+  "body": " Evaluate the indefinite integral    The bad news here is that we cannot simplify the fraction (there is nothing we can cancel here)...  You may try using -sub and it will work out if you use it smartly.  Here is Richard's hint: before using -sub, try splitting up the fraction as follows: Do we know how to integrate each term?    Using Richard's hint and linearity, we know that   Observe that there is a formula in we can use directly to evaluate the first integral. Hence, the first integral can be evaluated as follows:   For the second integral, we can evaluate it using -sub. Let . Then , and hence . This implies that   Putting these two pieces together, we obtain    "
+},
+{
+  "id": "subsec-581-Integral-InverseTrig-9",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig-9",
+  "type": "Example",
+  "number": "5.8.5",
+  "title": "",
+  "body": " Evaluate the definite integral    Observe that there are some inside functions in the integrand, so -sub may be a good way to go.  Let's try -sub first! Does -sub work out? Why or why not?  If you are open to another route to evaluate this integral, Richard will give a hint that the following formula may be helpful because of the resemblance.     You can verify it quickly that -sub doesn't work here. So Richard will try using the formula he gave in the hint.  To use the formula in the hint, observe that the constant term in the square root must be a . To make it happen, the trick to do here is factoring.   Now we made the constant term in the square root to be ! In order to use the formula, we need a perfect square after the subtraction in the square root. This is an easy fix since is a perfect square (a simple -sub here will make the problem matching up even more with the formula).  Let . Then , which implies that . Furthermore, when , ; when , Now we obtain   Observe that the integral now matches up perfectly with the formula! We can now evaluate this integral using FTC.    "
+},
+{
+  "id": "thm-IntegralInvolvingGeneralExponential",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#thm-IntegralInvolvingGeneralExponential",
+  "type": "Theorem",
+  "number": "5.8.6",
+  "title": "Integrals Involving Exponential Functions.",
+  "body": " Integrals Involving Exponential Functions       "
+},
+{
+  "id": "subsec-582-IntegralExponential-6",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#subsec-582-IntegralExponential-6",
+  "type": "Example",
+  "number": "5.8.7",
+  "title": "",
+  "body": " Evaluate the definite integral    There is clearly a composite function in the integrand. What method can we consider trying?    There is an inside function of in the integrand. This is a cue that -sub may work.  Let . Then , and hence . This implies that    "
+},
+{
+  "id": "ws-sec58-3-2",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-3-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec58-3-3",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-3-3",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec58-3-4",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-3-4",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec58-3-5",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-3-5",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec58-4-2",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-4-2",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec58-4-3",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-4-3",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec58-5-2",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-5-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "ws-sec58-5-3",
+  "level": "2",
+  "url": "sec58-FurtherIntegralFormulas.html#ws-sec58-5-3",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "",
+  "body": "      "
+},
+{
   "id": "secA1-HW1",
   "level": "1",
   "url": "secA1-HW1.html",
