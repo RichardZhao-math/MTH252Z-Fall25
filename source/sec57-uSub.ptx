@@ -784,6 +784,7 @@
           </note>
         </solution>
 
+      <!--
         <note xml:id="Intro-ErrorFunction">
           <title>Fun fact about this integral</title>
           
@@ -843,6 +844,7 @@
           </p>
             
         </note>
+      -->
 
       </task>
     </example>
