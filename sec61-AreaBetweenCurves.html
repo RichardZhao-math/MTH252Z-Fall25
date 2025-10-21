@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -101,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.9.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -145,43 +146,110 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec51-ApproximatingArea.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Approximating and Computing Area</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">51-Approximate_Rectangle</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">Approximating Area by Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-512-SummationNotation" class="internal"><span class="title">Summation Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-513-Compute_Limit_Approximation" class="internal"><span class="title">Computing Area as the Limit of Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-514-LimitSummation" class="internal"><span class="title">Limit of the approximation algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#ws-sec51" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-521-RiemannSum" class="internal"><span class="title">Riemann Sum and Definite Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-522-SignedArea" class="internal"><span class="title">Definite Integral and Signed Area</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-523-Properties_DefiniteIntegral" class="internal"><span class="title">Properties of Definite Integral</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#ws-sec52" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Indefinite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#subsec-531-AntiderivativesANDIndefiniteIntegrals" class="internal"><span class="title">Antiderivatives and Indefinite Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#subsec-532-IndefiniteIntegralFormulas-Basic" class="internal"><span class="title">Some (basic) Indefinite Integral Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#subsec-533-DifferentialEquationsANDIVP" class="internal"><span class="title">Differential Equations and IVP</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#sec53-IndefiniteIntegral-8" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#ws-sec53" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec54-FTCpartI.html" class="internal"><span class="codenumber">5.4</span> <span class="title">The Fundamental Theorem of Calculus, Part I</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-541-FTC-Corollary" class="internal"><span class="title">A Corollary of the Fundamental Theorem of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-542-Importance-FTC-Corollary" class="internal"><span class="title">Why is this corollary important?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary" class="internal"><span class="title">Examples on Applying FTC Corollary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-7" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec54-FTCpartI.html#ws-sec54" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec55-FTCpartII.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Fundamental Theorem of Calculus, Part II</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-551-AccumulationFunction" class="internal"><span class="title">Accumulation Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-552-FTC" class="internal"><span class="title">THE Fundamental Theorem of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-553-UsingFTC" class="internal"><span class="title">To apply the FTC...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-554-Graph-AccumulationFunction" class="internal"><span class="title">The Graph of the Accumulation Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec55-FTCpartII.html#ws-sec55" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-561-DistanceVelocity" class="internal"><span class="title">Relationship between Displacement and Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-562-DisplacementDistance" class="internal"><span class="title">Displacement vs. Distance Traveled</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-563-NetChange" class="internal"><span class="title">General Net Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec56-NetChange.html#ws-sec56" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec57-uSub.html#subsec-571-Indefinite" class="internal"><span class="title">Substitution Method for Indefinite Integrals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsubsec-5711-sub-usingDifferential" class="internal"><span class="title">Substitution Using Differentials</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsec-572-limitation" class="internal"><span class="title">Limitation of <span class="process-math">\(\boldsymbol{u}\)</span>-sub</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsec-573-Definite" class="internal"><span class="title">Substitution Method for Definite Integrals</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec57-uSub.html#ws-sec57" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig" class="internal"><span class="title">Integral formulas involving inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-582-IntegralExponential" class="internal"><span class="title">Integrals Involving Exponential Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#ws-sec58" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch6-ApplicationIntegral.html" class="internal"><span class="codenumber">6</span> <span class="title">Applications of the Integral</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec63-DishAndWasher.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Volume of Revolution: Disks and Washers</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec64-ShellMethod.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Volume of Revolution: Cylindrical Shells</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html#sec61-AreaBetweenCurves-5" class="internal"><span class="title">Area between Two Curves</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-621-Volume" class="internal"><span class="title">Volume by Cross Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-622-AverageValue" class="internal"><span class="title">Average Value</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="appendixA-Investigation.html" class="internal"><span class="codenumber">A</span> <span class="title">Investigation Assignments</span></a></div>
+<div class="toc-title-box"><a href="appendixA-WrittenHomework.html" class="internal"><span class="codenumber">A</span> <span class="title">Written Homework</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Conceptual Foundation of Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A11-StructureIntegral" class="internal"><span class="title">Structure of the Integral</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsubsec-A111-GorillaJump" class="internal"><span class="title">The Great Gorilla Jump</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A12-ProofFTC" class="internal"><span class="title">Proof of the Fundamental Theorem of Calculus</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA1-HW1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Written Homework #1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-HW1.html#secA1-HW1-3" class="internal"><span class="codenumber">A.1</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html" class="internal"><span class="codenumber">A.2</span> <span class="title">More Strategies to Evaluate Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A21-TrigIntegral" class="internal"><span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A22-TaylorPolynomial" class="internal"><span class="title">Approximation using Taylor Polynomials</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA3-ApplicationIntegral.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Some Famous Applications of Integrals</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA3-ApplicationIntegral.html#subsec-A31-PhysicsWork" class="internal"><span class="title">A physics and engineering application -- Work</span></a></div></li></ul>
+<div class="toc-title-box"><a href="secA2-HW2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Written Homework #2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-HW2.html#secA2-HW2-3" class="internal"><span class="codenumber">A.2</span> <span class="title"></span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -190,9 +258,346 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec61-AreaBetweenCurves"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Area Between Two Curves</span>
 </h2>
-<div class="para" id="sec61-AreaBetweenCurves-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec61-AreaBetweenCurves-2"><div class="para" id="sec61-AreaBetweenCurves-2-1">In this section, we will learn how to find the area <em class="emphasis">between</em> curves by integrating along the <span class="process-math">\(x\)</span>-axis and the <span class="process-math">\(y\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 6.1: Area Between Two Curves"><a href="#sec61-AreaBetweenCurves" title="Copy heading and permalink for Section 6.1: Area Between Two Curves" aria-label="Copy heading and permalink for Section 6.1: Area Between Two Curves">🔗</a></div></section></div>
+<article class="objectives goal-like" id="sec61-AreaBetweenCurves-2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<div class="introduction" id="sec61-AreaBetweenCurves-2-2-1"><div class="para" id="sec61-AreaBetweenCurves-2-2-1-1">After this section, students will be able to:<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul class="disc" id="sec61-AreaBetweenCurves-2-2-2">
+<li id="sec61-AreaBetweenCurves-2-2-2-1">
+<div class="para" id="sec61-AreaBetweenCurves-2-2-2-1-1">find the area between curves by integrating along the <span class="process-math">\(x\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec61-AreaBetweenCurves-2-2-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec61-AreaBetweenCurves-2-2-2-2">
+<div class="para" id="sec61-AreaBetweenCurves-2-2-2-2-1">find the area between curves by integrating along the <span class="process-math">\(y\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec61-AreaBetweenCurves-2-2-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives"><a href="#sec61-AreaBetweenCurves-2-2" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><article class="investigation project-like" id="sec61-AreaBetweenCurves-3"><h3 class="heading">
+<span class="type">Investigation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction" id="sec61-AreaBetweenCurves-3-1">
+<div class="para" id="sec61-AreaBetweenCurves-3-1-1">Remember that we can find the area under the curve using the definite integral!<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-3-1-2">Let <span class="process-math">\(f(x)=x^2+1\)</span> and <span class="process-math">\(g(x)=2x+4\text{.}\)</span> The graphs are shown below.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-3-1-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-3-1-3-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(f(x)=x^2+1\)</span> and <span class="process-math">\(g(x)=2x+4\)</span><div class="autopermalink" data-description="Figure 6.1.1"><a href="#sec61-AreaBetweenCurves-3-1-3" title="Copy heading and permalink for Figure 6.1.1" aria-label="Copy heading and permalink for Figure 6.1.1">🔗</a></div></figcaption></figure>
+</div>
+<article class="task exercise-like" id="sec61-AreaBetweenCurves-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec61-AreaBetweenCurves-3-2-1">Find the area under <span class="process-math">\(y = f(x)\)</span> on the interval <span class="process-math">\([-1,3]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec61-AreaBetweenCurves-3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec61-AreaBetweenCurves-3-2-2-1">
+<div class="para">Observe that <span class="process-math">\(f(x) = x^2 + 1\)</span> is positive on the interval <span class="process-math">\([-1,3]\text{.}\)</span> Hence, the definite integral represents the actual geometric area under the curve.</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-3-2-2-1-3">
+\begin{align*}
+\text{Area} \amp= \int_{-1}^3 \left(x^2 + 1\right)\, dx \\
+\amp= \left(\frac{x^3}{3} + x\right)\bigg|_{-1}^3 \\
+\amp= \left(\frac{3^3}{3} + 3\right) - \left(\frac{(-1)^3}{3} + (-1)\right) \\
+\amp= 12 - \left(-\frac{4}{3}\right) \\
+\amp= \frac{40}{3} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-3-2-2-2">Geometrically speaking, the <span class="process-math">\(\frac{40}{3}\)</span> is the area of the region highlighted in orange.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-3-2-2-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-3-2-2-3-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Region under <span class="process-math">\(f(x) = x^2 + 1\)</span> on <span class="process-math">\([-3, 1]\)</span><div class="autopermalink" data-description="Figure 6.1.2"><a href="#sec61-AreaBetweenCurves-3-2-2-3" title="Copy heading and permalink for Figure 6.1.2" aria-label="Copy heading and permalink for Figure 6.1.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 6.1.1.a.1"><a href="#sec61-AreaBetweenCurves-3-2-2" title="Copy heading and permalink for Solution 6.1.1.a.1" aria-label="Copy heading and permalink for Solution 6.1.1.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 6.1.1.a"><a href="#sec61-AreaBetweenCurves-3-2" title="Copy heading and permalink for Task 6.1.1.a" aria-label="Copy heading and permalink for Task 6.1.1.a">🔗</a></div></article><article class="task exercise-like" id="sec61-AreaBetweenCurves-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec61-AreaBetweenCurves-3-3-1">Find the area under <span class="process-math">\(y = g(x)\)</span> on the interval <span class="process-math">\([-1,3]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec61-AreaBetweenCurves-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec61-AreaBetweenCurves-3-3-2-1">
+<div class="para">Observe that <span class="process-math">\(f(x) = 2x + 4\)</span> is positive on the interval <span class="process-math">\([-1,3]\text{.}\)</span> Hence, the definite integral represents the actual geometric area under the curve.</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-3-3-2-1-3">
+\begin{align*}
+\text{Area} \amp= \int_{-1}^3 \left(2x + 4\right)\, dx \\
+\amp= \left(x^2 + 4x\right)\bigg|_{-1}^3 \\
+\amp= \left((3)^2 + 4(3)\right) - \left (-1)^2 + 4(-1)\right) \\
+\amp= 21 - \left(-3\right) \\
+\amp= 24 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-3-3-2-2">Geometrically speaking, the <span class="process-math">\(24\)</span> is the area of the region highlighted in green.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-3-3-2-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-3-3-2-3-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Region under <span class="process-math">\(g(x) = 2x + 4\)</span> on <span class="process-math">\([-3, 1]\)</span><div class="autopermalink" data-description="Figure 6.1.3"><a href="#sec61-AreaBetweenCurves-3-3-2-3" title="Copy heading and permalink for Figure 6.1.3" aria-label="Copy heading and permalink for Figure 6.1.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 6.1.1.b.1"><a href="#sec61-AreaBetweenCurves-3-3-2" title="Copy heading and permalink for Solution 6.1.1.b.1" aria-label="Copy heading and permalink for Solution 6.1.1.b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 6.1.1.b"><a href="#sec61-AreaBetweenCurves-3-3" title="Copy heading and permalink for Task 6.1.1.b" aria-label="Copy heading and permalink for Task 6.1.1.b">🔗</a></div></article><article class="task exercise-like" id="sec61-AreaBetweenCurves-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec61-AreaBetweenCurves-3-4-1">Find the area <em class="alert">between</em> <span class="process-math">\(y = f(x)\)</span> and <span class="process-math">\(y = g(x)\)</span> on the interval <span class="process-math">\([-1,3]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec61-AreaBetweenCurves-3-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec61-AreaBetweenCurves-3-4-2-1">It is important to know what region are we finding the area. Richard will shade the region <em class="alert">between</em> these two curves for you in the diagram below:<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-3-4-2-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-3-4-2-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Region enclosed by <span class="process-math">\(f(x)=x^2+1\)</span> and <span class="process-math">\(g(x)=2x+4\)</span><div class="autopermalink" data-description="Figure 6.1.4"><a href="#sec61-AreaBetweenCurves-3-4-2-2" title="Copy heading and permalink for Figure 6.1.4" aria-label="Copy heading and permalink for Figure 6.1.4">🔗</a></div></figcaption></figure><div class="para" id="sec61-AreaBetweenCurves-3-4-2-3">Now, how should we find the area of the highlighted region?<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-3-4-2-4">Don’t over-complicate it! The result you obtain from part (a) and part (b) should come in useful.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.1.c.1"><a href="#sec61-AreaBetweenCurves-3-4-2" title="Copy heading and permalink for Hint 6.1.1.c.1" aria-label="Copy heading and permalink for Hint 6.1.1.c.1">🔗</a></div>
+</div></details><details id="sec61-AreaBetweenCurves-3-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec61-AreaBetweenCurves-3-4-3-1">
+<div class="para">By observation, we can see that the two curves intersect at the points where <span class="process-math">\(x = -1\)</span> and <span class="process-math">\(x = 3\text{.}\)</span> Then we can find the area of the region highlighted in yellow by <em class="emphasis">subtracting the region highlighted in orange (part a) from the region highlighted in green (part b)</em>. That is,</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-3-4-3-1-4">
+\begin{align*}
+\text{Enclosed Area} \amp= \text{Area in green} - \text{Area in orange} \\
+\amp= 24 - \frac{40}{3} \\
+\amp= \frac{32}{3} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1.1.c.1"><a href="#sec61-AreaBetweenCurves-3-4-3" title="Copy heading and permalink for Solution 6.1.1.c.1" aria-label="Copy heading and permalink for Solution 6.1.1.c.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 6.1.1.c"><a href="#sec61-AreaBetweenCurves-3-4" title="Copy heading and permalink for Task 6.1.1.c" aria-label="Copy heading and permalink for Task 6.1.1.c">🔗</a></div></article><div class="autopermalink" data-description="Investigation 6.1.1"><a href="#sec61-AreaBetweenCurves-3" title="Copy heading and permalink for Investigation 6.1.1" aria-label="Copy heading and permalink for Investigation 6.1.1">🔗</a></div></article><div class="para" id="sec61-AreaBetweenCurves-4">The goal of this section is to find the area <em class="emphasis">between</em> curves. We are actually discussing the actual, geometric area between curves in this section. In other words, we want to figure out how much space is in between the curves. Then your final answer should always be positive (or at least zero). Area, in the geometric sense, cannot be negative.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="sec61-AreaBetweenCurves-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Area between Two Curves</span>
+</h3>
+<div class="para" id="sec61-AreaBetweenCurves-5-2">Based on the investigation, to find the area <em class="alert">between</em> curves, we need to first find the <em class="emphasis">points of intersection</em> to pin down the region. Then we will subtract the smaller area (area under the lower curve) from the larger area (area under the upper curve).<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-3">That is, we will need to observe which curve is higher and which curve is lower in order to determine the area <em class="alert">between</em> curves. It is always helpful to sketch the graphs first.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="sec61-AreaBetweenCurves-5-4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec61-AreaBetweenCurves-5-4-1">Find the area <em class="alert">between</em> the curves <span class="process-math">\(y = x^3 - 2x^2 + 10\)</span> and <span class="process-math">\(y = 3x^2 + 4x - 10\text{.}\)</span> The graph of the curves is shown below, where the red curve is <span class="process-math">\(y = x^3 - 2x^2 + 10\)</span> and the blue curve is <span class="process-math">\(y = 3x^2 + 4x - 10\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-5-4-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-5-4-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(y = x^3 - 2x^2 + 10\)</span> and <span class="process-math">\(y = 3x^2 + 4x - 10\)</span><div class="autopermalink" data-description="Figure 6.1.6"><a href="#sec61-AreaBetweenCurves-5-4-2" title="Copy heading and permalink for Figure 6.1.6" aria-label="Copy heading and permalink for Figure 6.1.6">🔗</a></div></figcaption></figure><details id="sec61-AreaBetweenCurves-5-4-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="sec61-AreaBetweenCurves-5-4-3-1">
+<div class="para">Recall the things we need to do in order to find the region between curves are:</div>
+<ul class="disc" id="sec61-AreaBetweenCurves-5-4-3-1-1">
+<li id="sec61-AreaBetweenCurves-5-4-3-1-1-1">
+<div class="para" id="sec61-AreaBetweenCurves-5-4-3-1-1-1-1">Find the <em class="emphasis">points of intersections</em> to pin down the region.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec61-AreaBetweenCurves-5-4-3-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec61-AreaBetweenCurves-5-4-3-1-1-2">
+<div class="para" id="sec61-AreaBetweenCurves-5-4-3-1-1-2-1">Determine the <em class="emphasis">upper</em> curve and the <em class="emphasis">lower</em> curve.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec61-AreaBetweenCurves-5-4-3-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec61-AreaBetweenCurves-5-4-3-1-1-3">
+<div class="para" id="sec61-AreaBetweenCurves-5-4-3-1-1-3-1">Find their respective area and do the subtraction to determine the area in-between.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec61-AreaBetweenCurves-5-4-3-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.5.1"><a href="#sec61-AreaBetweenCurves-5-4-3" title="Copy heading and permalink for Hint 6.1.5.1" aria-label="Copy heading and permalink for Hint 6.1.5.1">🔗</a></div>
+</div></details><details id="sec61-AreaBetweenCurves-5-4-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec61-AreaBetweenCurves-5-4-4-1">Let’s think about the points of intersection first. It turns out that we don’t really need to know the <span class="process-math">\(y\)</span>-values of the points of intersection since we are using <span class="process-math">\(x\)</span> as our variable in the integral. Reading from the graph, we know that these two curves intersect at the points where <span class="process-math">\(x = -2\)</span> and <span class="process-math">\(x = 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-4-4-2">Next, let’s determine the <em class="emphasis">upper</em> curve and the <em class="emphasis">lower</em> curve within the interval <span class="process-math">\([-2,2]\text{.}\)</span> Obviously, the red curve, which is the cubic function, is the <em class="emphasis">upper</em> curve, and the blue curve which is the quadratic function, is the <em class="emphasis">lower</em> curve.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-4-4-3">If this fact doesn’t come clear, Richard always like to draw a <em class="emphasis">representative rectangle</em> in the region to see which curve stays on top and which curve is on the bottom (like what the diagram below shows).<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-5-4-4-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-5-4-4-4-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(y = x^3 - 2x^2 + 10\)</span> and <span class="process-math">\(y = 3x^2 + 4x - 10\)</span><div class="autopermalink" data-description="Figure 6.1.7"><a href="#sec61-AreaBetweenCurves-5-4-4-4" title="Copy heading and permalink for Figure 6.1.7" aria-label="Copy heading and permalink for Figure 6.1.7">🔗</a></div></figcaption></figure><div class="para logical" id="sec61-AreaBetweenCurves-5-4-4-5">
+<div class="para">Observe that the red curve is located on the <em class="emphasis">top</em> of this rectangle and the blue curve is located on the <em class="emphasis">bottom</em> of the rectangle. This implies that the teal rectangle has the height of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(x^3 - 2x^2 + 10\right) - \left(3x^2 + 4x - 10\right)
+\end{equation*}
+</div>
+<div class="para">We also know that the width of the rectangle is of <span class="process-math">\(dx\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec61-AreaBetweenCurves-5-4-4-6">
+<div class="para">Putting all these pieces together, the area of the green region is</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-5-4-4-6-1">
+\begin{align*}
+\text{Area} \amp= \int_{-2}^2 \left(x^3 - 2x^2 + 10\right) - \left(3x^2 + 4x - 10\right)\, dx \\
+\amp= \int_{-2}^2 \left(x^3 - 5x^2 - 4x + 20\right)\, dx \\
+\amp= \left(\frac{x^4}{4} - \frac{5x^3}{3} - 2x^2 + 20x \right)\bigg|_{-2}^2 \\
+\amp= \frac{160}{3} \\
+\amp\approx 53.33 \qquad \text{unit}^2
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-4-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1.5.1"><a href="#sec61-AreaBetweenCurves-5-4-4" title="Copy heading and permalink for Solution 6.1.5.1" aria-label="Copy heading and permalink for Solution 6.1.5.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 6.1.5"><a href="#sec61-AreaBetweenCurves-5-4" title="Copy heading and permalink for Example 6.1.5" aria-label="Copy heading and permalink for Example 6.1.5">🔗</a></div></article><div class="para" id="sec61-AreaBetweenCurves-5-5">Let’s call the <em class="emphasis">upper</em> curve the <span class="process-math">\(y_\text{top}\)</span> and the <em class="emphasis">lower</em> curve the <span class="process-math">\(y_\text{bot}\text{.}\)</span> Then we can find the area <em class="emphasis">between</em> curves by integrating the <span class="process-math">\(y_\text{top} - y_\text{bot}\text{.}\)</span> Let’s summarize this into a fancy theorem!<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-area-between-x"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Area between two curves.</span>
+</h4>
+<div class="para logical" id="thm-area-between-x-2">
+<div class="para">Let <span class="process-math">\(y_\text{top}\)</span> be the top curve and <span class="process-math">\(y_\text{bot}\)</span> be the bottom curve. Then the area between the graphs is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Area} = \int_a^b \left(y_\text{top} - y_\text{bot}\right)\, dx
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x=a\)</span> and <span class="process-math">\(x=b\)</span> are the <span class="process-math">\(x\)</span>-coordinates of the points of intersection (or the interval <span class="process-math">\([a,b]\)</span> is given).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-area-between-x-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.1.8: Area between two curves"><a href="#thm-area-between-x" title="Copy heading and permalink for Theorem 6.1.8: Area between two curves" aria-label="Copy heading and permalink for Theorem 6.1.8: Area between two curves">🔗</a></div></article><div class="para" id="sec61-AreaBetweenCurves-5-7">Things are going to be a bit messy if the curves intersect more than twice. But the idea of <span class="process-math">\(y_\text{top} - y_\text{bot}\)</span> will remain the same.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-8">Then our challenge here will become: <em class="alert">which one is <span class="process-math">\(\boldsymbol{y_\text{top}}\)</span> and which one is <span class="process-math">\(\boldsymbol{y_\text{bot}}\text{?}\)</span></em><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="sec61-AreaBetweenCurves-5-9"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec61-AreaBetweenCurves-5-9-1">Find the area between <span class="process-math">\(y=\sin(x)\)</span> and <span class="process-math">\(y=\sin(2x)\)</span> for the interval <span class="process-math">\([0,\pi]\text{.}\)</span> The graph of the curves is shown below, where the blue curve is <span class="process-math">\(y=\sin(x)\)</span> and the red curve is <span class="process-math">\(y = \sin(2x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-5-9-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-5-9-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(y = \sin(x)\)</span> and <span class="process-math">\(y = \sin(2x)\)</span><div class="autopermalink" data-description="Figure 6.1.10"><a href="#sec61-AreaBetweenCurves-5-9-2" title="Copy heading and permalink for Figure 6.1.10" aria-label="Copy heading and permalink for Figure 6.1.10">🔗</a></div></figcaption></figure><details id="sec61-AreaBetweenCurves-5-9-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec61-AreaBetweenCurves-5-9-3-1">The game here is to find the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\text{.}\)</span> But which one is which...<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-9-3-2">Richard’s suggestion is to split up the highlighted region into two parts. It is <em class="emphasis">totally</em> possible for the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\)</span> to switch places if they intersect again...<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.9.1"><a href="#sec61-AreaBetweenCurves-5-9-3" title="Copy heading and permalink for Hint 6.1.9.1" aria-label="Copy heading and permalink for Hint 6.1.9.1">🔗</a></div>
+</div></details><details id="sec61-AreaBetweenCurves-5-9-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec61-AreaBetweenCurves-5-9-4-1">
+<div class="para">Let’s follow Richard’s hint to split up the region into two pieces! Within the interval <span class="process-math">\([0,\pi]\text{,}\)</span> the two curves intersect again. We can determine the <span class="process-math">\(x\)</span>-value of this middle point of intersection by <em class="emphasis">equating</em> the two function outputs and solve for <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-5-9-4-1-5">
+\begin{align*}
+\sin(x) \amp= \sin(2x) \qquad \qquad \\
+\implies \qquad \qquad x \amp= \frac{\pi}{3} 
+\end{align*}
+</div>
+<div class="para">Now let’s split up the region at <span class="process-math">\(x = \frac{\pi}{3}\)</span> and focus on one piece at a time!</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-9-4-2">In the region where <span class="process-math">\(x\)</span> is in the interval of <span class="process-math">\([0,\frac{\pi}{3}]\text{,}\)</span> we can determine the <span class="process-math">\(y_\text{top}\)</span> and the <span class="process-math">\(y_\text{bot}\)</span> by drawing a representative rectangle.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-5-9-4-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-5-9-4-3-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(y = \sin(x)\)</span> and <span class="process-math">\(y = \sin(2x)\)</span><div class="autopermalink" data-description="Figure 6.1.11"><a href="#sec61-AreaBetweenCurves-5-9-4-3" title="Copy heading and permalink for Figure 6.1.11" aria-label="Copy heading and permalink for Figure 6.1.11">🔗</a></div></figcaption></figure><div class="para logical" id="sec61-AreaBetweenCurves-5-9-4-4">
+<div class="para">Observe that in this rectangle, the <span class="process-math">\(y_\text{top}\)</span> is the red one and the <span class="process-math">\(y_\text{bot}\)</span> is the blue one. Hence, the area between the two curves on <span class="process-math">\([0,\frac{\pi}{3}]\)</span> is</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-5-9-4-4-4">
+\begin{align*}
+\text{Area} \amp= \int_0^{\frac{\pi}{3}} \left(\sin(2x) - \sin(x)\right)\, dx \\
+\amp= \left(-\frac{1}{2}\cos(2x) + \cos(x)\right)\bigg|_0^{\frac{\pi}{3}} \\
+\amp= \left(-\frac{1}{2}\cos\left(\frac{2\pi}{3}\right) + \cos\left(\frac{\pi}{3}\right)\right) - \left(-\frac{1}{2}\cos(0) + \cos(0)\right) \\
+\amp= \frac{1}{4} + \frac{1}{2} + \frac{1}{2} - 1 \\
+\amp= 0.25 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-9-4-5">Now let’s focus on the region where <span class="process-math">\(x\)</span> is in <span class="process-math">\([\frac{\pi}{3}, \pi]\text{.}\)</span> We can do the same trick to determine the <span class="process-math">\(y_\text{top}\)</span> and the <span class="process-math">\(y_\text{bot}\)</span> by drawing a representative rectangle.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-5-9-4-6"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-5-9-4-6-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(y = \sin(x)\)</span> and <span class="process-math">\(y = \sin(2x)\)</span><div class="autopermalink" data-description="Figure 6.1.12"><a href="#sec61-AreaBetweenCurves-5-9-4-6" title="Copy heading and permalink for Figure 6.1.12" aria-label="Copy heading and permalink for Figure 6.1.12">🔗</a></div></figcaption></figure><div class="para logical" id="sec61-AreaBetweenCurves-5-9-4-7">
+<div class="para">Similarly, we can observe, using this rectangle, that <span class="process-math">\(y_\text{top}\)</span> is the blue one and the <span class="process-math">\(y_\text{bot}\)</span> is the red one. Hence, the area between the two curves on <span class="process-math">\([\frac{\pi}{3}, \pi]\)</span> is</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-5-9-4-7-4">
+\begin{align*}
+\text{Area} \amp= \int_\frac{\pi}{3}^\pi \left(\sin(x) - \sin(2x)\right)\, dx \\
+\amp= \left(-\cos(x) + \frac{1}{2}\cos(2x)\right)\bigg|_\frac{\pi}{3}^\pi \\
+\amp= \left(-\cos(\pi) + \cos(2\pi) \right) - \left(-\cos\left(\frac{\pi}{3}\right) + \frac{1}{2}\cos\left(\frac{2\pi}{3}\right)\right) \\
+\amp= 1 + 1 + \frac{1}{2} - \frac{1}{4} \\
+\amp= 2.25 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec61-AreaBetweenCurves-5-9-4-8">
+<div class="para">Now let’s put everything together! The area of the shaded region on the graph is</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-5-9-4-8-1">
+\begin{align*}
+\text{Area} \amp= \int_0^{\frac{\pi}{3}} \left(\sin(2x) - \sin(x)\right)\, dx + \int_\frac{\pi}{3}^\pi \left(\sin(x) - \sin(2x)\right)\, dx \\
+\amp= 0.25 + 2.25 \\
+\amp= 2.5 \qquad \text{unit}^2 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-9-4-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1.9.1"><a href="#sec61-AreaBetweenCurves-5-9-4" title="Copy heading and permalink for Solution 6.1.9.1" aria-label="Copy heading and permalink for Solution 6.1.9.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 6.1.9"><a href="#sec61-AreaBetweenCurves-5-9" title="Copy heading and permalink for Example 6.1.9" aria-label="Copy heading and permalink for Example 6.1.9">🔗</a></div></article><details id="sec61-AreaBetweenCurves-5-10" class="note remark-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Is there a faster way to find the area between curves?</span>
+</h4></summary><article class="note remark-like knowl__content"><div class="para" id="sec61-AreaBetweenCurves-5-10-2">Observe that, in the previous example, we essentially only integrated <span class="process-math">\(\sin(x)\)</span> and <span class="process-math">\(\sin(2x)\text{,}\)</span> and subtract things in different order. Is there a faster way to do this?<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-10-3">There is actually a "checking" method and a "technology" method to help us streamline this problem.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-10-4">Let’s discuss the "checking" method first. Recall we don’t want negative values in our final answer since the area we are discussing in this section is in the geometric sense. If you are having trouble deciding on the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\text{,}\)</span> then just pick one and observe if the final answer is positive or negative. If your answer is negative, 95% of the time, you mixed up the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\text{.}\)</span> If this is the case, you can just swap the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\)</span> in the setup and erase the negative sign in your final answer.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-10-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec61-AreaBetweenCurves-5-10-5">
+<div class="para">There is also a faster way using technology. Essentially, what we tried to avoid here is to have a negative area. Algebraically speaking, we can avoid any negative area by putting an absolute value in the integrand (this is similar to the total distance traveled idea in <a href="sec56-NetChange.html" class="internal" title="Section 5.6: Net Change as the Integral of a Rate of Change">Section 5.6</a>). If you want to set up the integral in one step, then you can find the area by evaluating the integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec56-NetChange.html">
+\begin{equation*}
+\int_0^\pi \left|\sin(x) - \sin(2x)\right|\, dx
+\end{equation*}
+</div>
+<div class="para">Using technology, this integral equals to <span class="process-math">\(2.5\text{.}\)</span> You can definitely <em class="emphasis">check</em> your answer using technology in one step. <em class="alert">BUT Richard will not consider this as the "work" if you solve the question like this on the exam</em> since Richard doesn’t see any antiderivative you found here. While he doesn’t want to micro-manage you on how you solve the problem, make sure you do know how to evaluate the integral using the FTC by first finding an antiderivative of the integrand <em class="emphasis">without using a calculator</em>. This is THE calculus step.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-10-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 6.1.13: Is there a faster way to find the area between curves?"><a href="#sec61-AreaBetweenCurves-5-10" title="Copy heading and permalink for Note 6.1.13: Is there a faster way to find the area between curves?" aria-label="Copy heading and permalink for Note 6.1.13: Is there a faster way to find the area between curves?">🔗</a></div></article></details><div class="para" id="sec61-AreaBetweenCurves-5-11">Things can be even more complicated if the curves given doesn’t represent <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\)</span> (which means the curves given doesn’t pass the vertical line test). If this is the case, then finding the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\)</span> is sometimes impossible, as one curve can go both jobs.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-12">Alternatively, instead of integrating things along the <span class="process-math">\(x\)</span>-axis (meaning your integral will end with a <span class="process-math">\(dx\)</span>), we can look at things sideway by <em class="alert">integrating things along the <span class="process-math">\(\boldsymbol{y}\)</span>-axis</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="sec61-AreaBetweenCurves-5-13"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec61-AreaBetweenCurves-5-13-1">Find the area of the enclosed region between <span class="process-math">\(x=-\sin(2y)\)</span> (the red curve) and <span class="process-math">\(x=\cos(y)\)</span> (the blue curve) indicated in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-5-13-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-5-13-2-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(x = -\sin(2y)\)</span> and <span class="process-math">\(x = \cos(y)\)</span><div class="autopermalink" data-description="Figure 6.1.15"><a href="#sec61-AreaBetweenCurves-5-13-2" title="Copy heading and permalink for Figure 6.1.15" aria-label="Copy heading and permalink for Figure 6.1.15">🔗</a></div></figcaption></figure><details id="sec61-AreaBetweenCurves-5-13-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec61-AreaBetweenCurves-5-13-3-1">Observe that neither of the two curves passes the vertical line test, making it insanely difficult to find the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-13-3-2">
+<em class="emphasis">Note:</em> It is totally possible to find the find the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\)</span> by figuring out the inverse functions with restricted domain. Then you will end up with more than two functions, and you can determine the <span class="process-math">\(y_\text{top}\)</span> and <span class="process-math">\(y_\text{bot}\)</span> respectively in smaller pieces. But this is algebraically intensive and Richard doesn’t even want to go with this route himself...<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-13-3-3">Instead, let’s look at things sideway. Instead of constructing a vertical skinny rectangle, let’s construct a skinny rectangle horizontally, making the <em class="alert">height</em> of the rectangle to be <span class="process-math">\(dy\text{,}\)</span> as shown in the diagram below.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec61-AreaBetweenCurves-5-13-3-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec61-AreaBetweenCurves-5-13-3-4-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(x = -\sin(2y)\)</span> and <span class="process-math">\(x = \cos(y)\)</span> with a horizontal rectangle<div class="autopermalink" data-description="Figure 6.1.16"><a href="#sec61-AreaBetweenCurves-5-13-3-4" title="Copy heading and permalink for Figure 6.1.16" aria-label="Copy heading and permalink for Figure 6.1.16">🔗</a></div></figcaption></figure><div class="para" id="sec61-AreaBetweenCurves-5-13-3-5">Now can we determine the width of the rectangle?<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.14.1"><a href="#sec61-AreaBetweenCurves-5-13-3" title="Copy heading and permalink for Hint 6.1.14.1" aria-label="Copy heading and permalink for Hint 6.1.14.1">🔗</a></div>
+</div></details><details id="sec61-AreaBetweenCurves-5-13-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec61-AreaBetweenCurves-5-13-4-1">Let’s first figure out the <em class="alert">width</em> of the rectangle!<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-13-4-2">Recall the reason why we can determine the height of the rectangle by <span class="process-math">\(y_\text{top} - y_\text{bot}\)</span> is because we know the higher the point, the larger the <span class="process-math">\(y\)</span>-value, so by doing the subtraction this way, we don’t end up obtainning a negative height.<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-13-4-3">Similarly, we know the <span class="process-math">\(x\)</span>-value of a point is greater if the point is located more towards the right (so the "right-er" the point, the larger the <span class="process-math">\(x\)</span>-value). To make sure the width is not negative, we want to determine the width of the rectangle by doing <span class="process-math">\(x_\text{right} - x_\text{left}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec61-AreaBetweenCurves-5-13-4-4">
+<div class="para">Observe that the blue curve is "right-er" than the red curve, so <span class="process-math">\(x_\text{right} = \cos(y)\)</span> and <span class="process-math">\(x_\text{left} = -\sin(2y)\text{.}\)</span> Then we can find the area of the enclosed region by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{\underline{\quad}}^{\underline{\quad}} \left(\cos(y) - (-\sin(2y))\right)\, dy = \int_{\underline{\quad}}^{\underline{\quad}} \left(\cos(y) + \sin(2y)\right)\, dy
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec61-AreaBetweenCurves-5-13-4-5">The next thing to determine here is the <em class="alert">limits of integration</em>. Since the variable is <span class="process-math">\(y\)</span> in the integral now, we want to determine the region of the <span class="process-math">\(y\)</span>-values. Graphically, we observe that the <span class="process-math">\(y\)</span> value can go as high as <span class="process-math">\(y = \frac{\pi}{4}\)</span> in the enclosed region. So the upper limit is <span class="process-math">\(\frac{\pi}{4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec61-AreaBetweenCurves-5-13-4-6">
+<div class="para">To determine the lower limit, we can do the same trick by equating <span class="process-math">\(-\sin(2y)\)</span> and <span class="process-math">\(\cos(y)\)</span> and solve for <span class="process-math">\(y\)</span> within the region <span class="process-math">\((-\frac{\pi}{4},0)\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-5-13-4-6-5">
+\begin{align*}
+-\sin(2y) \amp= \cos(y) \qquad\qquad \\
+\implies \qquad\qquad y \amp= -\frac{\pi}{6} 
+\end{align*}
+</div>
+<div class="para">Hence, the lower limit is <span class="process-math">\(-\frac{\pi}{6}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec61-AreaBetweenCurves-5-13-4-7">
+<div class="para">Now putting everything together! We can find the area of the enclosed region.</div>
+<div class="displaymath process-math" id="sec61-AreaBetweenCurves-5-13-4-7-1">
+\begin{align*}
+\text{Area} \amp= \int_{-\frac{\pi}{4}}^\frac{\pi}{4} \left(\cos(y) - \sin(2y)\right)\, dy \\
+\amp= \left(\sin(y) + \frac{1}{2}\cos(2y)\right)\bigg|_{-\frac{\pi}{6}}^\frac{\pi}{4} \\
+\amp= \left(\sin\left(\frac{\pi}{4}\right) - \frac{1}{2}\cos\left(\frac{\pi}{2}\right)\right) - \left(\sin\left(-\frac{\pi}{6}\right) - \frac{1}{2}\cos\left(-\frac{\pi}{3}\right)\right) \\
+\amp= \frac{\sqrt{2}}{2} + \frac{1}{2} + \frac{1}{4} \\
+\amp= \frac{2\sqrt{2} + 3}{4} \approx 1.4571 \qquad \text{unit}^2
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec61-AreaBetweenCurves-5-13-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1.14.1"><a href="#sec61-AreaBetweenCurves-5-13-4" title="Copy heading and permalink for Solution 6.1.14.1" aria-label="Copy heading and permalink for Solution 6.1.14.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 6.1.14"><a href="#sec61-AreaBetweenCurves-5-13" title="Copy heading and permalink for Example 6.1.14" aria-label="Copy heading and permalink for Example 6.1.14">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Area between Two Curves"><a href="#sec61-AreaBetweenCurves-5" title="Copy heading and permalink for Subsection: Area between Two Curves" aria-label="Copy heading and permalink for Subsection: Area between Two Curves">🔗</a></div></section><div class="autopermalink" data-description="Section 6.1: Area Between Two Curves"><a href="#sec61-AreaBetweenCurves" title="Copy heading and permalink for Section 6.1: Area Between Two Curves" aria-label="Copy heading and permalink for Section 6.1: Area Between Two Curves">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch6-ApplicationIntegral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec62-VolumeAverageValue.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

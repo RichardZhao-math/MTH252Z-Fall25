@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -101,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.9.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -129,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec61-AreaBetweenCurves.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch6-ApplicationIntegral.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec63-DishAndWasher.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec61-AreaBetweenCurves.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch6-ApplicationIntegral.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendixA-WrittenHomework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -145,43 +146,110 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec51-ApproximatingArea.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Approximating and Computing Area</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">51-Approximate_Rectangle</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">Approximating Area by Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-512-SummationNotation" class="internal"><span class="title">Summation Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-513-Compute_Limit_Approximation" class="internal"><span class="title">Computing Area as the Limit of Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-514-LimitSummation" class="internal"><span class="title">Limit of the approximation algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#ws-sec51" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-521-RiemannSum" class="internal"><span class="title">Riemann Sum and Definite Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-522-SignedArea" class="internal"><span class="title">Definite Integral and Signed Area</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-523-Properties_DefiniteIntegral" class="internal"><span class="title">Properties of Definite Integral</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#ws-sec52" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Indefinite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#subsec-531-AntiderivativesANDIndefiniteIntegrals" class="internal"><span class="title">Antiderivatives and Indefinite Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#subsec-532-IndefiniteIntegralFormulas-Basic" class="internal"><span class="title">Some (basic) Indefinite Integral Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#subsec-533-DifferentialEquationsANDIVP" class="internal"><span class="title">Differential Equations and IVP</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#sec53-IndefiniteIntegral-8" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html#ws-sec53" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec54-FTCpartI.html" class="internal"><span class="codenumber">5.4</span> <span class="title">The Fundamental Theorem of Calculus, Part I</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-541-FTC-Corollary" class="internal"><span class="title">A Corollary of the Fundamental Theorem of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-542-Importance-FTC-Corollary" class="internal"><span class="title">Why is this corollary important?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary" class="internal"><span class="title">Examples on Applying FTC Corollary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-7" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec54-FTCpartI.html#ws-sec54" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec55-FTCpartII.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Fundamental Theorem of Calculus, Part II</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-551-AccumulationFunction" class="internal"><span class="title">Accumulation Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-552-FTC" class="internal"><span class="title">THE Fundamental Theorem of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-553-UsingFTC" class="internal"><span class="title">To apply the FTC...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-554-Graph-AccumulationFunction" class="internal"><span class="title">The Graph of the Accumulation Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec55-FTCpartII.html#ws-sec55" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-561-DistanceVelocity" class="internal"><span class="title">Relationship between Displacement and Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-562-DisplacementDistance" class="internal"><span class="title">Displacement vs. Distance Traveled</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-563-NetChange" class="internal"><span class="title">General Net Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec56-NetChange.html#ws-sec56" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec57-uSub.html#subsec-571-Indefinite" class="internal"><span class="title">Substitution Method for Indefinite Integrals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsubsec-5711-sub-usingDifferential" class="internal"><span class="title">Substitution Using Differentials</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsec-572-limitation" class="internal"><span class="title">Limitation of <span class="process-math">\(\boldsymbol{u}\)</span>-sub</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec57-uSub.html#subsec-573-Definite" class="internal"><span class="title">Substitution Method for Definite Integrals</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec57-uSub.html#ws-sec57" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig" class="internal"><span class="title">Integral formulas involving inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-582-IntegralExponential" class="internal"><span class="title">Integrals Involving Exponential Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#ws-sec58" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch6-ApplicationIntegral.html" class="internal"><span class="codenumber">6</span> <span class="title">Applications of the Integral</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec63-DishAndWasher.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Volume of Revolution: Disks and Washers</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec64-ShellMethod.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Volume of Revolution: Cylindrical Shells</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html#sec61-AreaBetweenCurves-5" class="internal"><span class="title">Area between Two Curves</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-621-Volume" class="internal"><span class="title">Volume by Cross Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-622-AverageValue" class="internal"><span class="title">Average Value</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="appendixA-Investigation.html" class="internal"><span class="codenumber">A</span> <span class="title">Investigation Assignments</span></a></div>
+<div class="toc-title-box"><a href="appendixA-WrittenHomework.html" class="internal"><span class="codenumber">A</span> <span class="title">Written Homework</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Conceptual Foundation of Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A11-StructureIntegral" class="internal"><span class="title">Structure of the Integral</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsubsec-A111-GorillaJump" class="internal"><span class="title">The Great Gorilla Jump</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A12-ProofFTC" class="internal"><span class="title">Proof of the Fundamental Theorem of Calculus</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA1-HW1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Written Homework #1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-HW1.html#secA1-HW1-3" class="internal"><span class="codenumber">A.1</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html" class="internal"><span class="codenumber">A.2</span> <span class="title">More Strategies to Evaluate Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A21-TrigIntegral" class="internal"><span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A22-TaylorPolynomial" class="internal"><span class="title">Approximation using Taylor Polynomials</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA3-ApplicationIntegral.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Some Famous Applications of Integrals</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA3-ApplicationIntegral.html#subsec-A31-PhysicsWork" class="internal"><span class="title">A physics and engineering application -- Work</span></a></div></li></ul>
+<div class="toc-title-box"><a href="secA2-HW2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Written Homework #2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-HW2.html#secA2-HW2-3" class="internal"><span class="codenumber">A.2</span> <span class="title"></span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -190,11 +258,239 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec62-VolumeAverageValue"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Setting up Integrals: Volume, Density, Average Value</span>
 </h2>
-<div class="para" id="sec62-VolumeAverageValue-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec62-VolumeAverageValue-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec62-VolumeAverageValue-2"><div class="para" id="sec62-VolumeAverageValue-2-1">In this section, we will discuss how to find the <em class="alert">volume</em> of a solid and the <em class="alert">average value</em> of a function using integrals.<div class="autopermalink" data-description="Paragraph"><a href="#sec62-VolumeAverageValue-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="objectives goal-like" id="sec62-VolumeAverageValue-2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<div class="introduction" id="sec62-VolumeAverageValue-2-2-1"><div class="para" id="sec62-VolumeAverageValue-2-2-1-1">After this section, students will be able to:<div class="autopermalink" data-description="Paragraph"><a href="#sec62-VolumeAverageValue-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul class="disc" id="sec62-VolumeAverageValue-2-2-2">
+<li id="sec62-VolumeAverageValue-2-2-2-1">
+<div class="para" id="sec62-VolumeAverageValue-2-2-2-1-1">interpret the concept of volume by adding up the volume of slices of cross sections.<div class="autopermalink" data-description="Paragraph"><a href="#sec62-VolumeAverageValue-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec62-VolumeAverageValue-2-2-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec62-VolumeAverageValue-2-2-2-2">
+<div class="para" id="sec62-VolumeAverageValue-2-2-2-2-1">find the volume of a solid by integration.<div class="autopermalink" data-description="Paragraph"><a href="#sec62-VolumeAverageValue-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec62-VolumeAverageValue-2-2-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec62-VolumeAverageValue-2-2-2-3">
+<div class="para" id="sec62-VolumeAverageValue-2-2-2-3-1">find the average value of a continuous function within a given interval.<div class="autopermalink" data-description="Paragraph"><a href="#sec62-VolumeAverageValue-2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec62-VolumeAverageValue-2-2-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives"><a href="#sec62-VolumeAverageValue-2-2" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><section class="subsection" id="subsec-621-Volume"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Volume by Cross Section</span>
+</h3>
+<div class="para" id="subsec-621-Volume-2">Let’s give a deeper consideration of what the term <em class="alert">volume</em> means geometrically. Imagine we can slice through the solid <em class="emphasis">vertically</em> into millions and millions of pieces with infinitesimally small thickness. Then we can find the <em class="alert">area of each cross section</em>, multiply it with the infinitesimally small thickness, and add up all the pieces.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="Volume_VerticalSlices"><iframe src="external/pdfs/Volume_VerticalSlices.pdf" id="Volume_VerticalSlices-2" width="720" height="563"></iframe><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Vertical Cross Section of a Solid<div class="autopermalink" data-description="Figure 6.2.1"><a href="#Volume_VerticalSlices" title="Copy heading and permalink for Figure 6.2.1" aria-label="Copy heading and permalink for Figure 6.2.1">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-621-Volume-4">
+<div class="para">If we assume the <em class="emphasis">vertical</em> cross section to have an area of <span class="process-math">\(A(x)\)</span> and each slice have the infinitesimally small thickness of <span class="process-math">\(dx\text{,}\)</span> then the volume of the solid is the sum of the volume of <em class="emphasis">all</em> the slices. That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V = \int_a^b A(x)\, dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-621-Volume-5">Similarly, if we are slicing the solid <em class="emphasis">horizontally</em>, then the infinitesimally small thickness will be <span class="process-math">\(dy\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="Volume_HorizontalSlices"><iframe src="external/pdfs/Volume_HorizontalSlices.pdf" id="Volume_HorizontalSlices-2" width="720" height="306"></iframe><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Horizontal Cross Section of a Solid<div class="autopermalink" data-description="Figure 6.2.2"><a href="#Volume_HorizontalSlices" title="Copy heading and permalink for Figure 6.2.2" aria-label="Copy heading and permalink for Figure 6.2.2">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-621-Volume-7">
+<div class="para">If we assume, similarly, that the <em class="emphasis">horizontal</em> cross section to have an area of <span class="process-math">\(A(y)\)</span> and each slice have the infinitesimally small thickness of <span class="process-math">\(dy\text{,}\)</span> then the volume of the solid is the sum of the volume of <em class="emphasis">all</em> the slices. That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V = \int_a^b A(y)\, dy
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-621-Volume-8">Now we can make a fancy theorem out of it.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-Volume-CrossSection"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Volume as the Integral of Cross-Sectional Area.</span>
+</h4>
+<div class="para logical" id="thm-Volume-CrossSection-2-1">
+<ul class="disc" id="thm-Volume-CrossSection-2-1-1">
+<li id="thm-Volume-CrossSection-2-1-1-1">
+<div class="para logical" id="thm-Volume-CrossSection-2-1-1-1-1">
+<div class="para">Let <span class="process-math">\(A(x)\)</span> be the area of the <em class="alert">vertical</em> cross section at distance <span class="process-math">\(x\)</span> of a solid body extending from <span class="process-math">\(x = a\)</span> to <span class="process-math">\(x = b\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Volume of the Solid Body} = \int_a^b A(x)\, dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-Volume-CrossSection-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-Volume-CrossSection-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-Volume-CrossSection-2-1-1-2">
+<div class="para logical" id="thm-Volume-CrossSection-2-1-1-2-1">
+<div class="para">Let <span class="process-math">\(A(y)\)</span> be the area of the <em class="alert">horizontal</em> cross section at distance <span class="process-math">\(y\)</span> of a solid body extending from <span class="process-math">\(y = a\)</span> to <span class="process-math">\(y = b\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Volume of the Solid Body} = \int_a^b A(y)\, dy
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-Volume-CrossSection-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-Volume-CrossSection-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-Volume-CrossSection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.2.3: Volume as the Integral of Cross-Sectional Area"><a href="#thm-Volume-CrossSection" title="Copy heading and permalink for Theorem 6.2.3: Volume as the Integral of Cross-Sectional Area" aria-label="Copy heading and permalink for Theorem 6.2.3: Volume as the Integral of Cross-Sectional Area">🔗</a></div></article><div class="para" id="subsec-621-Volume-10">Observe that there is a difference between which variable, <span class="process-math">\(x\)</span> or <span class="process-math">\(y\text{,}\)</span> we are using in the formula depending on the orientation of the slices. One way to remember this is by <em class="emphasis">determining the differential first</em>. If the slices are vertical, then the thickness is some horizontal distance (observe the diagram in <a href="sec62-VolumeAverageValue.html#Volume_VerticalSlices" class="xref" data-knowl="./knowl/xref/Volume_VerticalSlices.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.1">Figure 6.2.1</a>), which means the thickness is <span class="process-math">\(dx\text{.}\)</span> Then the variable in the integral should be <span class="process-math">\(x\text{.}\)</span> This is why we want to find the area of the cross sections with respect to <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-621-Volume-11">You can make a similar argument on why using the variable <span class="process-math">\(y\)</span> when the slices are <em class="emphasis">horizontal</em> (by observing the diagram in <a href="sec62-VolumeAverageValue.html#Volume_HorizontalSlices" class="xref" data-knowl="./knowl/xref/Volume_HorizontalSlices.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.2">Figure 6.2.2</a>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-621-Volume-12"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-621-Volume-12-1">Find the volume of the solid whose base is the semi-circle <span class="process-math">\(y = \sqrt{9 - x^2}\)</span> and the cross section perpendicular to the <span class="process-math">\(x\)</span>-axis are squares.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-621-Volume-12-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-621-Volume-12-2-1">You should imagine what the solid looks like based on this description. Richard understands that this may be super difficult (he doesn’t have a good 3-dimensional visualization skill so he understands how difficult this can be, but he did have students in the past who are super good at this...so everything is possible!).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-621-Volume-12-2-2">To help you visualize this solid, Richard included a Desmos applet below:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<iframe src="https://www.desmos.com/calculator/gex0uof9nc?embed&amp;lang=en&amp;noexpressions=1" id="subsec-621-Volume-12-2-3" width="651" height="488"></iframe><div class="para" id="subsec-621-Volume-12-2-4">Now that you have an idea of what the solid looks like, how do we determine the <em class="alert">area of the cross section</em> and the <em class="alert">interval</em> of which the <span class="process-math">\(x\)</span>-values is in?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.2.4.1"><a href="#subsec-621-Volume-12-2" title="Copy heading and permalink for Hint 6.2.4.1" aria-label="Copy heading and permalink for Hint 6.2.4.1">🔗</a></div>
+</div></details><details id="subsec-621-Volume-12-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-621-Volume-12-3-1">
+<div class="para">Since the slices are <em class="emphasis">vertical</em>, we can find the volume of the solid using the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Volume} = \int_a^b A(x)\, dx
+\end{equation*}
+</div>
+<div class="para">So the two things we want to find are (1) the area of the cross section, and (2) the interval in which the <span class="process-math">\(x\)</span>-values are in.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-621-Volume-12-3-2">Let’s figure out the area of the cross section first. By the problem, we know that the cross sections are <em class="alert">squares</em>, whose area can be computed by <em class="emphasis">squaring the sides</em>. So the question now becomes <em class="emphasis">what the side of the squares are</em>?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-621-Volume-12-3-3">
+<div class="para">By the Desmos applet in the hint, the <em class="alert">base</em> of the square is the <em class="emphasis">height</em> of the function <span class="process-math">\(y = \sqrt{9 - x^2}\text{,}\)</span> which is the <em class="emphasis">function value</em>. Then the area of the cross section is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(x) = \left(\sqrt{9 - x^2}\right)^2 = 9 - x^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-621-Volume-12-3-4">Now we will determine the interval in which the <span class="process-math">\(x\)</span>-values live in. Graphically, we can observe that the <span class="process-math">\(x\)</span>-values will be within the interval of <span class="process-math">\([-3,3]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-621-Volume-12-3-5">
+<div class="para">Putting these two pieces together, the volume of the solid is</div>
+<div class="displaymath process-math" id="subsec-621-Volume-12-3-5-1">
+\begin{align*}
+\text{Volume} \amp= \int_{-3}^3 \left(9 - x^2\right)\, dx \\
+\amp= \left(9x - \frac{x^3}{3}\right)\bigg|_{-3}^3 \\
+\amp= \left(9(3) - \frac{(3)^3}{3}\right) - \left(9(-3) - \frac{(-3)^3}{3}\right) \\
+\amp= 18 - (-18) \\
+\amp= 36 \qquad \text{unit}^3 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-621-Volume-12-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.2.4.1"><a href="#subsec-621-Volume-12-3" title="Copy heading and permalink for Solution 6.2.4.1" aria-label="Copy heading and permalink for Solution 6.2.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 6.2.4"><a href="#subsec-621-Volume-12" title="Copy heading and permalink for Example 6.2.4" aria-label="Copy heading and permalink for Example 6.2.4">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Volume by Cross Section"><a href="#subsec-621-Volume" title="Copy heading and permalink for Subsection: Volume by Cross Section" aria-label="Copy heading and permalink for Subsection: Volume by Cross Section">🔗</a></div></section><section class="subsection" id="subsec-622-AverageValue"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Average Value</span>
+</h3>
+<div class="para logical" id="subsec-622-AverageValue-2">
+<div class="para">In statistics, we can find the <em class="emphasis">average</em> by adding up all the data values and dividing the sum by the number of data values. Symbolically, the <em class="emphasis">average</em> in statistics is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{a_1 + a_2 + \cdots + a_N}{N} = \frac{1}{N}\sum_{i = 1}^N a_i
+\end{equation*}
+</div>
+<div class="para">But this formula is only useful if we have <em class="emphasis">finite</em> number of the data values. What if we want to find the average value of a <em class="emphasis">continuous</em> function within some interval? We will have infinite function values to deal with...</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-622-AverageValue-3">One way to work around this issue is to borrow the idea of the <em class="emphasis">right-endpoint approximation</em> back in <a href="sec51-ApproximatingArea.html" class="internal" title="Section 5.1: Approximating and Computing Area">Section 5.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-622-AverageValue-4">
+<div class="para">Let’s say we want to find the <em class="alert">average value</em> of a continuous function <span class="process-math">\(f\)</span> over some closed interval <span class="process-math">\([a,b]\text{.}\)</span> We will first find the right-endpoint approximation as follows:</div>
+<div class="displaymath process-math" id="subsec-622-AverageValue-4-4">
+\begin{align*}
+R_N \amp= \frac{b - a}{N} \left(f(x_1) + f(x_2) + \cdots + f(x_N)\right)\\
+\amp= (b - a)\cdot \frac{f(x_1) + f(x_2) + \cdots + f(x_N)}{N} 
+\end{align*}
+</div>
+<div class="para">Observe that the fraction on the right-hand side of the equation looks a lot like the average value in the statistical sense! So let’s isolate it!</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(x_1) + f(x_2) + \cdots + f(x_N)}{N} = \frac{1}{b - a}\cdot R_N
+\end{equation*}
+</div>
+<div class="para">If we want to sum up <em class="emphasis">all</em> the function values, then <span class="process-math">\(N\to \infty\)</span> here. Imagine we are taking the limit on both sides of the equation as <span class="process-math">\(N\to \infty\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="subsec-622-AverageValue-4-9">
+\begin{align*}
+\lim_{N\to \infty} \left(\frac{f(x_1) + f(x_2) + \cdots + f(x_N)}{N}\right) \amp= \lim_{N\to \infty} \left(\frac{1}{b-a}\cdot R_N\right) \\
+\amp = \frac{1}{b-a}\cdot \lim_{N\to \infty} R_N 
+\end{align*}
+</div>
+<div class="para">Hmm but what is the right-endpoint approximation when <span class="process-math">\(N\to \infty\text{...}\)</span> That is the definite integral! (Recall we defined the definite integrals as the limit of the Riemann sum, and <span class="process-math">\(R_N\)</span> is just one special Riemann sum!). That is, the average value of a continuous function can be computed by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Average Value} = \frac{1}{b-a}\int_a^b f(x)\, dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-622-AverageValue-5"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="subsec-622-AverageValue-5-1">
+<div class="para">The temperature (in degrees Celsius) at time <span class="process-math">\(t\)</span> (in hours) in an art museum varies according to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T(t) = 20 + 5\cos\left(\frac{\pi}{12}t\right)
+\end{equation*}
+</div>
+<div class="para">Find the <em class="alert">average temperature</em> in the museum over a day.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-622-AverageValue-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-622-AverageValue-5-2-1">Observe the temperature function is a continuous function, so it is impossible to find <em class="emphasis">all</em> the temperature, adding them up, and divide the sum by the number of temperature values.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-622-AverageValue-5-2-2">Instead, we just derived a fancy formula to find the average value of a continuous function over an interval. Let’s use this formula!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-622-AverageValue-5-2-3">What is the function and what is the interval of interest?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.2.5.1"><a href="#subsec-622-AverageValue-5-2" title="Copy heading and permalink for Hint 6.2.5.1" aria-label="Copy heading and permalink for Hint 6.2.5.1">🔗</a></div>
+</div></details><details id="subsec-622-AverageValue-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-622-AverageValue-5-3-1">
+<div class="para">The function we are looking at here is the temperature function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T(t) = 20 + 5\cos\left(\frac{\pi}{12}t\right)
+\end{equation*}
+</div>
+<div class="para">We care about the average temperature over a day, which has 24 hours, so the interval of interest is <span class="process-math">\([0,24]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-622-AverageValue-5-3-2">
+<div class="para">Now we can plug things into the average value formula!</div>
+<div class="displaymath process-math" id="subsec-622-AverageValue-5-3-2-1">
+\begin{align*}
+\text{Average Value} \amp= \frac{1}{24}\int_0^{24} \left(20 + 5\cos\left(\frac{\pi}{12}t\right)\right)\, dt \\
+\amp= \frac{1}{24}\left(20t + 5\cdot \frac{12}{\pi}\sin\left(\frac{\pi}{12} t\right)\right)\bigg|_0^{24} \\
+\amp= \frac{1}{24}\left(20\cdot 24 + \frac{60}{\pi}\sin\left(\frac{\pi}{12}\cdot 24\right)\right) \\
+\amp= 20 
+\end{align*}
+</div>
+<div class="para">Hence, the average temperature of the museum over a day is <span class="process-math">\(20 \text{C}^\circ\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-622-AverageValue-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.2.5.1"><a href="#subsec-622-AverageValue-5-3" title="Copy heading and permalink for Solution 6.2.5.1" aria-label="Copy heading and permalink for Solution 6.2.5.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 6.2.5"><a href="#subsec-622-AverageValue-5" title="Copy heading and permalink for Example 6.2.5" aria-label="Copy heading and permalink for Example 6.2.5">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Average Value"><a href="#subsec-622-AverageValue" title="Copy heading and permalink for Subsection: Average Value" aria-label="Copy heading and permalink for Subsection: Average Value">🔗</a></div></section><div class="para" id="sec62-VolumeAverageValue-5">Observe there are formulas you can apply directly in this section. To make sure you are familiar with the formulas, spend some time working through some practice problems, especially the volume idea by summing up the volume of smaller slices. The two big sections in this chapter, section 6.3 and 6.4, will rely on this idea of the volume.<div class="autopermalink" data-description="Paragraph"><a href="#sec62-VolumeAverageValue-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Section 6.2: Setting up Integrals: Volume, Density, Average Value"><a href="#sec62-VolumeAverageValue" title="Copy heading and permalink for Section 6.2: Setting up Integrals: Volume, Density, Average Value" aria-label="Copy heading and permalink for Section 6.2: Setting up Integrals: Volume, Density, Average Value">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec61-AreaBetweenCurves.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec63-DishAndWasher.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec61-AreaBetweenCurves.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendixA-WrittenHomework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
