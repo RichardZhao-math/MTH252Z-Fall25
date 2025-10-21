@@ -3,14 +3,13 @@
 <chapter xml:id="ch6-ApplicationIntegral" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Applications of the Integral</title>
 
-  <introduction>
-    <p> Blahblahblah. </p>
-  </introduction>
-
   <!-- include sections -->
   <xi:include href="sec61-AreaBetweenCurves.ptx" />
   <xi:include href="sec62-VolumeAverageValue.ptx" />
+
+  <!--
   <xi:include href="sec63-DiskAndWasher.ptx" />
   <xi:include href="sec64-ShellMethod.ptx" />
+  -->
 
 </chapter>

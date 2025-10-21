@@ -3,6 +3,1097 @@
 <section xml:id="sec61-AreaBetweenCurves" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Area Between Two Curves</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, we will learn how to find the area <em>between</em> curves by integrating along the <m>x</m>-axis and the <m>y</m>-axis.
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            find the area between curves by integrating along the <m>x</m>-axis.  
+          </p>
+        </li>
+        <li>
+          <p>
+            find the area between curves by integrating along the <m>y</m>-axis. 
+          </p>
+        </li>
+      </ul>
+    </objectives>
+  </introduction>
+
+  <investigation>
+    <introduction>
+      <p>
+        Remember that we can find the area under the curve using the <b>definite integral</b>!
+      </p>
+
+      <p>Let <m>f(x)=x^2+1</m> and <m>g(x)=2x+4</m>. The graphs are shown below.</p>
+
+      <figure>
+        <caption>Graphs of <m>f(x)=x^2+1</m> and <m>g(x)=2x+4</m></caption>
+        <image width="50%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              axis lines=middle,
+              axis on top=true,      % put axes above shaded region
+              xlabel={$x$},
+              ylabel={$y$},
+              xmin=-1.5, xmax=3.5,
+              ymin=-0.5, ymax=11.5,
+              xtick={-1,0,1,2,3},
+              ytick={0,2,4,6,8,10},
+              domain=-1.5:3.5,
+              samples=100,
+              width=1\textwidth,
+              height=1\textwidth,
+            ]
+
+            \addplot[red, ultra thick, smooth] {x^2+1};
+            \addplot[blue, ultra thick, smooth] {2*x+4};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+        </image>
+      </figure>
+    </introduction>
+
+    <task>
+      <p>
+        Find the area under <m>y = f(x)</m> on the interval <m>[-1,3]</m>
+      </p>
+
+      <solution>
+        <p>
+          Observe that <m>f(x) = x^2 + 1</m> is positive on the interval <m>[-1,3]</m>. 
+          Hence, the definite integral represents the actual geometric area under the curve. 
+          <md>
+            <mrow>\text{Area} \amp= \int_{-1}^3 \left(x^2 + 1\right)\, dx </mrow>
+            <mrow> \amp= \left(\frac{x^3}{3} + x\right)\bigg|_{-1}^3 </mrow>
+            <mrow> \amp= \left(\frac{3^3}{3} + 3\right) - \left(\frac{(-1)^3}{3} + (-1)\right) </mrow>
+            <mrow> \amp= 12 - \left(-\frac{4}{3}\right) </mrow>
+            <mrow> \amp= \frac{40}{3} </mrow>
+          </md>
+        </p>
+
+        <p>
+          Geometrically speaking, the <m>\frac{40}{3}</m> is the area of the region highlighted in orange. 
+        </p>
+
+        <figure>
+        <caption>Region under <m>f(x) = x^2 + 1</m> on <m>[-3, 1]</m></caption>
+        <image width="50%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              axis lines=middle,
+              axis on top=true,      % put axes above shaded region
+              xlabel={$x$},
+              ylabel={$y$},
+              xmin=-1.5, xmax=3.5,
+              ymin=-0.5, ymax=11.5,
+              xtick={-1,0,1,2,3},
+              ytick={0,2,4,6,8,10},
+              domain=-1.5:3.5,
+              samples=100,
+              width=1\textwidth,
+              height=1\textwidth,
+            ]
+
+            % --- Shaded region under y = x^2 + 1 on [-1,3]
+            \addplot [
+            draw=none,
+            fill=orange!30,
+            opacity=0.6,
+            domain=-1:3
+            ] {x^2 + 1} \closedcycle;
+
+            \addplot[red, ultra thick, smooth] {x^2+1};
+            \addplot[blue, ultra thick, smooth] {2*x+4};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+        </image>
+      </figure>
+      </solution>
+    </task>
+
+    <task>
+      <p>
+        Find the area under <m>y = g(x)</m> on the interval <m>[-1,3]</m>
+      </p>
+
+      <solution>
+        <p>
+          Observe that <m>f(x) = 2x + 4</m> is positive on the interval <m>[-1,3]</m>. 
+          Hence, the definite integral represents the actual geometric area under the curve. 
+          <md>
+            <mrow>\text{Area} \amp= \int_{-1}^3 \left(2x + 4\right)\, dx </mrow>
+            <mrow> \amp= \left(x^2 + 4x\right)\bigg|_{-1}^3 </mrow>
+            <mrow> \amp= \left((3)^2 + 4(3)\right) - \left (-1)^2 + 4(-1)\right) </mrow>
+            <mrow> \amp= 21 - \left(-3\right) </mrow>
+            <mrow> \amp= 24 </mrow>
+          </md>
+        </p>
+
+        <p>
+          Geometrically speaking, the <m>24</m> is the area of the region highlighted in green. 
+        </p>
+
+        <figure>
+        <caption>Region under <m>g(x) = 2x + 4</m> on <m>[-3, 1]</m></caption>
+        <image width="50%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              axis lines=middle,
+              axis on top=true,      % put axes above shaded region
+              xlabel={$x$},
+              ylabel={$y$},
+              xmin=-1.5, xmax=3.5,
+              ymin=-0.5, ymax=11.5,
+              xtick={-1,0,1,2,3},
+              ytick={0,2,4,6,8,10},
+              domain=-1.5:3.5,
+              samples=100,
+              width=1\textwidth,
+              height=1\textwidth,
+            ]
+
+            % --- Shaded region under y = 2x + 4 on [-1,3]
+            \addplot [
+            draw=none,
+            fill=green!30,
+            opacity=0.6,
+            domain=-1:3
+            ] {2*x + 4} \closedcycle;
+
+            \addplot[red, ultra thick, smooth] {x^2+1};
+            \addplot[blue, ultra thick, smooth] {2*x+4};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+        </image>
+      </figure>
+      </solution>
+    </task>
+
+    <task>
+      <p>
+        Find the area <alert>between</alert> <m>y = f(x)</m> and <m>y = g(x)</m> on the interval <m>[-1,3]</m>
+      </p>
+
+      <hint>
+        <p>
+          It is important to know what region are we finding the area. 
+          Richard will shade the region <alert>between</alert> these two curves for you in the diagram below: 
+        </p>
+
+        <figure>
+          <caption>Region enclosed by <m>f(x)=x^2+1</m> and <m>g(x)=2x+4</m></caption>
+          <image width="50%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines=middle,
+                  axis on top=true,      % keep axes above shaded region
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-1.5, xmax=3.5,
+                  ymin=-0.5, ymax=11.5,
+                  xtick={-1,0,1,2,3},
+                  ytick={0,2,4,6,8,10},
+                  domain=-1.5:3.5,
+                  samples=100,
+                  width=1\textwidth,
+                  height=1\textwidth,
+                ]
+
+                % --- SHADED REGION using polygon method ---
+                % Create a closed path: top curve from -1 to 3, then back along bottom curve
+                \addplot[
+                  draw=none,
+                  fill=yellow!30,
+                  opacity=0.6,
+                ]
+                coordinates {
+                  % Upper curve: g(x) = 2x + 4
+                  (-1,2) (-0.5,3) (0,4) (0.5,5) (1,6)
+                  (1.5,7) (2,8) (2.5,9) (3,10)
+                  % Lower curve: f(x) = x^2 + 1, traced backwards
+                  (3,10) (2.5,7.25) (2,5) (1.5,3.25)
+                  (1,2) (0.5,1.25) (0,1) (-0.5,1.25) (-1,2)
+                } -- cycle;
+
+                % --- Curves ---
+                \addplot[red, ultra thick, smooth, domain=-1.5:3.5] {x^2 + 1};
+                \addplot[blue, ultra thick, smooth, domain=-1.5:3.5] {2*x + 4};
+
+                % --- Intersection points (optional) ---
+                \addplot[mark=*, only marks] coordinates {(-1,2) (3,10)};
+                \node at (axis cs:-1,2) [anchor=north east] {(-1,2)};
+                \node at (axis cs:3,10) [anchor=south west] {(3,10)};
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Now, how should we find the area of the highlighted region? 
+        </p>
+
+        <p>
+          Don't over-complicate it! 
+          The result you obtain from part (a) and part (b) should come in useful. 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          By observation, we can see that the two curves intersect at the points where <m>x = -1</m> and <m>x = 3</m>. 
+          Then we can find the area of the region highlighted in yellow by <em>subtracting the region highlighted in orange (part a) from the region highlighted in green (part b)</em>. 
+          That is,
+          <md>
+            <mrow>\text{Enclosed Area} \amp= \text{Area in green} - \text{Area in orange} </mrow>
+            <mrow> \amp= 24 - \frac{40}{3} </mrow>
+            <mrow> \amp= \frac{32}{3} </mrow>
+          </md> 
+        </p>
+      </solution>
+    </task>
+  </investigation>
+
+  <p>
+    The goal of this section is to find the area <em>between</em> curves. 
+    We are actually discussing the actual, geometric area between curves in this section. 
+    In other words, we want to figure out how much space is in between the curves. 
+    Then your final answer should always be positive (or at least zero). 
+    Area, in the geometric sense, cannot be negative. 
+  </p>
+
+  <subsection>
+    <title>Area between Two Curves</title>
+
+    <p>
+      Based on the investigation, to find the area <alert>between</alert> curves, we need to first find the <em>points of intersection</em> to pin down the region. 
+      Then we will subtract the smaller area (area under the lower curve) from the larger area (area under the upper curve). 
+    </p>
+
+    <p>
+      That is, we will need to observe which curve is higher and which curve is lower in order to determine the area <alert>between</alert> curves.  
+      It is always helpful to sketch the graphs first.
+    </p>
+
+    <example>
+      <p>
+        Find the area <alert>between</alert> the curves <m>y = x^3 - 2x^2 + 10</m> and <m>y = 3x^2 + 4x - 10</m>. 
+        The graph of the curves is shown below, where the red curve is <m>y = x^3 - 2x^2 + 10</m> and the blue curve is <m>y = 3x^2 + 4x - 10</m>. 
+      </p>
+      <figure>
+        <caption>Graphs of <m>y = x^3 - 2x^2 + 10</m> and <m>y = 3x^2 + 4x - 10</m></caption>
+        <image width="50%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=10cm, height=6cm,
+              axis lines=middle,
+              axis on top=true,      % put axes above shaded region
+              xlabel={$x$},
+              ylabel={$y$},
+              xmin=-3.5, xmax=3.5,
+              ymin=-14, ymax=16,
+              xtick={-3,-2,-1,0,1,2,3},
+              ytick=\empty,
+              domain=-3.5:3.5,
+              samples=100,
+            ]
+
+            % Shade region between curves using coordinates
+            % We sample points along the two curves at equal x's and connect them
+            \addplot[draw=none, fill=green!40, opacity=0.6]
+              coordinates {
+                % upper curve (left to right)
+                (-2, -6)
+                (-1.5, 2.125)
+                (-1, {-1^3 - 2*(-1)^2 + 10})
+                (-0.5, 7)
+                (0, 10)
+                (0.5, 9.625)
+                (1, 9)
+                (1.5, 8.875)
+                (2, 10)
+                % lower curve (right to left)
+                (2, 10)
+                (1.5, 2.75)
+                (1, -3)
+                (0.5, -7.25)
+                (0, -10)
+                (-0.5, -11.25)
+                (-1, -11)
+                (-1.5, -9.25)
+                (-2, -6)
+              } -- cycle;
+
+            \addplot[red, ultra thick, smooth] {x^3 - 2*x^2 + 10};
+            \addplot[blue, ultra thick, smooth] {3*x^2 + 4*x - 10};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+        </image>
+      </figure>
+
+      <hint>
+        <p>
+          Recall the things we need to do in order to find the region between curves are:
+          <ul>
+            <li>
+              <p>
+                Find the <em>points of intersections</em> to pin down the region.  
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the <em>upper</em> curve and the <em>lower</em> curve. 
+              </p>
+            </li>
+            <li>
+              <p>
+                Find their respective area and do the subtraction to determine the area in-between. 
+              </p>
+            </li>
+          </ul>
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let's think about the points of intersection first. 
+          It turns out that we don't really need to know the <m>y</m>-values of the points of intersection since we are using <m>x</m> as our variable in the integral. 
+          Reading from the graph, we know that these two curves intersect at the points where <m>x = -2</m> and <m>x = 2</m>. 
+        </p>
+
+        <p>
+          Next, let's determine the <em>upper</em> curve and the <em>lower</em> curve within the interval <m>[-2,2]</m>. 
+          Obviously, the red curve, which is the cubic function, is the <em>upper</em> curve, and the blue curve which is the quadratic function, is the <em>lower</em> curve. 
+        </p>
+
+        <p>
+          If this fact doesn't come clear, Richard always like to draw a <em>representative rectangle</em> in the region to see which curve stays on top and which curve is on the bottom (like what the diagram below shows). 
+        </p>
+
+        <figure>
+          <caption>Graphs of <m>y = x^3 - 2x^2 + 10</m> and <m>y = 3x^2 + 4x - 10</m></caption>
+          <image width="50%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  width=10cm, height=6cm,
+                  axis lines=middle,
+                  axis on top=true,
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-3.5, xmax=3.5,
+                  ymin=-14, ymax=16,
+                  xtick={-3,-2,-1,0,1,2,3},
+                  ytick=\empty,
+                  domain=-3.5:3.5,
+                  samples=100,
+                ]
+
+                % --- Shaded region between curves (polygon method) ---
+                \addplot[draw=none, fill=green!40, opacity=0.6]
+                  coordinates {
+                    % upper curve (left to right)
+                    (-2, -6)
+                    (-1.5, 2.125)
+                    (-1, 7)
+                    (-0.5, 8.875)
+                    (0, 10)
+                    (0.5, 9.625)
+                    (1, 9)
+                    (1.5, 8.875)
+                    (2, 10)
+                    % lower curve (right to left)
+                    (2, 10)
+                    (1.5, 2.75)
+                    (1, -3)
+                    (0.5, -7.25)
+                    (0, -10)
+                    (-0.5, -11.25)
+                    (-1, -11)
+                    (-1.5, -9.25)
+                    (-2, -6)
+                  } -- cycle;
+
+                % --- Curves ---
+                \addplot[red, ultra thick, smooth] {x^3 - 2*x^2 + 10};
+                \addplot[blue, ultra thick, smooth] {3*x^2 + 4*x - 10};
+
+                % --- Vertical skinny rectangle in the middle ---
+                % x = -0.5 ± 0.05, between upper and lower curve values
+                % f(-0.5) = (-0.5)^3 - 2*(-0.5)^2 + 10 = 8.875
+                % g(-0.5) = 3*(-0.5)^2 + 4*(-0.5) - 10 = -11.25
+                \addplot[draw=teal, very thick]
+                coordinates {
+                  (-0.6, -11.25)
+                  (-0.4, -11.25)
+                  (-0.4, 8.875)
+                  (-0.6, 8.875)
+                  (-0.6, -11.25)
+                };
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Observe that the red curve is located on the <em>top</em> of this rectangle and the blue curve is located on the <em>bottom</em> of the rectangle.
+          This implies that the teal rectangle has the height of 
+          <me>
+            \left(x^3 - 2x^2 + 10\right) - \left(3x^2 + 4x - 10\right)
+          </me>
+          We also know that the width of the rectangle is of <m>dx</m>.  
+        </p>
+
+        <p>
+          Putting all these pieces together, the area of the green region is 
+          <md>
+            <mrow>\text{Area} \amp= \int_{-2}^2 \left(x^3 - 2x^2 + 10\right) - \left(3x^2 + 4x - 10\right)\, dx </mrow>
+            <mrow> \amp= \int_{-2}^2 \left(x^3 - 5x^2 - 4x + 20\right)\, dx </mrow>
+            <mrow> \amp= \left(\frac{x^4}{4} - \frac{5x^3}{3} - 2x^2 + 20x \right)\bigg|_{-2}^2 </mrow>
+            <mrow> \amp= \frac{160}{3} </mrow>
+            <mrow> \amp\approx 53.33 \qquad \text{unit}^2</mrow>
+          </md>
+        </p>
+      </solution>
+
+    </example>
+
+    <p>
+      Let's call the <em>upper</em> curve the <m>y_\text{top}</m> and the <em>lower</em> curve the <m>y_\text{bot}</m>. 
+      Then we can find the area <em>between</em> curves by integrating the <m>y_\text{top} - y_\text{bot}</m>. 
+      Let's summarize this into a fancy theorem! 
+    </p>
+
+    <theorem xml:id="thm-area-between-x">
+      <title>Area between two curves</title>
+      <p>
+        Let <m>y_\text{top}</m> be the top curve and <m>y_\text{bot}</m> be the bottom curve. Then the area between the graphs is
+        <me>
+          \text{Area} = \int_a^b \left(y_\text{top} - y_\text{bot}\right)\, dx
+        </me>
+        where <m>x=a</m> and <m>x=b</m> are the <m>x</m>-coordinates of the points of intersection (or the interval <m>[a,b]</m> is given).
+      </p>
+    </theorem>
+
+    <p>
+      Things are going to be a bit messy if the curves intersect more than twice. 
+      But the idea of <m>y_\text{top} - y_\text{bot}</m> will remain the same. 
+    </p>
+
+    <p>
+      Then our challenge here will become: <alert>which one is <m>\boldsymbol{y_\text{top}}</m> and which one is <m>\boldsymbol{y_\text{bot}}</m>?</alert>
+    </p>
+
+    <example>
+      <p>
+        Find the area between <m>y=\sin(x)</m> and <m>y=\sin(2x)</m> for the interval <m>[0,\pi]</m>. 
+        The graph of the curves is shown below, where the blue curve is <m>y=\sin(x)</m> and the red curve is <m>y = \sin(2x)</m>. 
+      </p>
+      <figure>
+        <caption>Graphs of <m>y = \sin(x)</m> and <m>y = \sin(2x)</m></caption>
+        <image width="50%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=8cm, height=8cm,
+              axis lines=middle,
+              axis on top=true,      % put axes above shaded region
+              xlabel={$x$},
+              ylabel={$y$},
+              xmin=-0.5, xmax=3.5,
+              ymin=-1.5, ymax=1.5,
+              xtick={0, 1.5708, 3.1416},
+              xticklabels={$0$, $\frac{\pi}{2}$, $\pi$},
+              ytick=\empty,
+              domain=-0.5:3.5,
+              samples=100,
+            ]
+
+            % Shaded region between curves
+            \addplot[draw=none, fill=green!40, opacity=0.6]
+              coordinates {
+                % upper curve sin(x) from left to right
+                (0, {sin(deg(0))})
+                (0.2, {sin(deg(0.2))})
+                (0.4, {sin(deg(0.4))})
+                (0.6, {sin(deg(0.6))})
+                (0.8, {sin(deg(0.8))})
+                (1.0, {sin(deg(1.0))})
+                (1.2, {sin(deg(1.2))})
+                (1.4, {sin(deg(1.4))})
+                (1.57, {sin(deg(1.57))})   % pi/2
+                (1.6, {sin(deg(1.6))})
+                (1.8, {sin(deg(1.8))})
+                (2.0, {sin(deg(2.0))})
+                (2.2, {sin(deg(2.2))})
+                (2.4, {sin(deg(2.4))})
+                (2.6, {sin(deg(2.6))})
+                (2.8, {sin(deg(2.8))})
+                (3.0, {sin(deg(3.0))})
+                (3.1416, {sin(deg(3.1416))}) % pi
+                % lower curve sin(2x) from right to left
+                (3.1416, {sin(2*deg(3.1416))})
+                (3.0, {sin(2*deg(3.0))})
+                (2.8, {sin(2*deg(2.8))})
+                (2.6, {sin(2*deg(2.6))})
+                (2.4, {sin(2*deg(2.4))})
+                (2.2, {sin(2*deg(2.2))})
+                (2.0, {sin(2*deg(2.0))})
+                (1.8, {sin(2*deg(1.8))})
+                (1.6, {sin(2*deg(1.6))})
+                (1.57, {sin(2*deg(1.57))})
+                (1.4, {sin(2*deg(1.4))})
+                (1.2, {sin(2*deg(1.2))})
+                (1.0, {sin(2*deg(1.0))})
+                (0.8, {sin(2*deg(0.8))})
+                (0.6, {sin(2*deg(0.6))})
+                (0.4, {sin(2*deg(0.4))})
+                (0.2, {sin(2*deg(0.2))})
+                (0, {sin(2*deg(0))})
+              } -- cycle;
+            
+            \addplot[red, ultra thick, smooth] {sin(2*deg(x))};
+            \addplot[blue, ultra thick, smooth] {sin(deg(x))};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+        </image>
+      </figure>
+
+      <hint>
+        <p>
+          The game here is to find the <m>y_\text{top}</m> and <m>y_\text{bot}</m>. 
+          But which one is which... 
+        </p>
+
+        <p>
+          Richard's suggestion is to split up the highlighted region into two parts.
+          It is <em>totally</em> possible for the <m>y_\text{top}</m> and <m>y_\text{bot}</m> to switch places if they intersect again... 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let's follow Richard's hint to split up the region into two pieces! 
+          Within the interval <m>[0,\pi]</m>, the two curves intersect again. 
+          We can determine the <m>x</m>-value of this middle point of intersection by <em>equating</em> the two function outputs and solve for <m>x</m>. 
+          <md>
+            <mrow> \sin(x) \amp= \sin(2x) \qquad \qquad </mrow>
+            <mrow> \implies \qquad \qquad x \amp= \frac{\pi}{3} </mrow>
+          </md>
+          Now let's split up the region at <m>x = \frac{\pi}{3}</m> and focus on one piece at a time! 
+        </p>
+
+        <p>
+          In the region where <m>x</m> is in the interval of <m>[0,\frac{\pi}{3}]</m>, we can determine the <m>y_\text{top}</m> and the <m>y_\text{bot}</m> by drawing a representative rectangle. 
+        </p>
+
+        <figure>
+          <caption>Graphs of <m>y = \sin(x)</m> and <m>y = \sin(2x)</m></caption>
+          <image width="50%">
+          <latex-image>
+            \begin{tikzpicture}
+              \begin{axis}[
+                width=8cm, height=8cm,
+                axis lines=middle,
+                axis on top=true,      % put axes above shaded region
+                xlabel={$x$},
+                ylabel={$y$},
+                xmin=-0.5, xmax=3.5,
+                ymin=-1.5, ymax=1.5,
+                xtick={0, 1.5708, 3.1416},
+                xticklabels={$0$, $\frac{\pi}{2}$, $\pi$},
+                ytick=\empty,
+                domain=-0.5:3.5,
+                samples=100,
+              ]
+
+              % Shaded region between curves
+              \addplot[draw=none, fill=green!40, opacity=0.6]
+                coordinates {
+                  % upper curve sin(x) from left to right
+                  (0, {sin(deg(0))})
+                  (0.2, {sin(deg(0.2))})
+                  (0.4, {sin(deg(0.4))})
+                  (0.6, {sin(deg(0.6))})
+                  (0.8, {sin(deg(0.8))})
+                  (1.0, {sin(deg(1.0))})
+                  (1.2, {sin(deg(1.2))})
+                  (1.4, {sin(deg(1.4))})
+                  (1.57, {sin(deg(1.57))})   % pi/2
+                  (1.6, {sin(deg(1.6))})
+                  (1.8, {sin(deg(1.8))})
+                  (2.0, {sin(deg(2.0))})
+                  (2.2, {sin(deg(2.2))})
+                  (2.4, {sin(deg(2.4))})
+                  (2.6, {sin(deg(2.6))})
+                  (2.8, {sin(deg(2.8))})
+                  (3.0, {sin(deg(3.0))})
+                  (3.1416, {sin(deg(3.1416))}) % pi
+                  % lower curve sin(2x) from right to left
+                  (3.1416, {sin(2*deg(3.1416))})
+                  (3.0, {sin(2*deg(3.0))})
+                  (2.8, {sin(2*deg(2.8))})
+                  (2.6, {sin(2*deg(2.6))})
+                  (2.4, {sin(2*deg(2.4))})
+                  (2.2, {sin(2*deg(2.2))})
+                  (2.0, {sin(2*deg(2.0))})
+                  (1.8, {sin(2*deg(1.8))})
+                  (1.6, {sin(2*deg(1.6))})
+                  (1.57, {sin(2*deg(1.57))})
+                  (1.4, {sin(2*deg(1.4))})
+                  (1.2, {sin(2*deg(1.2))})
+                  (1.0, {sin(2*deg(1.0))})
+                  (0.8, {sin(2*deg(0.8))})
+                  (0.6, {sin(2*deg(0.6))})
+                  (0.4, {sin(2*deg(0.4))})
+                  (0.2, {sin(2*deg(0.2))})
+                  (0, {sin(2*deg(0))})
+                } -- cycle;
+              
+              \addplot[red, ultra thick, smooth] {sin(2*deg(x))};
+              \addplot[blue, ultra thick, smooth] {sin(deg(x))};
+
+              % --- Rectangle 1: x = pi/4, width = 0.2 ---
+              % x from 0.6854 to 0.8854
+              % Top: sin(x) at pi/4 ~ 0.7071
+              % Bottom: sin(2x) at pi/4 ~ 1.0
+              \addplot[draw=teal, very thick] coordinates {
+              (0.7354,1.0)    % bottom-left
+              (0.8354,1.0)    % bottom-right
+              (0.8354,0.7071) % top-right
+              (0.7354,0.7071) % top-left
+              (0.7354,1.0)
+            };
+
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Observe that in this rectangle, the <m>y_\text{top}</m> is the red one and the <m>y_\text{bot}</m> is the blue one. 
+          Hence, the area between the two curves on <m>[0,\frac{\pi}{3}]</m> is
+          <md>
+            <mrow>\text{Area} \amp= \int_0^{\frac{\pi}{3}} \left(\sin(2x) - \sin(x)\right)\, dx </mrow>
+            <mrow> \amp= \left(-\frac{1}{2}\cos(2x) + \cos(x)\right)\bigg|_0^{\frac{\pi}{3}} </mrow>
+            <mrow> \amp= \left(-\frac{1}{2}\cos\left(\frac{2\pi}{3}\right) + \cos\left(\frac{\pi}{3}\right)\right) - \left(-\frac{1}{2}\cos(0) + \cos(0)\right) </mrow>
+            <mrow> \amp= \frac{1}{4} + \frac{1}{2} + \frac{1}{2} - 1 </mrow>
+            <mrow> \amp= 0.25 </mrow>
+          </md>
+        </p>
+
+        <p>
+          Now let's focus on the region where <m>x</m> is in <m>[\frac{\pi}{3}, \pi]</m>. 
+          We can do the same trick to determine the <m>y_\text{top}</m> and the <m>y_\text{bot}</m> by drawing a representative rectangle. 
+        </p>
+
+        <figure>
+          <caption>Graphs of <m>y = \sin(x)</m> and <m>y = \sin(2x)</m></caption>
+          <image width="50%">
+          <latex-image>
+            \begin{tikzpicture}
+              \begin{axis}[
+                width=8cm, height=8cm,
+                axis lines=middle,
+                axis on top=true,      % put axes above shaded region
+                xlabel={$x$},
+                ylabel={$y$},
+                xmin=-0.5, xmax=3.5,
+                ymin=-1.5, ymax=1.5,
+                xtick={0, 1.5708, 3.1416},
+                xticklabels={$0$, $\frac{\pi}{2}$, $\pi$},
+                ytick=\empty,
+                domain=-0.5:3.5,
+                samples=100,
+              ]
+
+              % Shaded region between curves
+              \addplot[draw=none, fill=green!40, opacity=0.6]
+                coordinates {
+                  % upper curve sin(x) from left to right
+                  (0, {sin(deg(0))})
+                  (0.2, {sin(deg(0.2))})
+                  (0.4, {sin(deg(0.4))})
+                  (0.6, {sin(deg(0.6))})
+                  (0.8, {sin(deg(0.8))})
+                  (1.0, {sin(deg(1.0))})
+                  (1.2, {sin(deg(1.2))})
+                  (1.4, {sin(deg(1.4))})
+                  (1.57, {sin(deg(1.57))})   % pi/2
+                  (1.6, {sin(deg(1.6))})
+                  (1.8, {sin(deg(1.8))})
+                  (2.0, {sin(deg(2.0))})
+                  (2.2, {sin(deg(2.2))})
+                  (2.4, {sin(deg(2.4))})
+                  (2.6, {sin(deg(2.6))})
+                  (2.8, {sin(deg(2.8))})
+                  (3.0, {sin(deg(3.0))})
+                  (3.1416, {sin(deg(3.1416))}) % pi
+                  % lower curve sin(2x) from right to left
+                  (3.1416, {sin(2*deg(3.1416))})
+                  (3.0, {sin(2*deg(3.0))})
+                  (2.8, {sin(2*deg(2.8))})
+                  (2.6, {sin(2*deg(2.6))})
+                  (2.4, {sin(2*deg(2.4))})
+                  (2.2, {sin(2*deg(2.2))})
+                  (2.0, {sin(2*deg(2.0))})
+                  (1.8, {sin(2*deg(1.8))})
+                  (1.6, {sin(2*deg(1.6))})
+                  (1.57, {sin(2*deg(1.57))})
+                  (1.4, {sin(2*deg(1.4))})
+                  (1.2, {sin(2*deg(1.2))})
+                  (1.0, {sin(2*deg(1.0))})
+                  (0.8, {sin(2*deg(0.8))})
+                  (0.6, {sin(2*deg(0.6))})
+                  (0.4, {sin(2*deg(0.4))})
+                  (0.2, {sin(2*deg(0.2))})
+                  (0, {sin(2*deg(0))})
+                } -- cycle;
+              
+              \addplot[red, ultra thick, smooth] {sin(2*deg(x))};
+              \addplot[blue, ultra thick, smooth] {sin(deg(x))};
+
+              % --- Rectangle 2: x = 3pi/4, width = 0.1 ---
+              % x from 2.3062 to 2.4062
+              % Top: sin(x) at 3pi/4 ~ 0.7071
+              % Bottom: sin(2x) at 3pi/4 ~ -0.7071
+              \addplot[draw=teal, very thick] coordinates {
+                (2.3062,-0.995)   % bottom-left
+                (2.4062,-0.995)   % bottom-right
+                (2.4062,0.7071)    % top-right
+                (2.3062,0.7071)    % top-left
+                (2.3062,-0.995)
+              };
+
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Similarly, we can observe, using this rectangle, that <m>y_\text{top}</m> is the blue one and the <m>y_\text{bot}</m> is the red one. 
+          Hence, the area between the two curves on <m>[\frac{\pi}{3}, \pi]</m> is
+          <md>
+            <mrow>\text{Area} \amp= \int_\frac{\pi}{3}^\pi \left(\sin(x) - \sin(2x)\right)\, dx </mrow>
+            <mrow> \amp= \left(-\cos(x) + \frac{1}{2}\cos(2x)\right)\bigg|_\frac{\pi}{3}^\pi </mrow>
+            <mrow> \amp= \left(-\cos(\pi) + \cos(2\pi) \right) - \left(-\cos\left(\frac{\pi}{3}\right) + \frac{1}{2}\cos\left(\frac{2\pi}{3}\right)\right) </mrow>
+            <mrow> \amp= 1 + 1 + \frac{1}{2} - \frac{1}{4} </mrow>
+            <mrow> \amp= 2.25 </mrow>
+          </md>
+        </p>
+
+        <p>
+          Now let's put everything together! 
+          The area of the shaded region on the graph is 
+          <md>
+            <mrow>\text{Area} \amp= \int_0^{\frac{\pi}{3}} \left(\sin(2x) - \sin(x)\right)\, dx + \int_\frac{\pi}{3}^\pi \left(\sin(x) - \sin(2x)\right)\, dx </mrow>
+            <mrow> \amp= 0.25 + 2.25 </mrow>
+            <mrow> \amp= 2.5 \qquad \text{unit}^2 </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+
+    <note>
+      <title>Is there a faster way to find the area between curves? </title>
+      
+      <p>
+        Observe that, in the previous example, we essentially only integrated <m>\sin(x)</m> and <m>\sin(2x)</m>, and subtract things in different order. 
+        Is there a faster way to do this? 
+      </p>
+
+      <p>
+        There is actually a "checking" method and a "technology" method to help us streamline this problem. 
+      </p>
+
+      <p>
+        Let's discuss the "checking" method first. 
+        Recall we don't want negative values in our final answer since the area we are discussing in this section is in the geometric sense. 
+        If you are having trouble deciding on the <m>y_\text{top}</m> and <m>y_\text{bot}</m>, then just pick one and observe if the final answer is positive or negative. 
+        If your answer is negative, 95% of the time, you mixed up the <m>y_\text{top}</m> and <m>y_\text{bot}</m>. 
+        If this is the case, you can just swap the <m>y_\text{top}</m> and <m>y_\text{bot}</m> in the setup and erase the negative sign in your final answer. 
+      </p>
+
+      <p>
+        There is also a faster way using technology. 
+        Essentially, what we tried to avoid here is to have a negative area. 
+        Algebraically speaking, we can avoid any negative area by putting an absolute value in the integrand 
+        (this is similar to the total distance traveled idea in <xref ref="sec56-NetChange"/>). 
+        If you want to set up the integral in one step, then you can find the area by evaluating the integral
+        <me>
+          \int_0^\pi \left|\sin(x) - \sin(2x)\right|\, dx
+        </me>
+        Using technology, this integral equals to <m>2.5</m>. 
+        You can definitely <em>check</em> your answer using technology in one step. 
+        <alert>BUT Richard will not consider this as the "work" if you solve the question like this on the exam</alert> since Richard doesn't see any antiderivative you found here. 
+        While he doesn't want to micro-manage you on how you solve the problem, make sure you do know how to evaluate the integral using the FTC by first finding an antiderivative of the integrand <em>without using a calculator</em>. 
+        This is THE calculus step. 
+      </p>
+    </note>
+
+    <p>
+      Things can be even more complicated if the curves given doesn't represent <m>y</m> as a function of <m>x</m> (which means the curves given doesn't pass the vertical line test). 
+      If this is the case, then finding the <m>y_\text{top}</m> and <m>y_\text{bot}</m> is sometimes impossible, as one curve can go both jobs. 
+    </p>
+
+    <p>
+      Alternatively, instead of integrating things along the <m>x</m>-axis (meaning your integral will end with a <m>dx</m>), we can look at things sideway by <alert>integrating things along the <m>\boldsymbol{y}</m>-axis</alert>. 
+    </p>
+
+    <example>
+      <p>
+        Find the area of the enclosed region between <m>x=-\sin(2y)</m> (the red curve) and <m>x=\cos(y)</m> (the blue curve) indicated in the figure below. 
+      </p>
+      <figure>
+        <caption>Graphs of <m>x = -\sin(2y)</m> and <m>x = \cos(y)</m></caption>
+        <image width="50%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=9cm, height=7cm,
+              axis lines=middle,
+              axis on top=true,      % put axes above shaded region
+              xlabel={$x$},
+              ylabel={$y$},
+              xmin=-1.5, xmax=1.5,
+              ymin=-1, ymax=2,
+              xtick={0, 1.5708, 3.1416},
+              ytick={-0.7854,0.7854,1.5708},
+              yticklabels={$-\frac{\pi}{4}$, $0$, $\frac{\pi}{4}$, $\frac{\pi}{2}$},
+              domain=-2:2,
+              samples=100,
+            ]
+
+            % Plot curves: x = -sin(2y) and x = cos(y)
+            \addplot[red, ultra thick, smooth] ({-sin(deg(2*x))}, x);
+            \addplot[blue, ultra thick, smooth] ({cos(deg(x))}, x);
+
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+        </image>
+      </figure>
+
+      <hint>
+        <p>
+          Observe that neither of the two curves passes the vertical line test, making it insanely difficult to find the <m>y_\text{top}</m> and <m>y_\text{bot}</m>. 
+        </p>
+
+        <p>
+          <em>Note:</em> It is totally possible to find the find the <m>y_\text{top}</m> and <m>y_\text{bot}</m> by figuring out the inverse functions with restricted domain. 
+          Then you will end up with more than two functions, and you can determine the <m>y_\text{top}</m> and <m>y_\text{bot}</m> respectively in smaller pieces. 
+          But this is algebraically intensive and Richard doesn't even want to go with this route himself... 
+        </p>
+
+        <p>
+          Instead, let's look at things sideway. 
+          Instead of constructing a vertical skinny rectangle, let's construct a skinny rectangle horizontally, making the <alert>height</alert> of the rectangle to be <m>dy</m>, as shown in the diagram below. 
+        </p>
+
+        <figure>
+          <caption>Graphs of <m>x = -\sin(2y)</m> and <m>x = \cos(y)</m> with a horizontal rectangle</caption>
+          <image width="50%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  width=9cm, height=7cm,
+                  axis lines=middle,
+                  axis on top=true,
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-1.5, xmax=1.5,
+                  ymin=-1, ymax=2,
+                  xtick={-1,0,1},
+                  ytick={-0.7854,0,0.7854,1.5708},
+                  yticklabels={$-\frac{\pi}{4}$, $0$, $\frac{\pi}{4}$, $\frac{\pi}{2}$},
+                  domain=-2:2,
+                  samples=100,
+                ]
+
+                % --- Curves ---
+                \addplot[red, ultra thick, smooth] ({-sin(deg(2*x))}, x);
+                \addplot[blue, ultra thick, smooth] ({cos(deg(x))}, x);
+
+                % --- Horizontal rectangle at y = 0.5, height = 0.1 ---
+                % Left x = -sin(2*y) at y = 0.5 -> -sin(2*0.5) ≈ -0.8415
+                % Right x = cos(y) at y = 0.5 -> cos(0.5) ≈ 0.8776
+                % Rectangle extends from y = 0.45 to 0.55
+                \addplot[draw=teal, very thick] coordinates {
+                  (-0.8415,0.45)   % bottom-left
+                  (0.8776,0.45)    % bottom-right
+                  (0.8776,0.55)    % top-right
+                  (-0.8415,0.55)   % top-left
+                  (-0.8415,0.45)   % close
+                };
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Now can we determine the width of the rectangle? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let's first figure out the <alert>width</alert> of the rectangle! 
+        </p>
+
+        <p>
+          Recall the reason why we can determine the height of the rectangle by <m>y_\text{top} - y_\text{bot}</m> is because we know the higher the point, the larger the <m>y</m>-value, 
+          so by doing the subtraction this way, we don't end up obtainning a negative height. 
+        </p>
+
+        <p>
+          Similarly, we know the <m>x</m>-value of a point is greater if the point is located more towards the right (so the "right-er" the point, the larger the <m>x</m>-value). 
+          To make sure the width is not negative, we want to determine the width of the rectangle by doing <m>x_\text{right} - x_\text{left}</m>. 
+        </p>
+
+        <p>
+          Observe that the blue curve is "right-er" than the red curve, so <m>x_\text{right} = \cos(y)</m> and <m>x_\text{left} = -\sin(2y)</m>. 
+          Then we can find the area of the enclosed region by 
+          <me>
+            \int_{\underline{\quad}}^{\underline{\quad}} \left(\cos(y) - (-\sin(2y))\right)\, dy = \int_{\underline{\quad}}^{\underline{\quad}} \left(\cos(y) + \sin(2y)\right)\, dy
+          </me>
+        </p>
+
+        <p>
+          The next thing to determine here is the <alert>limits of integration</alert>. 
+          Since the variable is <m>y</m> in the integral now, we want to determine the region of the <m>y</m>-values. 
+          Graphically, we observe that the <m>y</m> value can go as high as <m>y = \frac{\pi}{4}</m> in the enclosed region. 
+          So the upper limit is <m>\frac{\pi}{4}</m>. 
+        </p>
+
+        <p>
+          To determine the lower limit, we can do the same trick by equating <m>-\sin(2y)</m> and <m>\cos(y)</m> and solve for <m>y</m> within the region <m>(-\frac{\pi}{4},0)</m>. 
+          <md>
+            <mrow> -\sin(2y) \amp= \cos(y) \qquad\qquad </mrow>
+            <mrow> \implies \qquad\qquad y \amp= -\frac{\pi}{6} </mrow>
+          </md>
+          Hence, the lower limit is <m>-\frac{\pi}{6}</m>. 
+        </p>
+
+        <p>
+          Now putting everything together! We can find the area of the enclosed region. 
+          <md>
+            <mrow>\text{Area} \amp= \int_{-\frac{\pi}{4}}^\frac{\pi}{4} \left(\cos(y) - \sin(2y)\right)\, dy </mrow>
+            <mrow> \amp= \left(\sin(y) + \frac{1}{2}\cos(2y)\right)\bigg|_{-\frac{\pi}{6}}^\frac{\pi}{4} </mrow>
+            <mrow> \amp= \left(\sin\left(\frac{\pi}{4}\right) - \frac{1}{2}\cos\left(\frac{\pi}{2}\right)\right) - \left(\sin\left(-\frac{\pi}{6}\right) - \frac{1}{2}\cos\left(-\frac{\pi}{3}\right)\right) </mrow>
+            <mrow> \amp= \frac{\sqrt{2}}{2} + \frac{1}{2} + \frac{1}{4} </mrow>
+            <mrow> \amp= \frac{2\sqrt{2} + 3}{4} \approx 1.4571 \qquad \text{unit}^2</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <!--
+  <worksheet xml:id="ws-sec61">
+    <title>Some Exercises for this section</title>
+    
+    <introduction>
+      <p>
+        I included some practice problems that cover some main concepts in this section. 
+        You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. 
+        Reach out to Richard for help if you get stuck or have any questions. 
+      </p>
+
+      <p>
+        I will only include the final answer to some of the problems for you to check your result. 
+        If you want to check your work, talk to Richard and he is happy to discuss the process with you. 
+      </p>
+    </introduction>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Find the area of the shaded regions in the figures below. 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercise>
+      <p>Express the area of the shaded region in Figure 24 as a sum of three integrals involving <m>f(x)</m> and <m>g(x)</m>.</p>
+      <figure>
+        <image src="Images/6.1_Exercise_SetupArea.png"/>
+      </figure>
+    </exercise>
+
+    <exercise>
+      <p>
+        Sketch the region whose area is represented by
+        <me>
+          \int_{-\frac{\sqrt{2}}{2}}^{\frac{\sqrt{2}}{2}}\left(\sqrt{1-x^2}-|x|\right)\,dx
+        </me>
+        in the grid below and determine the area using geometry.
+      </p>
+      
+      <figure>
+        <caption>Empty Grid</caption>
+      <image  width="50%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            xlabel={$x$},
+            ylabel={$y$},
+            axis lines=middle,
+            grid=both,
+            xmin=-1.2, xmax=1.2,
+            ymin=-1.2, ymax=1.2,
+            xtick={-1, -0.5, 0, 0.5, 1},
+            ytick={-1, -0.5, 0, 0.5, 1},
+            legend pos=north west
+          ]
+
+          % Dummy invisible plot
+          \addplot[white,domain=-0.01:0.01]{0};
+          \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+      </image>
+      </figure>
+    </exercise>
+  </worksheet>
+  -->
 
 </section>

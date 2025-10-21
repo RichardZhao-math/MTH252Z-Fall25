@@ -3,6 +3,287 @@
 <section xml:id="sec62-VolumeAverageValue" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Setting up Integrals: Volume, Density, Average Value</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, we will discuss how to find the <alert>volume</alert> of a solid and the <alert>average value</alert> of a function using integrals. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            interpret the concept of volume by adding up the volume of slices of cross sections.  
+          </p>
+        </li>
+        <li>
+          <p>
+            find the volume of a solid by integration. 
+          </p>
+        </li>
+        <li>
+          <p>
+            find the average value of a continuous function within a given interval. 
+          </p>
+        </li>
+      </ul>
+    </objectives>
+  </introduction>
+
+  <subsection xml:id="subsec-621-Volume">
+    <title>Volume by Cross Section</title>
+
+    <p>
+      Let's give a deeper consideration of what the term <alert>volume</alert> means geometrically. 
+      Imagine we can slice through the solid <em>vertically</em> into millions and millions of pieces with infinitesimally small thickness. 
+      Then we can find the <alert>area of each cross section</alert>, multiply it with the infinitesimally small thickness, and add up all the pieces.  
+    </p>
+
+    <figure xml:id="Volume_VerticalSlices">
+      <caption>Vertical Cross Section of a Solid</caption>
+      <interactive iframe="pdfs/Volume_VerticalSlices.pdf" width="120%" aspect="16:12.5" />
+    </figure>
+
+    <p>
+      If we assume the <em>vertical</em> cross section to have an area of <m>A(x)</m> and each slice have the infinitesimally small thickness of <m>dx</m>, then the volume of the solid is the sum of the volume of <em>all</em> the slices. 
+      That is, 
+      <me>
+        V = \int_a^b A(x)\, dx
+      </me>
+    </p>
+
+    <p>
+      Similarly, if we are slicing the solid <em>horizontally</em>, then the infinitesimally small thickness will be <m>dy</m>. 
+    </p>
+
+    <figure xml:id="Volume_HorizontalSlices">
+      <caption>Horizontal Cross Section of a Solid</caption>
+      <interactive iframe="pdfs/Volume_HorizontalSlices.pdf" width="120%" aspect="16:6.8" />
+    </figure>
+
+    <p>
+      If we assume, similarly, that the <em>horizontal</em> cross section to have an area of <m>A(y)</m> and each slice have the infinitesimally small thickness of <m>dy</m>, then the volume of the solid is the sum of the volume of <em>all</em> the slices. 
+      That is, 
+      <me>
+        V = \int_a^b A(y)\, dy
+      </me>
+    </p>
+
+    <p>
+      Now we can make a fancy theorem out of it. 
+    </p>
+
+    <theorem xml:id="thm-Volume-CrossSection">
+      <title>Volume as the Integral of Cross-Sectional Area</title>
+      <statement>
+        <p>
+          <ul>
+            <li>
+              <p>
+                Let <m>A(x)</m> be the area of the <alert>vertical</alert> cross section at distance <m>x</m> of a solid body extending from <m>x = a</m> to <m>x = b</m>. 
+                Then
+                <me>
+                  \text{Volume of the Solid Body} = \int_a^b A(x)\, dx
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>A(y)</m> be the area of the <alert>horizontal</alert> cross section at distance <m>y</m> of a solid body extending from <m>y = a</m> to <m>y = b</m>. 
+                Then
+                <me>
+                  \text{Volume of the Solid Body} = \int_a^b A(y)\, dy
+                </me>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      Observe that there is a difference between which variable, <m>x</m> or <m>y</m>, we are using in the formula depending on the orientation of the slices. 
+      One way to remember this is by <em>determining the differential first</em>. 
+      If the slices are vertical, then the thickness is some horizontal distance (observe the diagram in <xref ref="Volume_VerticalSlices"/>), which means the thickness is <m>dx</m>. 
+      Then the variable in the integral should be <m>x</m>. 
+      This is why we want to find the area of the cross sections with respect to <m>x</m>. 
+    </p>
+
+    <p>
+      You can make a similar argument on why using the variable <m>y</m> when the slices are <em>horizontal</em> (by observing the diagram in <xref ref="Volume_HorizontalSlices"/>). 
+    </p>
+
+    <example>
+      <p>
+        Find the volume of the solid whose base is the semi-circle <m>y = \sqrt{9 - x^2}</m> and the cross section perpendicular to the <m>x</m>-axis are squares. 
+      </p>
+
+      <hint>
+        <p>
+          You should imagine what the solid looks like based on this description. 
+          Richard understands that this may be super difficult 
+          (he doesn't have a good 3-dimensional visualization skill so he understands how difficult this can be, but he did have students in the past who are super good at this...so everything is possible!). 
+        </p>
+
+        <p>
+          To help you visualize this solid, Richard included a Desmos applet below: 
+        </p>
+
+        <interactive iframe="https://www.desmos.com/calculator/gex0uof9nc?embed&amp;lang=en&amp;noexpressions=1"
+              width="108.5%" aspect="4:3">
+          <caption>
+            <p>Desmos Applet on Volume by Vertical Slices</p>
+          </caption>
+        </interactive>
+
+        <p>
+          Now that you have an idea of what the solid looks like, how do we determine the <alert>area of the cross section</alert> and the <alert>interval</alert> of which the <m>x</m>-values is in? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Since the slices are <em>vertical</em>, we can find the volume of the solid using the formula 
+          <me>
+            \text{Volume} = \int_a^b A(x)\, dx
+          </me>
+          So the two things we want to find are (1) the area of the cross section, and (2) the interval in which the <m>x</m>-values are in. 
+        </p>
+
+        <p>
+          Let's figure out the area of the cross section first. 
+          By the problem, we know that the cross sections are <alert>squares</alert>, whose area can be computed by <em>squaring the sides</em>. 
+          So the question now becomes <em>what the side of the squares are</em>? 
+        </p>
+
+        <p>
+          By the Desmos applet in the hint, the <alert>base</alert> of the square is the <em>height</em> of the function <m>y = \sqrt{9 - x^2}</m>, which is the <em>function value</em>. 
+          Then the area of the cross section is
+          <me>
+            A(x) = \left(\sqrt{9 - x^2}\right)^2 = 9 - x^2
+          </me>
+        </p>
+
+        <p>
+          Now we will determine the interval in which the <m>x</m>-values live in. 
+          Graphically, we can observe that the <m>x</m>-values will be within the interval of <m>[-3,3]</m>. 
+        </p>
+
+        <p>
+          Putting these two pieces together, the volume of the solid is
+          <md>
+            <mrow>\text{Volume} \amp= \int_{-3}^3 \left(9 - x^2\right)\, dx </mrow>
+            <mrow> \amp= \left(9x - \frac{x^3}{3}\right)\bigg|_{-3}^3 </mrow>
+            <mrow> \amp= \left(9(3) - \frac{(3)^3}{3}\right) - \left(9(-3) - \frac{(-3)^3}{3}\right) </mrow>
+            <mrow> \amp= 18 - (-18) </mrow>
+            <mrow> \amp= 36 \qquad \text{unit}^3 </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-622-AverageValue">
+    <title>Average Value</title>
+
+    <p>
+      In statistics, we can find the <em>average</em> by adding up all the data values and dividing the sum by the number of data values. 
+      Symbolically, the <em>average</em> in statistics is
+      <me>
+        \frac{a_1 + a_2 + \cdots + a_N}{N} = \frac{1}{N}\sum_{i = 1}^N a_i
+      </me>
+      But this formula is only useful if we have <em>finite</em> number of the data values. 
+      What if we want to find the average value of a <em>continuous</em> function within some interval? 
+      We will have infinite function values to deal with... 
+    </p>
+
+    <p>
+      One way to work around this issue is to borrow the idea of the <em>right-endpoint approximation</em> back in <xref ref="sec51-ApproximatingArea"/>. 
+    </p>
+
+    <p>
+      Let's say we want to find the <alert>average value</alert> of a continuous function <m>f</m> over some closed interval <m>[a,b]</m>. 
+      We will first find the right-endpoint approximation as follows: 
+      <md>
+        <mrow> R_N \amp= \frac{b - a}{N} \left(f(x_1) + f(x_2) + \cdots + f(x_N)\right)</mrow>
+        <mrow> \amp= (b - a)\cdot \frac{f(x_1) + f(x_2) + \cdots + f(x_N)}{N} </mrow>
+      </md>
+      Observe that the fraction on the right-hand side of the equation looks a lot like the average value in the statistical sense! 
+      So let's isolate it! 
+      <me>
+        \frac{f(x_1) + f(x_2) + \cdots + f(x_N)}{N} = \frac{1}{b - a}\cdot R_N
+      </me>
+      If we want to sum up <em>all</em> the function values, then <m>N\to \infty</m> here. 
+      Imagine we are taking the limit on both sides of the equation as <m>N\to \infty</m>, we have
+      <md>
+        <mrow>\lim_{N\to \infty} \left(\frac{f(x_1) + f(x_2) + \cdots + f(x_N)}{N}\right) \amp= \lim_{N\to \infty} \left(\frac{1}{b-a}\cdot R_N\right) </mrow>
+        <mrow> \amp = \frac{1}{b-a}\cdot \lim_{N\to \infty} R_N </mrow>
+      </md>
+      Hmm but what is the right-endpoint approximation when <m>N\to \infty</m>... 
+      That is the definite integral! (Recall we defined the definite integrals as the limit of the Riemann sum, and <m>R_N</m> is just one special Riemann sum!). 
+      That is, the average value of a continuous function can be computed by 
+      <me>
+        \text{Average Value} = \frac{1}{b-a}\int_a^b f(x)\, dx
+      </me>
+      
+    </p>
+
+    <example>
+      <p>
+        The temperature (in degrees Celsius) at time <m>t</m> (in hours) in an art museum varies according to 
+        <me>
+          T(t) = 20 + 5\cos\left(\frac{\pi}{12}t\right)
+        </me>
+        Find the <alert>average temperature</alert> in the museum over a day. 
+      </p>
+
+      <hint>
+        <p>
+          Observe the temperature function is a continuous function, so it is impossible to find <em>all</em> the temperature, adding them up, and divide the sum by the number of temperature values. 
+        </p>
+
+        <p>
+          Instead, we just derived a fancy formula to find the average value of a continuous function over an interval. 
+          Let's use this formula! 
+        </p>
+
+        <p>
+          What is the function and what is the interval of interest? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          The function we are looking at here is the temperature function 
+          <me>
+            T(t) = 20 + 5\cos\left(\frac{\pi}{12}t\right)
+          </me>
+          We care about the average temperature over a day, which has 24 hours, so the interval of interest is <m>[0,24]</m>. 
+        </p>
+
+        <p>
+          Now we can plug things into the average value formula! 
+          <md>
+            <mrow>\text{Average Value} \amp= \frac{1}{24}\int_0^{24} \left(20 + 5\cos\left(\frac{\pi}{12}t\right)\right)\, dt </mrow>
+            <mrow> \amp= \frac{1}{24}\left(20t + 5\cdot \frac{12}{\pi}\sin\left(\frac{\pi}{12} t\right)\right)\bigg|_0^{24} </mrow>
+            <mrow> \amp= \frac{1}{24}\left(20\cdot 24 + \frac{60}{\pi}\sin\left(\frac{\pi}{12}\cdot 24\right)\right) </mrow>
+            <mrow> \amp= 20 </mrow>
+          </md>
+          Hence, the average temperature of the museum over a day is <m>20 \text{C}^\circ</m>. 
+        </p>
+      </solution>
+    </example>
+    
+  </subsection>
+
+  <p>
+    Observe there are formulas you can apply directly in this section. 
+    To make sure you are familiar with the formulas, spend some time working through some practice problems, especially the volume idea by summing up the volume of smaller slices. 
+    The two big sections in this chapter, section 6.3 and 6.4, will rely on this idea of the volume. 
+  </p>
 
 </section>
