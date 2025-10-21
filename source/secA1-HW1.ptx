@@ -28,57 +28,81 @@
         <title> </title>
         
         <exercise>
-            <statement>
+            <p>
+                Approximate the area of the region under the curve of <me>y = \frac{4 - x}{1 + x^2}</me> by <alert>calculating the area the area of the shaded rectangles</alert> shown in the diagram below. 
+                Which approximation method do these rectangles represent? 
+            </p>
+
+            <figure>
+                <caption>The Graph of <m>y = \dfrac{4 - x}{1 + x^2}</m> with the region under the curve on <m>[-3,3]</m></caption>
+                <image width="50%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=middle,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-3.5, xmax=3.5,
+                            ymin=-0.5, ymax=4.5,
+                            xtick={-3,-2,-1,0,1,2,3},
+                            ytick=\empty,
+                            samples=200,
+                            clip=false
+                        ]
+
+                        % Shaded region (note: no extra parenthesis)
+                        \addplot [draw=none, fill=green!50, opacity=0.6, domain=-3:3] {(4-x)/(1+x^2)} \closedcycle;
+
+                        % Midpoint rectangles (explicit coordinates)
+                        \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-3,0) (-3,0.9) (-2,0.9) (-2,0)} -- cycle;
+                        \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-2,0) (-2,1.69) (-1,1.69) (-1,0)} -- cycle;
+                        \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-1,0) (-1,3.6) (0,3.6) (0,0)} -- cycle;
+                        \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(0,0) (0,2.8) (1,2.8) (1,0)} -- cycle;
+                        \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(1,0) (1,0.77) (2,0.77) (2,0)} -- cycle;
+                        \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(2,0) (2,0.21) (3,0.21) (3,0)} -- cycle;
+
+                        % Curve on top
+                        \addplot[blue, ultra thick, smooth, domain=-3.5:3.5] {(4-x)/(1+x^2)};
+
+                        % Label
+                        \node at (axis cs:1.25,3.75) {$y = \dfrac{4 - x}{1 + x^2}$}; 
+
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+
+            <solution>
                 <p>
-                    Approximate the area of the region under the curve of <me>y = \frac{4 - x}{1 + x^2}</me> by <alert>calculating the area the area of the shaded rectangles</alert> shown in the diagram below. 
-                    Which approximation method do these rectangles represent? 
+                    Let <m>f(x) = \frac{4-x}{1+x^2}</m>. 
+                    Each rectangle in the diagram has a width of 1 and the height is taken as the function value at the <alert>midpoint</alert> of each subinterval. 
+                    Thus, the area of the shaded rectangles can be approximated by
+                    <md>
+                        <mrow> \text{Area} \amp\approx 1\cdot\left( f\left(\frac{-3-2}{2}\right) + f\left(\frac{-2-1}{2}\right) + f\left(\frac{-1+0}{2}\right) + f\left(\frac{0+1}{2}\right) + f\left(\frac{1+2}{2}\right) + f\left(\frac{2+3}{2}\right)\right) </mrow>
+                        <mrow> \amp= 1\cdot\left( f(-2.5) + f(-1.5) + f(-0.5) + f(0.5) + f(1.5) + f(2.5)\right)</mrow>
+                        <mrow> \amp= 1\cdot\left( \frac{26}{29} + \frac{22}{13} + \frac{18}{5} + \frac{14}{5} + \frac{10}{13} + \frac{6}{29} \right) </mrow>
+                        <mrow> \amp= \frac{18784}{1885} \approx 9.965 </mrow>
+                    </md>
                 </p>
 
-                <figure>
-                    <caption>The Graph of <m>y = \dfrac{4 - x}{1 + x^2}</m> with the region under the curve on <m>[-3,3]</m></caption>
-                    <image width="50%">
-                        <latex-image>
-                            \begin{tikzpicture}
-                            \begin{axis}[
-                                axis lines=middle,
-                                xlabel={$x$},
-                                ylabel={$y$},
-                                xmin=-3.5, xmax=3.5,
-                                ymin=-0.5, ymax=4.5,
-                                xtick={-3,-2,-1,0,1,2,3},
-                                ytick=\empty,
-                                samples=200,
-                                clip=false
-                            ]
-
-                            % Shaded region (note: no extra parenthesis)
-                            \addplot [draw=none, fill=green!50, opacity=0.6, domain=-3:3] {(4-x)/(1+x^2)} \closedcycle;
-
-                            % Midpoint rectangles (explicit coordinates)
-                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-3,0) (-3,0.9) (-2,0.9) (-2,0)} -- cycle;
-                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-2,0) (-2,1.69) (-1,1.69) (-1,0)} -- cycle;
-                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(-1,0) (-1,3.6) (0,3.6) (0,0)} -- cycle;
-                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(0,0) (0,2.8) (1,2.8) (1,0)} -- cycle;
-                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(1,0) (1,0.77) (2,0.77) (2,0)} -- cycle;
-                            \addplot[draw=orange!80, fill=orange!40, opacity=0.7] coordinates {(2,0) (2,0.21) (3,0.21) (3,0)} -- cycle;
-
-                            % Curve on top
-                            \addplot[blue, ultra thick, smooth, domain=-3.5:3.5] {(4-x)/(1+x^2)};
-
-                            % Label
-                            \node at (axis cs:1.25,3.75) {$y = \dfrac{4 - x}{1 + x^2}$}; 
-
-                            \end{axis}
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
-            </statement>
+                <note>
+                    <p>
+                        Graphically, it is clear to see that the heights of each rectangle, using the midpoint rule, are the <alert>function values of midpoints of each subinterval</alert>, not the midpoint of function values. 
+                        In fact, if you took the midpoints of the function values, i.e., you did something like 
+                        <md>
+                            <mrow> \text{Area} \approx \frac{f(-3) + f(-2)}{2} + \frac{f(-2) + f(-1)}{2} \amp+ \frac{f(-1) + f(0)}{2} </mrow>
+                            <mrow> \amp+ \frac{f(0) + f(1)}{2} + \frac{f(1) + f(2)}{2} + \frac{f(2) + f(3)}{2} </mrow>
+                        </md>
+                        You actually used the <em>trapezoidal rule</em> instead of the midpoint rule. 
+                        We will learn this new rule in Chapter 7.
+                    </p>
+                </note>
+            </solution>
         </exercise>
 
         <exercise>
-            <statement>
-                <p>
+            <p>
                 Justify grapically, with pretty pictures and explanation that
                 <ol marker="(a)">
                     <li>
@@ -92,8 +116,7 @@
                     </p>
                     </li>
                 </ol>
-                </p>
-            </statement>
+            </p>
 
             <hint>
                 <p>
@@ -112,18 +135,80 @@
                     </ul>
                 </p>
             </hint>
+
+            <solution>
+                <p>
+                    Let's consider an odd function <m>y = f(x)</m> first. 
+                    Graphically, we define an odd function as one symmetric about the origin. 
+                    That is, you can obtain the same figure by rotating the graph by <m>180^\circ</m>. 
+                    The graph of an odd function looks like the one in the figure below. 
+                </p>
+
+                <interactive iframe="https://www.desmos.com/calculator/fnireuyfr8;lang=en&amp;noexpressions=1"
+                    width="108.5%" aspect="16:9">
+                <caption>
+                    <p>Desmos Applet on Area Under an Odd Function on Opposite Limits of Integration</p>
+                </caption>
+                </interactive>
+
+                <p>
+                    Observe that the area of the regions above and below the <m>x</m>-axis are identical because of symmetry. 
+                    That is, the green region and the orange region has the same area. 
+                    Since we are considering the signed area, then the green region will a the positive area and the orange region will have a negative area. 
+                    So they canceled out when added. 
+                    That is, 
+                    <me>
+                        \int_{-a}^a f(x)\, dx = \int_{-a}^0 f(x)\, dx + \int_0^a f(x)\, dx = 0
+                    </me>
+                </p>
+
+                <p>
+                    Now let's consider an even function <m>y = g(x)</m>. 
+                    Graphically, we define an even function as one symmetric across the <m>y</m>-axis. 
+                    That is, you can obtain the same figure by reflecting the graph across the <m>y</m>-axis. 
+                    The graph of an even function looks like the one in the figure below. 
+                </p>
+
+                <interactive iframe="https://www.desmos.com/calculator/wjtcwv79oe;lang=en&amp;noexpressions=1"
+                    width="108.5%" aspect="16:9">
+                <caption>
+                    <p>Desmos Applet on Area Under an Even Function on Opposite Limits of Integration</p>
+                </caption>
+                </interactive>
+
+                <p>
+                    Observe that the area of the regions on two sides of the <m>y</m>-axis are identical because of symmetry. 
+                    That is, the green region and the orange region has the same area. 
+                    Since we are considering the signed area, then the green region will have a positive area and the orange region will also have a positive area. 
+                    So they double out when added. 
+                    That is, 
+                    <me>
+                        \int_{-a}^a g(x)\, dx = \int_{-a}^0 g(x)\, dx + \int_0^a g(x)\, dx = 2\int_0^a g(x)\, dx
+                    </me>
+                </p>
+            </solution>
+
+            <note>
+                <p>
+                    One of the goals for this problem is to potentially give you a shortcut on taking integrals. 
+                    If you see that the limits of integration are opposite numbers, then you may want to check the parity (even or odd) of the function. 
+                </p>
+
+                <p>
+                    If the function is odd, then we can simply say that the integral equals to <m>0</m>; 
+                    if the function is even, then we can replace the lower limit with <m>0</m> and multiply the integral by <m>2</m>, as plugging in <m>0</m> to a function is always easier than plugging in an negative number. 
+                </p>
+            </note>
         </exercise>
 
         <exercise>
-            <statement>
-                <p>
-                    Find <alert>constants</alert> <m>c_1</m> and <m>c_2</m> such that
-                    <me>
-                        F(x) = c_1\sin(3x) + c_2x\cos(3x)
-                    </me>
-                    is an antiderivative of <m>f(x) = 2x\sin(3x)</m>. 
-                </p>
-            </statement>
+            <p>
+                Find <alert>constants</alert> <m>c_1</m> and <m>c_2</m> such that
+                <me>
+                    F(x) = c_1\sin(3x) + c_2x\cos(3x)
+                </me>
+                is an antiderivative of <m>f(x) = 2x\sin(3x)</m>. 
+            </p>
 
             <hint>
                 <p>
@@ -139,18 +224,129 @@
                     We want to find <m>c_1</m> and <m>c_2</m> such that <m>F'(x)</m> and <m>f(x)</m> look <em>exactly</em> the same. 
                 </p>
             </hint>
-        </exercise>
 
-        <exercise>
-            <statement>
+            <solution>
                 <p>
-                    Find <m>f'</m> and <m>f</m> using the following conditions: 
+                    Using the definition of antiderivatives, we can set up an equation such that <m>\int f(x) \, dx = F(x) + C</m>. 
+                    Yet, we can't evaluate the integral <m>\int 2x\sin(3x)\,dx</m> so far, as we haven't learned the technique to evaluate this integral yet (the technique is called <em>Integration by parts</em>, which is what Section 7.1 is about). 
+                    However, we can rewrite the equation using derivatives. That is, <m>F'(x) = f(x)</m>. 
+                    So let's take the derivative of <m>F(x)</m>.
+                </p>
+
+                <md>
+                    <mrow>F'(x) \amp= \frac{d}{dx} \left( c_1\sin(3x) + c_2 x\cos(3x)\right)</mrow>
+                    <mrow>\amp= c_1 \frac{d}{dx}\sin(3x) + c_2 \frac{d}{dx} (x\cos(3x)) \amp\amp \text{by the Linearity of Derivatives}</mrow>
+                    <mrow>\amp= c_1\cdot 3\cos(3x) + c_2 (\cos(3x) - 3x\sin(3x)) \amp\amp \text{by the Chain Rule and the Product Rule}</mrow>
+                    <mrow>\amp= 3c_1\cos(3x) + c_2 \cos(3x) - 3c_2 x\sin(3x)</mrow>
+                    <mrow>\amp= (3c_1 + c_2) \cos(3x) - 3c_2 x\sin(3x)</mrow>
+                </md>
+
+                <p>
+                    We know that this result must <alert>equal</alert> <m>f(x)</m>. 
+                    That is, 
                     <me>
-                        f''(x) = x - \cos(x), \qquad f'(0) = 2, \qquad f(0) = -2
+                        (3c_1 + c_2) \cos(3x) - 3c_2 x\sin(3x) = 2x\sin(3x)
+                    </me>
+                </p>
+
+                <p>
+                    Two functions are the same if they look <alert>exactly the same</alert>, including the coefficients. 
+                    Both <m>F'(x)</m> and <m>f(x)</m> have a term of <m>x\sin(3x)</m>, so the coefficients of this term must be the same. 
+                    That is,
+                    <me>
+                        -3c_2 = 2
+                        \qquad\implies\qquad
+                        c_2 = -\frac{2}{3}
+                    </me>  
+                </p>
+
+                <p>
+                    But there is no <m>\cos(3x)</m> in <m>f(x)</m>. 
+                    That is, we need to find out a way to <em>eliminate</em> the term <m>(3c_1 + c_2)\cos(3x)</m> in <m>\frac{d}{dx}\left(F(x)\right)</m>. 
+                    The way to do so is to set the coefficient of this term to 0. 
+                    That is, 
+                    <me>
+                        3c_1 + c_2 = 0
+                        \qquad\implies\qquad
+                        c_1 = -\frac{c_2}{3} = -\frac{-2/3}{3} = \frac{2}{9}
                     </me>
                     
                 </p>
-            </statement>
+
+                <p>
+                    Hence, the two constants that make <m>F(x)</m> an antiderivative of <m>f(x)</m> are <m>c_1 = \frac{2}{9}</m> and <m>c_2 = -\frac{2}{3}</m>.
+                </p>
+
+            </solution>
+        </exercise>
+
+        <exercise>
+            <p>
+                Find <m>f'</m> and <m>f</m> using the following conditions: 
+                <me>
+                    f''(x) = x - \cos(x), \qquad f'(0) = 2, \qquad f(0) = -2
+                </me>  
+            </p>
+
+            <solution>
+                <p>
+                    By FTC, we know that integration undoes differentiation. 
+                    That is, 
+                    <me>
+                        f'(x) = \int f''(x) \, dx
+                        \hspace{20px}\text{ and }\hspace{20px}
+                        f(x) = \int f'(x) \, dx
+                    </me>
+                    
+                </p>
+
+                <p>
+                    So let's start on taking the integrals!
+                </p>
+
+                <md>
+                    <mrow>f'(x) = \int f''(x) \, dx \amp= \int \left( x - \cos(x) \right) \, dx</mrow>
+                    <mrow>\amp= \int x \, dx - \int \cos(x)\, dx \amp\amp \text{by the Linearity of Integrals}</mrow>
+                    <mrow>\amp= \frac{x^2}{2} - \sin(x) + C_1 \amp\amp \text{by the Power Rule and Trig Rule}</mrow>
+                </md>
+
+                <p>
+                    We can determine what <m>f'(x)</m> is specifically using the initial condition <m>f'(0) = 2</m>. 
+                    That is, 
+                    <me>
+                        2 = f'(0) = \frac{0^2}{2} - \sin(0) + C_1
+                        \hspace{20px}\implies\hspace{20px}
+                        C_1 = 2
+                    </me>                    
+                </p>
+
+                <p>
+                    Hence, we know that <m>f'(x) = \dfrac{x^2}{2} - \sin(x) + 2</m>. 
+                    We can take one more integral to obtain <m>f(x)</m>.
+                </p>
+
+                <md>
+                    <mrow>f(x) = \int f'(x) \, dx \amp= \int \left( \frac{x^2}{2} - \sin(x) + 2 \right) \, dx</mrow>
+                    <mrow>\amp= \frac{1}{2} \int x^2 \, dx - \int \sin(x)\, dx + 2 \int \, dx \amp\amp \text{by the Linearity of Integrals}</mrow>
+                    <mrow>\amp= \frac{x^3}{6} + \cos(x) + 2x + C_2 \amp\amp \text{by the Power Rule and Trig Rule}</mrow>
+                </md>
+
+                <p>
+                    We can determine what <m>f(x)</m> is specifically using the initial condition <m>f(0) = -2</m>. 
+                    That is, 
+                    <me>
+                        -2 = f(0) = \frac{0^3}{6} + \cos(0) + 2(0) + C_2
+                        \hspace{20px}\implies\hspace{20px}
+                        C_2 = -3
+                    </me>
+                    
+                </p>
+
+                <p>
+                    Hence, we know that <m>f(t) = \dfrac{x^3}{6} + \cos(x) + 2x - 3</m>.
+                </p>
+
+            </solution>
         </exercise>
     </worksheet>
 
