@@ -144,7 +144,7 @@
                     The graph of an odd function looks like the one in the figure below. 
                 </p>
 
-                <interactive iframe="https://www.desmos.com/calculator/fnireuyfr8;lang=en&amp;noexpressions=1"
+                <interactive iframe="https://www.desmos.com/calculator/fnireuyfr8?embed;lang=en&amp;noexpressions=1"
                     width="108.5%" aspect="16:9">
                 <caption>
                     <p>Desmos Applet on Area Under an Odd Function on Opposite Limits of Integration</p>
@@ -169,7 +169,7 @@
                     The graph of an even function looks like the one in the figure below. 
                 </p>
 
-                <interactive iframe="https://www.desmos.com/calculator/wjtcwv79oe;lang=en&amp;noexpressions=1"
+                <interactive iframe="https://www.desmos.com/calculator/wjtcwv79oe?embed;lang=en&amp;noexpressions=1"
                     width="108.5%" aspect="16:9">
                 <caption>
                     <p>Desmos Applet on Area Under an Even Function on Opposite Limits of Integration</p>
