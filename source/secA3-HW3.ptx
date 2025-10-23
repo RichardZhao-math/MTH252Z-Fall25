@@ -1,0 +1,192 @@
+<section xml:id="secA3-HW3" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Written Homework #3</title>
+
+        <assemblage>
+            <p>
+                You are encouraged to work on this assignment collaboratively with your peers in class. 
+                You can also ask Richard for hints if you are stuck. 
+                Yet, you should write up your own work and submit it on Canvas in <alert>one single PDF file</alert>. 
+                Show all of your work for full credits, and your work should be clearly written and organized. 
+            </p>
+
+            <p>
+                The written homework #2 is due on <alert>October 30, 2025</alert>. 
+            </p>
+
+            <p>
+                You can find a printable PDF copy of the homework here: <url href="external/pdfs/MTH252Z_Fall25_HW3.pdf">Written Homework 2</url>
+            </p>
+
+            <p>
+                This homework assignment cover some important concepts in section 5.8, 6.1, 6.3, and 6.4. 
+            </p>
+        </assemblage>
+
+        <worksheet>
+            <title></title>
+
+            <exercise>
+                <p>
+                    Evaluate the following indefinite integrals using <em>substitution method</em>. 
+                    Make sure you state what your choice of <m>u</m> is for each integral. 
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                <m>\displaystyle \int \frac{dx}{25x^2 + 36}</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\displaystyle \int \frac{x\, dx}{25x^2 + 36}</m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </exercise>
+
+            <exercise>
+                <p>
+                    Find the area of the shaded region bounded by the curve
+                    <me>
+                        x^2 = y^4\left(1 - y^3\right)
+                    </me>
+                    See the figure below for the shaded region. 
+                </p>
+                <figure>
+  <caption>The graph of <m>x^2 = y^4(1 - y^3)</m></caption>
+  <image width="50%">
+    <latex-image>
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=middle,
+          axis on top,                     % put axes above the plot
+          xlabel={$x$},
+          ylabel={$y$},
+          xmin=-1.5, xmax=1.5,
+          ymin=-1.3, ymax=1.8,
+          xtick={-1,0,1},
+          ytick={-1,0,1},
+          enlargelimits=false,
+        ]
+
+        % Use TikZ plot to make one closed filled path:
+        \draw[fill=green!30, opacity=0.3, draw=none]
+          plot[domain=0:1, samples=400, variable=\y]
+            ({ sqrt( max(0, (\y)^4*(1 - (\y)^3) ) ) }, {\y})
+        % go back along the negative branch
+          plot[domain=0:1, samples=400, variable=\y]
+            ({ -sqrt( max(0, (\y)^4*(1 - (\y)^3) ) ) }, {\y})
+        -- cycle;
+
+          % positive branch x = + sqrt(y^4(1-y^3))
+          \addplot[
+            blue, ultra thick,
+            variable=\y,
+            domain=-1.3:1,      % restrict to y values where expression is nonnegative
+            samples=400
+          ] 
+          (
+            { sqrt( max(0, (\y)^4*(1 - (\y)^3) ) ) }, % protect against negative inside sqrt
+            { \y }
+          );
+
+          % negative branch x = - sqrt(...)
+          \addplot[
+            blue, ultra thick,
+            variable=\y,
+            domain=-1.3:1,
+            samples=400
+          ]
+          (
+            { -sqrt( max(0, (\y)^4*(1 - (\y)^3) ) ) },
+            { \y }
+          );
+        \end{axis}
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+
+                <hint>
+                    <p>
+                        Rather than integrating along the <m>x</m>-axis (which I believe is insanely difficult), try integrating along the <m>y</m>-axis to find the area of the shaded region. 
+                    </p>
+
+                    <p>
+                        To do so, you will need a function <m>x = g(y)</m>... 
+                        How do we isolate <m>x</m> in the equation? 
+                        You may want to confirm you have the right <em>function</em> by graphing it to see if it matches up with the graph in the figure. 
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <p>
+                    Let <m>\mathcal{R}</m> be the region enclosed between <m>y = \sec(x)</m>, <m>y = \csc(x)</m>, <m>y = 0</m>, <m>x = 0</m>, and <m>x = \frac{\pi}{2}</m>. 
+                    Let <m>\mathcal{S}</m> be the solid obtained by rotating <m>\mathcal{R}</m> about the <m>x</m>-axis. 
+                </p>
+
+                <p>
+                    Find the volume of <m>\mathcal{S}</m>. 
+                </p>
+
+                <hint>
+                    <p>
+                        What does the region look like? Graph out the functions and shade the region. 
+                    </p>
+
+                    <p>
+                        Which method, disk or shell, is easier to work with in this problem? 
+                        Try sketching out a typical disk (or a typical shell) and make a choice. 
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <p>
+                    Let <m>f(x) = x^2 - 1</m> and <m>g(x) = 2x - 1</m>, and let <m>\mathcal{R}</m> represent the region enclosed between <m>y = f(x)</m> and <m>y = g(x)</m>. 
+                </p>
+
+                <p>
+                    Find the volume of the solid obtained by rotating <m>\mathcal{R}</m> about the line <m>x = -2</m>. 
+                </p>
+
+                <hint>
+                     <p>
+                        What does the region look like? Graph out the functions and shade the region. 
+                    </p>
+
+                    <p>
+                        Which method, disk/washer or shell, is easier to work with in this problem? 
+                        <ul marker="">
+                            <li>
+                                <p>
+                                    If you pick the disk/washer method, sketch a typical disk/washer and mark its radius/radii.
+                                    This will help you determine the radius/radii. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If you pick the shell method, sketch a typical cylindrical shell and mark its radius and height. 
+                                    This will help you determine the radius and height. 
+                                </p>
+                            </li>
+                        </ul>  
+                    </p>
+                </hint>
+            </exercise>
+
+        </worksheet>
+
+        <assemblage>
+            <p>
+                When you finished the homework assignment, format it in one single PDF file and submit it in <url href="https://canvas.pdx.edu/courses/106988/assignments/1125510">Written Homework 3 Assignment Portal</url>. 
+            </p>
+
+            <p>
+                After the due dates, Richard will post the solution here on the same page so make sure to check back this page! 
+            </p>
+        </assemblage>
+
+    </section>
