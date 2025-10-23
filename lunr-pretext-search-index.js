@@ -1927,6 +1927,51 @@ var ptx_lunr_docs = [
   "body": " Wind engineers have found that wind speed (in m\/s) at a given location follows a Rayleigh distribution of the type This means that at a given moment in time, the probability that lies between and is equal to the shaded area in the figure below.   the shaded area is the probability that lies between and        Show that the probability that lies between and is .    Calculate the probability that lies between and .    "
 },
 {
+  "id": "secA3-HW3",
+  "level": "1",
+  "url": "secA3-HW3.html",
+  "type": "Section",
+  "number": "A.3",
+  "title": "Written Homework #3",
+  "body": " Written Homework #3   You are encouraged to work on this assignment collaboratively with your peers in class. You can also ask Richard for hints if you are stuck. Yet, you should write up your own work and submit it on Canvas in one single PDF file . Show all of your work for full credits, and your work should be clearly written and organized.  The written homework #2 is due on October 30, 2025 .  You can find a printable PDF copy of the homework here: Written Homework 2   This homework assignment cover some important concepts in section 5.8, 6.1, 6.3, and 6.4.      Evaluate the following indefinite integrals using substitution method . Make sure you state what your choice of is for each integral.                Find the area of the shaded region bounded by the curve See the figure below for the shaded region.   The graph of       Rather than integrating along the -axis (which I believe is insanely difficult), try integrating along the -axis to find the area of the shaded region.  To do so, you will need a function ... How do we isolate in the equation? You may want to confirm you have the right function by graphing it to see if it matches up with the graph in the figure.     Let be the region enclosed between , , , , and . Let be the solid obtained by rotating about the -axis.  Find the volume of .   What does the region look like? Graph out the functions and shade the region.  Which method, disk or shell, is easier to work with in this problem? Try sketching out a typical disk (or a typical shell) and make a choice.     Let and , and let represent the region enclosed between and .  Find the volume of the solid obtained by rotating about the line .   What does the region look like? Graph out the functions and shade the region.  Which method, disk\/washer or shell, is easier to work with in this problem?   If you pick the disk\/washer method, sketch a typical disk\/washer and mark its radius\/radii. This will help you determine the radius\/radii.    If you pick the shell method, sketch a typical cylindrical shell and mark its radius and height. This will help you determine the radius and height.         When you finished the homework assignment, format it in one single PDF file and submit it in Written Homework 3 Assignment Portal .  After the due dates, Richard will post the solution here on the same page so make sure to check back this page!   "
+},
+{
+  "id": "secA3-HW3-3-2",
+  "level": "2",
+  "url": "secA3-HW3.html#secA3-HW3-3-2",
+  "type": "Worksheet Exercise",
+  "number": "A.3.1",
+  "title": "",
+  "body": " Evaluate the following indefinite integrals using substitution method . Make sure you state what your choice of is for each integral.              "
+},
+{
+  "id": "secA3-HW3-3-3",
+  "level": "2",
+  "url": "secA3-HW3.html#secA3-HW3-3-3",
+  "type": "Worksheet Exercise",
+  "number": "A.3.2",
+  "title": "",
+  "body": " Find the area of the shaded region bounded by the curve See the figure below for the shaded region.   The graph of       Rather than integrating along the -axis (which I believe is insanely difficult), try integrating along the -axis to find the area of the shaded region.  To do so, you will need a function ... How do we isolate in the equation? You may want to confirm you have the right function by graphing it to see if it matches up with the graph in the figure.   "
+},
+{
+  "id": "secA3-HW3-3-4",
+  "level": "2",
+  "url": "secA3-HW3.html#secA3-HW3-3-4",
+  "type": "Worksheet Exercise",
+  "number": "A.3.3",
+  "title": "",
+  "body": " Let be the region enclosed between , , , , and . Let be the solid obtained by rotating about the -axis.  Find the volume of .   What does the region look like? Graph out the functions and shade the region.  Which method, disk or shell, is easier to work with in this problem? Try sketching out a typical disk (or a typical shell) and make a choice.   "
+},
+{
+  "id": "secA3-HW3-3-5",
+  "level": "2",
+  "url": "secA3-HW3.html#secA3-HW3-3-5",
+  "type": "Worksheet Exercise",
+  "number": "A.3.4",
+  "title": "",
+  "body": " Let and , and let represent the region enclosed between and .  Find the volume of the solid obtained by rotating about the line .   What does the region look like? Graph out the functions and shade the region.  Which method, disk\/washer or shell, is easier to work with in this problem?   If you pick the disk\/washer method, sketch a typical disk\/washer and mark its radius\/radii. This will help you determine the radius\/radii.    If you pick the shell method, sketch a typical cylindrical shell and mark its radius and height. This will help you determine the radius and height.      "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
