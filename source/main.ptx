@@ -14,7 +14,7 @@
     <!-- Include chapters -->
     <xi:include href="./ch5-Integration.ptx" />
     <xi:include href="./ch6-ApplicationIntegral.ptx" />
-    <!--<xi:include href="./ch7-TechniquesIntegration.ptx" />-->
+    <xi:include href="./ch7-TechniquesIntegration.ptx" />
     <!--<xi:include href="./ch8-FurtherApplicationIntegral.ptx" />-->
 
     <!-- Include Appendices -->
