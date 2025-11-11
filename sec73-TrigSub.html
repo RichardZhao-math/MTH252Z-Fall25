@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -101,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.9.18';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -129,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec72-TrigIntegral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch7-TechniquesIntegration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec74-HyperbolicIntegral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec72-TrigIntegral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch7-TechniquesIntegration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendixA-WrittenHomework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -145,9 +146,23 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec51-ApproximatingArea.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Approximating and Computing Area</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">51-Approximate_Rectangle</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">Approximating Area by Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-512-SummationNotation" class="internal"><span class="title">Summation Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-513-Compute_Limit_Approximation" class="internal"><span class="title">Computing Area as the Limit of Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-514-LimitSummation" class="internal"><span class="title">Limit of the approximation algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#ws-sec51" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-521-RiemannSum" class="internal"><span class="title">Riemann Sum and Definite Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-522-SignedArea" class="internal"><span class="title">Definite Integral and Signed Area</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-523-Properties_DefiniteIntegral" class="internal"><span class="title">Properties of Definite Integral</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#ws-sec52" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Indefinite Integral</span></a></div>
 <ul class="structural toc-item-list">
@@ -163,7 +178,9 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-541-FTC-Corollary" class="internal"><span class="title">A Corollary of the Fundamental Theorem of Calculus</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-542-Importance-FTC-Corollary" class="internal"><span class="title">Why is this corollary important?</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-5" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary" class="internal"><span class="title">Examples on Applying FTC Corollary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-7" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec54-FTCpartI.html#ws-sec54" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -172,9 +189,19 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-551-AccumulationFunction" class="internal"><span class="title">Accumulation Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-552-FTC" class="internal"><span class="title">THE Fundamental Theorem of Calculus</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-553-UsingFTC" class="internal"><span class="title">To apply the FTC...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-554-Graph-AccumulationFunction" class="internal"><span class="title">The Graph of the Accumulation Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec55-FTCpartII.html#ws-sec55" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-561-DistanceVelocity" class="internal"><span class="title">Relationship between Displacement and Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-562-DisplacementDistance" class="internal"><span class="title">Displacement vs. Distance Traveled</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-563-NetChange" class="internal"><span class="title">General Net Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec56-NetChange.html#ws-sec56" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div>
 <ul class="structural toc-item-list">
@@ -191,6 +218,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig" class="internal"><span class="title">Integral formulas involving inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-582-IntegralExponential" class="internal"><span class="title">Integrals Involving Exponential Functions</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#ws-sec58" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
@@ -199,10 +227,17 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch6-ApplicationIntegral.html" class="internal"><span class="codenumber">6</span> <span class="title">Applications of the Integral</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec63-DishAndWasher.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Volume of Revolution: Disks and Washers</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec64-ShellMethod.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Volume of Revolution: Cylindrical Shells</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html#sec61-AreaBetweenCurves-5" class="internal"><span class="title">Area between Two Curves</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-621-Volume" class="internal"><span class="title">Volume by Cross Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-622-AverageValue" class="internal"><span class="title">Average Value</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -218,38 +253,58 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec71-IntegrationByParts.html#ws-sec71" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec72-TrigIntegral.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec73-TrigSub.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Trigonometric Substitution</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec74-HyperbolicIntegral.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Integrals Involving Hyperbolic and Inverse Hyperbolic Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec75-PartialFraction.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Method of Partial Fractions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Strategies for Integration</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec77-ImproperIntegral.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Improper Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec78-NumericalIntegration.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Numerical Integration</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral" class="internal"><span class="title">Basic Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral-5" class="internal"><span class="title">Part (a): Integral of (Co)Tangent</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral-6" class="internal"><span class="title">Part (b): Integral of (Co)Secant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral" class="internal"><span class="title">Intermediate Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-3" class="internal"><span class="title">Part (a): If <span class="process-math">\(\boldsymbol{m}\)</span> is an odd number...</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-4" class="internal"><span class="title">Part (b): If <span class="process-math">\(\boldsymbol{n}\)</span> is an odd number...</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-5" class="internal"><span class="title">Why do we care so much about the odd power...</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral" class="internal"><span class="title">Advanced Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral-3" class="internal"><span class="title">Part (a): Base case: when the power is 2 and 3</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral-4" class="internal"><span class="title">Part (b): Reduction Formulas for larger powers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec73-TrigSub.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Trigonometric Substitution</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-731-TrigSub_Sine" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 - x^2}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-732-TrigSub_Tangent" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 + x^2}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-733-TrigSub_Secant" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{x^2 - a^2}\)</span></span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec73-TrigSub.html#ws-sec73" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="appendixA-Investigation.html" class="internal"><span class="codenumber">A</span> <span class="title">Investigation Assignments</span></a></div>
+<div class="toc-title-box"><a href="appendixA-WrittenHomework.html" class="internal"><span class="codenumber">A</span> <span class="title">Written Homework</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Conceptual Foundation of Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A11-StructureIntegral" class="internal"><span class="title">Structure of the Integral</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsubsec-A111-GorillaJump" class="internal"><span class="title">The Great Gorilla Jump</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A12-ProofFTC" class="internal"><span class="title">Proof of the Fundamental Theorem of Calculus</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA1-HW1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Written Homework #1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-HW1.html#secA1-HW1-3" class="internal"><span class="codenumber">A.1</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html" class="internal"><span class="codenumber">A.2</span> <span class="title">More Strategies to Evaluate Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A21-TrigIntegral" class="internal"><span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A22-TaylorPolynomial" class="internal"><span class="title">Approximation using Taylor Polynomials</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA2-HW2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Written Homework #2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-HW2.html#secA2-HW2-3" class="internal"><span class="codenumber">A.2</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA3-ApplicationIntegral.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Some Famous Applications of Integrals</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA3-ApplicationIntegral.html#subsec-A31-PhysicsWork" class="internal"><span class="title">A physics and engineering application -- Work</span></a></div></li></ul>
+<div class="toc-title-box"><a href="secA3-HW3.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Written Homework #3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA3-HW3.html#secA3-HW3-3" class="internal"><span class="codenumber">A.3</span> <span class="title"></span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -258,11 +313,597 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec73-TrigSub"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Trigonometric Substitution</span>
 </h2>
-<div class="para" id="sec73-TrigSub-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec73-TrigSub-2"><div class="para" id="sec73-TrigSub-2-1">In this section, we will learn another substitution method to evaluate integrals, called the <em class="alert">Trigonometric Substitution</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 7.3: Trigonometric Substitution"><a href="#sec73-TrigSub" title="Copy heading and permalink for Section 7.3: Trigonometric Substitution" aria-label="Copy heading and permalink for Section 7.3: Trigonometric Substitution">🔗</a></div></section></div>
+<article class="objectives goal-like" id="sec73-TrigSub-2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<div class="introduction" id="sec73-TrigSub-2-2-1"><div class="para" id="sec73-TrigSub-2-2-1-1">After this section, students will be able to:<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul class="disc" id="sec73-TrigSub-2-2-2">
+<li id="sec73-TrigSub-2-2-2-1">
+<div class="para" id="sec73-TrigSub-2-2-2-1-1">identify the correct case for the trig substitution<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec73-TrigSub-2-2-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec73-TrigSub-2-2-2-2">
+<div class="para" id="sec73-TrigSub-2-2-2-2-1">perform a trig substitution to convert the integral to a trigonometric integral<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec73-TrigSub-2-2-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec73-TrigSub-2-2-2-3">
+<div class="para" id="sec73-TrigSub-2-2-2-3-1">evaluate the trigonometric integral using formulas/strategies in <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a><div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec73-TrigSub-2-2-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives"><a href="#sec73-TrigSub-2-2" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><article class="investigation project-like" id="sec73-TrigSub-3"><h3 class="heading">
+<span class="type">Investigation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction" id="sec73-TrigSub-3-1"><div class="para logical" id="sec73-TrigSub-3-1-1">
+<div class="para">Let’s do a quick review on right triangles and basic trigonometry. There are three right triangles below. We know about a non-right angle <span class="process-math">\(\theta\)</span> and two sides, <span class="process-math">\(x\)</span> and <span class="process-math">\(a\text{.}\)</span> Your task is to</div>
+<ul class="disc" id="sec73-TrigSub-3-1-1-4">
+<li id="sec73-TrigSub-3-1-1-4-1">
+<div class="para" id="sec73-TrigSub-3-1-1-4-1-1">find the missing side of the right triangle, and<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-3-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec73-TrigSub-3-1-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec73-TrigSub-3-1-1-4-2">
+<div class="para" id="sec73-TrigSub-3-1-1-4-2-1">set up a trigonometric ratio using <span class="process-math">\(\theta\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-3-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec73-TrigSub-3-1-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="sec73-TrigSub-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<figure class="figure figure-like" id="sec73-TrigSub-3-2-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec73-TrigSub-3-2-1-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right Triangle Case I<div class="autopermalink" data-description="Figure 7.3.1"><a href="#sec73-TrigSub-3-2-1" title="Copy heading and permalink for Figure 7.3.1" aria-label="Copy heading and permalink for Figure 7.3.1">🔗</a></div></figcaption></figure><details id="sec73-TrigSub-3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec73-TrigSub-3-2-2-1">Observe that the missing side is <span class="process-math">\(\sqrt{a^2 - x^2}\)</span> and <span class="process-math">\(\sin(\theta) = \dfrac{x}{a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.3.1.a.1"><a href="#sec73-TrigSub-3-2-2" title="Copy heading and permalink for Solution 7.3.1.a.1" aria-label="Copy heading and permalink for Solution 7.3.1.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 7.3.1.a"><a href="#sec73-TrigSub-3-2" title="Copy heading and permalink for Task 7.3.1.a" aria-label="Copy heading and permalink for Task 7.3.1.a">🔗</a></div></article><article class="task exercise-like" id="sec73-TrigSub-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<figure class="figure figure-like" id="sec73-TrigSub-3-3-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec73-TrigSub-3-3-1-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right Triangle Case II<div class="autopermalink" data-description="Figure 7.3.2"><a href="#sec73-TrigSub-3-3-1" title="Copy heading and permalink for Figure 7.3.2" aria-label="Copy heading and permalink for Figure 7.3.2">🔗</a></div></figcaption></figure><details id="sec73-TrigSub-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec73-TrigSub-3-3-2-1">Observe that the missing side is <span class="process-math">\(\sqrt{a^2 + x^2}\)</span> and <span class="process-math">\(\tan(\theta) = \dfrac{x}{a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.3.1.b.1"><a href="#sec73-TrigSub-3-3-2" title="Copy heading and permalink for Solution 7.3.1.b.1" aria-label="Copy heading and permalink for Solution 7.3.1.b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 7.3.1.b"><a href="#sec73-TrigSub-3-3" title="Copy heading and permalink for Task 7.3.1.b" aria-label="Copy heading and permalink for Task 7.3.1.b">🔗</a></div></article><article class="task exercise-like" id="sec73-TrigSub-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<figure class="figure figure-like" id="sec73-TrigSub-3-4-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec73-TrigSub-3-4-1-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right Triangle Case III<div class="autopermalink" data-description="Figure 7.3.3"><a href="#sec73-TrigSub-3-4-1" title="Copy heading and permalink for Figure 7.3.3" aria-label="Copy heading and permalink for Figure 7.3.3">🔗</a></div></figcaption></figure><details id="sec73-TrigSub-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec73-TrigSub-3-4-2-1">Observe that the missing side is <span class="process-math">\(\sqrt{x^2 - a^2}\)</span> and <span class="process-math">\(\sec(\theta) = \dfrac{x}{a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.3.1.c.1"><a href="#sec73-TrigSub-3-4-2" title="Copy heading and permalink for Solution 7.3.1.c.1" aria-label="Copy heading and permalink for Solution 7.3.1.c.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Task 7.3.1.c"><a href="#sec73-TrigSub-3-4" title="Copy heading and permalink for Task 7.3.1.c" aria-label="Copy heading and permalink for Task 7.3.1.c">🔗</a></div></article><div class="autopermalink" data-description="Investigation 7.3.1"><a href="#sec73-TrigSub-3" title="Copy heading and permalink for Investigation 7.3.1" aria-label="Copy heading and permalink for Investigation 7.3.1">🔗</a></div></article><div class="para" id="sec73-TrigSub-4">You may be wondering what all of them have to do with integrals... These three right triangles are the three base cases of <em class="alert">trigonometric substitution</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec73-TrigSub-5">
+<em class="alert">Trigonometric substitution</em> (or trig sub for short), means we are making substitutions using trigonometric functions. Recall a goal of the substitution method back in section 5.7 when we learned the <span class="process-math">\(u\)</span>-sub is to make the integral <em class="emphasis">easier</em>. An advantage of trig sub here is that we can convert an un-simplified-able expression to a trigonometric expression, and we can manipulate it using trigonometric identities.<div class="autopermalink" data-description="Paragraph"><a href="#sec73-TrigSub-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="subsec-731-TrigSub_Sine"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 - x^2}\)</span></span>
+</h3>
+<div class="para" id="subsec-731-TrigSub_Sine-2">When you see an "<span class="process-math">\(a^2 - x^2\)</span>" in the integral, you may be able to solve it using a trig sub. The <span class="process-math">\(a^2 - x^2\)</span> should remind you of the first right triangle in the investigation task because the missing side of the triangle is <span class="process-math">\(\sqrt{a^2 - x^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-731-TrigSub_Sine-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-731-TrigSub_Sine-3-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{x^2\, dx}{\sqrt{9 - x^2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-731-TrigSub_Sine-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-731-TrigSub_Sine-3-2-1">Observe that we can’t simplify the integrand here, and there is no integral formulas we learned before that has a similar form of the integrand (not even the formulas involving inverse trig functions).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-2-2">You can try making a <span class="process-math">\(u\)</span>-sub, but Richard can tell you right now that there is no choice of <span class="process-math">\(u\)</span> that will work out.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-2-3">You may also be considering using integration by parts. But this involves turning the fraction into a product and it seems complicated to work out all the <span class="process-math">\(u\)</span>’s and <span class="process-math">\(v\)</span>’s... You can for sure give it a go but Richard has a feeling that this will be complicated...<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-2-4">Hmm... but is there an easier way to tackle this problem...<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-2-5">Richard is again come to your rescue! He is going to make a suggestion! Let’s try this substitution to let <span class="process-math">\(x = 3\sin(\theta)\text{.}\)</span> What does the integral look like after we fully substitute all the <span class="process-math">\(x\)</span>’s with the <span class="process-math">\(\theta\)</span>’s?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.3.4.1"><a href="#subsec-731-TrigSub_Sine-3-2" title="Copy heading and permalink for Hint 7.3.4.1" aria-label="Copy heading and permalink for Hint 7.3.4.1">🔗</a></div>
+</div></details><details id="subsec-731-TrigSub_Sine-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-731-TrigSub_Sine-3-3-1">
+<div class="para">Let’s follow Richard’s hint and make the substitution that <span class="process-math">\(x = 3\sin(\theta)\text{.}\)</span> Then this will imply that <span class="process-math">\(x^2 = 9\sin^2(\theta)\)</span> and</div>
+<div class="displaymath process-math" id="subsec-731-TrigSub_Sine-3-3-1-3">
+\begin{align*}
+\sqrt{9 - x^2} \amp= \sqrt{9 - 9\sin^2(\theta)} \\
+\amp= \sqrt{9\left(1 - \sin^2(\theta\right))} \\
+\amp= \sqrt{9\cos^2(\theta)}\amp\amp \text{by the Pythagorean Identity} \\
+\amp= 3\cos(\theta) 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-3-3-2">
+<div class="para">Remember we also want to convert the <span class="process-math">\(dx\)</span> to something with a <span class="process-math">\(d\theta\text{.}\)</span> Observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{d\theta} = 3\cos(\theta)
+\qquad\implies\qquad
+dx = 3\cos(\theta)\, d\theta
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-3-3-3">
+<div class="para">Now it looks like all the <span class="process-math">\(x\)</span>’s have been converted to <span class="process-math">\(\theta\)</span>’s. Let’s plug them back into the integral and see whether the integral will become easier.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{x^2\, dx}{\sqrt{9 - x^2}} = \int \frac{9\sin^2(\theta)\cdot 3\cos(\theta)\, d\theta}{3\cos(\theta)} = 9\int \sin^2(\theta)\, d\theta
+\end{equation*}
+</div>
+<div class="para">Observe how much easier-looking the integral became after this substitution! We no longer have fractions and square roots! All we had here is a <span class="process-math">\(\sin^2(\theta)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-3-4">You can actually find a formula to evaluate <span class="process-math">\(\int \sin^2(\theta)\, d\theta\)</span> in <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a> (more specifically, in <a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral" class="internal" title="Subsection: Advanced Trigonometric Integrals">Subsection </a>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-3-3-5">
+<div class="para">Now using the formula, we have</div>
+<div class="displaymath process-math" id="subsec-731-TrigSub_Sine-3-3-5-1">
+\begin{align*}
+\int \frac{x^2\, dx}{\sqrt{9 - x^2}} \amp= 9\int \sin^2(\theta)\, d\theta \\
+\amp= 9\left(\frac{\theta}{2} - \frac{\sin(2\theta)}{4}\right) + C \\
+\amp= \frac{9\theta}{2} - \frac{9\sin(2\theta)}{4} + C
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-3-6">The last step here is to plug back whatever <span class="process-math">\(\theta\)</span> is in terms of <span class="process-math">\(x\text{.}\)</span> There are actually a trivial way and a technical way to do so.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-3-3-7">
+<div class="para">
+<em class="alert">Trivial Way:</em> Recall the substitution we made is <span class="process-math">\(x = 3\sin(\theta)\text{.}\)</span> Isolating <span class="process-math">\(\theta\)</span> will give us <span class="process-math">\(\theta = \sin^{-1}\left(\frac{x}{3}\right)\text{.}\)</span> Hence, we can plug in the <span class="process-math">\(\sin^{-1}\left(\frac{x}{3}\right)\)</span> for <span class="process-math">\(\theta\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{9\theta}{2} - \frac{9\sin(2\theta)}{4} + C = \frac{9\sin^{-1}\left(\frac{x}{3}\right)}{2} - \frac{9\sin\left(2\cdot \sin^{-1}\left(\frac{x}{3}\right)\right)}{4} + C
+\end{equation*}
+</div>
+<div class="para">But look at how messy the answer is... You can for sure simplify this scary-looking answer using the technical way.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-3-8">
+<em class="alert">P.S.:</em> If all you care about is to obtain a correct answer, however messy it is, put it to Edfinity, and move on, Richard is 80% sure that Edfinity will recognize answers like this if it is correct.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-3-9">
+<em class="alert">Technical Way:</em> We know <span class="process-math">\(\theta = \sin^{-1}\left(\frac{x}{3}\right)\text{.}\)</span> There is no way to make it easier. But we can do something fun to plug things in for the <span class="process-math">\(\sin(2\theta)\text{!}\)</span> By the double angle identity, we know that <span class="process-math">\(\sin(2\theta) = 2\sin(\theta)\cos(\theta)\text{,}\)</span> and <span class="process-math">\(\sin(\theta) = \frac{x}{3}\)</span> based on the substitution we made. Then what is <span class="process-math">\(\cos(\theta)\)</span> in our substitution?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-3-3-10">This is a classical MTH 112Z problem to find the cosine value given the sine value. An easier way is to literally draw a right triangle that looks like the first right triangle in the investigation task and figure out the cosine value, as the figure below shows.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="subsec-731-TrigSub_Sine-3-3-11"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-731-TrigSub_Sine-3-3-11-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A right triangle with <span class="process-math">\(\sin(\theta) = \frac{x}{3}\)</span><div class="autopermalink" data-description="Figure 7.3.5"><a href="#subsec-731-TrigSub_Sine-3-3-11" title="Copy heading and permalink for Figure 7.3.5" aria-label="Copy heading and permalink for Figure 7.3.5">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-731-TrigSub_Sine-3-3-12">
+<div class="para">Observe that <span class="process-math">\(\cos(\theta) = \frac{\sqrt{9 - x^3}}{3}\text{.}\)</span> This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin(2\theta) = 2\sin(\theta)\cos(\theta) = 2\cdot \frac{x}{3}\cdot \frac{\sqrt{9 - x^2}}{3}
+\end{equation*}
+</div>
+<div class="para">Now plugging in this back to the antiderivative, we have</div>
+<div class="displaymath process-math" id="subsec-731-TrigSub_Sine-3-3-12-3">
+\begin{align*}
+\frac{9\theta}{2} - \frac{9\sin(2\theta)}{4} + C \amp= \frac{9\sin^{-1}\left(\frac{x}{3}\right)}{2} - \frac{9}{4}\cdot 2\cdot \frac{x}{3}\cdot \frac{\sqrt{9 - x^2}}{3} + C \\
+\amp= \frac{9}{2}\sin^{-1}\left(\frac{x}{3}\right) - \frac{1}{2}x\sqrt{9 - x^2} + C 
+\end{align*}
+</div>
+<div class="para">This answer is the simplified answer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-3-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.3.4.1"><a href="#subsec-731-TrigSub_Sine-3-3" title="Copy heading and permalink for Solution 7.3.4.1" aria-label="Copy heading and permalink for Solution 7.3.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.3.4"><a href="#subsec-731-TrigSub_Sine-3" title="Copy heading and permalink for Example 7.3.4" aria-label="Copy heading and permalink for Example 7.3.4">🔗</a></div></article><div class="para" id="subsec-731-TrigSub_Sine-4">That was a long example, but it captures the essence of the first case of the trig sub.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-5">
+<div class="para">If <span class="process-math">\(a^2 - x^2\)</span> is in the integral, then try the substitution <span class="process-math">\(x = a\sin(\theta)\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-731-TrigSub_Sine-5-3">
+\begin{align*}
+a^2 - x^2 \amp= a^2 - \left(a\sin(\theta)\right)^2 \\
+\amp= a^2 - a^2 \sin^2(\theta) \\
+\amp= a^2 \left(1 - \sin^2(\theta)\right) \\
+\amp= a^2\cos^2(\theta) 
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{d\theta} = a\cos(\theta) \qquad\implies\qquad dx = a\cos(\theta)\, d\theta
+\end{equation*}
+</div>
+<div class="para">Then we can deal with a (usually) simpler trigonometric integral. Observe that the trigonometric identity that allows us to simplify stuff is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin^2(\theta) + \cos^2(\theta) = 1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-6">For strategies to deal with a trigonometric integral, feel free to consult <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-7">If you are reading our textbook, this case is labeled as "integrals involving <span class="process-math">\(\sqrt{a^2 - x^2}\)</span>". The reason why your textbook throw in the square root is because dealing with powers of sine (and cosine) isn’t quite easy. But this will have no impact on the determination of using trig sub itself. So the square root may make the trigonometric integral easier after the trig sub, but the trig sub will work without the square root.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-8">Let’s look at an example of the definite integrals using a trig sub. Recall back in section 5.7 that we need to adjust the limits of integration when doing a <span class="process-math">\(u\)</span>-sub since we changed the variable. Similarly, trig sub is essentially a substitution method in the sense that we use a new variable <span class="process-math">\(\theta\text{.}\)</span> <em class="alert">So make sure you adjust the limits of integration when doing a trig sub!</em><div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-731-TrigSub_Sine-9"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-731-TrigSub_Sine-9-1">Evaluate the definite integral <span class="process-math">\(\displaystyle \int_\frac{1}{2}^1 \frac{\sqrt{1 - x^2}}{x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-731-TrigSub_Sine-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-731-TrigSub_Sine-9-2-1">Observe that the integral contain <span class="process-math">\(1 - x^2\text{,}\)</span> which takes the form of <span class="process-math">\(a^2 - x^2\text{,}\)</span> where <span class="process-math">\(a = 1\text{.}\)</span> Then what trig sub should we do here?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-9-2-2">In addition, this in a definite integral. Given that we are essentially changing the variable from <span class="process-math">\(x\)</span> to <span class="process-math">\(\theta\text{,}\)</span> we will need to <em class="alert">adjust the limits of integration</em>!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.3.6.1"><a href="#subsec-731-TrigSub_Sine-9-2" title="Copy heading and permalink for Hint 7.3.6.1" aria-label="Copy heading and permalink for Hint 7.3.6.1">🔗</a></div>
+</div></details><details id="subsec-731-TrigSub_Sine-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-731-TrigSub_Sine-9-3-1">
+<div class="para">Let <span class="process-math">\(x = \sin(\theta)\text{.}\)</span> Then we know that <span class="process-math">\(x^2 = \sin^2(\theta)\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sqrt{1 - x^2} = \sqrt{1 - \sin^2(\theta)} = \sqrt{\cos^2(\theta)} = \cos(\theta)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{d\theta} = \cos(x) 
+\qquad\implies\qquad
+dx = \cos(x)\, d\theta
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-9-3-2">
+<div class="para"><em class="alert">Remember we also need to adjust the limits of integration!!</em></div>
+<ul class="no-marker" id="subsec-731-TrigSub_Sine-9-3-2-2">
+<li id="subsec-731-TrigSub_Sine-9-3-2-2-1">
+<div class="para" id="subsec-731-TrigSub_Sine-9-3-2-2-1-1">When <span class="process-math">\(x = 1\text{,}\)</span> then <span class="process-math">\(1 = \sin(\theta)\text{,}\)</span> which implies that <span class="process-math">\(\theta = \sin^{-1}(1) = \dfrac{\pi}{2}\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-3-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-731-TrigSub_Sine-9-3-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-731-TrigSub_Sine-9-3-2-2-2">
+<div class="para" id="subsec-731-TrigSub_Sine-9-3-2-2-2-1">When <span class="process-math">\(x = \dfrac{1}{2}\text{,}\)</span> then <span class="process-math">\(\dfrac{1}{2} = \sin(\theta)\text{,}\)</span> which implies that <span class="process-math">\(\theta = \sin^{-1}\left(\dfrac{1}{2}\right) = \dfrac{\pi}{6}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-3-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-731-TrigSub_Sine-9-3-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-9-3-3">
+<div class="para">Now let’s plug everything back to the integral and see if the integral becomes easier.</div>
+<div class="displaymath process-math" id="subsec-731-TrigSub_Sine-9-3-3-1">
+\begin{align*}
+\int_\frac{1}{2}^1 \frac{\sqrt{1 - x^2}}{x^2}\, dx \amp= \int_\frac{\pi}{6}^\frac{\pi}{2} \frac{\cos(\theta)}{\sin^2(\theta)}\cdot \cos(\theta)\, d\theta \\
+\amp= \int_\frac{\pi}{6}^\frac{\pi}{2} \frac{\cos^2(\theta)}{\sin^2(\theta)}\, d\theta \\
+\amp= \int_\frac{\pi}{6}^\frac{\pi}{2} \cot^2(\theta)\, d\theta 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-731-TrigSub_Sine-9-3-4">
+<div class="para">Observe that this trig integral does look easier than what we started. <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a> is the section about integrating trig integrals so you may be able to find some clues there to evaluate this integral. It turns out that one of the integral formulas we learned back in <a href="sec53-IndefiniteIntegral.html" class="internal" title="Section 5.3: The Indefinite Integral">Section 5.3</a> when we un-did the derivative formulas in calculus 1 is useful (see <a href="sec53-IndefiniteIntegral.html#thm-BasicTrigIntegrals" class="xref" data-knowl="./knowl/xref/thm-BasicTrigIntegrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.15: Basic Trigonometric Integrals">Theorem 5.3.15</a>).</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec72-TrigIntegral.html ./knowl/xref/sec53-IndefiniteIntegral.html ./knowl/xref/thm-BasicTrigIntegrals.html" id="subsec-731-TrigSub_Sine-9-3-4-4">
+\begin{align*}
+\int_\frac{\pi}{6}^\frac{\pi}{2} \cot^2(\theta)\, d\theta \amp = \int_\frac{\pi}{6}^\frac{\pi}{2} \left(\csc^2(\theta) - 1\right)\, d\theta \amp\amp \text{by the Pythagorean Identity} \\
+\amp= \left(-\cot(\theta) - \theta\right)\bigg|_{\theta = \frac{\pi}{6}}^\frac{\pi}{2} \\
+\amp= \left(-\cot\left(\frac{\pi}{2}\right) - \frac{\pi}{2}\right) - \left(-\cot\left(\frac{\pi}{6}\right) - \frac{\pi}{6}\right) \\
+\amp= - \frac{\pi}{2} + \sqrt{3} + \frac{\pi}{6} \\
+\amp\approx 0.684853256372 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-731-TrigSub_Sine-9-3-5"><div class="autopermalink" data-description="Paragraph"><a href="#subsec-731-TrigSub_Sine-9-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Solution 7.3.6.1"><a href="#subsec-731-TrigSub_Sine-9-3" title="Copy heading and permalink for Solution 7.3.6.1" aria-label="Copy heading and permalink for Solution 7.3.6.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.3.6"><a href="#subsec-731-TrigSub_Sine-9" title="Copy heading and permalink for Example 7.3.6" aria-label="Copy heading and permalink for Example 7.3.6">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Integrals Involving \boldsymbol{a^2 - x^2}"><a href="#subsec-731-TrigSub_Sine" title="Copy heading and permalink for Subsection: Integrals Involving \boldsymbol{a^2 - x^2}" aria-label="Copy heading and permalink for Subsection: Integrals Involving \boldsymbol{a^2 - x^2}">🔗</a></div></section><section class="subsection" id="subsec-732-TrigSub_Tangent"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 + x^2}\)</span></span>
+</h3>
+<div class="para" id="subsec-732-TrigSub_Tangent-2">When you see an "<span class="process-math">\(a^2 + x^2\)</span>" in the integral, you may also be able to solve it using a trig sub. The <span class="process-math">\(a^2 + x^2\)</span> should remind you of the second right triangle in the investigation task because the missing side of the triangle is <span class="process-math">\(\sqrt{a^2 + x^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-732-TrigSub_Tangent-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-732-TrigSub_Tangent-3-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{dx}{x^2\sqrt{4 + x^2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-732-TrigSub_Tangent-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-732-TrigSub_Tangent-3-2-1">Similarly, there is no way to simplify this integral. Also, <span class="process-math">\(u\)</span>-sub and integration by parts won’t work either.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-732-TrigSub_Tangent-3-2-2">Richard is feeling generous and he is providing another suggestion! Let’s try the substitution to let <span class="process-math">\(x = 2\tan(\theta)\text{.}\)</span> Does the integral become easier-looking after we fully substitute all the <span class="process-math">\(x\)</span>’s with the <span class="process-math">\(\theta\)</span>’s?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.3.7.1"><a href="#subsec-732-TrigSub_Tangent-3-2" title="Copy heading and permalink for Hint 7.3.7.1" aria-label="Copy heading and permalink for Hint 7.3.7.1">🔗</a></div>
+</div></details><details id="subsec-732-TrigSub_Tangent-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-732-TrigSub_Tangent-3-3-1">
+<div class="para">Let’s again follow Richard’s hint and make the substitution that <span class="process-math">\(x = 2\tan(\theta)\text{.}\)</span> Then this implies that <span class="process-math">\(x^2 = 4\tan^2(\theta)\)</span> and</div>
+<div class="displaymath process-math" id="subsec-732-TrigSub_Tangent-3-3-1-3">
+\begin{align*}
+\sqrt{4 + x^2} \amp= \sqrt{4 + 4\tan^2(\theta)} \\
+\amp= \sqrt{4\left(1 + \tan^2(\theta)\right)} \\
+\amp= \sqrt{4\sec^2(\theta)} \amp\amp\text{by the Pythagorean Identity} \\
+\amp= 2\sec(\theta) 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-732-TrigSub_Tangent-3-3-2">
+<div class="para">Remember we also want to convert the <span class="process-math">\(dx\)</span> to something with a <span class="process-math">\(d\theta\text{.}\)</span> Observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{d\theta} = 2\sec^2(\theta)
+\qquad\implies\qquad
+dx = 2\sec^2(\theta)\, d\theta
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-732-TrigSub_Tangent-3-3-3">
+<div class="para">Now it looks like all the <span class="process-math">\(x\)</span>’s have been converted to <span class="process-math">\(\theta\)</span>’s. Let’s plug them back into the integral and see whether the integral will become easier.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{dx}{x^2\sqrt{4 + x^2}} = \int \frac{2\sec^2(\theta)\, d\theta}{4\tan^2(\theta)\cdot 2\sec(\theta)} = \frac{1}{4}\int \frac{\sec(\theta)}{\tan^2(\theta)}\, d\theta
+\end{equation*}
+</div>
+<div class="para">Hmm... it seems like the integral still looks complicated. But a good thing with trig is that we can convert everything into sine and cosine!</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{4}\int \frac{\sec(\theta)}{\tan^2(\theta)}\, d\theta = \frac{1}{4}\int \frac{\frac{1}{\cos(\theta)}}{\frac{\sin^2(\theta)}{\cos^2(\theta)}}\, d\theta = \frac{1}{4}\int \frac{\cos(\theta)}{\sin^2(\theta)}\, d\theta
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-732-TrigSub_Tangent-3-3-4">Now this integral is definitely u-sub-able! The strategy is similar to the integral of tangent and cotangent in <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a> (more specifically, in <a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral" class="internal" title="Subsection: Basic Trigonometric Integrals">Subsection </a>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-732-TrigSub_Tangent-3-3-5">
+<div class="para">Let <span class="process-math">\(u = \sin(\theta)\text{.}\)</span> Then <span class="process-math">\(du = \cos(\theta)\, d\theta\text{.}\)</span> This implies that</div>
+<div class="displaymath process-math" id="subsec-732-TrigSub_Tangent-3-3-5-3">
+\begin{align*}
+\frac{1}{4}\int \frac{\cos(\theta)}{\sin^2(\theta)}\, d\theta \amp= \frac{1}{4}\frac{du}{u^2} \\
+\amp= \frac{1}{4}\int u^{-2}\, du \\
+\amp= -\frac{1}{4}\cdot \frac{1}{u} + C \\
+\amp= -\frac{1}{4}\cdot \frac{1}{\sin(\theta)} \\
+\amp= -\frac{1}{4}\csc(\theta) + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-732-TrigSub_Tangent-3-3-6">Now that we found the antiderivative, we will need to plug back whatever <span class="process-math">\(\theta\)</span> is in terms of <span class="process-math">\(x\text{.}\)</span> Again, there is the trivial way and the technical way to do so (and this is really about simplification so we don’t end up getting an inverse trig function inside a trig function).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-732-TrigSub_Tangent-3-3-7">
+<div class="para">
+<em class="alert">Trivial Way:</em> Recall the substitution we made is <span class="process-math">\(x = 2\tan(\theta)\text{.}\)</span> Isolating <span class="process-math">\(\theta\)</span> will give us <span class="process-math">\(\theta = \tan^{-1}\left(\frac{x}{2}\right)\text{.}\)</span> Hence, we can plug in the <span class="process-math">\(\tan^{-1}\left(\frac{x}{2}\right)\)</span> for <span class="process-math">\(\theta\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{4}\csc(\theta) + C = -\frac{1}{4}\csc\left(\tan^{-1}\left(\frac{x}{2}\right)\right) + C 
+\end{equation*}
+</div>
+<div class="para">But the answer is really messy mainly because there is an inverse trig function inside a trig function. It seems like we may be able to simplify the answer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-732-TrigSub_Tangent-3-3-8">
+<em class="alert">Technical Way:</em> We can do the same trick of constructing a right triangle (the right triangle should look like the second right triangle in the investigation task) and figure out what the <span class="process-math">\(\csc(\theta)\)</span> value is, as the figure below shows.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="subsec-732-TrigSub_Tangent-3-3-9"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-732-TrigSub_Tangent-3-3-9-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A right triangle with <span class="process-math">\(\tan(\theta) = \frac{x}{2}\)</span><div class="autopermalink" data-description="Figure 7.3.8"><a href="#subsec-732-TrigSub_Tangent-3-3-9" title="Copy heading and permalink for Figure 7.3.8" aria-label="Copy heading and permalink for Figure 7.3.8">🔗</a></div></figcaption></figure><div class="para logical" id="subsec-732-TrigSub_Tangent-3-3-10">
+<div class="para">Observe that <span class="process-math">\(\csc(\theta) = \frac{\sqrt{4 + x^2}}{x}\text{.}\)</span> Now plugging this back to the antiderivative, we have</div>
+<div class="displaymath process-math" id="subsec-732-TrigSub_Tangent-3-3-10-2">
+\begin{align*}
+-\frac{1}{4}\csc(\theta) + C \amp= -\frac{1}{4}\cdot \frac{\sqrt{4 + x^2}}{x} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.3.7.1"><a href="#subsec-732-TrigSub_Tangent-3-3" title="Copy heading and permalink for Solution 7.3.7.1" aria-label="Copy heading and permalink for Solution 7.3.7.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.3.7"><a href="#subsec-732-TrigSub_Tangent-3" title="Copy heading and permalink for Example 7.3.7" aria-label="Copy heading and permalink for Example 7.3.7">🔗</a></div></article><div class="para" id="subsec-732-TrigSub_Tangent-4">This was also a long example, but it again captures the essence of the second case of the trig sub.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-732-TrigSub_Tangent-5">
+<div class="para">If <span class="process-math">\(a^2 + x^2\)</span> is in the integral, then try the substitution <span class="process-math">\(x = a\tan(\theta)\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-732-TrigSub_Tangent-5-3">
+\begin{align*}
+a^2 + x^2 \amp= a^2 + \left(a\tan(\theta)\right)^2 \\
+\amp= a^2 + a^2 \tan^2(\theta) \\
+\amp= a^2 \left(1 + \tan^2(\theta)\right) \\
+\amp= a^2\sec^2(\theta) 
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{d\theta} = a\sec^2(\theta) \qquad\implies\qquad dx = a\sec^2(\theta)\, d\theta
+\end{equation*}
+</div>
+<div class="para">Then we can deal with a (usually) simpler trigonometric integral. Observe that the trigonometric identity that allows us to simplify stuff is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 + \tan^2(\theta) = \sec^2(\theta)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-732-TrigSub_Tangent-6">For strategies to deal with a trigonometric integral, feel free to consult <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-732-TrigSub_Tangent-7">If you are reading our textbook, this case is labeled as "integrals involving <span class="process-math">\(\sqrt{a^2 + x^2}\)</span>". This is similar to the first case of the trig sub that having a square root will just make the trig integral we get after the trig sub to be easier (and half of the time, it actually doesn’t), but the square root should have no impact on the determination of using trig sub.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-732-TrigSub_Tangent-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Integrals Involving \boldsymbol{a^2 + x^2}"><a href="#subsec-732-TrigSub_Tangent" title="Copy heading and permalink for Subsection: Integrals Involving \boldsymbol{a^2 + x^2}" aria-label="Copy heading and permalink for Subsection: Integrals Involving \boldsymbol{a^2 + x^2}">🔗</a></div></section><section class="subsection" id="subsec-733-TrigSub_Secant"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{x^2 - a^2}\)</span></span>
+</h3>
+<div class="para" id="subsec-733-TrigSub_Secant-2">By now, you may get the idea that we may be able to make a trig sub to deal with the integrals involving <span class="process-math">\(x^2 - a^2\text{.}\)</span> The answer is yes! This will be the third case of the trig sub.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-733-TrigSub_Secant-3">
+<div class="para">If <span class="process-math">\(x^2 - a^2\)</span> is in the integral, then try the substitution <span class="process-math">\(x = a\sec(\theta)\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-733-TrigSub_Secant-3-3">
+\begin{align*}
+x^2 - a^2 \amp= \left(a\sec(\theta)\right)^2 - a^2 \\
+\amp= a^2 \sec^2(\theta) - a^2 \\
+\amp= a^2 \left(\sec^2(\theta) - 1\right) \\
+\amp= a^2 \tan^2(\theta) 
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{d\theta} = a\sec(\theta)\tan(\theta) \qquad\implies\qquad dx = a\sec(\theta)\tan(\theta)\, d\theta
+\end{equation*}
+</div>
+<div class="para">Then we can deal with a (usually) simpler trigonometric integral. Observe that the trigonometric identity that allows us to simplify stuff is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 + \tan^2(\theta) = \sec^2(\theta)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-733-TrigSub_Secant-4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-733-TrigSub_Secant-4-1">Evaluate the definite integral <span class="process-math">\(\displaystyle \int_1^4 \frac{\sqrt{t^2 + 4t - 5}}{t + 2}\, dt\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-733-TrigSub_Secant-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-733-TrigSub_Secant-4-2-1">Observe that there is no <span class="process-math">\(x^2 - a^2\)</span> in the integral... But there has to be a <span class="process-math">\(x^2 - a^2\)</span> in the integral (or why Richard put this problem as an example here)...<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-733-TrigSub_Secant-4-2-2">This is an algebraic trick you will need for an Edfinity problem. To force out some squares in the integrand, you may consider doing a <em class="emphasis">completing the square</em> on the trinomial.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-733-TrigSub_Secant-4-2-3">If the method of completing the square sounds familiar but you don’t remember much of it, Google it or ask Richard (he has a very pretty diagram about it when he teaches this in MTH 95 at PCC).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.3.9.1"><a href="#subsec-733-TrigSub_Secant-4-2" title="Copy heading and permalink for Hint 7.3.9.1" aria-label="Copy heading and permalink for Hint 7.3.9.1">🔗</a></div>
+</div></details><details id="subsec-733-TrigSub_Secant-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-733-TrigSub_Secant-4-3-1">
+<div class="para">Using the method of <em class="emphasis">completing the square</em> on the trinomial inside the square root, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t^2 + 4t - 5 = \left(t + \frac{4}{2}\right)^2 - 5 - \left(\frac{4}{2}\right)^2 = (t + 2)^2 - 9
+\end{equation*}
+</div>
+<div class="para">Then we can rewrite the problem as follows:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_1^4 \frac{(t + 2)^2 - 9}{t + 2}\, dt
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-733-TrigSub_Secant-4-3-2">
+<div class="para">Observe that now we are observing a <span class="process-math">\(x^2 - a^2\)</span> in the integrand if <span class="process-math">\(x = t + 2\)</span> and <span class="process-math">\(a = 3\text{.}\)</span> This implies a small little <span class="process-math">\(u\)</span>-sub (or <span class="process-math">\(x\)</span>-sub) to match the format of this case using trig sub.</div>
+<div class="displaymath process-math" id="subsec-733-TrigSub_Secant-4-3-2-6">
+\begin{align*}
+\int_1^4 \frac{(t + 2)^2 - 9}{t + 2}\, dt \amp= \int_{x(1)}^{x(4)} \frac{\sqrt{x^2 - 3^2}}{x}\, dx \\
+\amp= \int_{3}^{6} \frac{\sqrt{x^2 - 3^2}}{x}\, dx 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-733-TrigSub_Secant-4-3-3">
+<div class="para">Now this integral looks like something we can do a trig sub on! Let <span class="process-math">\(x = 3\sec(\theta)\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-733-TrigSub_Secant-4-3-3-2">
+\begin{align*}
+\sqrt{x^2 - 3^2} \amp= \sqrt{3^2\sec^2(\theta) - 3^2} \\
+\amp= \sqrt{3^2\left(\sec^2(\theta) - 1\right)} \\
+\amp= \sqrt{3^2 \tan^2(\theta)} \amp\amp\text{by the Pythagorean Identity} \\
+\amp= 3\tan(\theta) 
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{d\theta} = 3\sec(\theta)\tan(\theta)
+\qquad\implies\qquad
+dx = 3\sec(\theta)tan(\theta)\, d\theta
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-733-TrigSub_Secant-4-3-4">
+<div class="para">Also, since we changed the variable from <span class="process-math">\(x\)</span> to <span class="process-math">\(\theta\text{,}\)</span> <em class="alert">we will need to adjust the limits of integration.</em>
+</div>
+<ul class="no-marker" id="subsec-733-TrigSub_Secant-4-3-4-4">
+<li id="subsec-733-TrigSub_Secant-4-3-4-4-1">
+<div class="para" id="subsec-733-TrigSub_Secant-4-3-4-4-1-1">When <span class="process-math">\(x = 6\text{,}\)</span> then <span class="process-math">\(6 = 3\sec(\theta)\text{,}\)</span> which implies that <span class="process-math">\(\theta = \sec^{-1}\left(\frac{6}{3}\right) = \dfrac{\pi}{3}\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-3-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-733-TrigSub_Secant-4-3-4-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-733-TrigSub_Secant-4-3-4-4-2">
+<div class="para" id="subsec-733-TrigSub_Secant-4-3-4-4-2-1">When <span class="process-math">\(x = 3\text{,}\)</span> then <span class="process-math">\(3 = 3\sec(\theta)\text{,}\)</span> which implies that <span class="process-math">\(\theta = \sec^{-1}\left(\dfrac{3}{3}\right) = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-3-4-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-733-TrigSub_Secant-4-3-4-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-733-TrigSub_Secant-4-3-5">
+<div class="para">Now let’s plug everything back to the integral and see if the integral becomes easier.</div>
+<div class="displaymath process-math" id="subsec-733-TrigSub_Secant-4-3-5-1">
+\begin{align*}
+\int_{3}^{6} \frac{\sqrt{x^2 - 3^2}}{x}\, dx \amp= \int_0^\frac{\pi}{3} \frac{3\tan(\theta)}{3\sec(\theta)}\cdot 3\sec(\theta)\tan(\theta)\, d\theta \\
+\amp= \int_0^\frac{\pi}{3} \tan^2(\theta)\, d\theta 
+\end{align*}
+</div>
+<div class="para">The integral is definitely easier and we can evaluate it using the Pythagorean Identity.</div>
+<div class="displaymath process-math" id="subsec-733-TrigSub_Secant-4-3-5-2">
+\begin{align*}
+\int_0^\frac{\pi}{3} \tan^2(\theta)\, d\theta \amp= \int_0^\frac{\pi}{3} \left(\sec^2(\theta) + 1\right)\, d\theta \\
+\amp= \left(\tan(\theta) + \theta\right)\bigg|_{\theta = 0}^\frac{\pi}{3} \\
+\amp= \tan\left(\frac{\pi}{3}\right) + \frac{\pi}{3} \\
+\amp= \sqrt{3} + \frac{\pi}{3} \\
+\amp= 2.77924835877 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-733-TrigSub_Secant-4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.3.9.1"><a href="#subsec-733-TrigSub_Secant-4-3" title="Copy heading and permalink for Solution 7.3.9.1" aria-label="Copy heading and permalink for Solution 7.3.9.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.3.9"><a href="#subsec-733-TrigSub_Secant-4" title="Copy heading and permalink for Example 7.3.9" aria-label="Copy heading and permalink for Example 7.3.9">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Integrals Involving \boldsymbol{x^2 - a^2}"><a href="#subsec-733-TrigSub_Secant" title="Copy heading and permalink for Subsection: Integrals Involving \boldsymbol{x^2 - a^2}" aria-label="Copy heading and permalink for Subsection: Integrals Involving \boldsymbol{x^2 - a^2}">🔗</a></div></section><section class="worksheet" id="ws-sec73" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec73-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="introduction" id="ws-sec73-2"><div class="para" id="ws-sec73-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ws-sec73-2-2">I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="exercisegroup" id="ws-sec73-3">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec73-3-1"><div class="para" id="ws-sec73-3-1-1">Evaluate the following integrals<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec73-3-2"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec73-3-2-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{\left(16 - x^2\right)^\frac{3}{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#ws-sec73-3-2" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec73-3-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec73-3-3-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{x\sqrt{x^2 + 16}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#ws-sec73-3-3" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec73-3-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec73-3-4-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{\sqrt{x^2 - 9}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 3"><a href="#ws-sec73-3-4" title="Copy heading and permalink for Worksheet Exercise 3" aria-label="Copy heading and permalink for Worksheet Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec73-3-5"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec73-3-5-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dy}{y^2\sqrt{5 - y^2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 4"><a href="#ws-sec73-3-5" title="Copy heading and permalink for Worksheet Exercise 4" aria-label="Copy heading and permalink for Worksheet Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec73-3-6"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec73-3-6-1-1">
+<span class="process-math">\(\displaystyle \int \frac{x^2\, dx}{\left(x^2 + 1\right)^\frac{3}{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 5"><a href="#ws-sec73-3-6" title="Copy heading and permalink for Worksheet Exercise 5" aria-label="Copy heading and permalink for Worksheet Exercise 5">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1–5"><a href="#ws-sec73-3" title="Copy heading and permalink for Exercise Group 1–5" aria-label="Copy heading and permalink for Exercise Group 1–5">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ws-sec73-4">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec73-4-1"><div class="para" id="ws-sec73-4-1-1">Evaluate the following integral by first using a <span class="process-math">\(u\)</span>-sub.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec73-4-2"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec73-4-2-1-1">
+<span class="process-math">\(\displaystyle \int \sqrt{16 - 5x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 6"><a href="#ws-sec73-4-2" title="Copy heading and permalink for Worksheet Exercise 6" aria-label="Copy heading and permalink for Worksheet Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec73-4-3"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec73-4-3-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{\sqrt{25x^2 + 2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 7"><a href="#ws-sec73-4-3" title="Copy heading and permalink for Worksheet Exercise 7" aria-label="Copy heading and permalink for Worksheet Exercise 7">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 6–7"><a href="#ws-sec73-4" title="Copy heading and permalink for Exercise Group 6–7" aria-label="Copy heading and permalink for Exercise Group 6–7">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="ws-sec73-5"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ws-sec73-5-1-1">Evaluate the integral <span class="process-math">\(\displaystyle \int x^3\sqrt{9 - x^2}\text{.}\)</span> You will need to find a good strategy to evaluate the trigonometric integral in <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec73-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 8"><a href="#ws-sec73-5" title="Copy heading and permalink for Worksheet Exercise 8" aria-label="Copy heading and permalink for Worksheet Exercise 8">🔗</a></div></article><div class="autopermalink" data-description="Worksheet: Some Exercises for this section"><a href="#ws-sec73" title="Copy heading and permalink for Worksheet: Some Exercises for this section" aria-label="Copy heading and permalink for Worksheet: Some Exercises for this section">🔗</a></div></section><div class="autopermalink" data-description="Section 7.3: Trigonometric Substitution"><a href="#sec73-TrigSub" title="Copy heading and permalink for Section 7.3: Trigonometric Substitution" aria-label="Copy heading and permalink for Section 7.3: Trigonometric Substitution">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec72-TrigIntegral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec74-HyperbolicIntegral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec72-TrigIntegral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendixA-WrittenHomework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
