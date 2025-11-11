@@ -3,6 +3,854 @@
 <section xml:id="sec73-TrigSub" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Trigonometric Substitution</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, we will learn another substitution method to evaluate integrals, called the <alert>Trigonometric Substitution</alert>. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            identify the correct case for the trig substitution 
+          </p>
+        </li>
+        <li>
+          <p>
+            perform a trig substitution to convert the integral to a trigonometric integral
+          </p>
+        </li>
+        <li>
+          <p>
+            evaluate the trigonometric integral using formulas/strategies in <xref ref="sec72-TrigIntegral"/>
+          </p>
+        </li>
+      </ul>
+    </objectives>
+  </introduction>
+
+  <investigation>
+    <introduction>
+      <p>
+        Let's do a quick review on right triangles and basic trigonometry. 
+        There are three right triangles below. 
+        We know about a non-right angle <m>\theta</m> and two sides, <m>x</m> and <m>a</m>. 
+        Your task is to 
+        <ul>
+          <li>
+            <p>
+              find the missing side of the right triangle, and 
+            </p>
+          </li>
+          <li>
+            <p>
+              set up a trigonometric ratio using <m>\theta</m>, <m>x</m>, and <m>a</m>.  
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+
+    <task>
+      <figure>
+        <caption>Right Triangle Case I</caption>
+        <image width="50%">
+          <latex-image>
+            \usetikzlibrary{angles, quotes}
+            \begin{tikzpicture}
+              % Define triangle vertices
+              \coordinate (A) at (0,0);
+              \coordinate (B) at (5,0);
+              \coordinate (C) at (5,3);
+            
+              % Draw triangle
+              \draw (A) -- (B) -- (C) -- cycle;
+            
+              % Draw right angle symbol
+              \draw (B) ++(-0.5,0) -- ++(0,0.5) -- ++(0.5,0);
+            
+              % Label sides
+              \draw (A) -- (C) node[midway, left] {$a$};
+              \draw (A) -- (B) node[midway, below] { };
+              \draw (B) -- (C) node[midway, above right] {$x$};
+            
+              % Label angle
+              \pic [draw, angle radius=0.8cm, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+
+      <solution>
+        <p>
+          Observe that the missing side is <m>\sqrt{a^2 - x^2}</m> and <m>\sin(\theta) = \dfrac{x}{a}</m>. 
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <figure>
+        <caption>Right Triangle Case II</caption>
+        <image width="50%">
+          <latex-image>
+            \usetikzlibrary{angles, quotes}
+            \begin{tikzpicture}
+              % Define triangle vertices
+              \coordinate (A) at (0,0);
+              \coordinate (B) at (5,0);
+              \coordinate (C) at (5,3);
+            
+              % Draw triangle
+              \draw (A) -- (B) -- (C) -- cycle;
+            
+              % Draw right angle symbol
+              \draw (B) ++(-0.5,0) -- ++(0,0.5) -- ++(0.5,0);
+            
+              % Label sides
+              \draw (A) -- (C) node[midway, left] { };
+              \draw (A) -- (B) node[midway, below] {$a$};
+              \draw (B) -- (C) node[midway, above right] {$x$};
+            
+              % Label angle
+              \pic [draw, angle radius=0.8cm, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+
+      <solution>
+        <p>
+          Observe that the missing side is <m>\sqrt{a^2 + x^2}</m> and <m>\tan(\theta) = \dfrac{x}{a}</m>. 
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <figure>
+        <caption>Right Triangle Case III</caption>
+        <image width="50%">
+          <latex-image>
+            \usetikzlibrary{angles, quotes}
+            \begin{tikzpicture}
+              % Define triangle vertices
+              \coordinate (A) at (0,0);
+              \coordinate (B) at (5,0);
+              \coordinate (C) at (5,3);
+            
+              % Draw triangle
+              \draw (A) -- (B) -- (C) -- cycle;
+            
+              % Draw right angle symbol
+              \draw (B) ++(-0.5,0) -- ++(0,0.5) -- ++(0.5,0);
+            
+              % Label sides
+              \draw (A) -- (C) node[midway, left] {$x$};
+              \draw (A) -- (B) node[midway, below] {$a$};
+              \draw (B) -- (C) node[midway, above right] { };
+            
+              % Label angle
+              \pic [draw, angle radius=0.8cm, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+
+      <solution>
+        <p>
+          Observe that the missing side is <m>\sqrt{x^2 - a^2}</m> and <m>\sec(\theta) = \dfrac{x}{a}</m>. 
+        </p>
+      </solution>
+    </task>
+
+  </investigation>
+
+  <p>
+    You may be wondering what all of them have to do with integrals... 
+    These three right triangles are the three base cases of <alert>trigonometric substitution</alert>. 
+  </p>
+
+  <p>
+    <alert>Trigonometric substitution</alert> (or trig sub for short), means we are making substitutions using trigonometric functions. 
+    Recall a goal of the substitution method back in section 5.7 when we learned the <m>u</m>-sub is to make the integral <em>easier</em>. 
+    An advantage of trig sub here is that we can convert an un-simplified-able expression to a trigonometric expression, and we can manipulate it using trigonometric identities. 
+  </p>
+
+  <subsection xml:id="subsec-731-TrigSub_Sine">
+    <title>Integrals Involving <m>\boldsymbol{a^2 - x^2}</m></title>
+
+    <p>
+      When you see an "<m>a^2 - x^2</m>" in the integral, you may be able to solve it using a trig sub. 
+      The <m>a^2 - x^2</m> should remind you of the first right triangle in the investigation task because the missing side of the triangle is <m>\sqrt{a^2 - x^2}</m>. 
+    </p>
+
+    <example>
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int \frac{x^2\, dx}{\sqrt{9 - x^2}}</m>
+      </p>
+
+      <hint>
+        <p>
+          Observe that we can't simplify the integrand here, and there is no integral formulas we learned before that has a similar form of the integrand (not even the formulas involving inverse trig functions). 
+        </p>
+
+        <p>
+          You can try making a <m>u</m>-sub, but Richard can tell you right now that there is no choice of <m>u</m> that will work out. 
+        </p>
+
+        <p>
+          You may also be considering using integration by parts. 
+          But this involves turning the fraction into a product and it seems complicated to work out all the <m>u</m>'s and <m>v</m>'s... 
+          You can for sure give it a go but Richard has a feeling that this will be complicated... 
+        </p>
+
+        <p>
+          Hmm... but is there an easier way to tackle this problem... 
+        </p>
+
+        <p>
+          Richard is again come to your rescue! He is going to make a suggestion! 
+          Let's try this substitution to let <m>x = 3\sin(\theta)</m>. 
+          What does the integral look like after we fully substitute all the <m>x</m>'s with the <m>\theta</m>'s? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let's follow Richard's hint and make the substitution that <m>x = 3\sin(\theta)</m>. 
+          Then this will imply that <m>x^2 = 9\sin^2(\theta)</m> and 
+          <md>
+            <mrow>\sqrt{9 - x^2} \amp= \sqrt{9 - 9\sin^2(\theta)} </mrow>
+            <mrow> \amp= \sqrt{9\left(1 - \sin^2(\theta\right))} </mrow>
+            <mrow> \amp= \sqrt{9\cos^2(\theta)}\amp\amp \text{by the Pythagorean Identity} </mrow>
+            <mrow> \amp= 3\cos(\theta) </mrow>
+          </md>
+        </p>
+
+        <p>
+          Remember we also want to convert the <m>dx</m> to something with a <m>d\theta</m>. 
+          Observe that
+          <me>
+            \frac{dx}{d\theta} = 3\cos(\theta)
+            \qquad\implies\qquad
+            dx = 3\cos(\theta)\, d\theta
+          </me>
+        </p>
+
+        <p>
+          Now it looks like all the <m>x</m>'s have been converted to <m>\theta</m>'s. 
+          Let's plug them back into the integral and see whether the integral will become easier. 
+          <me>
+            \int \frac{x^2\, dx}{\sqrt{9 - x^2}} = \int \frac{9\sin^2(\theta)\cdot 3\cos(\theta)\, d\theta}{3\cos(\theta)} = 9\int \sin^2(\theta)\, d\theta
+          </me>
+          Observe how much easier-looking the integral became after this substitution! 
+          We no longer have fractions and square roots! All we had here is a <m>\sin^2(\theta)</m>. 
+        </p>
+
+        <p>
+          You can actually find a formula to evaluate <m>\int \sin^2(\theta)\, d\theta</m> in <xref ref="sec72-TrigIntegral"/> (more specifically, in <xref ref="subsec-723AdvancedTrigIntegral"/>). 
+        </p>
+
+        <p>
+          Now using the formula, we have
+          <md>
+            <mrow> \int \frac{x^2\, dx}{\sqrt{9 - x^2}} \amp= 9\int \sin^2(\theta)\, d\theta </mrow>
+            <mrow> \amp= 9\left(\frac{\theta}{2} - \frac{\sin(2\theta)}{4}\right) + C </mrow>
+            <mrow> \amp= \frac{9\theta}{2} - \frac{9\sin(2\theta)}{4} + C</mrow>
+          </md>
+        </p>
+
+        <p>
+          The last step here is to plug back whatever <m>\theta</m> is in terms of <m>x</m>. 
+          There are actually a trivial way and a technical way to do so. 
+        </p>
+
+        <p>
+          <alert>Trivial Way:</alert> Recall the substitution we made is <m>x = 3\sin(\theta)</m>. 
+          Isolating <m>\theta</m> will give us <m>\theta = \sin^{-1}\left(\frac{x}{3}\right)</m>. 
+          Hence, we can plug in the <m>\sin^{-1}\left(\frac{x}{3}\right)</m> for <m>\theta</m>. 
+          <me>
+            \frac{9\theta}{2} - \frac{9\sin(2\theta)}{4} + C = \frac{9\sin^{-1}\left(\frac{x}{3}\right)}{2} - \frac{9\sin\left(2\cdot \sin^{-1}\left(\frac{x}{3}\right)\right)}{4} + C
+          </me>
+          But look at how messy the answer is... 
+          You can for sure simplify this scary-looking answer using the technical way. 
+        </p>
+        
+        <p>
+          <alert>P.S.:</alert> If all you care about is to obtain a correct answer, however messy it is, put it to Edfinity, and move on, Richard is 80% sure that Edfinity will recognize answers like this if it is correct.  
+        </p>
+
+        <p>
+          <alert>Technical Way:</alert> We know <m>\theta = \sin^{-1}\left(\frac{x}{3}\right)</m>. There is no way to make it easier. 
+          But we can do something fun to plug things in for the <m>\sin(2\theta)</m>! 
+          By the double angle identity, we know that <m>\sin(2\theta) = 2\sin(\theta)\cos(\theta)</m>, and <m>\sin(\theta) = \frac{x}{3}</m> based on the substitution we made. 
+          Then what is <m>\cos(\theta)</m> in our substitution? 
+        </p>
+
+        <p>
+          This is a classical MTH 112Z problem to find the cosine value given the sine value. 
+          An easier way is to literally draw a right triangle that looks like the first right triangle in the investigation task and figure out the cosine value, as the figure below shows. 
+        </p>
+
+        <figure>
+          <caption>A right triangle with <m>\sin(\theta) = \frac{x}{3}</m></caption>
+          <image width="50%">
+            <latex-image>
+              \usetikzlibrary{angles, quotes}
+              \begin{tikzpicture}
+                % Define triangle vertices
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (5,0);
+                \coordinate (C) at (5,3);
+            
+                % Draw triangle
+                \draw (A) -- (B) -- (C) -- cycle;
+            
+                % Draw right angle symbol
+                \draw (B) ++(-0.5,0) -- ++(0,0.5) -- ++(0.5,0);
+            
+                % Label sides
+                \draw (A) -- (C) node[midway, left] {$3$};
+                \draw (A) -- (B) node[midway, below] {$\sqrt{9 - x^2}$};
+                \draw (B) -- (C) node[midway, above right] {$x$};
+            
+                % Label angle
+                \pic [draw, angle radius=0.8cm, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Observe that <m>\cos(\theta) = \frac{\sqrt{9 - x^3}}{3}</m>. This implies that
+          <me>
+            \sin(2\theta) = 2\sin(\theta)\cos(\theta) = 2\cdot \frac{x}{3}\cdot \frac{\sqrt{9 - x^2}}{3}
+          </me>
+          Now plugging in this back to the antiderivative, we have
+          <md>
+            <mrow> \frac{9\theta}{2} - \frac{9\sin(2\theta)}{4} + C \amp= \frac{9\sin^{-1}\left(\frac{x}{3}\right)}{2} - \frac{9}{4}\cdot 2\cdot \frac{x}{3}\cdot \frac{\sqrt{9 - x^2}}{3} + C </mrow>
+            <mrow> \amp= \frac{9}{2}\sin^{-1}\left(\frac{x}{3}\right) - \frac{1}{2}x\sqrt{9 - x^2} + C </mrow>
+          </md>
+          This answer is the simplified answer. 
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      That was a long example, but it captures the essence of the first case of the trig sub. 
+    </p>
+
+    <p>
+      If <m>a^2 - x^2</m> is in the integral, then try the substitution <m>x = a\sin(\theta)</m>. 
+      Then
+      <md>
+        <mrow> a^2 - x^2 \amp= a^2 - \left(a\sin(\theta)\right)^2 </mrow>
+        <mrow> \amp= a^2 - a^2 \sin^2(\theta) </mrow>
+        <mrow> \amp= a^2 \left(1 - \sin^2(\theta)\right) </mrow>
+        <mrow> \amp= a^2\cos^2(\theta) </mrow>
+      </md>
+      and
+      <me>
+        \frac{dx}{d\theta} = a\cos(\theta) \qquad\implies\qquad dx = a\cos(\theta)\, d\theta
+      </me>
+      Then we can deal with a (usually) simpler trigonometric integral. Observe that the trigonometric identity that allows us to simplify stuff is 
+      <me>
+        \sin^2(\theta) + \cos^2(\theta) = 1
+      </me>
+    </p>
+
+    <p>
+      For strategies to deal with a trigonometric integral, feel free to consult <xref ref="sec72-TrigIntegral"/>. 
+    </p>
+    
+    <p>
+      If you are reading our textbook, this case is labeled as "integrals involving <m>\sqrt{a^2 - x^2}</m>". 
+      The reason why your textbook throw in the square root is because dealing with powers of sine (and cosine) isn't quite easy. 
+      But this will have no impact on the determination of using trig sub itself. 
+      So the square root may make the trigonometric integral easier after the trig sub, but the trig sub will work without the square root. 
+    </p>
+
+    <p>
+      Let's look at an example of the definite integrals using a trig sub. 
+      Recall back in section 5.7 that we need to adjust the limits of integration when doing a <m>u</m>-sub since we changed the variable. 
+      Similarly, trig sub is essentially a substitution method in the sense that we use a new variable <m>\theta</m>. 
+      <alert>So make sure you adjust the limits of integration when doing a trig sub!</alert>
+    </p>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_\frac{1}{2}^1 \frac{\sqrt{1 - x^2}}{x^2}\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          Observe that the integral contain <m>1 - x^2</m>, which takes the form of <m>a^2 - x^2</m>, where <m>a = 1</m>. 
+          Then what trig sub should we do here? 
+        </p>
+
+        <p>
+          In addition, this in a definite integral. 
+          Given that we are essentially changing the variable from <m>x</m> to <m>\theta</m>, we will need to <alert>adjust the limits of integration</alert>! 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let <m>x = \sin(\theta)</m>. 
+          Then we know that <m>x^2 = \sin^2(\theta)</m>,  
+          <me>
+            \sqrt{1 - x^2} = \sqrt{1 - \sin^2(\theta)} = \sqrt{\cos^2(\theta)} = \cos(\theta)
+          </me>
+          and
+          <me>
+            \frac{dx}{d\theta} = \cos(x) 
+            \qquad\implies\qquad
+            dx = \cos(x)\, d\theta
+          </me>
+        </p>
+
+        <p>
+          <alert>Remember we also need to adjust the limits of integration!!</alert>
+          <ul marker="">
+            <li>
+              <p>
+                When <m>x = 1</m>, then <m>1 = \sin(\theta)</m>, which implies that <m>\theta = \sin^{-1}(1) = \dfrac{\pi}{2}</m>; 
+              </p>
+            </li>
+            <li>
+              <p>
+                When <m>x = \dfrac{1}{2}</m>, then <m>\dfrac{1}{2} = \sin(\theta)</m>, which implies that <m>\theta = \sin^{-1}\left(\dfrac{1}{2}\right) = \dfrac{\pi}{6}</m>. 
+              </p>
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          Now let's plug everything back to the integral and see if the integral becomes easier. 
+          <md>
+            <mrow> \int_\frac{1}{2}^1 \frac{\sqrt{1 - x^2}}{x^2}\, dx \amp= \int_\frac{\pi}{6}^\frac{\pi}{2} \frac{\cos(\theta)}{\sin^2(\theta)}\cdot \cos(\theta)\, d\theta </mrow>
+            <mrow> \amp= \int_\frac{\pi}{6}^\frac{\pi}{2} \frac{\cos^2(\theta)}{\sin^2(\theta)}\, d\theta </mrow>
+            <mrow> \amp= \int_\frac{\pi}{6}^\frac{\pi}{2} \cot^2(\theta)\, d\theta </mrow>
+          </md>
+        </p>
+
+        <p>
+          Observe that this trig integral does look easier than what we started. <xref ref="sec72-TrigIntegral"/> is the section about integrating trig integrals so you may be able to find some clues there to evaluate this integral. 
+          It turns out that one of the integral formulas we learned back in <xref ref="sec53-IndefiniteIntegral"/> when we un-did the derivative formulas in calculus 1 is useful
+          (see <xref ref="thm-BasicTrigIntegrals"/>). 
+          <md>
+            <mrow> \int_\frac{\pi}{6}^\frac{\pi}{2} \cot^2(\theta)\, d\theta \amp = \int_\frac{\pi}{6}^\frac{\pi}{2} \left(\csc^2(\theta) - 1\right)\, d\theta \amp\amp \text{by the Pythagorean Identity} </mrow>
+            <mrow> \amp= \left(-\cot(\theta) - \theta\right)\bigg|_{\theta = \frac{\pi}{6}}^\frac{\pi}{2} </mrow>
+            <mrow> \amp= \left(-\cot\left(\frac{\pi}{2}\right) - \frac{\pi}{2}\right) - \left(-\cot\left(\frac{\pi}{6}\right) - \frac{\pi}{6}\right) </mrow>
+            <mrow> \amp= - \frac{\pi}{2} + \sqrt{3} + \frac{\pi}{6} </mrow>
+            <mrow> \amp\approx 0.684853256372 </mrow>
+          </md>
+        </p>
+
+        <p>
+          
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-732-TrigSub_Tangent">
+    <title>Integrals Involving <m>\boldsymbol{a^2 + x^2}</m></title>
+    
+    <p>
+      When you see an "<m>a^2 + x^2</m>" in the integral, you may also be able to solve it using a trig sub. 
+      The <m>a^2 + x^2</m> should remind you of the second right triangle in the investigation task because the missing side of the triangle is <m>\sqrt{a^2 + x^2}</m>. 
+    </p>
+
+    <example>
+      <p>
+        Evaluate the indefinite integral <m>\displaystyle \int \frac{dx}{x^2\sqrt{4 + x^2}}</m>
+      </p>
+
+      <hint>
+        <p>
+          Similarly, there is no way to simplify this integral. 
+          Also, <m>u</m>-sub and integration by parts won't work either. 
+        </p>
+
+        <p>
+          Richard is feeling generous and he is providing another suggestion! 
+          Let's try the substitution to let <m>x = 2\tan(\theta)</m>. 
+          Does the integral become easier-looking after we fully substitute all the <m>x</m>'s with the <m>\theta</m>'s? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Let's again follow Richard's hint and make the substitution that <m>x = 2\tan(\theta)</m>. 
+          Then this implies that <m>x^2 = 4\tan^2(\theta)</m> and 
+          <md>
+            <mrow> \sqrt{4 + x^2} \amp= \sqrt{4 + 4\tan^2(\theta)} </mrow>
+            <mrow> \amp= \sqrt{4\left(1 + \tan^2(\theta)\right)} </mrow>
+            <mrow> \amp= \sqrt{4\sec^2(\theta)} \amp\amp\text{by the Pythagorean Identity} </mrow>
+            <mrow> \amp= 2\sec(\theta) </mrow>
+          </md>
+        </p>
+
+        <p>
+          Remember we also want to convert the <m>dx</m> to something with a <m>d\theta</m>. 
+          Observe that
+          <me>
+            \frac{dx}{d\theta} = 2\sec^2(\theta)
+            \qquad\implies\qquad
+            dx = 2\sec^2(\theta)\, d\theta
+          </me>
+        </p>
+
+        <p>
+          Now it looks like all the <m>x</m>'s have been converted to <m>\theta</m>'s. 
+          Let's plug them back into the integral and see whether the integral will become easier. 
+          <me>
+            \int \frac{dx}{x^2\sqrt{4 + x^2}} = \int \frac{2\sec^2(\theta)\, d\theta}{4\tan^2(\theta)\cdot 2\sec(\theta)} = \frac{1}{4}\int \frac{\sec(\theta)}{\tan^2(\theta)}\, d\theta
+          </me>
+          Hmm... it seems like the integral still looks complicated. 
+          But a good thing with trig is that we can convert everything into sine and cosine! 
+          <me>
+            \frac{1}{4}\int \frac{\sec(\theta)}{\tan^2(\theta)}\, d\theta = \frac{1}{4}\int \frac{\frac{1}{\cos(\theta)}}{\frac{\sin^2(\theta)}{\cos^2(\theta)}}\, d\theta = \frac{1}{4}\int \frac{\cos(\theta)}{\sin^2(\theta)}\, d\theta
+          </me>
+        </p>
+
+        <p>
+          Now this integral is definitely u-sub-able! 
+          The strategy is similar to the integral of tangent and cotangent in <xref ref="sec72-TrigIntegral"/> (more specifically, in <xref ref="subsec-721BasicTrigIntegral"/>). 
+        </p>
+
+        <p>
+          Let <m>u = \sin(\theta)</m>. 
+          Then <m>du = \cos(\theta)\, d\theta</m>. 
+          This implies that
+          <md>
+            <mrow> \frac{1}{4}\int \frac{\cos(\theta)}{\sin^2(\theta)}\, d\theta \amp= \frac{1}{4}\frac{du}{u^2} </mrow>
+            <mrow> \amp= \frac{1}{4}\int u^{-2}\, du </mrow>
+            <mrow> \amp= -\frac{1}{4}\cdot \frac{1}{u} + C </mrow>
+            <mrow> \amp= -\frac{1}{4}\cdot \frac{1}{\sin(\theta)} </mrow>
+            <mrow> \amp= -\frac{1}{4}\csc(\theta) + C </mrow>
+          </md>
+        </p>
+
+        <p>
+          Now that we found the antiderivative, we will need to plug back whatever <m>\theta</m> is in terms of <m>x</m>. 
+          Again, there is the trivial way and the technical way to do so (and this is really about simplification so we don't end up getting an inverse trig function inside a trig function). 
+        </p>
+        
+        <p>
+          <alert>Trivial Way:</alert> Recall the substitution we made is <m>x = 2\tan(\theta)</m>. 
+          Isolating <m>\theta</m> will give us <m>\theta = \tan^{-1}\left(\frac{x}{2}\right)</m>. 
+          Hence, we can plug in the <m>\tan^{-1}\left(\frac{x}{2}\right)</m> for <m>\theta</m>. 
+          <me>
+            -\frac{1}{4}\csc(\theta) + C = -\frac{1}{4}\csc\left(\tan^{-1}\left(\frac{x}{2}\right)\right) + C 
+          </me>
+          But the answer is really messy mainly because there is an inverse trig function inside a trig function. 
+          It seems like we may be able to simplify the answer.  
+        </p>
+
+        <p>
+          <alert>Technical Way:</alert> We can do the same trick of constructing a right triangle (the right triangle should look like the second right triangle in the investigation task) and figure out what the <m>\csc(\theta)</m> value is, as the figure below shows. 
+        </p>
+        <figure>
+          <caption>A right triangle with <m>\tan(\theta) = \frac{x}{2}</m></caption>
+          <image width="50%">
+            <latex-image>
+              \usetikzlibrary{angles, quotes}
+              \begin{tikzpicture}
+                % Define triangle vertices
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (5,0);
+                \coordinate (C) at (5,3);
+            
+                % Draw triangle
+                \draw (A) -- (B) -- (C) -- cycle;
+            
+                % Draw right angle symbol
+                \draw (B) ++(-0.5,0) -- ++(0,0.5) -- ++(0.5,0);
+            
+                % Label sides
+                \draw (A) -- (C) node[midway, left] {$\sqrt{4 + x^2}$};
+                \draw (A) -- (B) node[midway, below] {$2$};
+                \draw (B) -- (C) node[midway, above right] {$x$};
+            
+                % Label angle
+                \pic [draw, angle radius=0.8cm, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Observe that <m>\csc(\theta) = \frac{\sqrt{4 + x^2}}{x}</m>. Now plugging this back to the antiderivative, we have
+          <md>
+            <mrow> -\frac{1}{4}\csc(\theta) + C \amp= -\frac{1}{4}\cdot \frac{\sqrt{4 + x^2}}{x} + C </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      This was also a long example, but it again captures the essence of the second case of the trig sub. 
+    </p>
+
+    <p>
+      If <m>a^2 + x^2</m> is in the integral, then try the substitution <m>x = a\tan(\theta)</m>. 
+      Then
+      <md>
+        <mrow> a^2 + x^2 \amp= a^2 + \left(a\tan(\theta)\right)^2 </mrow>
+        <mrow> \amp= a^2 + a^2 \tan^2(\theta) </mrow>
+        <mrow> \amp= a^2 \left(1 + \tan^2(\theta)\right) </mrow>
+        <mrow> \amp= a^2\sec^2(\theta) </mrow>
+      </md>
+      and
+      <me>
+        \frac{dx}{d\theta} = a\sec^2(\theta) \qquad\implies\qquad dx = a\sec^2(\theta)\, d\theta
+      </me>
+      Then we can deal with a (usually) simpler trigonometric integral. Observe that the trigonometric identity that allows us to simplify stuff is 
+      <me>
+        1 + \tan^2(\theta) = \sec^2(\theta)
+      </me>
+    </p>
+
+    <p>
+      For strategies to deal with a trigonometric integral, feel free to consult <xref ref="sec72-TrigIntegral"/>. 
+    </p>
+    
+    <p>
+      If you are reading our textbook, this case is labeled as "integrals involving <m>\sqrt{a^2 + x^2}</m>". 
+      This is similar to the first case of the trig sub that having a square root will just make the trig integral we get after the trig sub to be easier (and half of the time, it actually doesn't), but the square root should have no impact on the determination of using trig sub. 
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="subsec-733-TrigSub_Secant">
+    <title>Integrals Involving <m>\boldsymbol{x^2 - a^2}</m></title>
+    
+    <p>
+      By now, you may get the idea that we may be able to make a trig sub to deal with the integrals involving <m>x^2 - a^2</m>. 
+      The answer is yes! This will be the third case of the trig sub. 
+    </p>
+
+    <p>
+      If <m>x^2 - a^2</m> is in the integral, then try the substitution <m>x = a\sec(\theta)</m>. 
+      Then
+      <md>
+        <mrow> x^2 - a^2 \amp= \left(a\sec(\theta)\right)^2 - a^2 </mrow>
+        <mrow> \amp= a^2 \sec^2(\theta) - a^2 </mrow>
+        <mrow> \amp= a^2 \left(\sec^2(\theta) - 1\right) </mrow>
+        <mrow> \amp= a^2 \tan^2(\theta) </mrow>
+      </md>
+      and
+      <me>
+        \frac{dx}{d\theta} = a\sec(\theta)\tan(\theta) \qquad\implies\qquad dx = a\sec(\theta)\tan(\theta)\, d\theta
+      </me>
+      Then we can deal with a (usually) simpler trigonometric integral. Observe that the trigonometric identity that allows us to simplify stuff is 
+      <me>
+        1 + \tan^2(\theta) = \sec^2(\theta)
+      </me>
+    </p>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_1^4 \frac{\sqrt{t^2 + 4t - 5}}{t + 2}\, dt</m>
+      </p>
+
+      <hint>
+        <p>
+          Observe that there is no <m>x^2 - a^2</m> in the integral... 
+          But there has to be a <m>x^2 - a^2</m> in the integral (or why Richard put this problem as an example here)... 
+        </p>
+
+        <p>
+          This is an algebraic trick you will need for an Edfinity problem. 
+          To force out some squares in the integrand, you may consider doing a <em>completing the square</em> on the trinomial. 
+        </p>
+
+        <p>
+          If the method of completing the square sounds familiar but you don't remember much of it, Google it or ask Richard (he has a very pretty diagram about it when he teaches this in MTH 95 at PCC). 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Using the method of <em>completing the square</em> on the trinomial inside the square root, we obtain
+          <me>
+            t^2 + 4t - 5 = \left(t + \frac{4}{2}\right)^2 - 5 - \left(\frac{4}{2}\right)^2 = (t + 2)^2 - 9
+          </me>
+          Then we can rewrite the problem as follows: 
+          <me>
+            \int_1^4 \frac{(t + 2)^2 - 9}{t + 2}\, dt
+          </me>
+        </p>
+
+        <p>
+          Observe that now we are observing a <m>x^2 - a^2</m> in the integrand if <m>x = t + 2</m> and <m>a = 3</m>. 
+          This implies a small little <m>u</m>-sub (or <m>x</m>-sub) to match the format of this case using trig sub. 
+          <md>
+            <mrow>\int_1^4 \frac{(t + 2)^2 - 9}{t + 2}\, dt \amp= \int_{x(1)}^{x(4)} \frac{\sqrt{x^2 - 3^2}}{x}\, dx </mrow>
+            <mrow> \amp= \int_{3}^{6} \frac{\sqrt{x^2 - 3^2}}{x}\, dx </mrow>
+          </md>
+        </p>
+
+        <p>
+          Now this integral looks like something we can do a trig sub on! 
+          Let <m>x = 3\sec(\theta)</m>. Then 
+          <md>
+            <mrow>\sqrt{x^2 - 3^2} \amp= \sqrt{3^2\sec^2(\theta) - 3^2} </mrow>
+            <mrow> \amp= \sqrt{3^2\left(\sec^2(\theta) - 1\right)} </mrow>
+            <mrow> \amp= \sqrt{3^2 \tan^2(\theta)} \amp\amp\text{by the Pythagorean Identity} </mrow>
+            <mrow> \amp= 3\tan(\theta) </mrow>
+          </md>
+          and 
+          <me>
+            \frac{dx}{d\theta} = 3\sec(\theta)\tan(\theta)
+            \qquad\implies\qquad
+            dx = 3\sec(\theta)tan(\theta)\, d\theta
+          </me>
+        </p>
+
+        <p>
+          Also, since we changed the variable from <m>x</m> to <m>\theta</m>, <alert>we will need to adjust the limits of integration.</alert>
+          <ul marker="">
+            <li>
+              <p>
+                When <m>x = 6</m>, then <m>6 = 3\sec(\theta)</m>, which implies that <m>\theta = \sec^{-1}\left(\frac{6}{3}\right) = \dfrac{\pi}{3}</m>; 
+              </p>
+            </li>
+            <li>
+              <p>
+                When <m>x = 3</m>, then <m>3 = 3\sec(\theta)</m>, which implies that <m>\theta = \sec^{-1}\left(\dfrac{3}{3}\right) = 0</m>. 
+              </p>
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          Now let's plug everything back to the integral and see if the integral becomes easier. 
+          <md>
+            <mrow> \int_{3}^{6} \frac{\sqrt{x^2 - 3^2}}{x}\, dx \amp= \int_0^\frac{\pi}{3} \frac{3\tan(\theta)}{3\sec(\theta)}\cdot 3\sec(\theta)\tan(\theta)\, d\theta </mrow>
+            <mrow> \amp= \int_0^\frac{\pi}{3} \tan^2(\theta)\, d\theta </mrow>
+          </md>
+          The integral is definitely easier and we can evaluate it using the Pythagorean Identity. 
+          <md>
+            <mrow> \int_0^\frac{\pi}{3} \tan^2(\theta)\, d\theta \amp= \int_0^\frac{\pi}{3} \left(\sec^2(\theta) + 1\right)\, d\theta </mrow>
+            <mrow> \amp= \left(\tan(\theta) + \theta\right)\bigg|_{\theta = 0}^\frac{\pi}{3} </mrow>
+            <mrow> \amp= \tan\left(\frac{\pi}{3}\right) + \frac{\pi}{3} </mrow>
+            <mrow> \amp= \sqrt{3} + \frac{\pi}{3} </mrow>
+            <mrow> \amp= 2.77924835877 </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <worksheet xml:id="ws-sec73">
+    <title>Some Exercises for this section</title>
+    
+    <introduction>
+      <p>
+        I included some practice problems that cover some main concepts in this section. 
+        You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. 
+        Reach out to Richard for help if you get stuck or have any questions. 
+      </p>
+
+      <p>
+        I will only include the final answer to some of the problems for you to check your result. 
+        If you want to check your work, talk to Richard and he is happy to discuss the process with you. 
+      </p>
+    </introduction>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Evaluate the following integrals
+        </p>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{\left(16 - x^2\right)^\frac{3}{2}}</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{x\sqrt{x^2 + 16}}</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{\sqrt{x^2 - 9}}</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dy}{y^2\sqrt{5 - y^2}}</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{x^2\, dx}{\left(x^2 + 1\right)^\frac{3}{2}}</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Evaluate the following integral by first using a <m>u</m>-sub. 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \sqrt{16 - 5x^2}\, dx</m>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{\sqrt{25x^2 + 2}}</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercise>
+        <statement>
+          <p>
+            Evaluate the integral <m>\displaystyle \int x^3\sqrt{9 - x^2}</m>. 
+            You will need to find a good strategy to evaluate the trigonometric integral in <xref ref="sec72-TrigIntegral"/>. 
+          </p>
+        </statement>
+      </exercise>
+
+  </worksheet>
 
 </section>

@@ -17,17 +17,594 @@
       <ul>
         <li>
           <p>
-            blahblahblah
+            evaluate trigonometric integrals involving sine, cosine, and their powers. 
           </p>
         </li>
         <li>
           <p>
-            blahblahblah
+            summarize a list of formulas involving trigonometric functions for <xref ref="sec73-TrigSub"/>. 
           </p>
         </li>
       </ul>
     </objectives>
     
   </introduction>
+
+  <p>
+    <alert>NOTE:</alert> This is not one of the required sections to go through (and we certainly don't have time to go through an optional section in class this term). 
+    Yet Richard believes this is an important section and this is also a good practice on <m>u</m>-sub. 
+    Hence, Richard will write the notes in this section in the form of exercises (with hints and solution, of course) if you want to practice some skills of evaluating integrals 
+    (this is actually an assignment Richard gave in his MTH 252 class in Summer 2025). 
+  </p>
+
+  <p>
+    Even if you don't want to work on all the problems in this section, make sure you pick up all the important formulas, as this will help you save a lot of time in <xref ref="sec73-TrigSub"/>. 
+  </p>
+
+  <subsection xml:id="subsec-721BasicTrigIntegral">
+    <title>Basic Trigonometric Integrals</title>
+
+    <p>
+      In order to evaluate some trigonometric integrals, we need some basic integral formulas we can use. 
+      We learned some integral formulas <xref ref="sec53-IndefiniteIntegral"/> involving trigonometric functions by undoing the derivative formulas of trigonometric formulas in calculus 1 (see <xref ref="thm-BasicTrigIntegrals"/>). 
+    </p>
+
+    <p>
+      But we actually don't know about the integral formulas of all the six trigonometric functions yet... 
+      The goal of this activity is to derive the integral formula of tangent, cotangent, secant, and cosecant. 
+    </p>
+
+    <p>
+      <alert>P.S.:</alert> To help you stay on track, I will give you the method you should use and also the answer. 
+      <em>Your job is to evaluate the integral and obtain the answer in the exact format</em>.
+      Don't forget to show all your work to convince Richard that you know where the formulas come from. 
+    </p>
+
+    <exercises>
+    <title>Part (a): Integral of (Co)Tangent</title>
+
+    <statement>
+        <p>
+            Let's start by figuring out what the integral of tangent and cotangent are! 
+        </p>
+
+        <p>
+            Your job is to evaluate <m>\displaystyle \int \tan(x)\, dx</m> and <m>\displaystyle \int \cot(x)\, dx</m>. 
+        </p>
+    </statement>
+
+    <hint>
+        <title>to help you get started... </title>
+        <p>
+            Since we knew nothing about the integral of tangent and cotangent, a good strategy is to convert them to sine and cosine, because we do know about the integrals (and also derivatives) of sine and cosine. 
+            The following identities should be helpful to get you started: 
+            <me>
+                \tan(x) = \frac{\sin(x)}{\cos(x)} \quad\text{and}\quad \cot(x) = \frac{\cos(x)}{\sin(x)}
+            </me>
+            The method you should be thinking about using here is <m>u</m>-sub... (so pick your <m>u</m> wisely). 
+        </p>
+    </hint>
+
+    <hint>
+        <title>to check your answers...</title>
+        <p>
+            If your math is right, then you should arrive the following answers: 
+            <md>
+                <mrow>\int \tan(x)\, dx \amp= \ln\left|\sec(x)\right| + C </mrow>
+                <mrow>\int \cot(x)\, dx \amp= \ln\left|\sin(x)\right| + C \amp </mrow>
+            </md>
+        </p>
+    </hint>
+
+    <solution>
+        <p>
+            Let's tackle the integral of <m>\tan(x)</m> first! By the hint, we know that
+            <me>
+                \int \tan(x)\, dx = \int\frac{\sin(x)}{\cos(x)}\, dx
+            </me>
+            Let <m>u = \cos(x)</m>. Then <m>du = -\sin(x)\, dx</m>. This implies that
+            <md>
+                <mrow>\int \tan(x)\, dx \amp= \int\frac{\sin(x)}{\cos(x)}\, dx </mrow>
+                <mrow> \amp= \int \frac{-du}{u} </mrow>
+                <mrow> \amp= -\ln|u| + C </mrow>
+                <mrow> \amp= -\ln|\cos(x)| + C </mrow>
+                <mrow> \amp= \ln\left|\left(\cos(x)\right)^{-1}\right| + C </mrow>
+                <mrow> \amp= \ln\left|\sec(x)\right| + C </mrow>
+            </md>    
+        </p>
+
+        <p>
+            Now let's integrate <m>\cot(x)</m>! Again, by the hint, we know that
+            <me>
+                \int \cot(x)\, dx = \int\frac{\cos(x)}{\sin(x)}\, dx
+            </me>
+            Let <m>u = \sin(x)</m>. Then <m>du = \cos(x)\, dx</m>. This implies that
+            <md>
+                <mrow>\int \cot(x)\, dx \amp= \int\frac{\cos(x)}{\sin(x)}\, dx </mrow>
+                <mrow> \amp= \int \frac{du}{u} </mrow>
+                <mrow> \amp= \ln|u| + C </mrow>
+                <mrow> \amp= \ln\left|\sin(x)\right| + C </mrow>
+            </md>
+        </p>
+    </solution>
+    
+  </exercises>
+
+  <exercises>
+    <title>Part (b): Integral of (Co)Secant</title>
+    <p>
+        Next, we will tackle the integral of secant and cosecant!
+    </p>
+
+    <p>
+        Your job is to evaluate <m>\displaystyle \int \sec(x)\, dx</m> and <m>\displaystyle \int \csc(x)\, dx</m>. 
+    </p>
+
+    <hint>
+        <title>to help you get started...</title>
+        <p>
+            These two integrals are bit tricky since the previous strategy won't work well in the sense that we don't get both the <m>\sin(x)</m> and <m>\cos(x)</m> in a single integral. 
+            So we will need a tricky manipulation to turn <m>\sec(x)</m> and <m>\csc(x)</m> into a slightly complicated fractions to work with, and they are
+            <md>
+                <mrow> \sec(x) \amp= \frac{\sec(x)\big(\sec(x) + \tan(x)\big)}{\sec(x) + \tan(x)} </mrow>
+                <mrow> \csc(x) \amp= \frac{\csc(x)\big(\csc(x) - \cot(x)\big)}{\csc(x) - \cot(x)}</mrow>
+            </md>
+            The method you should be thinking about using here is also <m>u</m>-sub (in a similar fashion to Part (a)). 
+        </p>
+    </hint>
+
+    <hint>
+        <title>to check your answers...</title>
+        <p>
+            If your math is right, then you should arrive the following answers: 
+            <md>
+                <mrow>\int \sec(x)\, dx \amp= \ln\left|\sec(x) + \tan(x)\right| + C </mrow>
+                <mrow>\int \csc(x)\, dx \amp= \ln\left|\csc(x) - \cot(x)\right| + C </mrow>
+            </md>
+        </p>
+    </hint>
+
+    <solution>
+        <p>
+            Let's integrate <m>\sec(x)</m> first! 
+            Using the hint, we know that
+            <me>
+                \int \sec(x)\, dx = \int \frac{\sec(x)\big(\sec(x) + \tan(x)\big)}{\sec(x) + \tan(x)}\, dx
+            </me>
+        </p>
+        <p>
+            Let <m>u = \sec(x) + \tan(x)</m>. 
+            Then <m>du = \left(\sec(x)\tan(x) + \sec^2(x)\right)\, dx</m>. 
+            This implies that
+            <md>
+                <mrow> \int \sec(x)\, dx \amp= \int \frac{\sec(x)\big(\sec(x) + \tan(x)\big)}{\sec(x) + \tan(x)}\, dx </mrow>
+                <mrow> \amp= \int \frac{\sec^2(x) + \sec(x)\tan(x)}{\sec(x) + \tan(x)}\, dx </mrow>
+                <mrow> \amp= \int\frac{du}{u} </mrow>
+                <mrow> \amp= \ln|u| + C </mrow>
+                <mrow> \amp= \ln\left|\sec(x) + \tan(x)\right| + C </mrow>
+            </md>
+        </p>
+        <p>
+            Now let's integrate <m>\csc(x)</m>! We know, from the hint, that
+            <me>
+                \int\csc(x)\, dx = \int\frac{\csc(x)\big(\csc(x) - \cot(x)\big)}{\csc(x) - \cot(x)}\, dx
+            </me>
+            Let <m>u = \csc(x) - \cot(x)</m>. Then <m>du = \big(-\csc(x)\cot(x) + \csc^2(x)\big)\, dx</m>
+            This implies that
+            <md>
+                <mrow> \int \csc(x)\, dx \amp= \int\frac{\csc(x)\big(\csc(x) - \cot(x)\big)}{\csc(x) - \cot(x)}\, dx </mrow>
+                <mrow> \amp= \int \frac{\csc^2(x) - \csc(x)\cot(x)}{\csc(x) - \cot(x)}\, dx </mrow>
+                <mrow> \amp= \int\frac{du}{u} </mrow>
+                <mrow> \amp= \ln|u| + C </mrow>
+                <mrow> \amp= \ln\left|\csc(x) - \cot(x)\right| + C </mrow>
+            </md>
+        </p>
+    </solution>
+
+  </exercises>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-722IntermediateTrigIntegral">
+    <title>Intermediate Trigonometric Integrals</title>
+
+    <introduction>
+    <p>
+        Now that we know the integral formulas of all the six trigonometric functions. 
+        Let's take things up a notch! 
+        What if there are two trigonometric functions in the integrand? 
+    </p>
+
+    <p>
+        Back in MTH 112Z in which you learned a lot of the fun trigonometric identities, remember we can turn all the trigonometric functions in some combinations of <m>\sin(x)</m> and <m>\cos(x)</m>. 
+        Because of this, we will focus our investigation to some combinations of <m>\sin(x)</m> and <m>\cos(x)</m>. 
+        If you ever need to deal with other trigonometric integrals, then converting everything to some combinations of <m>\sin(x)</m> and <m>\cos(x)</m> is always a strategy to consider. 
+    </p>
+
+    <p>
+        The goal of the following tasks is to develop a strategy to deal with integrals in the form of 
+        <me>
+            \int \sin^m(x)\cos^n(x)\, dx
+        </me>
+        where <m>m</m> and <m>n</m> are some integer powers. It turns out that the <alert>parity</alert> of <m>m</m> and <m>n</m> will help us in determining the strategy to use. 
+    </p>
+
+    <p>
+        <alert>P.S.:</alert> This is essentially what a third of section 7.2 is about. 
+        To have you explore the various strategies, your job is to take the following specific integrals while summarizing the patterns (but you don't need to include the patterns in your writeup. This will be too much). 
+        Richard will give out the strategies after the due date (so he won't take the fun of discovering some fancy math away from you). 
+        Make sure to check this page again after the due date! 
+    </p>
+  </introduction>
+
+  <exercises>
+    <title>Part (a): If <m>\boldsymbol{m}</m> is an odd number...</title>
+    
+    <statement>
+        <p>
+            The first case we are looking at here is when the power on <m>\sin(x)</m> is an odd number. 
+            To have you explore the strategy using a specific example, your job here is to evaluate the following integral
+            <me>
+                \int \sin^3(x)\cos^2(x)\, dx
+            </me>
+        </p>
+
+        <p>
+            Remember to show your work! 
+        </p>
+    </statement>
+
+    <hint>
+        <title>to help you get started...</title>
+        <p>
+            It is kind of annoying to deal with two <em>different</em> trigonometric functions. 
+            The goal here is to convert them into one function (so either trying to convert as many as the <m>\sin(x)</m>'s to <m>\cos(x)</m>'s or vice versa so we only need to deal with one single trigonometric function). 
+        </p>
+
+        <p>
+            The identity that may come in handy is the Pythagorean Identity, as follows: 
+            <me>
+                \sin^2(x) + \cos^2(x) = 1
+            </me>
+        </p>
+
+        <p>
+            Well but that brings up another question: Do we convert the <m>\sin(x)</m>'s to <m>\cos(x)</m>'s or the other way around... 
+        </p>
+
+        <hint>
+            <title>to help you pick in which way of the conversion will help...</title>
+            <p>
+                It turns out that both ways will work, but one way will be easier than the other one ...
+                Let's follow the easier route to convert as many of the <m>\sin(x)</m>'s to <m>\cos(x)</m>'s as possible. 
+                That is, we want less than 3 copies of <m>\sin(x)</m>'s in the integrand. 
+            </p>
+        </hint>
+            
+    </hint>
+
+    <hint>
+        <title>to check your setup... </title>
+        <p>
+            Since we want to convert as many of the <m>\sin(x)</m>'s to <m>\cos(x)</m>'s, we can use the Pythagorean identity to obtain the following integrals
+            <me>
+                \int \sin(x)\left(\cos^2(x) - \cos^4(x)\right)\, dx
+            </me>
+        </p>
+
+        <p>
+            <alert>P.S.:</alert> Just because Richard is nice to give you a step for you to check your work, it doesn't mean you get to start here. 
+            Show your work. How does it go from the original integral to this one? 
+        </p>
+
+        <hint>
+            <title>if you need help to go further...</title>
+            <p>
+                You actually can evaluate this integral using <m>u</m>-sub. 
+                Try using <m>u = \cos(x)</m> and see how easy the integral will become!
+            </p>
+        </hint>
+        
+    </hint>
+
+    <solution>
+        <p>
+            By the hint, we want to convert as many <m>\sin(x)</m>'s to <m>\cos(x)</m>'s. 
+            Using the Pythagorean identity <m>\sin^2(x) = 1 - \cos^2(x)</m>, we obtain
+            <md>
+                <mrow>\int\sin^3(x)\cos^2(x)\, dx \amp= \int \sin(x)\cdot \sin^2(x)\cos^2(x)\, dx </mrow>
+                <mrow> \amp= \int \sin(x)\left(1 - \cos^2(x)\right)\cos^2(x)\, dx </mrow>
+                <mrow> \amp= \int \sin(x)\left(\cos^2(x) - \cos^4(x)\right)\, dx </mrow>
+            </md>
+            Now let's use the hint Richard gave by letting <m>u = \cos(x)</m>. Then <m>du = -\sin(x)\, dx</m>. 
+            This implies that
+            <md>
+                <mrow> \int \sin(x)\left(\cos^2(x) - \cos^4(x)\right)\, dx \amp = -\int \left(u^2 - u^4\right)\, du</mrow>
+                <mrow> \amp= -\frac{u^3}{3} + \frac{u^5}{5} + C </mrow>
+                <mrow> \amp= -\frac{\cos^3(x)}{3} + \frac{\cos^5(x)}{5} + C </mrow>
+            </md>
+        </p>
+    </solution>
+
+  </exercises>
+
+  <exercises>
+    <title>Part (b): If <m>\boldsymbol{n}</m> is an odd number... </title> 
+    
+    <statement>
+
+        <p>
+            The second case is when the power on <m>\cos(x)</m> is an odd number. 
+            It turns out that the procedure is (highly?) similar to the one in part (a) but you will need to make some adjustments since <m>\cos(x)</m> is the one with the odd power now. 
+        </p>
+
+        <p>
+            Your job here is to evaluate the following integral 
+            <me>
+                \int \sin^2(x)\cos^5(x)\, dx
+            </me>
+            by <alert>mimicking</alert> what you did in part (a). Again, remember to show your work! 
+        </p>
+
+        <p>
+            Richard will not give out formal hints here since the hints will be highly similar to the ones above. 
+            If you get stuck or want to confirm your work, email your questions/work to Richard and he can help you out. 
+        </p>
+
+    </statement>
+
+    <solution>
+        <p>
+            Let's mimic the process here. Observe that <m>\cos(x)</m> is the one with the odd power. 
+            Then we will convert as many of the <m>\cos(x)</m>'s to <m>\sin(x)</m>'s using the Pythagorean identity. 
+            <md>
+                <mrow>\int \sin^2(x)\cos^5(x)\, dx \amp= \int \sin^2(x) \left(\cos^2(x)\right)^2 \cos(x)\, dx</mrow>
+                <mrow> \amp= \int \sin^2(x)\left(1 - \sin^2(x)\right)^2\cos(x)\, dx </mrow>
+                <mrow> \amp= \int \sin^2(x)\left(1 - 2\sin^2(x) + \sin^4(x)\right)\cos(x)\, dx </mrow>
+                <mrow> \amp= \int\left( \sin^2(x) - 2\sin^4(x) + \sin^6(x)\right)\cos(x)\, dx </mrow>
+            </md>
+            Now let <m>u = \sin(x)</m>. Then <m>du = \cos(x)\, dx</m>. This implies that
+            <md>
+                <mrow> \int\left( \sin^2(x) - 2\sin^4(x) + \sin^6(x)\right)\cos(x)\, dx \amp= \int \left(u^2 - 2u^4 + u^6\right)\, du </mrow>
+                <mrow> \amp= \frac{u^3}{3} - \frac{2u^5}{5} + \frac{u^7}{7} + C </mrow>
+                <mrow> \amp= \frac{\sin^3(x)}{3} - \frac{2\sin^5(x)}{5} + \frac{\sin^7(x)}{7} + C </mrow>
+            </md>
+        </p>
+    </solution>
+    
+  </exercises>
+
+  <exercises>
+    <title>Why do we care so much about the odd power...</title>
+
+    <statement>
+        <p>
+            From the previous two examples, we can see that we can always peel out a single <m>\sin(x)</m> or <m>\cos(x)</m> from the odd power and make it part of the <m>du</m>. 
+            For the rest of the even number of factors, we can turn it to the other one using the Pythagorean identity. 
+            To summarize it into a pretty table, these are the strategies we should consider: 
+        </p>
+        
+        <table>
+        <tabular halign="center" frame="all" rules="all">
+            <col width="40%"/>
+            <col width="60%"/>
+
+            <row header="yes" bottom="medium">
+            <cell><m>\int \sin^m(x) \cos^n(x) \, dx</m></cell>
+            <cell>Strategy</cell>
+            </row>
+
+            <row bottom="minor">
+            <cell halign="left"><m>m</m> is odd</cell>
+            <cell halign="left">
+                <p>Factor out a <m>\sin(x)</m></p>
+                <p>Convert the remaining even power of <m>\sin(x)</m> to <m>\cos(x)</m> using the Pythagorean identity</p>
+                <p>Then use <m>u</m>-sub that <m>u = \cos(x)</m> </p>
+            </cell>
+            </row>
+
+            <row bottom="minor">
+            <cell halign="left"><m>n</m> is odd</cell>
+            <cell halign="left">
+                <p>Factor out a <m>\cos(x)</m></p>
+                <p>Convert the remaining even power of <m>\cos(x)</m> to <m>\sin(x)</m> using the Pythagorean identity</p>
+                <p>Then use <m>u</m>-sub that <m>u = \sin(x)</m> </p>
+            </cell>
+            </row>
+
+        </tabular>
+        </table>
+
+        <p>
+            <alert>But Richard... what happens if both <m>\boldsymbol{m}</m> and <m>\boldsymbol{n}</m> are odd... </alert>
+            Well then you can just pick one of the two strategies above and they should both work. 
+        </p>
+
+        <p>
+            <alert>But Richard... what happens if neither <m>\boldsymbol{m}</m> nor <m>\boldsymbol{n}</m> are odd... </alert>
+            Well then we need to use power-reducing formulas to chip away the power. 
+            You will explore a similar question in the next investigation. Long story short, the two major power-reducing formulas we are using are
+            <me>
+                \sin^2(x) = \frac{1}{2}\left(1 - \cos(2x)\right)
+            </me>
+            and
+            <me>
+                \cos^2(x) = \frac{1}{2}\left(1 + \cos(2x)\right)
+            </me>
+        </p>
+
+    </statement>
+
+  </exercises>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-723AdvancedTrigIntegral">
+    <title>Advanced Trigonometric Integrals</title>
+
+    <introduction>
+    <p>
+        There are a lot of advanced and fancy methods to evaluate trigonometric integrals. 
+        For this activity, you will explore a particular advanced method to evaluate the integral of higher power of <m>\sin(x)</m> (or <m>\cos(x)</m>). 
+        That is, we want to evaluate integrals like 
+        <me>
+            \int\sin^m(x)\, dx 
+            \qquad\text{ and }\qquad 
+            \int\cos^n(x)\, dx
+        </me>
+        where <m>m</m> and <m>n</m> are larger numbers (without having another trigonometric function that allows you to <m>u</m>-sub it). 
+    </p>
+
+    <p>
+        By saying an "advanced" method, I don't mean the math concept is advanced, but more like the algebraic work is a bit complicated (so the steps are a bit longer). 
+        In fact, I will (eventually) just give you the formula and let you use it (the proof of the formula is in your textbook). 
+    </p>
+
+    <p>
+        For demonstration purposes, we will only focus on integrating the powers of <m>\sin(x)</m> in the following tasks. 
+        Remember that the method in integrating the powers of <m>\cos(x)</m> is (highly) similar! 
+    </p>
+
+  </introduction>
+
+  <exercises>
+    <title>Part (a): Base case: when the power is 2 and 3</title>
+    
+    <p>
+        The base case consists of the following two integrals: 
+        <me>
+            \int\sin^2(x)\, dx 
+            \qquad\text{ and }\qquad
+            \int\sin^3(x)\, dx
+        </me>
+        Your job is to evaluate these two integrals.
+        Again, show your work! 
+    </p>
+
+    <hint>
+        <title>to help you get started in the second integral... </title>
+        <p>
+            The second integral is actually the easier one since we can use the same method to evaluate this integral from the last activity!
+        </p>
+        
+        <p>
+            <alert>(Observe that the power on <m>\boldsymbol{\sin(x)}</m> is odd!)</alert>
+        </p>
+
+        <p>
+            So a good first step is to convert as many of the <m>\sin(x)</m>'s to <m>\cos(x)</m>'s, following the method used in part (a) of the previous activity... 
+        </p>
+
+        <hint>
+            <title>to check your setup...</title>
+            <p>
+                The correct setup should be something like
+                <me>
+                    \int\sin^3(x)\, dx = \int\sin(x)\left(1 - \cos^2(x)\right)\, dx
+                </me>
+            </p>
+        </hint>
+
+    </hint>
+
+    <hint>
+        <title>to help you get started in the first integral...</title>
+        <p>
+           The first integral is actually a harder one (well it depends on if you are familiar with a specific formula in MTH 112Z...). 
+           Observe that the square is what prevented us from applying any of the basic trigonometric integral formulas. 
+           Then is there a way to get rid of the square?  
+        </p>
+
+        <p>
+            <alert>Yes there is!</alert> Recall we learned some special formulas in MTH 112Z called the <alert>power reducing formula</alert>. 
+            The one we want to use here is the power reducing formula for sine, as follows: 
+            <me>
+                \sin^2(x) = \frac{1}{2}\left(1 - \cos(2x)\right)
+            </me>
+            See that there is no more square on your trigonometric function!
+        </p>
+    
+    </hint>
+
+    <solution>
+        <p>
+            Let's start with the second integral since we have used the same method in the previous investigation task. 
+            Using the Pythagorean identity, we obtain
+            <md>
+                <mrow>\int \sin^3(x)\, dx \amp= \int \sin^2(x)\cdot \sin(x)\, dx </mrow>
+                <mrow> \amp= \int\left(1 - \cos^2(x)\right)\cdot \sin(x)\, dx</mrow>
+            </md>
+            Let <m>u = \cos(x)</m>. Then <m>du = -\sin(x)\, dx</m>. 
+            This implies that
+            <md>
+                <mrow> \int\left(1 - \cos^2(x)\right)\cdot \sin(x)\, dx \amp= -\int \left(1 - u^2\right)\, du </mrow>
+                <mrow> \amp= -u + \frac{u^3}{3} + C </mrow>
+                <mrow> \amp= -\cos(x) + \frac{\cos^3(x)}{3} + C </mrow>
+            </md>
+        </p>
+        <p>
+            Now let's tackle the more difficult one. Using the power-reducing formula, we obtain
+            <md>
+                <mrow>\int \sin^2(x)\, dx \amp= \int \frac{1}{2}\left(1 - \cos(2x)\right)\, dx </mrow>
+                <mrow> \amp= \frac{1}{2}\int \left(1 - \cos(2x)\right)\, dx </mrow>
+                <mrow> \amp= \frac{1}{2} \left(\int \, dx - \int \cos(2x)\, dx\right)</mrow>
+            </md>
+            We can integrate <m>\cos(2x)</m> by a simple <m>u</m>-sub of letting <m>u = 2x</m>. 
+            Then we have
+            <md>
+                <mrow> \frac{1}{2} \left(\int \, dx - \int \cos(2x)\, dx\right) \amp= \frac{1}{2} \left(x - \frac{1}{2}\sin(2x)\right) + C</mrow>
+                <mrow> \amp= \frac{x}{2} - \frac{1}{4}\sin(2x) + C </mrow>
+            </md>
+        </p>
+    </solution>
+    
+  </exercises>
+
+  <exercises>
+    <title>Part (b): Reduction Formulas for larger powers</title>
+    
+    <p>
+        The first integral in part (a) demonstrates the essence of integrating trigonometric functions with larger powers, that we want to <alert>reduce the power</alert> to a number small enough that we can just use one of the existing formulas (like power of 1, 2, and 3 of <m>\sin(x)</m>). 
+    </p>
+
+    <p>
+        But how do we reduce the power? There is a reduction formula for sine that we can use directly and I included it below: 
+        <men xml:id="eqn-reduction-sine">
+            \int \sin^m(x)\, dx = -\frac{\sin^{m-1}(x)\cos(x)}{m} + \frac{m - 1}{m}\int \sin^{m-2}(x)\, dx
+        </men>
+        If you are comparing the two integrals in the above formula, we can reduce the power of <m>\sin(x)</m> in the integrand by 2 each time we apply this formula. 
+    </p>
+
+    <p>
+        If you are wondering how we obtain this formula, the proof is included in section 7.1 in your textbook (I used to have my students prove the cosine version by mimicking the process but this would make this weekly investigation assignment way too long...). 
+        To get the best out of this formula, I want to make sure you know <alert>how</alert> to use it. 
+    </p>
+
+    <p>
+        Your job in this part is to evaluate the following integral
+        <me>
+            \int\sin^4(x)\, dx
+        </me>
+        using this reduction formula above. 
+    </p>
+
+    <solution>
+        <p>
+            We can use the reduction formula with <m>m = 4</m> to integrate <m>\sin^4(x)</m> as follows: 
+            <md>
+                <mrow> \int \sin^4(x)\, dx \amp= -\frac{\sin^3(x)\cos(x)}{4} + \frac{3}{4}\int \sin^2(x)\, dx </mrow>
+            </md>
+                See that the resulting integral is something we have evaluated in part (a), so we can use the result directly. 
+                This implies that
+            <md>
+                <mrow> -\frac{\sin^3(x)\cos(x)}{4} + \frac{3}{4}\int \sin^2(x)\, dx \amp= -\frac{\sin^3(x)\cos(x)}{4} + \frac{3}{4}\left(\frac{x}{2} - \frac{1}{4}\sin(2x)\right) + C </mrow>
+                <mrow> \amp= -\frac{\sin^3(x)\cos(x)}{4} + \frac{3x}{8} - \frac{3}{16}\sin(2x) + C </mrow>
+            </md>
+        </p>
+    </solution>
+    
+  </exercises>
+    
+  </subsection>
 
 </section>
