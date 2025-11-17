@@ -3,6 +3,911 @@
 <section xml:id="sec76-StrategiesIntegral" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Strategies for Integration</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, we will summarize all the techniques we learned in class for evaluating integrals and come up with some strategies to evaluate integrals. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            identify the structural features of an integral and determine which integration methods are applicable.
+          </p>
+        </li>
+        <li>
+          <p>
+            realize that an integral may be evaluated using multiple methods.  
+          </p>
+        </li>
+        <li>
+          <p>
+            use computer algebra systems (CAS) to evaluate integrals and critically assess the elegance and efficiency of CAS-generated solutions.
+          </p>
+        </li>
+      </ul>
+    </objectives>
+    
+  </introduction>
+
+  <investigation>
+    <title>POP QUIZ! </title>
+    
+    <introduction>
+      <p>
+        Suppose the following question were the first problem on your final exam for this class. 
+      </p>
+
+      <p>
+        Evaluate the integral <m>\displaystyle \int\dfrac{x}{9 - x^2}\, dx</m>
+      </p>
+
+    </introduction>
+
+  <!--
+    <solution>
+      <p>
+        We can evaluate this integral using the three methods we have learned in his class: <m>u</m>-sub, trig sub, and partial fraction decomposition. 
+      </p>
+
+      <solution>
+        <title>Using <m>u</m>-sub</title>
+        <p>
+          Let <m>u = 9 - x^2</m>. Then <m>du = -2x\, dx</m>. 
+          Hence, we obtain
+          <md>
+            <mrow>\int \frac{x}{9 - x^2}\, dx \amp = -\int \frac{1}{2u}\, du </mrow>
+            <mrow> \amp = -\frac{1}{2}\ln|u| + C </mrow>
+            <mrow> \amp = -\frac{1}{2}\ln\left|9 - x^2\right| + C </mrow>
+          </md>
+        </p>
+      </solution>
+
+      <solution>
+        <title>Using Trig sub</title>
+        <p>
+          Let <m>x = 3\sin(\theta)</m>. Then <m>dx = 3\cos(\theta)\, d\theta</m>. 
+          Hence, we obtain
+          <md>
+            <mrow>\int \frac{x}{9 - x^2}\, dx \amp = \int \frac{3\sin(\theta)}{9 - 9\sin^2(\theta)}\cdot 3\cos(\theta)\, d\theta </mrow>
+            <mrow> \amp = \int \frac{9\sin(\theta)\cos(\theta)}{9\cos^2(\theta)}\, d\theta </mrow>
+            <mrow> \amp = \int \tan(\theta)\, d\theta </mrow>
+            <mrow> \amp = \ln|\sec(\theta)| + C_0 </mrow>
+            <mrow> \amp = \ln\left|\frac{3}{\sqrt{9 - x^2}}\right| + C_0 </mrow>
+            <mrow> \amp = \ln(3) - \ln\left|9 - x^2\right|^{\frac{1}{2}} + C_0</mrow>
+            <mrow> \amp = -\frac{1}{2}\ln\left|9 - x^2\right| + \ln(3) + C_0</mrow>
+            <mrow> \amp = -\frac{1}{2}\ln\left|9 - x^2\right| + C </mrow>
+          </md>
+          where <m>C = \ln(3) + C_0</m>. 
+        </p>
+      </solution>
+
+      <solution>
+        <title>Using Partial Fraction Decomposition</title>
+        <p>
+          Let <m>A</m> and <m>B</m> be two numbers. 
+          Note that
+          <me>
+            \frac{x}{9 - x^2} = \frac{x}{(3 - x)(3 + x)} = \frac{A}{3 - x} + \frac{B}{3 + x}
+          </me>
+          This implies that
+          <me>
+            x = A(x + 3) + B(x - 3)
+          </me>
+          We can determine that <m>A = \dfrac{1}{2}</m> and <m>B = -\dfrac{1}{2}</m>. 
+          Hence, we obtain
+          <md>
+            <mrow>\int \frac{x}{9 - x^2}\, dx \amp = \int \left(\frac{1/2}{3 - x} + \frac{-1/2}{3 + x}\right)\, dx </mrow>
+            <mrow> \amp = \frac{1}{2} \int \left(\frac{1}{3 - x} - \frac{1}{3 + x}\right) \, dx </mrow> 
+            <mrow> \amp = \frac{1}{2} \left(-\ln|3 - x| - \ln|3 + x|\right) + C </mrow>
+            <mrow> \amp = -\frac{1}{2} \left(\ln|3 - x| + \ln|3 + x|\right) + C </mrow>
+            <mrow> \amp = -\frac{1}{2}\ln\left|9 - x^2\right| + C </mrow>
+          </md>
+        </p>
+      </solution>
+    </solution>
+  -->
+
+  </investigation>
+
+<!--
+  <p>
+    Richard actually found this task from a research paper in math education during the first doctoral class he took during his first year of PhD. 
+    Back in the 1990s, an instructor placed the integral problem <m>\int \frac{x}{x^2 - 9}\, dx</m> at the beginning of a final exam in an integral calculus course 
+    (our pop quiz problem is a bit different since the original integral was a bit complicated if a student attempted to try trig sub). 
+  </p>
+
+  <p>
+    The result from that study showed that only about 50% of the students attempted the <m>u</m>-sub in this problem. 
+    About 35% of them tried partial fraction decomposition and 15% of them used trig sub. 
+  </p>
+
+  <p>
+    Well students trying <m>u</m>-sub performed better in general compared to students who didn't try <m>u</m>-sub in this problem since they have greater confidence and ample time for the rest of the exam. 
+    People trying trig sub spent too much time on this problem and often got stuck and doubt whether their answer was correct. 
+  </p>
+
+  <p>
+    But the surprising finding here is that students using partial fraction decomposition or trig sub didn't switch method when they got stuck. 
+    They just kept on getting stuck using a complicated method rather than trying another method. 
+  </p>
+
+  <p>
+    In addition, the instructor put this problem in the beginning of the final exam, hoping to bolster students' confidence. 
+    This goal was only achieved for those who attempted <m>u</m>-sub in this problem... 
+  </p>
+
+  <p>
+    I was shocked by the finding when I read this paper two years ago (there are more from this paper but this is the most shocking finding to me). 
+    I hope you all learn something from this task and the findings in terms of evaluating the integrals! 
+  </p>
+
+-->
+
+<subsection xml:id="subsec-761-IntegralStrategies">
+  <title>What is the "best" way to evaluate integrals? </title>
+
+  <p>
+    We went through various strategies to evaluate integrals this term (and there are more strategies that goes beyond the scope of this class!). 
+    Sometimes it is difficult to determine which method to try right off the bat. 
+  </p>
+
+  <p>
+    There are two factors that you may consider when determining which method to try right off the bat. 
+  </p>
+
+  <p>
+    The first one is the structural features of the integral. You want to pick a <em>right</em> method for the integrals (for example, trying partial fraction decomposition on an integral that has no rational expression is not <em>right</em>).   
+  </p>
+
+  <p>
+    The second one is the complexity of the method. Similar to the pop quiz problem, if multiple methods work out for an integral, then always try the <em>easier</em> method first (if we can solve a problem using an <em>easier</em> method, why bother using something complicated). 
+  </p>
+
+  <p>
+    For summary purposes, Richard put all the methods we have learned so far below all on one page: 
+    <ul>
+      <li>
+        <p>
+          Always try <alert>simplification</alert> first! 
+          Do any algebraic simplification possible! 
+          If we can make the integrand a lot simpler to deal with, why not!? 
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert><m>\boldsymbol{u}</m>-sub</alert> is the method you should try next. 
+          Recall <m>u</m>-sub came from the chain rule you learned in calculus 1, which means you may want to be able to find the derivative of the choice of <m>u</m> in the integrand. 
+          Long story short, the <m>u</m>-sub formula is
+          <me>
+            \int f'(u(x))\cdot u'(x)\, dx = f(u(x)) + C
+          </me>
+          Just make sure you don't end up getting a more complicated integral after <m>u</m>-sub. 
+          (for more detail, check out <m>u</m>-sub in <xref ref="sec57-uSub"/>). 
+        </p>
+      </li>
+      <li>
+        <p>
+          If you see two functions being multiplied in the integrand, you may want to consider using <alert>integration by parts</alert> since this method came from the product rule in derivative. 
+          You will want to pick a <m>u</m> and the rest of the integral will be the <m>dv</m>. 
+          Long story short, the integration by parts formula is
+          <me>
+            \int u\, dv = uv - \int v\, du
+          </me>
+          You may be wondering how we can pick a <m>u</m> to make the problem easier. 
+          Recall there is an acronym "LIPET" to help us pick a good <m>u</m>. 
+          This acronym LIPET tells us that we should pick the <m>u</m> in the following order: 
+          <ul>
+            <li>
+              <p>
+                <alert>L</alert> stands for Logarithmic functions; 
+              </p>
+            </li>
+            <li>
+              <p>
+                <alert>I</alert> stands for Inverse Trigonometric functions; 
+              </p>
+            </li>
+            <li>
+              <p>
+                <alert>P</alert> stands for Polynomial functions; 
+              </p>
+            </li>
+            <li>
+              <p>
+                <alert>E</alert> stands for Exponential functions; 
+              </p>
+            </li>
+            <li>
+              <p>
+                <alert>T</alert> stands for Trigonometric functions; 
+              </p>
+            </li>
+          </ul>  
+          (for more detail, check out <m>u</m>-sub in <xref ref="sec71-IntegrationByParts"/>).
+        </p>
+      </li>
+      <li>
+        <p>
+          There are also two special methods we learned that only works if the situation fits. 
+          They are: 
+          <ul>
+            <li>
+              <p>
+                <alert>Trigonometric Substitution</alert>: If you see <m>a^2 - x^2</m> in the integrand, you may consider using the substitution that <m>x = a\sin(\theta)</m>. 
+                Likewise, if you see <m>a^2 + x^2</m> in the integrand, you may consider using the substitution that <m>x = a\tan(\theta)</m>. 
+                (for more detail, check out <m>u</m>-sub in <xref ref="sec73-TrigSub"/>).
+              </p>
+            </li>
+            <li>
+              <p>
+                <alert>Partial Fraction Decomposition</alert>: If you see a complicated <em>proper</em> fraction where the denominator happens to be reducible (fancy way of saying the denominator can be factored), then partial fraction decomposition will help you split up the fraction to smaller pieces. 
+                (for more detail, check out <m>u</m>-sub in <xref ref="sec75-PartialFraction"/>).
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <p>
+    Let's look at a couple examples. 
+    Make sure you know <alert>HOW</alert> to determine what method you should use (and <alert>WHY</alert>, rather than just picking a method at random). 
+  </p>
+
+  <example>
+    <p>
+      Evaluate the indefinite integral <m>\displaystyle \int\left(\sin(x) + \cos(x)\right)^2\, dx</m>. 
+    </p>
+
+    <hint>
+      <p>
+        A good first step is to determine what method we should use for this integral. 
+        By looking through Richard's list above, pick a method (you may want to convince yourself <alert>why</alert> the method you pick is a good choice) and try it out! 
+        If it doesn't work out, pick something else. 
+      </p>
+    </hint>
+
+    <solution xml:id="example-sec76-manvscas">
+      <p>
+        Observe that the integrand can be simplified further by expanding the square and using some trig identities. 
+        <md>
+          <mrow>\int \left(\sin(x) + \cos(x)\right)^2\, dx \amp = \int \left(\sin^2(x) + \cos^2(x) + 2\sin(x)\cos(x)\right)\, dx </mrow>
+          <mrow> \amp= \int \left(1 + 2\sin(x)\cos(x)\right)\, dx \amp\amp \text{by Pythagorean Identity} </mrow>
+          <mrow> \amp= \int \left(1 + \sin(2x)\right)\, dx \amp\amp \text{by Double-angle Identity} </mrow>
+        </md>
+        See that the integrand is a lot easier now compared to what we started with! 
+        A simple <m>u</m>-sub will help evaluate the integral. 
+        <md>
+          <mrow> \int \left(1 + \sin(2x)\right)\, dx \amp= x + \frac{1}{2x}\cos(2x) + C </mrow>
+        </md>
+      </p>
+    </solution>
+  </example>
+
+  <example>
+    <p>
+      Evaluate the indefinite integral <m>\displaystyle \int x\sec^2(x)\, dx</m>. 
+    </p>
+
+    <hint>
+      <p>
+        A good first step is to determine what method we should use for this integral. 
+        By looking through Richard's list above, pick a method (you may want to convince yourself <alert>why</alert> the method you pick is a good choice) and try it out! 
+        If it doesn't work out, pick something else. 
+      </p>
+    </hint>
+
+    <solution>
+      <p>
+        For starters, we can't simplify the integrand any further. 
+        Also, there is no composite function here that may allow us to do a <m>u</m>-sub. 
+        But the integral consists of the <em>product</em> of two functions. 
+        Then <alert>integration by parts</alert> may be a good method to try here. 
+      </p>
+
+      <p>
+        By the LIPET test, we pick <m>u = x</m> here. 
+        Then we have
+          <md>
+            <mrow> u \amp= x \amp\amp dv = \sec^2(x)\, dx </mrow>
+            <mrow> du \amp= dx \amp\amp \;\; v= \tan(x) </mrow>
+          </md>
+          Using the integration by parts formula, we obtain
+          <md>
+            <mrow> \int x\sec^2(x)\, dx \amp= x\tan(x) - \int \tan(x)\, dx </mrow>
+          </md>
+          Recall we do have a formula to evaluate the integral of tangent (see <xref ref="sec72-TrigIntegral"/>). 
+          Using the formula, we obtain
+          <md>
+            <mrow> \int x\sec^2(x)\, dx \amp= x\tan(x) - \int \tan(x)\, dx </mrow>
+            <mrow> \amp= x\tan(x) - \ln\left|\sec(x)\right| + C </mrow>
+          </md>
+      </p>
+    </solution>
+  </example>
+
+  <example>
+    <p>
+      Evaluate the indefinite integral <m>\displaystyle \int \frac{\tan^{-1}(x)}{1 + x^2}\, dx</m>
+    </p>
+    
+    <hint>
+      <p>
+        Observe that we can't simplify the integrand any further. 
+        Also, the integrand doesn't consist of a product (so integration by parts may not be useful) and the integrand isn't a rational expression (so partial fraction decomposition isn't gonna work). 
+      </p>
+
+      <p>
+        Richard just eliminated three of the methods for you. 
+        What method do you think you should use here (and why)? 
+      </p>
+    </hint>
+
+    <solution>
+      <p>
+        Observe that the denominator of the integrand takes the form of <m>a^2 + x^2</m>, where <m>a = 1</m>. 
+        Then trig sub may work out here. 
+      </p>
+
+      <p>
+        Let <m>x = \tan(\theta)</m>. 
+        Then
+        <me>
+          1 + x^2 = 1 + \tan^2(\theta) = \sec^2(\theta)
+        </me>
+        and
+        <me>
+          \tan^{-1}(x) = \tan^{-1}\left(\tan(\theta)\right) = \theta
+        </me>
+        In addition, we know that <m>\dfrac{dx}{d\theta} = \sec^2(\theta)</m>, which implies that <m>dx = \sec^2(\theta)\, d\theta</m>. 
+      </p>
+
+      <p>
+        Now putting all the pieces together, we obtain
+        <md>
+          <mrow> \int \frac{\tan^{-1}(x)}{1 + x^2}\, dx \amp=\int \frac{\theta}{\sec^2(\theta)}\cdot \sec^2(\theta)\, d\theta </mrow>
+          <mrow> \amp= \int \theta\, d\theta </mrow>
+          <mrow> \amp= \frac{\theta^2}{2} + C </mrow>
+        </md>
+      </p>
+
+      <p>
+        By our assumption of <m>x = \tan(\theta)</m>, we know that <m>\theta = \tan^{-1}(x)</m>. 
+        Hence, we obtain 
+        <me>
+          \frac{\theta^2}{2} + C = \frac{\left(\tan^{-1}(x)\right)^2}{2} + C
+        </me>
+      </p>
+
+      <solution>
+        <title>Alternative method (if you are super observant)</title>
+        <p>
+          The integral can be rewritten as follows
+          <me>
+            \int \frac{\tan^{-1}(x)}{1 + x^2}\, dx = \int \tan^{-1}(x) \cdot \frac{1}{1 + x^2}\, dx
+          </me>
+          Observe that <m>\dfrac{1}{1 + x^2}</m> is the derivative of <m>\tan^{-1}(x)</m>, which implies that a <m>u</m>-sub may work out here. 
+        </p>
+
+        <p>
+          Let <m>u = \tan^{-1}(x)</m>. Then
+          <me>
+            \frac{du}{dx} = \frac{1}{1 + x^2}
+            \qquad\implies\qquad
+            du = \frac{1}{1 + x^2}\, dx
+          </me>
+          We obtain
+          <md>
+            <mrow> \int \tan^{-1}(x) \cdot \frac{1}{1 + x^2}\, dx \amp= \int u\, du </mrow>
+            <mrow> \amp= \frac{u^2}{2} + C </mrow>
+            <mrow> \amp= \frac{\left(\tan^{-1}(x)\right)^2}{2} + C </mrow>
+          </md>
+        </p>
+      </solution>
+    </solution>
+  </example>
+  
+</subsection>
+
+<subsection xml:id="subsec-762-CAS">
+  <title>Evaluate Integrals using CAS</title>
+
+  <p>
+    There are some computer algebra system (CAS), including
+    <url href="https://www.wolframalpha.com/calculators/integral-calculator">WolframAlpha</url>, 
+    <url href="https://www.symbolab.com/solver/integral-calculator">Symbolab</url>, 
+    <url href="https://www.integral-calculator.com/">Integral Calculator</url>, 
+    and so many others, to evaluate integrals. 
+  </p>
+
+  <p>
+    As we saw in the pop quiz, there may be multiple approaches to evaluate integrals, some of which may be easier than others. 
+    We can imagine CAS is a pretty powerful tool to evaluate integrals, but does it always evaluate integrals using the most "efficient" way? 
+  </p>
+
+  <example>
+    <p>
+      Evaluate the indefinite integral <m>\displaystyle \int \left(\sin(x) + \cos(x)\right)^2\, dx</m> using <url href="https://www.integral-calculator.com/">Integral Calculator</url>. 
+      Next, scroll down on the Result and click "Show steps" to see how CAS evaluated the integral. 
+    </p>
+
+    <p>
+      Then compare your solution with the one CAS provided. 
+      In your opinion, who do you think, you or CAS, provided an easier and more elegant solution? 
+      Why? 
+    </p>
+
+    <p>
+      This is the <xref ref="example-sec76-manvscas"/> to the integral when we evaluated it by hand. 
+    </p>
+
+    <solution>
+      <p>
+        Well what CAS did was expanding <m>(\sin x + \cos x)^2</m> and breaking it down using linearity as follows: 
+        <md>
+          <mrow> \int \left(\sin x + \cos x\right)^2 \amp = \int \left(\sin^2 x + 2\sin(x)\cos(x) + \cos^2(x)\right)\, dx </mrow>
+          <mrow> \amp = \int\sin^2(x)\, dx + \int 2\sin(x)\cos(x)\, dx + \int \cos^2(x)\, dx </mrow>
+        </md>
+        Well the middle integral is easy to evaluate but CAS uses the reduction formula for <m>\int \sin^2(x)\, dx</m> and <m>\int \cos^2(x)\, dx</m>, making the steps a lot more complicated. 
+      </p>
+
+      <p>
+        We human certainly provided an easier and more elegant solution than the CAS did when evaluating this integral! 
+        We are smart to <alert>simplify</alert> the integrand instead of evaluating each term separately! 
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    You may all have some takeaways about evaluating integrals using CAS! 
+    Normally, CAS is powerful enough to provide the correct answer, but it may not provide the most easiest and elegant solution. 
+    Don't just trust the CAS 100%. 
+    We human are a lot smarter than CAS! 
+  </p>
+</subsection>
+
+<p>
+  Remember the goal in this class is for you to learn how to integrate functions. 
+  Richard can't past you if you don't show any understanding on integrating functions. 
+  Below are a lot of practices on integrating functions. 
+  Feel free to test yourself or practice with the list. 
+  <alert>Reach out to Richard if you need help!!</alert>
+</p>
+
+<worksheet xml:id="ws-sec76">
+    <title>Some Exercises for this section</title>
+    
+    <introduction>
+      <p>
+        I included some practice problems that cover some main concepts in this section. 
+        You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. 
+        Reach out to Richard for help if you get stuck or have any questions. 
+      </p>
+
+      <p>
+        I will only include the final answer to some of the problems for you to check your result. 
+        If you want to check your work, talk to Richard and he is happy to discuss the process with you. 
+      </p>
+    </introduction>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Evaluate the following integrals. 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \left(\frac{1 - x}{x}\right)^2\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              -\frac{1}{x} - 2\ln|x| + x + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{\csc^2(x)}{1 + \cot(x)}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \ln\left|1 + \cot(x)\right| + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \sqrt{\tan(x)}\sec^2(x)\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{2}{3}\tan^\frac{3}{2}(x) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int x^3\ln(x)\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{x^4}{4}\ln(x) - \frac{x^4}{16} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{\ln(x)}{x^{10}}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              -\frac{\ln(x)}{9x^9} - \frac{1}{81x^9} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int (x + 1)e^{4 - 3x}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              -\frac{1}{9}e^{4 - 3x}(3x + 4) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{x + 2}{\sqrt{x^2 + 4x}}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \sqrt{x^2 + 4x} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{x}{\sqrt{1 - x^4}}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{2}\sin^{-1}(x) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{x^2 + 6x + 8}</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{2}\ln\left|\frac{x + 2}{x + 4}\right| + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{(x - 3)^2(x + 4)}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{49}\ln\left|\frac{x + 4}{x - 3}\right| - \frac{1}{7(x - 3)} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{x^2 + 8x + 25}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{3}\tan^{-1}\left(\frac{x + 4}{3}\right) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \ln\left(\sqrt{5 - x}\right)\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{2}\bigg((x - 5)\ln(5 - x) - x \bigg) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \tan^5(x)\sec^3(x) \, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{\sec^7(x)}{7} - \frac{2\sec^5(x)}{5} + \frac{\sec^3(x)}{3} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{x^3}{\sqrt{x^2 + 1}}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{x^2}{3}\sqrt{x^2 + 1} - \frac{2}{3}\sqrt{x^2 + 1} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \sin\left(\ln(x)\right)\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{x}{2}\left(\sin\left(\ln(x)\right) - \cos\left(\ln(x)\right)\right) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{x}{e^{2x}}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              -\frac{2x + 1}{4e^{2x}} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \tan^{-1}\left(\frac{1}{x}\right)\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{\ln\left(x^2 + 1\right)}{2} + x\tan^{-1}\left(\frac{1}{x}\right) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{5x + 1}{2x^2 - x - 1}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{2}\ln\left|2x + 1\right| + 2\ln\left|x - 1\right| + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int x^3\cos\left(x^2\right)\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{2}\left(x^2\sin\left(x^2\right) + \cos\left(x^2\right)\right) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{x^2 - x + 6}{x^3 + 3x}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              2\ln|x| - \frac{1}{2}\ln\left(x^2 + 3\right) - \frac{1}{\sqrt{3}}\tan^{-1}\left(\frac{x}{\sqrt{3}}\right) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{\sqrt{9 - x^2}}{x^2}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              -\frac{\sqrt{9 - x^2}}{x} - \sin^{-1}\left(\frac{x}{3}\right)+ C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{x\sqrt{9 - x^2}}</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{1}{3}\ln\left|\frac{3 - \sqrt{9 - x^2}}{x}\right| + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{dx}{x^2 \sqrt{4 - x^2}}</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              -\frac{4 - x^2}{4x} + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int \frac{10}{(x - 1)\left(x^2 + 9\right)}\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              -\frac{1}{2}\ln\left(x^2 + 9\right) - \frac{1}{3}\tan^{-1}\left(\frac{x}{3}\right) + \ln|x - 1| + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>\displaystyle \int e^{2x}\sin(3x)\, dx</m>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            <me>
+              \frac{e^{2x}}{13}\left(2\sin(3x) - 3\cos(3x)\right) + C
+            </me>
+          </p>
+        </solution>
+      </exercise>
+    
+    </exercisegroup>
+    
+  </worksheet>
 
 </section>
