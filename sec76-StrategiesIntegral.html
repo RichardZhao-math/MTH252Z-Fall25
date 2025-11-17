@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -101,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.9.19';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -129,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec75-PartialFraction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch7-TechniquesIntegration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec77-ImproperIntegral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec75-PartialFraction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch7-TechniquesIntegration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendixA-WrittenHomework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -145,9 +146,23 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec51-ApproximatingArea.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Approximating and Computing Area</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">51-Approximate_Rectangle</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">Approximating Area by Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-512-SummationNotation" class="internal"><span class="title">Summation Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-513-Compute_Limit_Approximation" class="internal"><span class="title">Computing Area as the Limit of Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-514-LimitSummation" class="internal"><span class="title">Limit of the approximation algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#ws-sec51" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-521-RiemannSum" class="internal"><span class="title">Riemann Sum and Definite Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-522-SignedArea" class="internal"><span class="title">Definite Integral and Signed Area</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-523-Properties_DefiniteIntegral" class="internal"><span class="title">Properties of Definite Integral</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#ws-sec52" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Indefinite Integral</span></a></div>
 <ul class="structural toc-item-list">
@@ -163,7 +178,9 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-541-FTC-Corollary" class="internal"><span class="title">A Corollary of the Fundamental Theorem of Calculus</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-542-Importance-FTC-Corollary" class="internal"><span class="title">Why is this corollary important?</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-5" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary" class="internal"><span class="title">Examples on Applying FTC Corollary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-7" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec54-FTCpartI.html#ws-sec54" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -172,9 +189,19 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-551-AccumulationFunction" class="internal"><span class="title">Accumulation Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-552-FTC" class="internal"><span class="title">THE Fundamental Theorem of Calculus</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-553-UsingFTC" class="internal"><span class="title">To apply the FTC...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-554-Graph-AccumulationFunction" class="internal"><span class="title">The Graph of the Accumulation Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec55-FTCpartII.html#ws-sec55" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-561-DistanceVelocity" class="internal"><span class="title">Relationship between Displacement and Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-562-DisplacementDistance" class="internal"><span class="title">Displacement vs. Distance Traveled</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-563-NetChange" class="internal"><span class="title">General Net Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec56-NetChange.html#ws-sec56" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div>
 <ul class="structural toc-item-list">
@@ -191,6 +218,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig" class="internal"><span class="title">Integral formulas involving inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-582-IntegralExponential" class="internal"><span class="title">Integrals Involving Exponential Functions</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#ws-sec58" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
@@ -199,10 +227,17 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch6-ApplicationIntegral.html" class="internal"><span class="codenumber">6</span> <span class="title">Applications of the Integral</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec63-DishAndWasher.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Volume of Revolution: Disks and Washers</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec64-ShellMethod.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Volume of Revolution: Cylindrical Shells</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html#sec61-AreaBetweenCurves-5" class="internal"><span class="title">Area between Two Curves</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-621-Volume" class="internal"><span class="title">Volume by Cross Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-622-AverageValue" class="internal"><span class="title">Average Value</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -218,38 +253,77 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec71-IntegrationByParts.html#ws-sec71" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec72-TrigIntegral.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec73-TrigSub.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Trigonometric Substitution</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral" class="internal"><span class="title">Basic Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral-5" class="internal"><span class="title">Part (a): Integral of (Co)Tangent</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral-6" class="internal"><span class="title">Part (b): Integral of (Co)Secant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral" class="internal"><span class="title">Intermediate Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-3" class="internal"><span class="title">Part (a): If <span class="process-math">\(\boldsymbol{m}\)</span> is an odd number...</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-4" class="internal"><span class="title">Part (b): If <span class="process-math">\(\boldsymbol{n}\)</span> is an odd number...</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-5" class="internal"><span class="title">Why do we care so much about the odd power...</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral" class="internal"><span class="title">Advanced Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral-3" class="internal"><span class="title">Part (a): Base case: when the power is 2 and 3</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral-4" class="internal"><span class="title">Part (b): Reduction Formulas for larger powers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec73-TrigSub.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Trigonometric Substitution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-731-TrigSub_Sine" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 - x^2}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-732-TrigSub_Tangent" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 + x^2}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-733-TrigSub_Secant" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{x^2 - a^2}\)</span></span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec73-TrigSub.html#ws-sec73" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec74-HyperbolicIntegral.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Integrals Involving Hyperbolic and Inverse Hyperbolic Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec75-PartialFraction.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Method of Partial Fractions</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Strategies for Integration</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec77-ImproperIntegral.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Improper Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec78-NumericalIntegration.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Numerical Integration</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec75-PartialFraction.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Method of Partial Fractions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-751-ProperFractions" class="internal"><span class="title">Prerequisite: Proper Rational Expression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-752-PDF-Regular" class="internal"><span class="title">Partial Fraction Decomposition: Distinct Linear Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-753-Repeated" class="internal"><span class="title">Partial Fraction Decomposition: Repeated Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-754-Quadratic" class="internal"><span class="title">Partial Fraction Decomposition: Irreducible Quadratic Factors</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec75-PartialFraction.html#ws-sec75" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec76-StrategiesIntegral.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Strategies for Integration</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html#subsec-761-IntegralStrategies" class="internal"><span class="title">What is the "best" way to evaluate integrals?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html#subsec-762-CAS" class="internal"><span class="title">Evaluate Integrals using CAS</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html#ws-sec76" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="appendixA-Investigation.html" class="internal"><span class="codenumber">A</span> <span class="title">Investigation Assignments</span></a></div>
+<div class="toc-title-box"><a href="appendixA-WrittenHomework.html" class="internal"><span class="codenumber">A</span> <span class="title">Written Homework</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Conceptual Foundation of Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A11-StructureIntegral" class="internal"><span class="title">Structure of the Integral</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsubsec-A111-GorillaJump" class="internal"><span class="title">The Great Gorilla Jump</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A12-ProofFTC" class="internal"><span class="title">Proof of the Fundamental Theorem of Calculus</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA1-HW1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Written Homework #1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-HW1.html#secA1-HW1-3" class="internal"><span class="codenumber">A.1</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html" class="internal"><span class="codenumber">A.2</span> <span class="title">More Strategies to Evaluate Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A21-TrigIntegral" class="internal"><span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A22-TaylorPolynomial" class="internal"><span class="title">Approximation using Taylor Polynomials</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA2-HW2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Written Homework #2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-HW2.html#secA2-HW2-3" class="internal"><span class="codenumber">A.2</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA3-ApplicationIntegral.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Some Famous Applications of Integrals</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA3-ApplicationIntegral.html#subsec-A31-PhysicsWork" class="internal"><span class="title">A physics and engineering application -- Work</span></a></div></li></ul>
+<div class="toc-title-box"><a href="secA3-HW3.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Written Homework #3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA3-HW3.html#secA3-HW3-3" class="internal"><span class="codenumber">A.3</span> <span class="title"></span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -258,11 +332,717 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec76-StrategiesIntegral"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strategies for Integration</span>
 </h2>
-<div class="para" id="sec76-StrategiesIntegral-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec76-StrategiesIntegral-2"><div class="para" id="sec76-StrategiesIntegral-2-1">In this section, we will summarize all the techniques we learned in class for evaluating integrals and come up with some strategies to evaluate integrals.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 7.6: Strategies for Integration"><a href="#sec76-StrategiesIntegral" title="Copy heading and permalink for Section 7.6: Strategies for Integration" aria-label="Copy heading and permalink for Section 7.6: Strategies for Integration">🔗</a></div></section></div>
+<article class="objectives goal-like" id="sec76-StrategiesIntegral-2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<div class="introduction" id="sec76-StrategiesIntegral-2-2-1"><div class="para" id="sec76-StrategiesIntegral-2-2-1-1">After this section, students will be able to:<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul class="disc" id="sec76-StrategiesIntegral-2-2-2">
+<li id="sec76-StrategiesIntegral-2-2-2-1">
+<div class="para" id="sec76-StrategiesIntegral-2-2-2-1-1">identify the structural features of an integral and determine which integration methods are applicable.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec76-StrategiesIntegral-2-2-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec76-StrategiesIntegral-2-2-2-2">
+<div class="para" id="sec76-StrategiesIntegral-2-2-2-2-1">realize that an integral may be evaluated using multiple methods.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec76-StrategiesIntegral-2-2-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec76-StrategiesIntegral-2-2-2-3">
+<div class="para" id="sec76-StrategiesIntegral-2-2-2-3-1">use computer algebra systems (CAS) to evaluate integrals and critically assess the elegance and efficiency of CAS-generated solutions.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec76-StrategiesIntegral-2-2-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives"><a href="#sec76-StrategiesIntegral-2-2" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><article class="investigation project-like" id="sec76-StrategiesIntegral-3"><h3 class="heading">
+<span class="type">Investigation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">POP QUIZ!</span>
+</h3>
+<div class="introduction" id="sec76-StrategiesIntegral-3-2">
+<div class="para" id="sec76-StrategiesIntegral-3-2-1">Suppose the following question were the first problem on your final exam for this class.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec76-StrategiesIntegral-3-2-2">Evaluate the integral <span class="process-math">\(\displaystyle \int\dfrac{x}{9 - x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Investigation 7.6.1: POP QUIZ!"><a href="#sec76-StrategiesIntegral-3" title="Copy heading and permalink for Investigation 7.6.1: POP QUIZ!" aria-label="Copy heading and permalink for Investigation 7.6.1: POP QUIZ!">🔗</a></div></article><section class="subsection" id="subsec-761-IntegralStrategies"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">What is the "best" way to evaluate integrals?</span>
+</h3>
+<div class="para" id="subsec-761-IntegralStrategies-2">We went through various strategies to evaluate integrals this term (and there are more strategies that goes beyond the scope of this class!). Sometimes it is difficult to determine which method to try right off the bat.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-761-IntegralStrategies-3">There are two factors that you may consider when determining which method to try right off the bat.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-761-IntegralStrategies-4">The first one is the structural features of the integral. You want to pick a <em class="emphasis">right</em> method for the integrals (for example, trying partial fraction decomposition on an integral that has no rational expression is not <em class="emphasis">right</em>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-761-IntegralStrategies-5">The second one is the complexity of the method. Similar to the pop quiz problem, if multiple methods work out for an integral, then always try the <em class="emphasis">easier</em> method first (if we can solve a problem using an <em class="emphasis">easier</em> method, why bother using something complicated).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-761-IntegralStrategies-6">
+<div class="para">For summary purposes, Richard put all the methods we have learned so far below all on one page:</div>
+<ul class="disc" id="subsec-761-IntegralStrategies-6-1">
+<li id="subsec-761-IntegralStrategies-6-1-1">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-1-1">Always try <em class="alert">simplification</em> first! Do any algebraic simplification possible! If we can make the integrand a lot simpler to deal with, why not!?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-2">
+<div class="para logical" id="subsec-761-IntegralStrategies-6-1-2-1">
+<div class="para">
+<em class="alert"><span class="process-math">\(\boldsymbol{u}\)</span>-sub</em> is the method you should try next. Recall <span class="process-math">\(u\)</span>-sub came from the chain rule you learned in calculus 1, which means you may want to be able to find the derivative of the choice of <span class="process-math">\(u\)</span> in the integrand. Long story short, the <span class="process-math">\(u\)</span>-sub formula is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec57-uSub.html">
+\begin{equation*}
+\int f'(u(x))\cdot u'(x)\, dx = f(u(x)) + C
+\end{equation*}
+</div>
+<div class="para">Just make sure you don’t end up getting a more complicated integral after <span class="process-math">\(u\)</span>-sub. (for more detail, check out <span class="process-math">\(u\)</span>-sub in <a href="sec57-uSub.html" class="internal" title="Section 5.7: The Substitution Method">Section 5.7</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-3">
+<div class="para logical" id="subsec-761-IntegralStrategies-6-1-3-1">
+<div class="para">If you see two functions being multiplied in the integrand, you may want to consider using <em class="alert">integration by parts</em> since this method came from the product rule in derivative. You will want to pick a <span class="process-math">\(u\)</span> and the rest of the integral will be the <span class="process-math">\(dv\text{.}\)</span> Long story short, the integration by parts formula is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec71-IntegrationByParts.html">
+\begin{equation*}
+\int u\, dv = uv - \int v\, du
+\end{equation*}
+</div>
+<div class="para">You may be wondering how we can pick a <span class="process-math">\(u\)</span> to make the problem easier. Recall there is an acronym "LIPET" to help us pick a good <span class="process-math">\(u\text{.}\)</span> This acronym LIPET tells us that we should pick the <span class="process-math">\(u\)</span> in the following order:</div>
+<ul class="circle" id="subsec-761-IntegralStrategies-6-1-3-1-8">
+<li id="subsec-761-IntegralStrategies-6-1-3-1-8-1">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-3-1-8-1-1">
+<em class="alert">L</em> stands for Logarithmic functions;<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-3-1-8-2">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-3-1-8-2-1">
+<em class="alert">I</em> stands for Inverse Trigonometric functions;<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-3-1-8-3">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-3-1-8-3-1">
+<em class="alert">P</em> stands for Polynomial functions;<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-3-1-8-4">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-3-1-8-4-1">
+<em class="alert">E</em> stands for Exponential functions;<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-3-1-8-5">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-3-1-8-5-1">
+<em class="alert">T</em> stands for Trigonometric functions;<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-3-1-8-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">(for more detail, check out <span class="process-math">\(u\)</span>-sub in <a href="sec71-IntegrationByParts.html" class="internal" title="Section 7.1: Integration by Parts">Section 7.1</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-4">
+<div class="para logical" id="subsec-761-IntegralStrategies-6-1-4-1">
+<div class="para">There are also two special methods we learned that only works if the situation fits. They are:</div>
+<ul class="circle" id="subsec-761-IntegralStrategies-6-1-4-1-1">
+<li id="subsec-761-IntegralStrategies-6-1-4-1-1-1">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-4-1-1-1-1">
+<em class="alert">Trigonometric Substitution</em>: If you see <span class="process-math">\(a^2 - x^2\)</span> in the integrand, you may consider using the substitution that <span class="process-math">\(x = a\sin(\theta)\text{.}\)</span> Likewise, if you see <span class="process-math">\(a^2 + x^2\)</span> in the integrand, you may consider using the substitution that <span class="process-math">\(x = a\tan(\theta)\text{.}\)</span> (for more detail, check out <span class="process-math">\(u\)</span>-sub in <a href="sec73-TrigSub.html" class="internal" title="Section 7.3: Trigonometric Substitution">Section 7.3</a>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-4-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-4-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-761-IntegralStrategies-6-1-4-1-1-2">
+<div class="para" id="subsec-761-IntegralStrategies-6-1-4-1-1-2-1">
+<em class="alert">Partial Fraction Decomposition</em>: If you see a complicated <em class="emphasis">proper</em> fraction where the denominator happens to be reducible (fancy way of saying the denominator can be factored), then partial fraction decomposition will help you split up the fraction to smaller pieces. (for more detail, check out <span class="process-math">\(u\)</span>-sub in <a href="sec75-PartialFraction.html" class="internal" title="Section 7.5: The Method of Partial Fractions">Section 7.5</a>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-4-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-4-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-761-IntegralStrategies-6-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-761-IntegralStrategies-7">Let’s look at a couple examples. Make sure you know <em class="alert">HOW</em> to determine what method you should use (and <em class="alert">WHY</em>, rather than just picking a method at random).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-761-IntegralStrategies-8"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-761-IntegralStrategies-8-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int\left(\sin(x) + \cos(x)\right)^2\, dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-761-IntegralStrategies-8-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-761-IntegralStrategies-8-2-1">A good first step is to determine what method we should use for this integral. By looking through Richard’s list above, pick a method (you may want to convince yourself <em class="alert">why</em> the method you pick is a good choice) and try it out! If it doesn’t work out, pick something else.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.6.1.1"><a href="#subsec-761-IntegralStrategies-8-2" title="Copy heading and permalink for Hint 7.6.1.1" aria-label="Copy heading and permalink for Hint 7.6.1.1">🔗</a></div>
+</div></details><details id="example-sec76-manvscas" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-sec76-manvscas-1">
+<div class="para">Observe that the integrand can be simplified further by expanding the square and using some trig identities.</div>
+<div class="displaymath process-math" id="example-sec76-manvscas-1-1">
+\begin{align*}
+\int \left(\sin(x) + \cos(x)\right)^2\, dx \amp = \int \left(\sin^2(x) + \cos^2(x) + 2\sin(x)\cos(x)\right)\, dx \\
+\amp= \int \left(1 + 2\sin(x)\cos(x)\right)\, dx \amp\amp \text{by Pythagorean Identity} \\
+\amp= \int \left(1 + \sin(2x)\right)\, dx \amp\amp \text{by Double-angle Identity} 
+\end{align*}
+</div>
+<div class="para">See that the integrand is a lot easier now compared to what we started with! A simple <span class="process-math">\(u\)</span>-sub will help evaluate the integral.</div>
+<div class="displaymath process-math" id="example-sec76-manvscas-1-3">
+\begin{align*}
+\int \left(1 + \sin(2x)\right)\, dx \amp= x + \frac{1}{2x}\cos(2x) + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sec76-manvscas-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.6.1.1"><a href="#example-sec76-manvscas" title="Copy heading and permalink for Solution 7.6.1.1" aria-label="Copy heading and permalink for Solution 7.6.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.6.1"><a href="#subsec-761-IntegralStrategies-8" title="Copy heading and permalink for Example 7.6.1" aria-label="Copy heading and permalink for Example 7.6.1">🔗</a></div></article><article class="example example-like" id="subsec-761-IntegralStrategies-9"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-761-IntegralStrategies-9-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int x\sec^2(x)\, dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-761-IntegralStrategies-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-761-IntegralStrategies-9-2-1">A good first step is to determine what method we should use for this integral. By looking through Richard’s list above, pick a method (you may want to convince yourself <em class="alert">why</em> the method you pick is a good choice) and try it out! If it doesn’t work out, pick something else.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.6.2.1"><a href="#subsec-761-IntegralStrategies-9-2" title="Copy heading and permalink for Hint 7.6.2.1" aria-label="Copy heading and permalink for Hint 7.6.2.1">🔗</a></div>
+</div></details><details id="subsec-761-IntegralStrategies-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-761-IntegralStrategies-9-3-1">For starters, we can’t simplify the integrand any further. Also, there is no composite function here that may allow us to do a <span class="process-math">\(u\)</span>-sub. But the integral consists of the <em class="emphasis">product</em> of two functions. Then <em class="alert">integration by parts</em> may be a good method to try here.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-761-IntegralStrategies-9-3-2">
+<div class="para">By the LIPET test, we pick <span class="process-math">\(u = x\)</span> here. Then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec72-TrigIntegral.html" id="subsec-761-IntegralStrategies-9-3-2-2">
+\begin{align*}
+u \amp= x \amp\amp dv = \sec^2(x)\, dx \\
+du \amp= dx \amp\amp \;\; v= \tan(x) 
+\end{align*}
+</div>
+<div class="para">Using the integration by parts formula, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec72-TrigIntegral.html" id="subsec-761-IntegralStrategies-9-3-2-3">
+\begin{align*}
+\int x\sec^2(x)\, dx \amp= x\tan(x) - \int \tan(x)\, dx 
+\end{align*}
+</div>
+<div class="para">Recall we do have a formula to evaluate the integral of tangent (see <a href="sec72-TrigIntegral.html" class="internal" title="Section 7.2: Trigonometric Integrals">Section 7.2</a>). Using the formula, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec72-TrigIntegral.html" id="subsec-761-IntegralStrategies-9-3-2-5">
+\begin{align*}
+\int x\sec^2(x)\, dx \amp= x\tan(x) - \int \tan(x)\, dx \\
+\amp= x\tan(x) - \ln\left|\sec(x)\right| + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-9-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.6.2.1"><a href="#subsec-761-IntegralStrategies-9-3" title="Copy heading and permalink for Solution 7.6.2.1" aria-label="Copy heading and permalink for Solution 7.6.2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.6.2"><a href="#subsec-761-IntegralStrategies-9" title="Copy heading and permalink for Example 7.6.2" aria-label="Copy heading and permalink for Example 7.6.2">🔗</a></div></article><article class="example example-like" id="subsec-761-IntegralStrategies-10"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-761-IntegralStrategies-10-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{\tan^{-1}(x)}{1 + x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-761-IntegralStrategies-10-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-761-IntegralStrategies-10-2-1">Observe that we can’t simplify the integrand any further. Also, the integrand doesn’t consist of a product (so integration by parts may not be useful) and the integrand isn’t a rational expression (so partial fraction decomposition isn’t gonna work).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-761-IntegralStrategies-10-2-2">Richard just eliminated three of the methods for you. What method do you think you should use here (and why)?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.6.3.1"><a href="#subsec-761-IntegralStrategies-10-2" title="Copy heading and permalink for Hint 7.6.3.1" aria-label="Copy heading and permalink for Hint 7.6.3.1">🔗</a></div>
+</div></details><details id="subsec-761-IntegralStrategies-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-761-IntegralStrategies-10-3-1">Observe that the denominator of the integrand takes the form of <span class="process-math">\(a^2 + x^2\text{,}\)</span> where <span class="process-math">\(a = 1\text{.}\)</span> Then trig sub may work out here.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-761-IntegralStrategies-10-3-2">
+<div class="para">Let <span class="process-math">\(x = \tan(\theta)\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 + x^2 = 1 + \tan^2(\theta) = \sec^2(\theta)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tan^{-1}(x) = \tan^{-1}\left(\tan(\theta)\right) = \theta
+\end{equation*}
+</div>
+<div class="para">In addition, we know that <span class="process-math">\(\dfrac{dx}{d\theta} = \sec^2(\theta)\text{,}\)</span> which implies that <span class="process-math">\(dx = \sec^2(\theta)\, d\theta\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-761-IntegralStrategies-10-3-3">
+<div class="para">Now putting all the pieces together, we obtain</div>
+<div class="displaymath process-math" id="subsec-761-IntegralStrategies-10-3-3-1">
+\begin{align*}
+\int \frac{\tan^{-1}(x)}{1 + x^2}\, dx \amp=\int \frac{\theta}{\sec^2(\theta)}\cdot \sec^2(\theta)\, d\theta \\
+\amp= \int \theta\, d\theta \\
+\amp= \frac{\theta^2}{2} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-761-IntegralStrategies-10-3-4">
+<div class="para">By our assumption of <span class="process-math">\(x = \tan(\theta)\text{,}\)</span> we know that <span class="process-math">\(\theta = \tan^{-1}(x)\text{.}\)</span> Hence, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\theta^2}{2} + C = \frac{\left(\tan^{-1}(x)\right)^2}{2} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-761-IntegralStrategies-10-3-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alternative method (if you are super observant)</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-761-IntegralStrategies-10-3-5-2">
+<div class="para">The integral can be rewritten as follows</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{\tan^{-1}(x)}{1 + x^2}\, dx = \int \tan^{-1}(x) \cdot \frac{1}{1 + x^2}\, dx
+\end{equation*}
+</div>
+<div class="para">Observe that <span class="process-math">\(\dfrac{1}{1 + x^2}\)</span> is the derivative of <span class="process-math">\(\tan^{-1}(x)\text{,}\)</span> which implies that a <span class="process-math">\(u\)</span>-sub may work out here.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-761-IntegralStrategies-10-3-5-3">
+<div class="para">Let <span class="process-math">\(u = \tan^{-1}(x)\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du}{dx} = \frac{1}{1 + x^2}
+\qquad\implies\qquad
+du = \frac{1}{1 + x^2}\, dx
+\end{equation*}
+</div>
+<div class="para">We obtain</div>
+<div class="displaymath process-math" id="subsec-761-IntegralStrategies-10-3-5-3-3">
+\begin{align*}
+\int \tan^{-1}(x) \cdot \frac{1}{1 + x^2}\, dx \amp= \int u\, du \\
+\amp= \frac{u^2}{2} + C \\
+\amp= \frac{\left(\tan^{-1}(x)\right)^2}{2} + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-10-3-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.6.3.1.1: Alternative method (if you are super observant)"><a href="#subsec-761-IntegralStrategies-10-3-5" title="Copy heading and permalink for Solution 7.6.3.1.1: Alternative method (if you are super observant)" aria-label="Copy heading and permalink for Solution 7.6.3.1.1: Alternative method (if you are super observant)">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Solution 7.6.3.1"><a href="#subsec-761-IntegralStrategies-10-3" title="Copy heading and permalink for Solution 7.6.3.1" aria-label="Copy heading and permalink for Solution 7.6.3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.6.3"><a href="#subsec-761-IntegralStrategies-10" title="Copy heading and permalink for Example 7.6.3" aria-label="Copy heading and permalink for Example 7.6.3">🔗</a></div></article><div class="autopermalink" data-description='Subsection: What is the "best" way to evaluate integrals?'><a href="#subsec-761-IntegralStrategies" title='Copy heading and permalink for Subsection: What is the "best" way to evaluate integrals?' aria-label='Copy heading and permalink for Subsection: What is the "best" way to evaluate integrals?'>🔗</a></div></section><section class="subsection" id="subsec-762-CAS"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluate Integrals using CAS</span>
+</h3>
+<div class="para" id="subsec-762-CAS-2">There are some computer algebra system (CAS), including <a class="external" href="https://www.wolframalpha.com/calculators/integral-calculator" target="_blank">WolframAlpha</a>, <a class="external" href="https://www.symbolab.com/solver/integral-calculator" target="_blank">Symbolab</a>, <a class="external" href="https://www.integral-calculator.com/" target="_blank">Integral Calculator</a>, and so many others, to evaluate integrals.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-762-CAS-3">As we saw in the pop quiz, there may be multiple approaches to evaluate integrals, some of which may be easier than others. We can imagine CAS is a pretty powerful tool to evaluate integrals, but does it always evaluate integrals using the most "efficient" way?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-762-CAS-4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-762-CAS-4-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \left(\sin(x) + \cos(x)\right)^2\, dx\)</span> using <a class="external" href="https://www.integral-calculator.com/" target="_blank">Integral Calculator</a>. Next, scroll down on the Result and click "Show steps" to see how CAS evaluated the integral.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-762-CAS-4-2">Then compare your solution with the one CAS provided. In your opinion, who do you think, you or CAS, provided an easier and more elegant solution? Why?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-762-CAS-4-3">This is the <a href="sec76-StrategiesIntegral.html#example-sec76-manvscas" class="xref" data-knowl="./knowl/xref/example-sec76-manvscas.html" data-reveal-label="Reveal" data-close-label="Close" title="Solution 7.6.1.1">Solution 7.6.1.1</a> to the integral when we evaluated it by hand.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-762-CAS-4-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-762-CAS-4-4-1">
+<div class="para">Well what CAS did was expanding <span class="process-math">\((\sin x + \cos x)^2\)</span> and breaking it down using linearity as follows:</div>
+<div class="displaymath process-math" id="subsec-762-CAS-4-4-1-2">
+\begin{align*}
+\int \left(\sin x + \cos x\right)^2 \amp = \int \left(\sin^2 x + 2\sin(x)\cos(x) + \cos^2(x)\right)\, dx \\
+\amp = \int\sin^2(x)\, dx + \int 2\sin(x)\cos(x)\, dx + \int \cos^2(x)\, dx 
+\end{align*}
+</div>
+<div class="para">Well the middle integral is easy to evaluate but CAS uses the reduction formula for <span class="process-math">\(\int \sin^2(x)\, dx\)</span> and <span class="process-math">\(\int \cos^2(x)\, dx\text{,}\)</span> making the steps a lot more complicated.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-762-CAS-4-4-2">We human certainly provided an easier and more elegant solution than the CAS did when evaluating this integral! We are smart to <em class="alert">simplify</em> the integrand instead of evaluating each term separately!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.6.4.1"><a href="#subsec-762-CAS-4-4" title="Copy heading and permalink for Solution 7.6.4.1" aria-label="Copy heading and permalink for Solution 7.6.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.6.4"><a href="#subsec-762-CAS-4" title="Copy heading and permalink for Example 7.6.4" aria-label="Copy heading and permalink for Example 7.6.4">🔗</a></div></article><div class="para" id="subsec-762-CAS-5">You may all have some takeaways about evaluating integrals using CAS! Normally, CAS is powerful enough to provide the correct answer, but it may not provide the most easiest and elegant solution. Don’t just trust the CAS 100%. We human are a lot smarter than CAS!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Evaluate Integrals using CAS"><a href="#subsec-762-CAS" title="Copy heading and permalink for Subsection: Evaluate Integrals using CAS" aria-label="Copy heading and permalink for Subsection: Evaluate Integrals using CAS">🔗</a></div></section><div class="para" id="sec76-StrategiesIntegral-6">Remember the goal in this class is for you to learn how to integrate functions. Richard can’t past you if you don’t show any understanding on integrating functions. Below are a lot of practices on integrating functions. Feel free to test yourself or practice with the list. <em class="alert">Reach out to Richard if you need help!!</em><div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="worksheet" id="ws-sec76" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec76-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="introduction" id="ws-sec76-2"><div class="para" id="ws-sec76-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ws-sec76-2-2">I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="exercisegroup" id="ws-sec76-3">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec76-3-1"><div class="para" id="ws-sec76-3-1-1">Evaluate the following integrals.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec76-3-2"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-2-1-1">
+<span class="process-math">\(\displaystyle \int \left(\frac{1 - x}{x}\right)^2\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-2-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{x} - 2\ln|x| + x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#ws-sec76-3-2-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#ws-sec76-3-2" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-3-1-1">
+<span class="process-math">\(\displaystyle \int \frac{\csc^2(x)}{1 + \cot(x)}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-3-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\ln\left|1 + \cot(x)\right| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#ws-sec76-3-3-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#ws-sec76-3-3" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-4-1-1">
+<span class="process-math">\(\displaystyle \int \sqrt{\tan(x)}\sec^2(x)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-4-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{2}{3}\tan^\frac{3}{2}(x) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#ws-sec76-3-4-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 3"><a href="#ws-sec76-3-4" title="Copy heading and permalink for Worksheet Exercise 3" aria-label="Copy heading and permalink for Worksheet Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-5"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-5-1-1">
+<span class="process-math">\(\displaystyle \int x^3\ln(x)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-5-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^4}{4}\ln(x) - \frac{x^4}{16} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#ws-sec76-3-5-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 4"><a href="#ws-sec76-3-5" title="Copy heading and permalink for Worksheet Exercise 4" aria-label="Copy heading and permalink for Worksheet Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-6"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-6-1-1">
+<span class="process-math">\(\displaystyle \int \frac{\ln(x)}{x^{10}}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-6-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{\ln(x)}{9x^9} - \frac{1}{81x^9} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#ws-sec76-3-6-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 5"><a href="#ws-sec76-3-6" title="Copy heading and permalink for Worksheet Exercise 5" aria-label="Copy heading and permalink for Worksheet Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-7"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-7-1-1">
+<span class="process-math">\(\displaystyle \int (x + 1)e^{4 - 3x}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-7-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{9}e^{4 - 3x}(3x + 4) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#ws-sec76-3-7-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 6"><a href="#ws-sec76-3-7" title="Copy heading and permalink for Worksheet Exercise 6" aria-label="Copy heading and permalink for Worksheet Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-8"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-8-1-1">
+<span class="process-math">\(\displaystyle \int \frac{x + 2}{\sqrt{x^2 + 4x}}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-8-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\sqrt{x^2 + 4x} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#ws-sec76-3-8-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 7"><a href="#ws-sec76-3-8" title="Copy heading and permalink for Worksheet Exercise 7" aria-label="Copy heading and permalink for Worksheet Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-9"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-9-1-1">
+<span class="process-math">\(\displaystyle \int \frac{x}{\sqrt{1 - x^4}}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-9-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2}\sin^{-1}(x) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#ws-sec76-3-9-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 8"><a href="#ws-sec76-3-9" title="Copy heading and permalink for Worksheet Exercise 8" aria-label="Copy heading and permalink for Worksheet Exercise 8">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-10"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-10-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{x^2 + 6x + 8}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-10-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2}\ln\left|\frac{x + 2}{x + 4}\right| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#ws-sec76-3-10-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 9"><a href="#ws-sec76-3-10" title="Copy heading and permalink for Worksheet Exercise 9" aria-label="Copy heading and permalink for Worksheet Exercise 9">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-11"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-11-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{(x - 3)^2(x + 4)}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-11-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{49}\ln\left|\frac{x + 4}{x - 3}\right| - \frac{1}{7(x - 3)} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.1"><a href="#ws-sec76-3-11-2" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 10"><a href="#ws-sec76-3-11" title="Copy heading and permalink for Worksheet Exercise 10" aria-label="Copy heading and permalink for Worksheet Exercise 10">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-12"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-12-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{x^2 + 8x + 25}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-12-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{3}\tan^{-1}\left(\frac{x + 4}{3}\right) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.1"><a href="#ws-sec76-3-12-2" title="Copy heading and permalink for Solution 11.1" aria-label="Copy heading and permalink for Solution 11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 11"><a href="#ws-sec76-3-12" title="Copy heading and permalink for Worksheet Exercise 11" aria-label="Copy heading and permalink for Worksheet Exercise 11">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-13"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-13-1-1">
+<span class="process-math">\(\displaystyle \int \ln\left(\sqrt{5 - x}\right)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-13-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2}\bigg((x - 5)\ln(5 - x) - x \bigg) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.1"><a href="#ws-sec76-3-13-2" title="Copy heading and permalink for Solution 12.1" aria-label="Copy heading and permalink for Solution 12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 12"><a href="#ws-sec76-3-13" title="Copy heading and permalink for Worksheet Exercise 12" aria-label="Copy heading and permalink for Worksheet Exercise 12">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-14"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-14-1-1">
+<span class="process-math">\(\displaystyle \int \tan^5(x)\sec^3(x) \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-14-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-14-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sec^7(x)}{7} - \frac{2\sec^5(x)}{5} + \frac{\sec^3(x)}{3} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.1"><a href="#ws-sec76-3-14-2" title="Copy heading and permalink for Solution 13.1" aria-label="Copy heading and permalink for Solution 13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 13"><a href="#ws-sec76-3-14" title="Copy heading and permalink for Worksheet Exercise 13" aria-label="Copy heading and permalink for Worksheet Exercise 13">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-15"><h5 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-15-1-1">
+<span class="process-math">\(\displaystyle \int \frac{x^3}{\sqrt{x^2 + 1}}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-15-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^2}{3}\sqrt{x^2 + 1} - \frac{2}{3}\sqrt{x^2 + 1} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 14.1"><a href="#ws-sec76-3-15-2" title="Copy heading and permalink for Solution 14.1" aria-label="Copy heading and permalink for Solution 14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 14"><a href="#ws-sec76-3-15" title="Copy heading and permalink for Worksheet Exercise 14" aria-label="Copy heading and permalink for Worksheet Exercise 14">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-16"><h5 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-16-1-1">
+<span class="process-math">\(\displaystyle \int \sin\left(\ln(x)\right)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-16-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-16-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x}{2}\left(\sin\left(\ln(x)\right) - \cos\left(\ln(x)\right)\right) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 15.1"><a href="#ws-sec76-3-16-2" title="Copy heading and permalink for Solution 15.1" aria-label="Copy heading and permalink for Solution 15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 15"><a href="#ws-sec76-3-16" title="Copy heading and permalink for Worksheet Exercise 15" aria-label="Copy heading and permalink for Worksheet Exercise 15">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-17"><h5 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-17-1-1">
+<span class="process-math">\(\displaystyle \int \frac{x}{e^{2x}}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-17-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-17-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{2x + 1}{4e^{2x}} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-17-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.1"><a href="#ws-sec76-3-17-2" title="Copy heading and permalink for Solution 16.1" aria-label="Copy heading and permalink for Solution 16.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 16"><a href="#ws-sec76-3-17" title="Copy heading and permalink for Worksheet Exercise 16" aria-label="Copy heading and permalink for Worksheet Exercise 16">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-18"><h5 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-18-1-1">
+<span class="process-math">\(\displaystyle \int \tan^{-1}\left(\frac{1}{x}\right)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-18-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-18-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\ln\left(x^2 + 1\right)}{2} + x\tan^{-1}\left(\frac{1}{x}\right) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-18-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 17.1"><a href="#ws-sec76-3-18-2" title="Copy heading and permalink for Solution 17.1" aria-label="Copy heading and permalink for Solution 17.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 17"><a href="#ws-sec76-3-18" title="Copy heading and permalink for Worksheet Exercise 17" aria-label="Copy heading and permalink for Worksheet Exercise 17">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-19"><h5 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-19-1-1">
+<span class="process-math">\(\displaystyle \int \frac{5x + 1}{2x^2 - x - 1}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-19-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-19-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2}\ln\left|2x + 1\right| + 2\ln\left|x - 1\right| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 18.1"><a href="#ws-sec76-3-19-2" title="Copy heading and permalink for Solution 18.1" aria-label="Copy heading and permalink for Solution 18.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 18"><a href="#ws-sec76-3-19" title="Copy heading and permalink for Worksheet Exercise 18" aria-label="Copy heading and permalink for Worksheet Exercise 18">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-20"><h5 class="heading"><span class="codenumber">19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-20-1-1">
+<span class="process-math">\(\displaystyle \int x^3\cos\left(x^2\right)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-20-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-20-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2}\left(x^2\sin\left(x^2\right) + \cos\left(x^2\right)\right) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 19.1"><a href="#ws-sec76-3-20-2" title="Copy heading and permalink for Solution 19.1" aria-label="Copy heading and permalink for Solution 19.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 19"><a href="#ws-sec76-3-20" title="Copy heading and permalink for Worksheet Exercise 19" aria-label="Copy heading and permalink for Worksheet Exercise 19">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-21"><h5 class="heading"><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-21-1-1">
+<span class="process-math">\(\displaystyle \int \frac{x^2 - x + 6}{x^3 + 3x}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-21-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-21-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+2\ln|x| - \frac{1}{2}\ln\left(x^2 + 3\right) - \frac{1}{\sqrt{3}}\tan^{-1}\left(\frac{x}{\sqrt{3}}\right) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-21-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 20.1"><a href="#ws-sec76-3-21-2" title="Copy heading and permalink for Solution 20.1" aria-label="Copy heading and permalink for Solution 20.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 20"><a href="#ws-sec76-3-21" title="Copy heading and permalink for Worksheet Exercise 20" aria-label="Copy heading and permalink for Worksheet Exercise 20">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-22"><h5 class="heading"><span class="codenumber">21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-22-1-1">
+<span class="process-math">\(\displaystyle \int \frac{\sqrt{9 - x^2}}{x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-22-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-22-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{\sqrt{9 - x^2}}{x} - \sin^{-1}\left(\frac{x}{3}\right)+ C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 21.1"><a href="#ws-sec76-3-22-2" title="Copy heading and permalink for Solution 21.1" aria-label="Copy heading and permalink for Solution 21.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 21"><a href="#ws-sec76-3-22" title="Copy heading and permalink for Worksheet Exercise 21" aria-label="Copy heading and permalink for Worksheet Exercise 21">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-23"><h5 class="heading"><span class="codenumber">22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-23-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{x\sqrt{9 - x^2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-23-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-23-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{3}\ln\left|\frac{3 - \sqrt{9 - x^2}}{x}\right| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 22.1"><a href="#ws-sec76-3-23-2" title="Copy heading and permalink for Solution 22.1" aria-label="Copy heading and permalink for Solution 22.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 22"><a href="#ws-sec76-3-23" title="Copy heading and permalink for Worksheet Exercise 22" aria-label="Copy heading and permalink for Worksheet Exercise 22">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-24"><h5 class="heading"><span class="codenumber">23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-24-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{x^2 \sqrt{4 - x^2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-24-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-24-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{4 - x^2}{4x} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-24-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 23.1"><a href="#ws-sec76-3-24-2" title="Copy heading and permalink for Solution 23.1" aria-label="Copy heading and permalink for Solution 23.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 23"><a href="#ws-sec76-3-24" title="Copy heading and permalink for Worksheet Exercise 23" aria-label="Copy heading and permalink for Worksheet Exercise 23">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-25"><h5 class="heading"><span class="codenumber">24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-25-1-1">
+<span class="process-math">\(\displaystyle \int \frac{10}{(x - 1)\left(x^2 + 9\right)}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-25-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-25-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{2}\ln\left(x^2 + 9\right) - \frac{1}{3}\tan^{-1}\left(\frac{x}{3}\right) + \ln|x - 1| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-25-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 24.1"><a href="#ws-sec76-3-25-2" title="Copy heading and permalink for Solution 24.1" aria-label="Copy heading and permalink for Solution 24.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 24"><a href="#ws-sec76-3-25" title="Copy heading and permalink for Worksheet Exercise 24" aria-label="Copy heading and permalink for Worksheet Exercise 24">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec76-3-26"><h5 class="heading"><span class="codenumber">25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec76-3-26-1-1">
+<span class="process-math">\(\displaystyle \int e^{2x}\sin(3x)\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-26-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec76-3-26-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec76-3-26-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{e^{2x}}{13}\left(2\sin(3x) - 3\cos(3x)\right) + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec76-3-26-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 25.1"><a href="#ws-sec76-3-26-2" title="Copy heading and permalink for Solution 25.1" aria-label="Copy heading and permalink for Solution 25.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 25"><a href="#ws-sec76-3-26" title="Copy heading and permalink for Worksheet Exercise 25" aria-label="Copy heading and permalink for Worksheet Exercise 25">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1–25"><a href="#ws-sec76-3" title="Copy heading and permalink for Exercise Group 1–25" aria-label="Copy heading and permalink for Exercise Group 1–25">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet: Some Exercises for this section"><a href="#ws-sec76" title="Copy heading and permalink for Worksheet: Some Exercises for this section" aria-label="Copy heading and permalink for Worksheet: Some Exercises for this section">🔗</a></div></section><div class="autopermalink" data-description="Section 7.6: Strategies for Integration"><a href="#sec76-StrategiesIntegral" title="Copy heading and permalink for Section 7.6: Strategies for Integration" aria-label="Copy heading and permalink for Section 7.6: Strategies for Integration">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec75-PartialFraction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec77-ImproperIntegral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec75-PartialFraction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendixA-WrittenHomework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

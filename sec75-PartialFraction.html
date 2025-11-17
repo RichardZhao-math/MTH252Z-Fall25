@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -101,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.9.19';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -145,9 +146,23 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec51-ApproximatingArea.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Approximating and Computing Area</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">51-Approximate_Rectangle</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-511-Approximate_Rectangle" class="internal"><span class="title">Approximating Area by Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-512-SummationNotation" class="internal"><span class="title">Summation Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-513-Compute_Limit_Approximation" class="internal"><span class="title">Computing Area as the Limit of Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#subsec-514-LimitSummation" class="internal"><span class="title">Limit of the approximation algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec51-ApproximatingArea.html#ws-sec51" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec52-DefiniteIntegral.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Definite Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-521-RiemannSum" class="internal"><span class="title">Riemann Sum and Definite Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-522-SignedArea" class="internal"><span class="title">Definite Integral and Signed Area</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#subsec-523-Properties_DefiniteIntegral" class="internal"><span class="title">Properties of Definite Integral</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec52-DefiniteIntegral.html#ws-sec52" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec53-IndefiniteIntegral.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Indefinite Integral</span></a></div>
 <ul class="structural toc-item-list">
@@ -163,7 +178,9 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-541-FTC-Corollary" class="internal"><span class="title">A Corollary of the Fundamental Theorem of Calculus</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-542-Importance-FTC-Corollary" class="internal"><span class="title">Why is this corollary important?</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-5" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#subsec-543-Examples-FTC-Corollary" class="internal"><span class="title">Examples on Applying FTC Corollary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec54-FTCpartI.html#sec54-FTCpartI-7" class="internal"><span class="title">Something to ponder on...</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec54-FTCpartI.html#ws-sec54" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -172,9 +189,19 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-551-AccumulationFunction" class="internal"><span class="title">Accumulation Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-552-FTC" class="internal"><span class="title">THE Fundamental Theorem of Calculus</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-553-UsingFTC" class="internal"><span class="title">To apply the FTC...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec55-FTCpartII.html#subsec-554-Graph-AccumulationFunction" class="internal"><span class="title">The Graph of the Accumulation Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec55-FTCpartII.html#ws-sec55" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec56-NetChange.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Net Change as the Integral of a Rate of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-561-DistanceVelocity" class="internal"><span class="title">Relationship between Displacement and Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-562-DisplacementDistance" class="internal"><span class="title">Displacement vs. Distance Traveled</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec56-NetChange.html#subsec-563-NetChange" class="internal"><span class="title">General Net Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec56-NetChange.html#ws-sec56" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec57-uSub.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Substitution Method</span></a></div>
 <ul class="structural toc-item-list">
@@ -191,6 +218,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Further Integral Formulas</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-581-Integral-InverseTrig" class="internal"><span class="title">Integral formulas involving inverse trigonometric functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#subsec-582-IntegralExponential" class="internal"><span class="title">Integrals Involving Exponential Functions</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec58-FurtherIntegralFormulas.html#ws-sec58" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
@@ -199,10 +227,17 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch6-ApplicationIntegral.html" class="internal"><span class="codenumber">6</span> <span class="title">Applications of the Integral</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec63-DishAndWasher.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Volume of Revolution: Disks and Washers</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec64-ShellMethod.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Volume of Revolution: Cylindrical Shells</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Area Between Two Curves</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec61-AreaBetweenCurves.html#sec61-AreaBetweenCurves-5" class="internal"><span class="title">Area between Two Curves</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec62-VolumeAverageValue.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Setting up Integrals: Volume, Density, Average Value</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-621-Volume" class="internal"><span class="title">Volume by Cross Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec62-VolumeAverageValue.html#subsec-622-AverageValue" class="internal"><span class="title">Average Value</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -218,38 +253,77 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec71-IntegrationByParts.html#ws-sec71" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec72-TrigIntegral.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec73-TrigSub.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Trigonometric Substitution</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral" class="internal"><span class="title">Basic Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral-5" class="internal"><span class="title">Part (a): Integral of (Co)Tangent</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-721BasicTrigIntegral-6" class="internal"><span class="title">Part (b): Integral of (Co)Secant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral" class="internal"><span class="title">Intermediate Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-3" class="internal"><span class="title">Part (a): If <span class="process-math">\(\boldsymbol{m}\)</span> is an odd number...</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-4" class="internal"><span class="title">Part (b): If <span class="process-math">\(\boldsymbol{n}\)</span> is an odd number...</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-722IntermediateTrigIntegral-5" class="internal"><span class="title">Why do we care so much about the odd power...</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral" class="internal"><span class="title">Advanced Trigonometric Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral-3" class="internal"><span class="title">Part (a): Base case: when the power is 2 and 3</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec72-TrigIntegral.html#subsec-723AdvancedTrigIntegral-4" class="internal"><span class="title">Part (b): Reduction Formulas for larger powers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec73-TrigSub.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Trigonometric Substitution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-731-TrigSub_Sine" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 - x^2}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-732-TrigSub_Tangent" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{a^2 + x^2}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec73-TrigSub.html#subsec-733-TrigSub_Secant" class="internal"><span class="title">Integrals Involving <span class="process-math">\(\boldsymbol{x^2 - a^2}\)</span></span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec73-TrigSub.html#ws-sec73" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec74-HyperbolicIntegral.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Integrals Involving Hyperbolic and Inverse Hyperbolic Functions</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec75-PartialFraction.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Method of Partial Fractions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Strategies for Integration</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec77-ImproperIntegral.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Improper Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec78-NumericalIntegration.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Numerical Integration</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec75-PartialFraction.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Method of Partial Fractions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-751-ProperFractions" class="internal"><span class="title">Prerequisite: Proper Rational Expression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-752-PDF-Regular" class="internal"><span class="title">Partial Fraction Decomposition: Distinct Linear Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-753-Repeated" class="internal"><span class="title">Partial Fraction Decomposition: Repeated Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec75-PartialFraction.html#subsec-754-Quadratic" class="internal"><span class="title">Partial Fraction Decomposition: Irreducible Quadratic Factors</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec75-PartialFraction.html#ws-sec75" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec76-StrategiesIntegral.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Strategies for Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html#subsec-761-IntegralStrategies" class="internal"><span class="title">What is the "best" way to evaluate integrals?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html#subsec-762-CAS" class="internal"><span class="title">Evaluate Integrals using CAS</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec76-StrategiesIntegral.html#ws-sec76" class="internal"><span class="title">Some Exercises for this section</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="appendixA-Investigation.html" class="internal"><span class="codenumber">A</span> <span class="title">Investigation Assignments</span></a></div>
+<div class="toc-title-box"><a href="appendixA-WrittenHomework.html" class="internal"><span class="codenumber">A</span> <span class="title">Written Homework</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Conceptual Foundation of Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A11-StructureIntegral" class="internal"><span class="title">Structure of the Integral</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsubsec-A111-GorillaJump" class="internal"><span class="title">The Great Gorilla Jump</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA1-ConceptualFoundation.html#subsec-A12-ProofFTC" class="internal"><span class="title">Proof of the Fundamental Theorem of Calculus</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA1-HW1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Written Homework #1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-HW1.html#secA1-HW1-3" class="internal"><span class="codenumber">A.1</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html" class="internal"><span class="codenumber">A.2</span> <span class="title">More Strategies to Evaluate Integrals</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A21-TrigIntegral" class="internal"><span class="title">Trigonometric Integrals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA2-StrategiesEvaluate.html#subsec-A22-TaylorPolynomial" class="internal"><span class="title">Approximation using Taylor Polynomials</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="secA2-HW2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Written Homework #2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-HW2.html#secA2-HW2-3" class="internal"><span class="codenumber">A.2</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="secA3-ApplicationIntegral.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Some Famous Applications of Integrals</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secA3-ApplicationIntegral.html#subsec-A31-PhysicsWork" class="internal"><span class="title">A physics and engineering application -- Work</span></a></div></li></ul>
+<div class="toc-title-box"><a href="secA3-HW3.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Written Homework #3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA3-HW3.html#secA3-HW3-3" class="internal"><span class="codenumber">A.3</span> <span class="title"></span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -258,9 +332,973 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec75-PartialFraction"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Method of Partial Fractions</span>
 </h2>
-<div class="para" id="sec75-PartialFraction-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec75-PartialFraction-2"><div class="para" id="sec75-PartialFraction-2-1">In this section, we will an <em class="emphasis">algebraic</em> method called the <em class="alert">partial fraction decomposition</em> to help evaluate integrals.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 7.5: The Method of Partial Fractions"><a href="#sec75-PartialFraction" title="Copy heading and permalink for Section 7.5: The Method of Partial Fractions" aria-label="Copy heading and permalink for Section 7.5: The Method of Partial Fractions">🔗</a></div></section></div>
+<article class="objectives goal-like" id="sec75-PartialFraction-2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<div class="introduction" id="sec75-PartialFraction-2-2-1"><div class="para" id="sec75-PartialFraction-2-2-1-1">After this section, students will be able to:<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul class="disc" id="sec75-PartialFraction-2-2-2">
+<li id="sec75-PartialFraction-2-2-2-1">
+<div class="para" id="sec75-PartialFraction-2-2-2-1-1">determine whether a rational expression is proper or improper<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec75-PartialFraction-2-2-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec75-PartialFraction-2-2-2-2">
+<div class="para" id="sec75-PartialFraction-2-2-2-2-1">set up the correct form of the partial fraction decomposition based on the factorization of the denominator<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec75-PartialFraction-2-2-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec75-PartialFraction-2-2-2-3">
+<div class="para" id="sec75-PartialFraction-2-2-2-3-1">find the constants in a partial fraction decomposition<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec75-PartialFraction-2-2-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="sec75-PartialFraction-2-2-2-4">
+<div class="para" id="sec75-PartialFraction-2-2-2-4-1">evaluate integrals of rational expressions using the method of partial fraction decomposition.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-2-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#sec75-PartialFraction-2-2-2-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives"><a href="#sec75-PartialFraction-2-2" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><article class="investigation project-like" id="sec75-PartialFraction-3"><h3 class="heading">
+<span class="type">Investigation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction" id="sec75-PartialFraction-3-1">
+<div class="para" id="sec75-PartialFraction-3-1-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int\dfrac{5x - 4}{2x^2 + x - 1}\, dx\text{.}\)</span> Can we evaluate it using any of the methods we have learned so far in the class?<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec75-PartialFraction-3-1-2">If you get stuck and/or ready to be helped. Click open Richard’s hint below.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<details id="sec75-PartialFraction-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec75-PartialFraction-3-2-1">What is <span class="process-math">\(\dfrac{3}{x + 1} - \dfrac{1}{2x - 1}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec75-PartialFraction-3-2-2">How do we subtract fractions?<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.1.1"><a href="#sec75-PartialFraction-3-2" title="Copy heading and permalink for Hint 7.5.1.1" aria-label="Copy heading and permalink for Hint 7.5.1.1">🔗</a></div>
+</div></details><details id="sec75-PartialFraction-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec75-PartialFraction-3-3-1">
+<div class="para">One can verify quickly that</div>
+<div class="displaymath process-math" id="sec75-PartialFraction-3-3-1-1">
+\begin{align*}
+\frac{3}{x + 1} - \frac{1}{2x - 1} \amp= \frac{3\cdot(2x - 1)}{(x + 1)\cdot(2x - 1)} - \frac{1\cdot(x + 1)}{(2x - 1)\cdot(x + 1)} \\
+\amp= \frac{3(2x - 1) - (x + 1)}{(x + 1)(2x - 1)} \\
+\amp= \frac{6x - 3 - x - 1}{2x^2 - x + 2x - 1} \\
+\amp= \frac{5x - 4}{2x^2 + x - 1} 
+\end{align*}
+</div>
+<div class="para">This implies that <span class="process-math">\(\dfrac{5x - 4}{2x^2 + x - 1} = \dfrac{3}{x + 1} - \dfrac{1}{2x - 1}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec75-PartialFraction-3-3-2">
+<div class="para">But why is it helpful... That is because we can now split up the integral (using linearity) and integrate each of the smaller fractions.</div>
+<div class="displaymath process-math" id="sec75-PartialFraction-3-3-2-1">
+\begin{align*}
+\int\dfrac{5x - 4}{2x^2 + x - 1}\, dx \amp= \int\left(\dfrac{3}{x + 1} - \dfrac{1}{2x - 1}\right)\, dx\\
+\amp= 3\int \frac{1}{x + 1}\, dx - \int \frac{1}{2x - 1}\, dx \amp\amp\text{by linearity} \\
+\amp= 3\ln\left|x + 1\right| - \frac{1}{2}\ln\left|2x - 1\right| + C \amp\amp\text{by quick little -sub} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.5.1.1"><a href="#sec75-PartialFraction-3-3" title="Copy heading and permalink for Solution 7.5.1.1" aria-label="Copy heading and permalink for Solution 7.5.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Investigation 7.5.1"><a href="#sec75-PartialFraction-3" title="Copy heading and permalink for Investigation 7.5.1" aria-label="Copy heading and permalink for Investigation 7.5.1">🔗</a></div></article><div class="para" id="sec75-PartialFraction-4">Observe that the key step here that allows us to evaluate the integral is captured in Richard’s hint that he somehow knew how to <em class="emphasis">decompose</em> a giant fraction in the integrand into two smaller terms. This section will introduce this fancy method of decomposing a giant fraction into smaller terms, called the <em class="alert">partial fraction decomposition</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec75-PartialFraction-5">This is essentially an <em class="emphasis">algebraic</em> method, in the sense that we don’t need any calculus to make sense of this method. After we decompose the giant fraction into smaller terms, we still need to integrate each smaller term of the fractions.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="subsec-751-ProperFractions"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prerequisite: Proper Rational Expression</span>
+</h3>
+<div class="para" id="subsec-751-ProperFractions-2">In order to apply the method of partial fraction decomposition, we need the fraction to be <em class="alert">proper</em>. But what does a "proper fraction" mean...<div class="autopermalink" data-description="Paragraph"><a href="#subsec-751-ProperFractions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-751-ProperFractions-3">
+<div class="para">In short, a proper fraction has a smaller numerator than the denominator.</div>
+<div class="displaymath process-math" id="subsec-751-ProperFractions-3-1">
+\begin{align*}
+\text{Examples of Proper Fractions} \amp: \frac{3}{8}, \, \frac{1}{4}, \, \frac{14}{15}, \, \frac{4}{5} \\
+\amp \\
+\text{Examples of Improper Fractions} \amp: \frac{4}{3}, \, \frac{11}{4}, \, \frac{7}{7} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-751-ProperFractions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-751-ProperFractions-4">The reason why we call such fractions the <em class="alert">proper</em> fractions is because it makes sense to visualize the idea of "part of a whole" in these types of fractions, where the denominator of a fraction represents the total number of parts in a whole and the numerator represents the parts we are taking. In other words, the value of a proper fraction must be between <span class="process-math">\(0\)</span> and <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-751-ProperFractions-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-751-ProperFractions-5">Similarly, a <em class="alert">proper</em> rational expression is defined as a rational expression where the numerator is <em class="emphasis">less than</em> the denominator. But how do we compare polynomials though (for example, which one is greater, <span class="process-math">\(x^3 - 1\)</span> or <span class="process-math">\(2x^2 + 5\text{?}\)</span>). We usually compare the <em class="alert">degree</em> of the polynomials (the highest power on <span class="process-math">\(x\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-751-ProperFractions-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-751-ProperFractions-6">
+<div class="para">That is, <em class="alert">proper</em> rational expressions are the ones where the <em class="alert">degree of the numerator is less than the degree of the denominator</em>.</div>
+<div class="displaymath process-math" id="subsec-751-ProperFractions-6-3">
+\begin{align*}
+\text{Examples of Proper Rational Expression} \amp: \frac{x^2 - 3x + 7}{x^4 - 16}, \, \frac{x^2 - 5}{x^3 + 2x}, \, \frac{2x + 9}{x^4}, \, \frac{x - 1}{x^2 - 9} \\
+\amp \\
+\text{Examples of Improper Rational Expression} \amp: \frac{2x^2 + 7}{x - 5}, \, \frac{x - 2}{x - 5}, \, \frac{x^3}{6x^2 + 2x - 1} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-751-ProperFractions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-751-ProperFractions-7">
+<em class="alert">The method of partial fraction decomposition will only work on proper rational expressions.</em><div class="autopermalink" data-description="Paragraph"><a href="#subsec-751-ProperFractions-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Prerequisite: Proper Rational Expression"><a href="#subsec-751-ProperFractions" title="Copy heading and permalink for Subsection: Prerequisite: Proper Rational Expression" aria-label="Copy heading and permalink for Subsection: Prerequisite: Proper Rational Expression">🔗</a></div></section><section class="subsection" id="subsec-752-PDF-Regular"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Fraction Decomposition: Distinct Linear Factors</span>
+</h3>
+<div class="para logical" id="subsec-752-PDF-Regular-2">
+<div class="para">Recall the idea of the partial fraction decomposition is to decompose a fraction into smaller terms. If we know what the denominator can be factored into, then we know the denominators of the little fractions.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{p(x)}{(x - r_1)(x - r_2)} = \frac{?}{x - r_1} + \frac{?}{x - r_2}
+\end{equation*}
+</div>
+<div class="para">So the work here is really to determine the mysterious numerators. There are multiple strategies to determine the numerators. We will first look at an example with specific rational expressions to demonstrate the two main strategies to determine the numerators.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-752-PDF-Regular-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-752-PDF-Regular-3-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{3x}{x^2 + 2x - 8}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-752-PDF-Regular-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-752-PDF-Regular-3-2-1">Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-3-2-2">
+<div class="para">To determine the denominators of the smaller terms of fractions, we need to factor this denominator.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^2 + 2x - 8 = (x + 4)(x - 2)
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3x}{x^2 + 2x - 8} = \frac{?}{x + 4} + \frac{?}{x - 2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-3-2-3">
+<div class="para">We don’t know the numerators yet (that is why Richard put ?’s on the fractions). Let’s call them <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> where they are two variables. Then we are essentially solving the following rational equation for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3x}{x^2 + 2x - 8} = \frac{A}{x + 4} + \frac{B}{x - 2}
+\end{equation*}
+</div>
+<div class="para">Now put your MTH 95 thinking cap on. How do we solve a rational equation?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.1.1"><a href="#subsec-752-PDF-Regular-3-2" title="Copy heading and permalink for Hint 7.5.1.1" aria-label="Copy heading and permalink for Hint 7.5.1.1">🔗</a></div>
+</div></details><details id="subsec-752-PDF-Regular-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-752-PDF-Regular-3-3-1">Let’s first apply the method of partial fraction decomposition to the integrand first to decompose the proper rational expression.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-3-3-2">
+<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two constants such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3x}{(x + 4)(x - 2)} = \frac{A}{x + 4} + \frac{B}{x - 2}
+\end{equation*}
+</div>
+<div class="para">Then the goal here is to solve this equation for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> One strategy to solve a rational equation is to <em class="emphasis">multiply out the denominators</em>.</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-3-3-2-7">
+\begin{align*}
+(x + 4)(x - 2)\cdot \frac{3x}{(x + 4)(x - 2)} \amp= \left(\frac{A}{x + 4} + \frac{B}{x - 2}\right)\cdot (x + 4)(x - 2) \\
+\amp \\
+3x \amp= A(x - 2) + B(x + 4) 
+\end{align*}
+</div>
+<div class="para">To determine the values of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> there are two methods here.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-3-3-3">
+<div class="para">
+<em class="alert">Method I: Determining Coefficients.</em> We can simplify the right-hand side of the equation and combine the like terms.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3x = (A + B)x + (-2A + 4B)
+\end{equation*}
+</div>
+<div class="para">Two functions are the same when they look <em class="emphasis">exactly the same</em>, including the coefficients. This equation implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases} A + B = 3 \amp \\ -2A + 2B = 6 \amp \end{cases} 
+\qquad\implies \qquad 
+\begin{cases} A \amp= 2 \\ B \amp= 1 \end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-3-3-4">
+<div class="para">
+<em class="alert">Method II: Special Values (or Cover-up Method).</em> We know the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3x = A(x - 2) + B(x + 4)
+\end{equation*}
+</div>
+<div class="para">is true <em class="emphasis">for all</em> <span class="process-math">\(x\)</span>’s. So we want to plug in some values of <span class="process-math">\(x\)</span>’s to <em class="emphasis">"cover up"</em> either <span class="process-math">\(A\)</span> or <span class="process-math">\(B\text{.}\)</span>
+</div>
+<ul class="no-marker" id="subsec-752-PDF-Regular-3-3-4-9">
+<li id="subsec-752-PDF-Regular-3-3-4-9-1">
+<div class="para logical" id="subsec-752-PDF-Regular-3-3-4-9-1-1">
+<div class="para">To determine the value of <span class="process-math">\(A\text{,}\)</span> we need to cover up <span class="process-math">\(B\text{,}\)</span> which means we want the coefficient of <span class="process-math">\(B\)</span> to be <span class="process-math">\(0\text{.}\)</span> That is, we will let <span class="process-math">\(x = -4\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-3-3-4-9-1-1-6">
+\begin{align*}
+3(-4) \amp= A(-4 - 2) + B(-4 + 4) \\
+-12 \amp= -6A \\
+A \amp= 2 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-3-4-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-752-PDF-Regular-3-3-4-9-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-752-PDF-Regular-3-3-4-9-2">
+<div class="para logical" id="subsec-752-PDF-Regular-3-3-4-9-2-1">
+<div class="para">To determine the value of <span class="process-math">\(B\text{,}\)</span> we need to cover up <span class="process-math">\(A\text{,}\)</span> which means we want the coefficient of <span class="process-math">\(A\)</span> to be <span class="process-math">\(0\text{.}\)</span> That is, we will let <span class="process-math">\(x = 2\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-3-3-4-9-2-1-6">
+\begin{align*}
+3(2) \amp= A(2 - 2) + B(2 + 4) \\
+6 \amp= 6B \\
+B \amp= 1 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-3-4-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-752-PDF-Regular-3-3-4-9-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Hence, we know that <span class="process-math">\(A = 2\)</span> and <span class="process-math">\(B = 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-3-3-5">
+<div class="para">It doesn’t matter which method you used to determine <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> we know that <span class="process-math">\(A = 2\)</span> and <span class="process-math">\(B = 1\text{.}\)</span> This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3x}{(x + 4)(x - 2)} = \frac{2}{x + 4} + \frac{1}{x - 2}
+\end{equation*}
+</div>
+<div class="para">Then we obtain</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-3-3-5-6">
+\begin{align*}
+\int \frac{3x}{(x + 4)(x - 2)}\, dx \amp= \int \left(\frac{2}{x + 4} + \frac{1}{x - 2}\right)\, dx \\
+\amp= 2\int \frac{1}{x + 4}\, dx + \int \frac{1}{x - 2} \, dx \amp\amp\text{by linearity} \\
+\amp= 2\ln\left|x + 4\right| + \ln\left|x - 2\right| + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.5.1.1"><a href="#subsec-752-PDF-Regular-3-3" title="Copy heading and permalink for Solution 7.5.1.1" aria-label="Copy heading and permalink for Solution 7.5.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.5.1"><a href="#subsec-752-PDF-Regular-3" title="Copy heading and permalink for Example 7.5.1" aria-label="Copy heading and permalink for Example 7.5.1">🔗</a></div></article><div class="para" id="subsec-752-PDF-Regular-4">Observe that we will need to determine the form of the partial fraction decomposition in the setup. Then we solve this rational equation by multiplying the giant denominator on both sides of the equation. Next, we will determine the values of the variables using <em class="alert">Method I: Determining Coefficients</em> or <em class="alert">Method II: Special Values (or Cover-up Method)</em>. This will allow us to decompose the giant fraction into smaller terms, and we can integrate each smaller term by linearity.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-752-PDF-Regular-5">We will summarize the form of the partial fraction decomposition into a nice little list (there are three cases in total).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-752-PDF-Regular-6">To determine the value of the variables, it is up to you which method, I or II, you want to use. They have their advantages and shortcomings so Richard will not make you use one or the other (but you will need to understand at least one of the two methods).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-752-PDF-Regular-7"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-752-PDF-Regular-7-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{6x + 4}{x^2 - 1}\, dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-752-PDF-Regular-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-752-PDF-Regular-7-2-1">Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-752-PDF-Regular-7-2-2">So determine the form of the partial fraction decomposition in the setup using <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> as the variables. Then solve the equation for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to decompose the integrand. Next, integrate the smaller terms of fractions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.2.1"><a href="#subsec-752-PDF-Regular-7-2" title="Copy heading and permalink for Hint 7.5.2.1" aria-label="Copy heading and permalink for Hint 7.5.2.1">🔗</a></div>
+</div></details><details id="subsec-752-PDF-Regular-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-752-PDF-Regular-7-3-1">
+<div class="para">Observe we can factor the denominator</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^2 - 1 = (x + 1)(x - 1)
+\end{equation*}
+</div>
+<div class="para">Then the form of the partial fraction decomposition in the setup is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{6x + 4}{(x + 1)(x - 1)} = \frac{A}{x + 1} + \frac{B}{x - 1}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-7-3-2">
+<div class="para">We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-7-3-2-1">
+\begin{align*}
+(x + 1)(x - 1)\cdot \frac{6x + 4}{(x + 1)(x - 1)} \amp= \left(\frac{A}{x + 1} + \frac{B}{x - 1}\right)\cdot (x + 1)(x - 1) \\
+\amp \\
+6x + 4 \amp= A(x - 1) + B(x + 1) 
+\end{align*}
+</div>
+<div class="para">We can determine the values of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> using either method I or method II.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-7-3-3">
+<div class="para">
+<em class="alert">Method I: Determining Coefficients.</em> We can simplify the right-hand side of the equation and combine like terms.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+6x + 4 = (A + B)x + (-A + B)
+\end{equation*}
+</div>
+<div class="para">Now we are matching up the coefficients. This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases} A + B = 6 \amp \\ -A + B = 4 \amp \end{cases} 
+\qquad\implies \qquad 
+\begin{cases} A \amp= 1 \\ B \amp= B \end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-7-3-4">
+<div class="para">
+<em class="alert">Method II: Special Values (or Cover-up Method).</em> We want to plug in some values of <span class="process-math">\(x\)</span>’s to <em class="emphasis">"cover up"</em> either <span class="process-math">\(A\)</span> or <span class="process-math">\(B\text{.}\)</span>
+</div>
+<ul class="no-marker" id="subsec-752-PDF-Regular-7-3-4-6">
+<li id="subsec-752-PDF-Regular-7-3-4-6-1">
+<div class="para logical" id="subsec-752-PDF-Regular-7-3-4-6-1-1">
+<div class="para">To determine the value of <span class="process-math">\(A\text{,}\)</span> we need to cover up <span class="process-math">\(B\text{.}\)</span> To do so, we let <span class="process-math">\(x = -1\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-7-3-4-6-1-1-4">
+\begin{align*}
+6(-1) + 4 \amp= A(-1 - 1) + B(-1 + 1) \\
+-2 \amp= -2A \\
+A \amp= 1 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-3-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-752-PDF-Regular-7-3-4-6-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-752-PDF-Regular-7-3-4-6-2">
+<div class="para logical" id="subsec-752-PDF-Regular-7-3-4-6-2-1">
+<div class="para">To determine the value of <span class="process-math">\(B\text{,}\)</span> we need to cover up <span class="process-math">\(A\text{.}\)</span> To do so, we let <span class="process-math">\(x = 1\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-7-3-4-6-2-1-4">
+\begin{align*}
+6(1) + 4 \amp= A(1 - 1) + B(1 + 1) \\
+10 \amp= 2B \\
+B \amp= 5 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-3-4-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-752-PDF-Regular-7-3-4-6-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-7-3-5">
+<div class="para">Now we know the values of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{6x + 4}{(x + 1)(x - 1)} = \frac{1}{x + 1} + \frac{5}{x - 1}
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-7-3-5-4">
+\begin{align*}
+\int \frac{6x + 4}{(x + 1)(x - 1)}\, dx \amp= \int \left(\frac{1}{x + 1} + \frac{5}{x - 1} \right)\, dx \\
+\amp= \int \frac{1}{x + 1}\, dx + \int 5\frac{1}{x - 1}\, dx \amp\amp\text{by linearity}\\
+\amp= \ln\left|x + 1\right| + 5\ln\left|x - 1\right| + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-7-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.5.2.1"><a href="#subsec-752-PDF-Regular-7-3" title="Copy heading and permalink for Solution 7.5.2.1" aria-label="Copy heading and permalink for Solution 7.5.2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.5.2"><a href="#subsec-752-PDF-Regular-7" title="Copy heading and permalink for Example 7.5.2" aria-label="Copy heading and permalink for Example 7.5.2">🔗</a></div></article><div class="para" id="subsec-752-PDF-Regular-8">But what if the denominator can be factored into <em class="emphasis">more than two distinct factors</em>? The setup is similar. We will just need as many fractions as the number of distinct factors in the setup, with each fraction taking one factor as the denominator.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-752-PDF-Regular-9"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-752-PDF-Regular-9-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{3x^2 + 7x - 2}{x^3 - x^2 - 2x}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-752-PDF-Regular-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-752-PDF-Regular-9-2-1">Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-9-2-2">
+<div class="para">Furthermore, we can factor the denominator as follows</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^3 - x^2 - 2x = x(x - 2)(x + 1)
+\end{equation*}
+</div>
+<div class="para">Then we can decompose the giant fraction in the integral into three little fractions where each fraction has the denominator of a factor.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.3.1"><a href="#subsec-752-PDF-Regular-9-2" title="Copy heading and permalink for Hint 7.5.3.1" aria-label="Copy heading and permalink for Hint 7.5.3.1">🔗</a></div>
+</div></details><details id="subsec-752-PDF-Regular-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-752-PDF-Regular-9-3-1">
+<div class="para">Based on the factors, the form of the partial fraction decomposition in the setup is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3x^2 + 7x - 2}{x(x - 2)(x + 1)} = \frac{A}{x} + \frac{B}{x - 2} + \frac{C}{x + 1}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> are constants.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-9-3-2">
+<div class="para">We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-9-3-2-1">
+\begin{align*}
+x(x - 2)(x + 1)\cdot\frac{3x^2 + 7x - 2}{x(x - 2)(x + 1)} \amp= \left(\frac{A}{x} + \frac{B}{x - 2} + \frac{C}{x + 1}\right)\cdot x(x - 2)(x + 1) \\
+\amp \\
+3x^2 + 7x - 2 \amp= A(x - 2)(x + 1) + Bx(x + 1) + Cx(x - 2) 
+\end{align*}
+</div>
+<div class="para">We can determine the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> using either method I or method II.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-752-PDF-Regular-9-3-3">Richard will present <em class="alert">method II</em> in this solution. You can for sure approach this using method I if you wish.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-9-3-4">
+<div class="para">To determine the value of <span class="process-math">\(A\text{,}\)</span> we need to cover up both <span class="process-math">\(B\)</span> and <span class="process-math">\(C\text{.}\)</span> To do so, we let <span class="process-math">\(x = 0\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-9-3-4-5">
+\begin{align*}
+3(0)^2 + 7(0) - 2 \amp= A(0 - 2)(0 + 1) + B(0)(0 + 1) + C(0)(0 - 2) \\
+-2 \amp= -2A \\
+A \amp= 1 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-9-3-5">
+<div class="para">To determine the value of <span class="process-math">\(B\text{,}\)</span> we need to cover up both <span class="process-math">\(A\)</span> and <span class="process-math">\(C\text{.}\)</span> To do so, we let <span class="process-math">\(x = 2\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-9-3-5-5">
+\begin{align*}
+3(2)^2 + 7(2) - 2 \amp= A(2 - 2)(2 + 1) + B(2)(2 + 1) + C(2)(2 - 2) \\
+24 \amp= 6B \\
+B \amp= 4 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-9-3-6">
+<div class="para">To determine the value of <span class="process-math">\(C\text{,}\)</span> we need to cover up both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> To do so, we let <span class="process-math">\(x = -1\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-9-3-6-5">
+\begin{align*}
+3(-1)^2 + 7(-1) - 2 \amp= A(-1 - 2)(-1 + 1) + B(-1)(-1 + 1) + C(-1)(-1 - 2) \\
+-6 \amp= 3C \\
+C \amp= -2 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-752-PDF-Regular-9-3-7">
+<div class="para">Now we know the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3x^2 + 7x - 2}{x(x - 2)(x + 1)} = \frac{1}{x} + \frac{4}{x - 2} + \frac{-2}{x + 1}
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsec-752-PDF-Regular-9-3-7-5">
+\begin{align*}
+\int \frac{3x^2 + 7x - 2}{x(x - 2)(x + 1)}\, dx \amp= \int\left( \frac{1}{x} + \frac{4}{x - 2} + \frac{-2}{x + 1} \right)\, dx \\
+\amp= \int \frac{1}{x}\, dx + 4\int \frac{1}{x - 2}\, dx -2\int \frac{1}{x + 1}\, dx \\
+\amp= \ln|x| + 4\ln|x - 2| - 2\ln|x + 1| + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-752-PDF-Regular-9-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.5.3.1"><a href="#subsec-752-PDF-Regular-9-3" title="Copy heading and permalink for Solution 7.5.3.1" aria-label="Copy heading and permalink for Solution 7.5.3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.5.3"><a href="#subsec-752-PDF-Regular-9" title="Copy heading and permalink for Example 7.5.3" aria-label="Copy heading and permalink for Example 7.5.3">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Partial Fraction Decomposition: Distinct Linear Factors"><a href="#subsec-752-PDF-Regular" title="Copy heading and permalink for Subsection: Partial Fraction Decomposition: Distinct Linear Factors" aria-label="Copy heading and permalink for Subsection: Partial Fraction Decomposition: Distinct Linear Factors">🔗</a></div></section><section class="subsection" id="subsec-753-Repeated"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Fraction Decomposition: Repeated Factors</span>
+</h3>
+<div class="para" id="subsec-753-Repeated-2">A follow-up question to ask here is <em class="alert">what if there are repeated factors?</em> Can we use the same setup as the previous example?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-753-Repeated-3">
+<div class="para">Let’s look at a quick example (we will integrate this fraction later). Let’s say we want to decompose the fraction</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{5x^2 - 3x + 2}{x^3 - 2x^2}
+\end{equation*}
+</div>
+<div class="para">This is a proper fraction so we may be able to apply the method of partial fraction decomposition. The denominator can be factored into <span class="process-math">\(x\cdot x\cdot(x - 2)\text{,}\)</span> so can we set up the form of partial fraction decomposition as follows?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{5x^2 - 3x + 2}{x^3 - 2x^2} = \frac{5x^2 - 3x + 2}{x\cdot x\cdot (x - 2)} = \frac{A}{x} + \frac{B}{x} + \frac{C}{x - 2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-753-Repeated-4">
+<div class="para">
+<em class="alert">The short answer is NO</em> because we won’t be able to obtain the denominator of <span class="process-math">\(x^3 - 2x^2\)</span> when adding the three little terms of the fractions together. Imagine you wanted to add the three little terms of the fractions together, we would obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{A}{x} + \frac{B}{x} + \frac{C}{x - 2} = \frac{(A + B)(x - 2) + Cx}{x(x - 2)}
+\end{equation*}
+</div>
+<div class="para">Observe this denominator doesn’t match up with the denominator of our giant fraction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-753-Repeated-5">
+<div class="para">One way to fix this issue is to replace one of the denominator of <span class="process-math">\(x\)</span> with an <span class="process-math">\(x^2\)</span> to force out a factor of <span class="process-math">\(x^2\)</span> in the common denominator when adding them together. Then the correct set up for the form of the partial fraction decomposition is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{5x^2 - 3x + 2}{x\cdot x\cdot (x - 2)} = \frac{A}{x} + \frac{B}{x^2} + \frac{C}{x - 2}
+\end{equation*}
+</div>
+<div class="para">Now let’s put this in use and integrate the giant fraction!</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-753-Repeated-6"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-753-Repeated-6-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{5x^2 - 3x + 2}{x^3 - 2x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-753-Repeated-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-753-Repeated-6-2-1">Now you know the form of the partial fraction decomposition in the setup. Determine the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> to help evaluate the integral!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.4.1"><a href="#subsec-753-Repeated-6-2" title="Copy heading and permalink for Hint 7.5.4.1" aria-label="Copy heading and permalink for Hint 7.5.4.1">🔗</a></div>
+</div></details><details id="subsec-753-Repeated-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-753-Repeated-6-3-1">
+<div class="para">The form of the partial fraction decomposition in the setup is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{5x^2 - 3x + 2}{x^2(x - 2)} = \frac{A}{x} + \frac{B}{x^2} + \frac{C}{x - 2}
+\end{equation*}
+</div>
+<div class="para">We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain</div>
+<div class="displaymath process-math" id="subsec-753-Repeated-6-3-1-2">
+\begin{align*}
+x^2(x - 2)\cdot \frac{5x^2 - 3x + 2}{x\cdot x\cdot (x - 2)} \amp= \left( \frac{A}{x} + \frac{B}{x^2} + \frac{C}{x - 2} \right)\cdot x^2(x - 2)\\
+\amp \\
+5x^2 - 3x + 2 \amp= Ax(x - 2) + B(x - 2) + Cx^2 
+\end{align*}
+</div>
+<div class="para">We can determine the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> using either method I or method II.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-753-Repeated-6-3-2">Richard will present <em class="alert">method II</em> in this solution. If you know a little bit of matrix algebra, method I will be a lot easier by the way.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-753-Repeated-6-3-3">
+<div class="para">We can determine the value of <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> easily.</div>
+<ul class="no-marker" id="subsec-753-Repeated-6-3-3-3">
+<li id="subsec-753-Repeated-6-3-3-3-1">
+<div class="para logical" id="subsec-753-Repeated-6-3-3-3-1-1">
+<div class="para">To determine the value of <span class="process-math">\(B\text{,}\)</span> we need to cover up both <span class="process-math">\(A\)</span> and <span class="process-math">\(C\text{.}\)</span> To do so, we let <span class="process-math">\(x = 0\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-753-Repeated-6-3-3-3-1-1-5">
+\begin{align*}
+5(0)^2 - 3(0) + 2 \amp= A(0)(0 - 2) + B(0 - 2) + C(0)^2 \\
+2 \amp= -2B \\
+B \amp= -1 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-3-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-753-Repeated-6-3-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-753-Repeated-6-3-3-3-2">
+<div class="para logical" id="subsec-753-Repeated-6-3-3-3-2-1">
+<div class="para">To determine the value of <span class="process-math">\(C\text{,}\)</span> we need to cover up both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> To do so, we let <span class="process-math">\(x = 2\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-753-Repeated-6-3-3-3-2-1-5">
+\begin{align*}
+5(2)^2 - 3(2) + 2 \amp= A(2)(2 - 2) + B(2 - 2) + C(2)^2 \\
+16 \amp= 4C \\
+C \amp= 4 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-3-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-753-Repeated-6-3-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">But there is no way we can cover <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> at the same time...</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-753-Repeated-6-3-4">
+<div class="para">One way to go around this issue is to plug back the value of <span class="process-math">\(B\)</span> and <span class="process-math">\(C\text{,}\)</span> and let <span class="process-math">\(x\)</span> be any other numbers than <span class="process-math">\(0\)</span> and <span class="process-math">\(2\text{.}\)</span> This will result in an equation with JUST <span class="process-math">\(A\)</span> as the variable. For simplicity, Richard will let <span class="process-math">\(x = 1\text{.}\)</span> Plugging in <span class="process-math">\(B = -1\)</span> and <span class="process-math">\(C = 4\)</span> back to the equation, we obtain</div>
+<div class="displaymath process-math" id="subsec-753-Repeated-6-3-4-10">
+\begin{align*}
+5(1)^2 - 3(1) + 2 \amp= A(1)(1 - 2) - 1(1 - 2) + 4(1)^2 \\
+4 \amp= -A + 1 + 4 \\
+A \amp= 1 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-753-Repeated-6-3-5">
+<div class="para">Now we know the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{5x^2 - 3x + 2}{x^2(x - 2)} = \frac{1}{x} + \frac{-1}{x^2} + \frac{4}{x - 2}
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsec-753-Repeated-6-3-5-5">
+\begin{align*}
+\int \frac{5x^2 - 3x + 2}{x^2(x - 2)}\, dx \amp= \int \left( \frac{1}{x} + \frac{-1}{x^2} + \frac{4}{x - 2} \right)\, dx \\
+\amp= \int \frac{1}{x}\, dx - \int \frac{1}{x^2}\, dx + 4\int \frac{1}{x - 2}\, dx \\
+\amp= \ln|x| + x^{-1} + 4\ln|x - 2| + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-6-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.5.4.1"><a href="#subsec-753-Repeated-6-3" title="Copy heading and permalink for Solution 7.5.4.1" aria-label="Copy heading and permalink for Solution 7.5.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.5.4"><a href="#subsec-753-Repeated-6" title="Copy heading and permalink for Example 7.5.4" aria-label="Copy heading and permalink for Example 7.5.4">🔗</a></div></article><div class="para logical" id="subsec-753-Repeated-7">
+<div class="para">
+<em class="alert">But Richard...</em> why can’t we factor the denominator of <span class="process-math">\(x^3 - 2x^2\)</span> into <span class="process-math">\(x^2(x - 2)\)</span> and set up the form of the partial fraction decomposition as follows</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{5x^2 - 3x + 2}{x^2(x - 2)} = \frac{A}{x^2} + \frac{B}{x - 2}
+\end{equation*}
+</div>
+<div class="para">The issue lies on the fraction of <span class="process-math">\(\dfrac{A}{x^2}\)</span> in the setup.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-753-Repeated-8">
+<div class="para">Let’s grab the correct decomposition we had earlier and combine the first two terms. Then we obtain</div>
+<div class="displaymath process-math" id="subsec-753-Repeated-8-1">
+\begin{align*}
+\frac{1}{x} - \frac{1}{x^2} + \frac{4}{x - 2} \amp= \frac{1\cdot x}{x\cdot x} - \frac{1}{x^2} + \frac{4}{x - 2} \\
+\amp= \frac{x}{x^2} - \frac{1}{x^2} + \frac{4}{x - 2} \\
+\amp= \frac{x - 1}{x^2} + \frac{4}{x - 2} 
+\end{align*}
+</div>
+<div class="para">Observe that the first fraction doesn’t have a constant on the numerator, but rather a linear factor. Hence, there is no constant <span class="process-math">\(A\)</span> that will make <span class="process-math">\(\frac{A}{x^2}\)</span> equal to <span class="process-math">\(\frac{x - 1}{x^2}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-753-Repeated-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Partial Fraction Decomposition: Repeated Factors"><a href="#subsec-753-Repeated" title="Copy heading and permalink for Subsection: Partial Fraction Decomposition: Repeated Factors" aria-label="Copy heading and permalink for Subsection: Partial Fraction Decomposition: Repeated Factors">🔗</a></div></section><section class="subsection" id="subsec-754-Quadratic"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Fraction Decomposition: Irreducible Quadratic Factors</span>
+</h3>
+<div class="para" id="subsec-754-Quadratic-2">We also know that there are some quadratic expressions we can’t factor. Then how do we set up the form of the partial fraction decomposition with an irreducible factor in the denominator?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-754-Quadratic-3">
+<div class="para">Let’s look at another quick example (we will integrate this fraction later). Let’s say we want to decompose the fraction</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)}
+\end{equation*}
+</div>
+<div class="para">This is also a proper fraction so we may be able to apply the method of partial fraction decomposition. Observe that the denominator is factored <em class="emphasis">completely</em>, which means we can’t factor <span class="process-math">\(x^2 - 2x + 3\)</span> further (Why is that? This is left as an exercise for the readers to figure out. If you need a hint, the factor theorem will help you out). So can we set up the form of partial fraction decomposition as follows?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)} = \frac{A}{x - 2} + \frac{B}{x^2 - 2x + 3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-754-Quadratic-4">
+<em class="alert">The short answer is NO</em> because there is no guarantee that the numerator of the second fraction (the one with the denominator of the quadratic expression) is a constant.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-754-Quadratic-5">
+<div class="para">Observe the previous example that we can decompose the fraction of <span class="process-math">\(\frac{5x^2 - 3x + 2}{x^2(x - 2)}\)</span> as <span class="process-math">\(\frac{x - 1}{x^2} + \frac{4}{x - 2}\text{.}\)</span> This implies that a quadratic denominator may have a non-constant linear numerator. Since we don’t know whether the numerator of the quadratic denominator is a constant or non-constant linear expression, we can set the numerator to be a generic linear expression of <span class="process-math">\(Bx + C\)</span> to take into account both possibilities (if the numerator is a constant, then <span class="process-math">\(B\)</span> would be <span class="process-math">\(0\text{;}\)</span> if the numerator is not a constant, then <span class="process-math">\(B\)</span> is not <span class="process-math">\(0\)</span>). Hence, the correct setup for the form of the partial fraction decomposition is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)} = \frac{A}{x - 2} + \frac{Bx + C}{x^2 - 2x + 3}
+\end{equation*}
+</div>
+<div class="para">Now let’s put this in use and integrate the giant fraction!</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-754-Quadratic-6"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-754-Quadratic-6-1">Evaluate the indefinite integral <span class="process-math">\(\displaystyle \int \frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)}\, dx \)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-754-Quadratic-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-754-Quadratic-6-2-1">Now you know the form of the partial fraction decomposition in the setup. Determine the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> to help evaluate the integral!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.5.1"><a href="#subsec-754-Quadratic-6-2" title="Copy heading and permalink for Hint 7.5.5.1" aria-label="Copy heading and permalink for Hint 7.5.5.1">🔗</a></div>
+</div></details><details id="subsec-754-Quadratic-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-754-Quadratic-6-3-1">
+<div class="para">The form of the partial fraction decomposition in the setup is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)} = \frac{A}{x - 2} + \frac{Bx + C}{x^2 - 2x + 3}
+\end{equation*}
+</div>
+<div class="para">We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain</div>
+<div class="displaymath process-math" id="subsec-754-Quadratic-6-3-1-2">
+\begin{align*}
+(x - 2)\left(x^2 - 2x + 3\right)\cdot \frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)} \amp= \left(\frac{A}{x - 2} + \frac{Bx + C}{x^2 - 2x + 3}\right)\cdot (x - 2)\left(x^2 - 2x + 3\right) \\
+\amp \\
+7x^2 - 16x + 19 \amp= A\left(x^2 - 2x + 3\right) + (Bx + C)(x - 2) 
+\end{align*}
+</div>
+<div class="para">We can determine the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> using either method I or method II.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-754-Quadratic-6-3-2">Richard will present <em class="alert">method II</em> in this solution. If you know a little bit of matrix algebra, method I will be a lot easier by the way.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-754-Quadratic-6-3-3">
+<div class="para">We can determine the value of <span class="process-math">\(A\)</span> easily. To determine the value of <span class="process-math">\(A\text{,}\)</span> we need to cover up both <span class="process-math">\(B\)</span> and <span class="process-math">\(C\text{.}\)</span> To do so, we let <span class="process-math">\(x = 2\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-754-Quadratic-6-3-3-6">
+\begin{align*}
+7(2)^2 - 16(2) + 19 \amp= A\left(2^2 - 2(2) + 3\right) + (B(2) + C)(2 - 2) \\
+15 \amp= 3A \\
+A \amp= 5 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-754-Quadratic-6-3-4">
+<div class="para">We can pull the same trick to determine the value of <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> by picking another value for <span class="process-math">\(x\)</span> and plug back <span class="process-math">\(A = 5\)</span> to the equation. Richard will let <span class="process-math">\(x = 0\)</span> and plug in <span class="process-math">\(A = 5\)</span> to the equation. Then we obtain</div>
+<div class="displaymath process-math" id="subsec-754-Quadratic-6-3-4-7">
+\begin{align*}
+7(0)^2 - 16(0) + 19 \amp= 5\left(0^2 - 2(0) + 3\right) + (B(0) + C)(0 - 2) \\
+19 \amp= 15 - 2A \\
+C \amp= 2 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-754-Quadratic-6-3-5">
+<div class="para">To determine the value of <span class="process-math">\(B\text{,}\)</span> Richard will let <span class="process-math">\(x = 1\)</span> (for simplicity) and plug in <span class="process-math">\(A = 5\)</span> and <span class="process-math">\(C = 1\)</span> back to the equation. Then we obtain</div>
+<div class="displaymath process-math" id="subsec-754-Quadratic-6-3-5-5">
+\begin{align*}
+7(1)^2 - 16(1) + 19 \amp= 5\left(1^2 - 2(1) + 3\right) + (B(1) + 1)(1 - 2) \\
+10 \amp= 10 - B + 2 \\
+B \amp= 2 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-754-Quadratic-6-3-6">
+<div class="para">Now we know the values of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)} = \frac{5}{x - 2} + \frac{2x - 2}{x^2 - 2x + 3}
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math" id="subsec-754-Quadratic-6-3-6-5">
+\begin{align*}
+\int\frac{7x^2 - 16x + 19}{(x - 2)\left(x^2 - 2x + 3\right)}\, dx \amp= \int\left( \frac{5}{x - 2} + \frac{2x - 2}{x^2 - 2x + 3} \right)\, dx \\
+\amp= 5\int\frac{1}{x - 2}\, dx + \int \frac{2x - 2}{x^2 - 2x + 3}\, dx \\
+\amp= 5\ln|x - 2| + \ln\left(x^2 - 2x + 3\right) + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-754-Quadratic-6-3-7">
+<em class="emphasis">Note:</em> The second integral on the right-hand side can be evaluated quickly using <span class="process-math">\(u\)</span>-sub with <span class="process-math">\(u = x^2 - 2x + 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-754-Quadratic-6-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.5.5.1"><a href="#subsec-754-Quadratic-6-3" title="Copy heading and permalink for Solution 7.5.5.1" aria-label="Copy heading and permalink for Solution 7.5.5.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 7.5.5"><a href="#subsec-754-Quadratic-6" title="Copy heading and permalink for Example 7.5.5" aria-label="Copy heading and permalink for Example 7.5.5">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Partial Fraction Decomposition: Irreducible Quadratic Factors"><a href="#subsec-754-Quadratic" title="Copy heading and permalink for Subsection: Partial Fraction Decomposition: Irreducible Quadratic Factors" aria-label="Copy heading and permalink for Subsection: Partial Fraction Decomposition: Irreducible Quadratic Factors">🔗</a></div></section><div class="para" id="sec75-PartialFraction-10">
+<em class="alert">To sum up</em>, we looked at three different cases of the form of the partial fraction decomposition depending on the factors of the denominator. These three cases have different setups. Let’s summarize them into a nice little list below:<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec75-PartialFraction-11">
+<div class="para">Let <span class="process-math">\(R(x) = \frac{f(x)}{q(x)}\)</span> be a <em class="emphasis">proper</em> rational expression, where <span class="process-math">\(q(x)\)</span> is <em class="emphasis">factored</em> completely over the real numbers.</div>
+<ol class="decimal" id="sec75-PartialFraction-11-5">
+<li id="sec75-PartialFraction-11-5-1">
+<div class="para" id="sec75-PartialFraction-11-5-1-1">A factor of <span class="process-math">\(x - r\)</span> in the denominator requires the fraction <span class="process-math">\(\dfrac{A}{x - r}\)</span> in the setup.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-11-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec75-PartialFraction-11-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec75-PartialFraction-11-5-2">
+<div class="para logical" id="sec75-PartialFraction-11-5-2-1">
+<div class="para">A repeated linear factor <span class="process-math">\((x - r)^m\)</span> with <span class="process-math">\(m &gt; 1\)</span> in the denominator requires</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{A_1}{x - r} + \frac{A_2}{(x - r)^2} + \frac{A_3}{(x - r)^3} + \cdots + \frac{A_m}{(x - r)^m}
+\end{equation*}
+</div>
+<div class="para">in the setup.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-11-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec75-PartialFraction-11-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec75-PartialFraction-11-5-3">
+<div class="para" id="sec75-PartialFraction-11-5-3-1">An irreducible quadratic factor of <span class="process-math">\(ax^2 + bx + c\)</span> in the denominator requires the fraction <span class="process-math">\(\dfrac{Ax + B}{ax^2 + bx + c}\)</span> in the setup.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-11-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec75-PartialFraction-11-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="para">We will just need to apply these rules as you see fit based on the factors of the denominator to set up the form of the partial fraction decomposition.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec75-PartialFraction-12">
+<em class="alert">But Richard...</em> What if there is an irreducible cubic factor in the denominator? Or an irreducible fourth-degree factor in the denominator? Does the pattern of setting the numerator to be one degree less than the denominator also hold?<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec75-PartialFraction-13">
+<em class="alert">Richard’s response:</em> It is impossible to have an irreducible polynomial of degree three and above over the real numbers. That is, if you see a polynomial of degree three or above, you can always factor it. Factor the polynomial into smaller pieces of factors and apply the rule(s).<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec75-PartialFraction-14">
+<em class="alert">But Richard...</em> What if we are given an improper fraction? Can we do something about it first since the method of partial fraction decomposition doesn’t work for improper fractions.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec75-PartialFraction-15">
+<em class="alert">Richard’s response:</em> You can. You can always obtain a proper fraction out of an improper fraction by doing long division. Then you can apply the method of partial fraction decomposition on the proper fraction.<div class="autopermalink" data-description="Paragraph"><a href="#sec75-PartialFraction-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="worksheet" id="ws-sec75" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec75-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="introduction" id="ws-sec75-2"><div class="para" id="ws-sec75-2-1">I included some practice problems that cover some main concepts in this section. You don’t need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. Reach out to Richard for help if you get stuck or have any questions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ws-sec75-2-2">I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="exercisegroup" id="ws-sec75-3">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec75-3-1"><div class="para" id="ws-sec75-3-1-1">Set up the form of the partial fraction decomposition for the following rational expressions.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec75-3-2"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-3-2-1-1">
+<span class="process-math">\(\dfrac{x - 9}{x^2 - 3x - 18}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-3-2-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x - 9}{x^2 - 3x - 18} = \frac{A}{x - 6} + \frac{B}{x + 3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#ws-sec75-3-2-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#ws-sec75-3-2" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec75-3-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-3-3-1-1">
+<span class="process-math">\(\dfrac{x^2 - 3x}{x^3 - 3x^2 - 4x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-3-3-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{x^2 - 3x}{x^3 - 3x^2 - 4x} = \frac{A}{x} + \frac{B}{x - 4} + \frac{C}{x + 1}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#ws-sec75-3-3-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#ws-sec75-3-3" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec75-3-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-3-4-1-1">
+<span class="process-math">\(\dfrac{1}{(x + 1)^2\left(x^2 + 2\right)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-3-4-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{1}{(x + 1)^2\left(x^2 + 2\right)} = \frac{A}{x + 1} + \frac{B}{(x + 1)^2} + \frac{Cx + D}{x^2 + 2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#ws-sec75-3-4-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 3"><a href="#ws-sec75-3-4" title="Copy heading and permalink for Worksheet Exercise 3" aria-label="Copy heading and permalink for Worksheet Exercise 3">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1–3"><a href="#ws-sec75-3" title="Copy heading and permalink for Exercise Group 1–3" aria-label="Copy heading and permalink for Exercise Group 1–3">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ws-sec75-4">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec75-4-1"><div class="para" id="ws-sec75-4-1-1">Evaluate the following integrals.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec75-4-2"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-4-2-1-1">
+<span class="process-math">\(\displaystyle \int \frac{2x - 1}{x^2 - 5x + 6}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-4-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-4-2-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+5\ln|x - 3| - 3\ln|x - 2| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#ws-sec75-4-2-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 4"><a href="#ws-sec75-4-2" title="Copy heading and permalink for Worksheet Exercise 4" aria-label="Copy heading and permalink for Worksheet Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec75-4-3"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-4-3-1-1">
+<span class="process-math">\(\displaystyle \int \frac{dx}{(x - 2)(x - 3)(x + 2)}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-4-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-4-3-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{20}\ln|x + 2| - \frac{1}{4}\ln|x - 2| + \frac{1}{5}\ln|x - 3| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#ws-sec75-4-3-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 5"><a href="#ws-sec75-4-3" title="Copy heading and permalink for Worksheet Exercise 5" aria-label="Copy heading and permalink for Worksheet Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec75-4-4"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-4-4-1-1">
+<span class="process-math">\(\displaystyle \int_{-1}^1 \frac{x}{(x + 3)^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-4-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-4-4-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\ln(2) - \frac{3}{4} \approx -0.0568528194401
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-4-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#ws-sec75-4-4-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 6"><a href="#ws-sec75-4-4" title="Copy heading and permalink for Worksheet Exercise 6" aria-label="Copy heading and permalink for Worksheet Exercise 6">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 4–6"><a href="#ws-sec75-4" title="Copy heading and permalink for Exercise Group 4–6" aria-label="Copy heading and permalink for Exercise Group 4–6">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ws-sec75-5">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="ws-sec75-5-1"><div class="para" id="ws-sec75-5-1-1">Evaluate the following integrals by first making a substitution to convert the integrand into a rational expression.<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ws-sec75-5-2"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-5-2-1-1">
+<span class="process-math">\(\displaystyle \int \frac{e^x\, dx}{\left(e^x - 1\right)\left(e^x + 2\right)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-5-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-5-2-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{3}\ln\left|\frac{e^x - 1}{e^x + 2}\right| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#ws-sec75-5-2-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 7"><a href="#ws-sec75-5-2" title="Copy heading and permalink for Worksheet Exercise 7" aria-label="Copy heading and permalink for Worksheet Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec75-5-3"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-5-3-1-1">
+<span class="process-math">\(\displaystyle \int \frac{e^x\, dx}{e^{2x} - e^x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-5-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-5-3-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\ln\left|e^x - 1\right| - x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#ws-sec75-5-3-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 8"><a href="#ws-sec75-5-3" title="Copy heading and permalink for Worksheet Exercise 8" aria-label="Copy heading and permalink for Worksheet Exercise 8">🔗</a></div></article><article class="exercise exercise-like" id="ws-sec75-5-4"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="ws-sec75-5-4-1-1">
+<span class="process-math">\(\displaystyle \int \frac{\sqrt{x}\, dx}{x - 1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-sec75-5-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-sec75-5-4-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+2\sqrt{x} - \ln\left(\sqrt{x} + 1\right) + \ln\left|\sqrt{x} - 1\right| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-sec75-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#ws-sec75-5-4-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 9"><a href="#ws-sec75-5-4" title="Copy heading and permalink for Worksheet Exercise 9" aria-label="Copy heading and permalink for Worksheet Exercise 9">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 7–9"><a href="#ws-sec75-5" title="Copy heading and permalink for Exercise Group 7–9" aria-label="Copy heading and permalink for Exercise Group 7–9">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet: Some Exercises for this section"><a href="#ws-sec75" title="Copy heading and permalink for Worksheet: Some Exercises for this section" aria-label="Copy heading and permalink for Worksheet: Some Exercises for this section">🔗</a></div></section><div class="autopermalink" data-description="Section 7.5: The Method of Partial Fractions"><a href="#sec75-PartialFraction" title="Copy heading and permalink for Section 7.5: The Method of Partial Fractions" aria-label="Copy heading and permalink for Section 7.5: The Method of Partial Fractions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec74-HyperbolicIntegral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec76-StrategiesIntegral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

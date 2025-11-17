@@ -2206,6 +2206,456 @@ var ptx_lunr_docs = [
   "body": "  Evaluate the integral . You will need to find a good strategy to evaluate the trigonometric integral in .   "
 },
 {
+  "id": "sec74-HyperbolicIntegral",
+  "level": "1",
+  "url": "sec74-HyperbolicIntegral.html",
+  "type": "Section",
+  "number": "7.4",
+  "title": "Integrals Involving Hyperbolic and Inverse Hyperbolic Functions",
+  "body": " Integrals Involving Hyperbolic and Inverse Hyperbolic Functions   We will not go through this section so Richard will skip this section and writing any notes here.   "
+},
+{
+  "id": "sec75-PartialFraction",
+  "level": "1",
+  "url": "sec75-PartialFraction.html",
+  "type": "Section",
+  "number": "7.5",
+  "title": "The Method of Partial Fractions",
+  "body": " The Method of Partial Fractions   In this section, we will an algebraic method called the partial fraction decomposition to help evaluate integrals.    After this section, students will be able to:     determine whether a rational expression is proper or improper    set up the correct form of the partial fraction decomposition based on the factorization of the denominator    find the constants in a partial fraction decomposition    evaluate integrals of rational expressions using the method of partial fraction decomposition.        Evaluate the indefinite integral . Can we evaluate it using any of the methods we have learned so far in the class?  If you get stuck and\/or ready to be helped. Click open Richard's hint below.    What is ?  How do we subtract fractions?    One can verify quickly that This implies that .  But why is it helpful... That is because we can now split up the integral (using linearity) and integrate each of the smaller fractions.     Observe that the key step here that allows us to evaluate the integral is captured in Richard's hint that he somehow knew how to decompose a giant fraction in the integrand into two smaller terms. This section will introduce this fancy method of decomposing a giant fraction into smaller terms, called the partial fraction decomposition .  This is essentially an algebraic method, in the sense that we don't need any calculus to make sense of this method. After we decompose the giant fraction into smaller terms, we still need to integrate each smaller term of the fractions.   Prerequisite: Proper Rational Expression  In order to apply the method of partial fraction decomposition, we need the fraction to be proper . But what does a \"proper fraction\" mean...  In short, a proper fraction has a smaller numerator than the denominator.   The reason why we call such fractions the proper fractions is because it makes sense to visualize the idea of \"part of a whole\" in these types of fractions, where the denominator of a fraction represents the total number of parts in a whole and the numerator represents the parts we are taking. In other words, the value of a proper fraction must be between and .  Similarly, a proper rational expression is defined as a rational expression where the numerator is less than the denominator. But how do we compare polynomials though (for example, which one is greater, or ?). We usually compare the degree of the polynomials (the highest power on ).  That is, proper rational expressions are the ones where the degree of the numerator is less than the degree of the denominator .    The method of partial fraction decomposition will only work on proper rational expressions.     Partial Fraction Decomposition: Distinct Linear Factors  Recall the idea of the partial fraction decomposition is to decompose a fraction into smaller terms. If we know what the denominator can be factored into, then we know the denominators of the little fractions. So the work here is really to determine the mysterious numerators. There are multiple strategies to determine the numerators. We will first look at an example with specific rational expressions to demonstrate the two main strategies to determine the numerators.   Evaluate the indefinite integral    Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.  To determine the denominators of the smaller terms of fractions, we need to factor this denominator. This implies that   We don't know the numerators yet (that is why Richard put ?'s on the fractions). Let's call them and , where they are two variables. Then we are essentially solving the following rational equation for and : Now put your MTH 95 thinking cap on. How do we solve a rational equation?    Let's first apply the method of partial fraction decomposition to the integrand first to decompose the proper rational expression.  Let and be two constants such that Then the goal here is to solve this equation for and . One strategy to solve a rational equation is to multiply out the denominators . To determine the values of and , there are two methods here.   Method I: Determining Coefficients. We can simplify the right-hand side of the equation and combine the like terms. Two functions are the same when they look exactly the same , including the coefficients. This equation implies that    Method II: Special Values (or Cover-up Method). We know the equation is true for all  's. So we want to plug in some values of 's to \"cover up\" either or .   To determine the value of , we need to cover up , which means we want the coefficient of to be . That is, we will let . Then     To determine the value of , we need to cover up , which means we want the coefficient of to be . That is, we will let . Then    Hence, we know that and .  It doesn't matter which method you used to determine and , we know that and . This implies that Then we obtain     Observe that we will need to determine the form of the partial fraction decomposition in the setup. Then we solve this rational equation by multiplying the giant denominator on both sides of the equation. Next, we will determine the values of the variables using Method I: Determining Coefficients or Method II: Special Values (or Cover-up Method) . This will allow us to decompose the giant fraction into smaller terms, and we can integrate each smaller term by linearity.  We will summarize the form of the partial fraction decomposition into a nice little list (there are three cases in total).  To determine the value of the variables, it is up to you which method, I or II, you want to use. They have their advantages and shortcomings so Richard will not make you use one or the other (but you will need to understand at least one of the two methods).   Evaluate the indefinite integral .   Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.  So determine the form of the partial fraction decomposition in the setup using and as the variables. Then solve the equation for and to decompose the integrand. Next, integrate the smaller terms of fractions.    Observe we can factor the denominator Then the form of the partial fraction decomposition in the setup is where and are constants.  We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of and using either method I or method II.   Method I: Determining Coefficients. We can simplify the right-hand side of the equation and combine like terms. Now we are matching up the coefficients. This implies that    Method II: Special Values (or Cover-up Method). We want to plug in some values of 's to \"cover up\" either or .   To determine the value of , we need to cover up . To do so, we let . Then     To determine the value of , we need to cover up . To do so, we let . Then      Now we know the values of and , we obtain This implies that     But what if the denominator can be factored into more than two distinct factors ? The setup is similar. We will just need as many fractions as the number of distinct factors in the setup, with each fraction taking one factor as the denominator.   Evaluate the indefinite integral    Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.  Furthermore, we can factor the denominator as follows Then we can decompose the giant fraction in the integral into three little fractions where each fraction has the denominator of a factor.    Based on the factors, the form of the partial fraction decomposition in the setup is where , , and are constants.  We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of , , and using either method I or method II.  Richard will present method II in this solution. You can for sure approach this using method I if you wish.  To determine the value of , we need to cover up both and . To do so, we let .   To determine the value of , we need to cover up both and . To do so, we let .   To determine the value of , we need to cover up both and . To do so, we let .   Now we know the values of , , and , we obtain This implies that       Partial Fraction Decomposition: Repeated Factors  A follow-up question to ask here is what if there are repeated factors? Can we use the same setup as the previous example?  Let's look at a quick example (we will integrate this fraction later). Let's say we want to decompose the fraction This is a proper fraction so we may be able to apply the method of partial fraction decomposition. The denominator can be factored into , so can we set up the form of partial fraction decomposition as follows?    The short answer is NO because we won't be able to obtain the denominator of when adding the three little terms of the fractions together. Imagine you wanted to add the three little terms of the fractions together, we would obtain Observe this denominator doesn't match up with the denominator of our giant fraction.  One way to fix this issue is to replace one of the denominator of with an to force out a factor of in the common denominator when adding them together. Then the correct set up for the form of the partial fraction decomposition is Now let's put this in use and integrate the giant fraction!   Evaluate the indefinite integral    Now you know the form of the partial fraction decomposition in the setup. Determine the values of , , and to help evaluate the integral!    The form of the partial fraction decomposition in the setup is We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of , , and using either method I or method II.  Richard will present method II in this solution. If you know a little bit of matrix algebra, method I will be a lot easier by the way.  We can determine the value of and easily.   To determine the value of , we need to cover up both and . To do so, we let .     To determine the value of , we need to cover up both and . To do so, we let .    But there is no way we can cover and at the same time...  One way to go around this issue is to plug back the value of and , and let be any other numbers than and . This will result in an equation with JUST as the variable. For simplicity, Richard will let . Plugging in and back to the equation, we obtain   Now we know the values of , , and , we obtain This implies that      But Richard... why can't we factor the denominator of into and set up the form of the partial fraction decomposition as follows The issue lies on the fraction of in the setup.  Let's grab the correct decomposition we had earlier and combine the first two terms. Then we obtain Observe that the first fraction doesn't have a constant on the numerator, but rather a linear factor. Hence, there is no constant that will make equal to .    Partial Fraction Decomposition: Irreducible Quadratic Factors  We also know that there are some quadratic expressions we can't factor. Then how do we set up the form of the partial fraction decomposition with an irreducible factor in the denominator?  Let's look at another quick example (we will integrate this fraction later). Let's say we want to decompose the fraction This is also a proper fraction so we may be able to apply the method of partial fraction decomposition. Observe that the denominator is factored completely , which means we can't factor further (Why is that? This is left as an exercise for the readers to figure out. If you need a hint, the factor theorem will help you out). So can we set up the form of partial fraction decomposition as follows?    The short answer is NO because there is no guarantee that the numerator of the second fraction (the one with the denominator of the quadratic expression) is a constant.  Observe the previous example that we can decompose the fraction of as . This implies that a quadratic denominator may have a non-constant linear numerator. Since we don't know whether the numerator of the quadratic denominator is a constant or non-constant linear expression, we can set the numerator to be a generic linear expression of to take into account both possibilities (if the numerator is a constant, then would be ; if the numerator is not a constant, then is not ). Hence, the correct setup for the form of the partial fraction decomposition is Now let's put this in use and integrate the giant fraction!   Evaluate the indefinite integral    Now you know the form of the partial fraction decomposition in the setup. Determine the values of , , and to help evaluate the integral!    The form of the partial fraction decomposition in the setup is We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of , , and using either method I or method II.  Richard will present method II in this solution. If you know a little bit of matrix algebra, method I will be a lot easier by the way.  We can determine the value of easily. To determine the value of , we need to cover up both and . To do so, we let .   We can pull the same trick to determine the value of and by picking another value for and plug back to the equation. Richard will let and plug in to the equation. Then we obtain   To determine the value of , Richard will let (for simplicity) and plug in and back to the equation. Then we obtain   Now we know the values of , , and , we obtain This implies that    Note: The second integral on the right-hand side can be evaluated quickly using -sub with .      To sum up , we looked at three different cases of the form of the partial fraction decomposition depending on the factors of the denominator. These three cases have different setups. Let's summarize them into a nice little list below:  Let be a proper rational expression, where is factored completely over the real numbers.   A factor of in the denominator requires the fraction in the setup.    A repeated linear factor with in the denominator requires in the setup.    An irreducible quadratic factor of in the denominator requires the fraction in the setup.   We will just need to apply these rules as you see fit based on the factors of the denominator to set up the form of the partial fraction decomposition.   But Richard... What if there is an irreducible cubic factor in the denominator? Or an irreducible fourth-degree factor in the denominator? Does the pattern of setting the numerator to be one degree less than the denominator also hold?   Richard's response: It is impossible to have an irreducible polynomial of degree three and above over the real numbers. That is, if you see a polynomial of degree three or above, you can always factor it. Factor the polynomial into smaller pieces of factors and apply the rule(s).   But Richard... What if we are given an improper fraction? Can we do something about it first since the method of partial fraction decomposition doesn't work for improper fractions.   Richard's response: You can. You can always obtain a proper fraction out of an improper fraction by doing long division. Then you can apply the method of partial fraction decomposition on the proper fraction.   Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     Set up the form of the partial fraction decomposition for the following rational expressions.                                          Evaluate the following integrals.                                          Evaluate the following integrals by first making a substitution to convert the integrand into a rational expression.                                         "
+},
+{
+  "id": "sec75-PartialFraction-2-2",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#sec75-PartialFraction-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     determine whether a rational expression is proper or improper    set up the correct form of the partial fraction decomposition based on the factorization of the denominator    find the constants in a partial fraction decomposition    evaluate integrals of rational expressions using the method of partial fraction decomposition.    "
+},
+{
+  "id": "sec75-PartialFraction-3",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#sec75-PartialFraction-3",
+  "type": "Investigation",
+  "number": "7.5.1",
+  "title": "",
+  "body": "  Evaluate the indefinite integral . Can we evaluate it using any of the methods we have learned so far in the class?  If you get stuck and\/or ready to be helped. Click open Richard's hint below.    What is ?  How do we subtract fractions?    One can verify quickly that This implies that .  But why is it helpful... That is because we can now split up the integral (using linearity) and integrate each of the smaller fractions.    "
+},
+{
+  "id": "subsec-752-PDF-Regular-3",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#subsec-752-PDF-Regular-3",
+  "type": "Example",
+  "number": "7.5.1",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.  To determine the denominators of the smaller terms of fractions, we need to factor this denominator. This implies that   We don't know the numerators yet (that is why Richard put ?'s on the fractions). Let's call them and , where they are two variables. Then we are essentially solving the following rational equation for and : Now put your MTH 95 thinking cap on. How do we solve a rational equation?    Let's first apply the method of partial fraction decomposition to the integrand first to decompose the proper rational expression.  Let and be two constants such that Then the goal here is to solve this equation for and . One strategy to solve a rational equation is to multiply out the denominators . To determine the values of and , there are two methods here.   Method I: Determining Coefficients. We can simplify the right-hand side of the equation and combine the like terms. Two functions are the same when they look exactly the same , including the coefficients. This equation implies that    Method II: Special Values (or Cover-up Method). We know the equation is true for all  's. So we want to plug in some values of 's to \"cover up\" either or .   To determine the value of , we need to cover up , which means we want the coefficient of to be . That is, we will let . Then     To determine the value of , we need to cover up , which means we want the coefficient of to be . That is, we will let . Then    Hence, we know that and .  It doesn't matter which method you used to determine and , we know that and . This implies that Then we obtain    "
+},
+{
+  "id": "subsec-752-PDF-Regular-7",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#subsec-752-PDF-Regular-7",
+  "type": "Example",
+  "number": "7.5.2",
+  "title": "",
+  "body": " Evaluate the indefinite integral .   Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.  So determine the form of the partial fraction decomposition in the setup using and as the variables. Then solve the equation for and to decompose the integrand. Next, integrate the smaller terms of fractions.    Observe we can factor the denominator Then the form of the partial fraction decomposition in the setup is where and are constants.  We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of and using either method I or method II.   Method I: Determining Coefficients. We can simplify the right-hand side of the equation and combine like terms. Now we are matching up the coefficients. This implies that    Method II: Special Values (or Cover-up Method). We want to plug in some values of 's to \"cover up\" either or .   To determine the value of , we need to cover up . To do so, we let . Then     To determine the value of , we need to cover up . To do so, we let . Then      Now we know the values of and , we obtain This implies that    "
+},
+{
+  "id": "subsec-752-PDF-Regular-9",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#subsec-752-PDF-Regular-9",
+  "type": "Example",
+  "number": "7.5.3",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Observe that the integrand is a proper rational expression, which means we may be able to use the method of partial fraction decomposition. This will allow us to decompose the integrand into smaller terms of fractions that we can integrate easily.  Furthermore, we can factor the denominator as follows Then we can decompose the giant fraction in the integral into three little fractions where each fraction has the denominator of a factor.    Based on the factors, the form of the partial fraction decomposition in the setup is where , , and are constants.  We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of , , and using either method I or method II.  Richard will present method II in this solution. You can for sure approach this using method I if you wish.  To determine the value of , we need to cover up both and . To do so, we let .   To determine the value of , we need to cover up both and . To do so, we let .   To determine the value of , we need to cover up both and . To do so, we let .   Now we know the values of , , and , we obtain This implies that    "
+},
+{
+  "id": "subsec-753-Repeated-6",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#subsec-753-Repeated-6",
+  "type": "Example",
+  "number": "7.5.4",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Now you know the form of the partial fraction decomposition in the setup. Determine the values of , , and to help evaluate the integral!    The form of the partial fraction decomposition in the setup is We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of , , and using either method I or method II.  Richard will present method II in this solution. If you know a little bit of matrix algebra, method I will be a lot easier by the way.  We can determine the value of and easily.   To determine the value of , we need to cover up both and . To do so, we let .     To determine the value of , we need to cover up both and . To do so, we let .    But there is no way we can cover and at the same time...  One way to go around this issue is to plug back the value of and , and let be any other numbers than and . This will result in an equation with JUST as the variable. For simplicity, Richard will let . Plugging in and back to the equation, we obtain   Now we know the values of , , and , we obtain This implies that    "
+},
+{
+  "id": "subsec-754-Quadratic-6",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#subsec-754-Quadratic-6",
+  "type": "Example",
+  "number": "7.5.5",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Now you know the form of the partial fraction decomposition in the setup. Determine the values of , , and to help evaluate the integral!    The form of the partial fraction decomposition in the setup is We can solve this rational equation by multiplying the giant denominator on both sides of the equation. We obtain We can determine the values of , , and using either method I or method II.  Richard will present method II in this solution. If you know a little bit of matrix algebra, method I will be a lot easier by the way.  We can determine the value of easily. To determine the value of , we need to cover up both and . To do so, we let .   We can pull the same trick to determine the value of and by picking another value for and plug back to the equation. Richard will let and plug in to the equation. Then we obtain   To determine the value of , Richard will let (for simplicity) and plug in and back to the equation. Then we obtain   Now we know the values of , , and , we obtain This implies that    Note: The second integral on the right-hand side can be evaluated quickly using -sub with .   "
+},
+{
+  "id": "ws-sec75-3-2",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-3-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-3-3",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-3-3",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-3-4",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-3-4",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-4-2",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-4-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-4-3",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-4-3",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-4-4",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-4-4",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-5-2",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-5-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-5-3",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-5-3",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec75-5-4",
+  "level": "2",
+  "url": "sec75-PartialFraction.html#ws-sec75-5-4",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "sec76-StrategiesIntegral",
+  "level": "1",
+  "url": "sec76-StrategiesIntegral.html",
+  "type": "Section",
+  "number": "7.6",
+  "title": "Strategies for Integration",
+  "body": " Strategies for Integration   In this section, we will summarize all the techniques we learned in class for evaluating integrals and come up with some strategies to evaluate integrals.    After this section, students will be able to:     identify the structural features of an integral and determine which integration methods are applicable.    realize that an integral may be evaluated using multiple methods.    use computer algebra systems (CAS) to evaluate integrals and critically assess the elegance and efficiency of CAS-generated solutions.       POP QUIZ!   Suppose the following question were the first problem on your final exam for this class.  Evaluate the integral        What is the \"best\" way to evaluate integrals?  We went through various strategies to evaluate integrals this term (and there are more strategies that goes beyond the scope of this class!). Sometimes it is difficult to determine which method to try right off the bat.  There are two factors that you may consider when determining which method to try right off the bat.  The first one is the structural features of the integral. You want to pick a right method for the integrals (for example, trying partial fraction decomposition on an integral that has no rational expression is not right ).  The second one is the complexity of the method. Similar to the pop quiz problem, if multiple methods work out for an integral, then always try the easier method first (if we can solve a problem using an easier method, why bother using something complicated).  For summary purposes, Richard put all the methods we have learned so far below all on one page:   Always try simplification first! Do any algebraic simplification possible! If we can make the integrand a lot simpler to deal with, why not!?     -sub is the method you should try next. Recall -sub came from the chain rule you learned in calculus 1, which means you may want to be able to find the derivative of the choice of in the integrand. Long story short, the -sub formula is Just make sure you don't end up getting a more complicated integral after -sub. (for more detail, check out -sub in ).    If you see two functions being multiplied in the integrand, you may want to consider using integration by parts since this method came from the product rule in derivative. You will want to pick a and the rest of the integral will be the . Long story short, the integration by parts formula is You may be wondering how we can pick a to make the problem easier. Recall there is an acronym \"LIPET\" to help us pick a good . This acronym LIPET tells us that we should pick the in the following order:    L stands for Logarithmic functions;     I stands for Inverse Trigonometric functions;     P stands for Polynomial functions;     E stands for Exponential functions;     T stands for Trigonometric functions;   (for more detail, check out -sub in ).    There are also two special methods we learned that only works if the situation fits. They are:    Trigonometric Substitution : If you see in the integrand, you may consider using the substitution that . Likewise, if you see in the integrand, you may consider using the substitution that . (for more detail, check out -sub in ).     Partial Fraction Decomposition : If you see a complicated proper fraction where the denominator happens to be reducible (fancy way of saying the denominator can be factored), then partial fraction decomposition will help you split up the fraction to smaller pieces. (for more detail, check out -sub in ).        Let's look at a couple examples. Make sure you know HOW to determine what method you should use (and WHY , rather than just picking a method at random).   Evaluate the indefinite integral .   A good first step is to determine what method we should use for this integral. By looking through Richard's list above, pick a method (you may want to convince yourself why the method you pick is a good choice) and try it out! If it doesn't work out, pick something else.    Observe that the integrand can be simplified further by expanding the square and using some trig identities. See that the integrand is a lot easier now compared to what we started with! A simple -sub will help evaluate the integral.      Evaluate the indefinite integral .   A good first step is to determine what method we should use for this integral. By looking through Richard's list above, pick a method (you may want to convince yourself why the method you pick is a good choice) and try it out! If it doesn't work out, pick something else.    For starters, we can't simplify the integrand any further. Also, there is no composite function here that may allow us to do a -sub. But the integral consists of the product of two functions. Then integration by parts may be a good method to try here.  By the LIPET test, we pick here. Then we have Using the integration by parts formula, we obtain Recall we do have a formula to evaluate the integral of tangent (see ). Using the formula, we obtain      Evaluate the indefinite integral    Observe that we can't simplify the integrand any further. Also, the integrand doesn't consist of a product (so integration by parts may not be useful) and the integrand isn't a rational expression (so partial fraction decomposition isn't gonna work).  Richard just eliminated three of the methods for you. What method do you think you should use here (and why)?    Observe that the denominator of the integrand takes the form of , where . Then trig sub may work out here.  Let . Then and In addition, we know that , which implies that .  Now putting all the pieces together, we obtain   By our assumption of , we know that . Hence, we obtain    Alternative method (if you are super observant)  The integral can be rewritten as follows Observe that is the derivative of , which implies that a -sub may work out here.  Let . Then We obtain        Evaluate Integrals using CAS  There are some computer algebra system (CAS), including WolframAlpha , Symbolab , Integral Calculator , and so many others, to evaluate integrals.  As we saw in the pop quiz, there may be multiple approaches to evaluate integrals, some of which may be easier than others. We can imagine CAS is a pretty powerful tool to evaluate integrals, but does it always evaluate integrals using the most \"efficient\" way?   Evaluate the indefinite integral using Integral Calculator . Next, scroll down on the Result and click \"Show steps\" to see how CAS evaluated the integral.  Then compare your solution with the one CAS provided. In your opinion, who do you think, you or CAS, provided an easier and more elegant solution? Why?  This is the to the integral when we evaluated it by hand.   Well what CAS did was expanding and breaking it down using linearity as follows: Well the middle integral is easy to evaluate but CAS uses the reduction formula for and , making the steps a lot more complicated.  We human certainly provided an easier and more elegant solution than the CAS did when evaluating this integral! We are smart to simplify the integrand instead of evaluating each term separately!    You may all have some takeaways about evaluating integrals using CAS! Normally, CAS is powerful enough to provide the correct answer, but it may not provide the most easiest and elegant solution. Don't just trust the CAS 100%. We human are a lot smarter than CAS!   Remember the goal in this class is for you to learn how to integrate functions. Richard can't past you if you don't show any understanding on integrating functions. Below are a lot of practices on integrating functions. Feel free to test yourself or practice with the list. Reach out to Richard if you need help!!    Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     Evaluate the following integrals.                                                                                                                                                                                                                                                                                                                 "
+},
+{
+  "id": "sec76-StrategiesIntegral-2-2",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#sec76-StrategiesIntegral-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     identify the structural features of an integral and determine which integration methods are applicable.    realize that an integral may be evaluated using multiple methods.    use computer algebra systems (CAS) to evaluate integrals and critically assess the elegance and efficiency of CAS-generated solutions.    "
+},
+{
+  "id": "sec76-StrategiesIntegral-3",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#sec76-StrategiesIntegral-3",
+  "type": "Investigation",
+  "number": "7.6.1",
+  "title": "POP QUIZ!",
+  "body": " POP QUIZ!   Suppose the following question were the first problem on your final exam for this class.  Evaluate the integral     "
+},
+{
+  "id": "subsec-761-IntegralStrategies-8",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#subsec-761-IntegralStrategies-8",
+  "type": "Example",
+  "number": "7.6.1",
+  "title": "",
+  "body": " Evaluate the indefinite integral .   A good first step is to determine what method we should use for this integral. By looking through Richard's list above, pick a method (you may want to convince yourself why the method you pick is a good choice) and try it out! If it doesn't work out, pick something else.    Observe that the integrand can be simplified further by expanding the square and using some trig identities. See that the integrand is a lot easier now compared to what we started with! A simple -sub will help evaluate the integral.    "
+},
+{
+  "id": "subsec-761-IntegralStrategies-9",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#subsec-761-IntegralStrategies-9",
+  "type": "Example",
+  "number": "7.6.2",
+  "title": "",
+  "body": " Evaluate the indefinite integral .   A good first step is to determine what method we should use for this integral. By looking through Richard's list above, pick a method (you may want to convince yourself why the method you pick is a good choice) and try it out! If it doesn't work out, pick something else.    For starters, we can't simplify the integrand any further. Also, there is no composite function here that may allow us to do a -sub. But the integral consists of the product of two functions. Then integration by parts may be a good method to try here.  By the LIPET test, we pick here. Then we have Using the integration by parts formula, we obtain Recall we do have a formula to evaluate the integral of tangent (see ). Using the formula, we obtain    "
+},
+{
+  "id": "subsec-761-IntegralStrategies-10",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#subsec-761-IntegralStrategies-10",
+  "type": "Example",
+  "number": "7.6.3",
+  "title": "",
+  "body": " Evaluate the indefinite integral    Observe that we can't simplify the integrand any further. Also, the integrand doesn't consist of a product (so integration by parts may not be useful) and the integrand isn't a rational expression (so partial fraction decomposition isn't gonna work).  Richard just eliminated three of the methods for you. What method do you think you should use here (and why)?    Observe that the denominator of the integrand takes the form of , where . Then trig sub may work out here.  Let . Then and In addition, we know that , which implies that .  Now putting all the pieces together, we obtain   By our assumption of , we know that . Hence, we obtain    Alternative method (if you are super observant)  The integral can be rewritten as follows Observe that is the derivative of , which implies that a -sub may work out here.  Let . Then We obtain     "
+},
+{
+  "id": "subsec-762-CAS-4",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#subsec-762-CAS-4",
+  "type": "Example",
+  "number": "7.6.4",
+  "title": "",
+  "body": " Evaluate the indefinite integral using Integral Calculator . Next, scroll down on the Result and click \"Show steps\" to see how CAS evaluated the integral.  Then compare your solution with the one CAS provided. In your opinion, who do you think, you or CAS, provided an easier and more elegant solution? Why?  This is the to the integral when we evaluated it by hand.   Well what CAS did was expanding and breaking it down using linearity as follows: Well the middle integral is easy to evaluate but CAS uses the reduction formula for and , making the steps a lot more complicated.  We human certainly provided an easier and more elegant solution than the CAS did when evaluating this integral! We are smart to simplify the integrand instead of evaluating each term separately!   "
+},
+{
+  "id": "ws-sec76-3-2",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-3",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-3",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-4",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-4",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-5",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-5",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-6",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-6",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-7",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-7",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-8",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-8",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-9",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-9",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-10",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-10",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-11",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-11",
+  "type": "Worksheet Exercise",
+  "number": "10",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-12",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-12",
+  "type": "Worksheet Exercise",
+  "number": "11",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-13",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-13",
+  "type": "Worksheet Exercise",
+  "number": "12",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-14",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-14",
+  "type": "Worksheet Exercise",
+  "number": "13",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-15",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-15",
+  "type": "Worksheet Exercise",
+  "number": "14",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-16",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-16",
+  "type": "Worksheet Exercise",
+  "number": "15",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-17",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-17",
+  "type": "Worksheet Exercise",
+  "number": "16",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-18",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-18",
+  "type": "Worksheet Exercise",
+  "number": "17",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-19",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-19",
+  "type": "Worksheet Exercise",
+  "number": "18",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-20",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-20",
+  "type": "Worksheet Exercise",
+  "number": "19",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-21",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-21",
+  "type": "Worksheet Exercise",
+  "number": "20",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-22",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-22",
+  "type": "Worksheet Exercise",
+  "number": "21",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-23",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-23",
+  "type": "Worksheet Exercise",
+  "number": "22",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-24",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-24",
+  "type": "Worksheet Exercise",
+  "number": "23",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-25",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-25",
+  "type": "Worksheet Exercise",
+  "number": "24",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "ws-sec76-3-26",
+  "level": "2",
+  "url": "sec76-StrategiesIntegral.html#ws-sec76-3-26",
+  "type": "Worksheet Exercise",
+  "number": "25",
+  "title": "",
+  "body": "           "
+},
+{
   "id": "secA1-HW1",
   "level": "1",
   "url": "secA1-HW1.html",
