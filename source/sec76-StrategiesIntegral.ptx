@@ -49,7 +49,6 @@
 
     </introduction>
 
-  <!--
     <solution>
       <p>
         We can evaluate this integral using the three methods we have learned in his class: <m>u</m>-sub, trig sub, and partial fraction decomposition. 
@@ -111,11 +110,9 @@
         </p>
       </solution>
     </solution>
-  -->
 
   </investigation>
 
-<!--
   <p>
     Richard actually found this task from a research paper in math education during the first doctoral class he took during his first year of PhD. 
     Back in the 1990s, an instructor placed the integral problem <m>\int \frac{x}{x^2 - 9}\, dx</m> at the beginning of a final exam in an integral calculus course 
@@ -146,8 +143,6 @@
     I was shocked by the finding when I read this paper two years ago (there are more from this paper but this is the most shocking finding to me). 
     I hope you all learn something from this task and the findings in terms of evaluating the integrals! 
   </p>
-
--->
 
 <subsection xml:id="subsec-761-IntegralStrategies">
   <title>What is the "best" way to evaluate integrals? </title>

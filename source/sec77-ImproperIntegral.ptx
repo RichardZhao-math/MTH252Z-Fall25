@@ -3,6 +3,91 @@
 <section xml:id="sec77-ImproperIntegral" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Improper Integrals</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, we will discuss the concept of <em>improper integrals</em>. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            blahblahblah
+          </p>
+        </li>
+        <li>
+          <p>
+            blahblahblah
+          </p>
+        </li>
+        <li>
+          <p>
+            blahblahblah
+          </p>
+        </li>
+        <li>
+          <p>
+            blahblahblah
+          </p>
+        </li>
+      </ul>
+    </objectives>
+    
+  </introduction>
+
+  <investigation>
+    <introduction>
+      <p>
+        Recall we learned about finding the volume of revolution using the disk method back in section 6.3. 
+        Let's solve a quick problem using the disk method. 
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        Find the volume of the solid obtained by rotating <m>y = \frac{1}{x}</m> on the interval <m>[1,b]</m> across the <m>x</m>-axis, where <m>b</m> is a constant greater than <m>1</m>. 
+      </p>
+    </task>
+
+    <task>
+      <p>
+        Now we make <m>b</m> to be larger and larger (to potentially <m>\infty</m>). 
+        How does it affect the volume of the solid obtained by the rotation? 
+      </p>
+    </task>
+
+    <task>
+      <p>
+        Find the volume of the solid obtained by rotating <m>y = \frac{1}{x}</m> on the interval <m>[1,\infty)</m> by taking the limit of the volume you obtained in part (a) as <m>b\to \infty</m>. 
+        Does it match up with your expectation in part (b)? Why or why not? 
+      </p>
+    </task>
+    
+  </investigation>
+
+  <p>
+    The reason why we call a definite integral <m>improper</m> is because we can't evaluate it using the Fundamental Theorem of Calculus <em>directly</em> (hence, improper). 
+    Recall the Fundamental theorem of calculus only holds if we are integrating a <em>continuous</em> function on some <em>closed</em>. 
+  </p>
+
+  <subsection xml:id="subsec-771-InfiniteIntervals">
+    <title>Improper Integrals over Infinite Intervals</title>
+
+    <p>
+      The first case of improper integrals is when we integrate a function over an infinite interval, which means the interval has at least one endpoint to be infinity (or negative infinity). 
+      Since the interval is not closed, we can't apply the Fundamental Theorem of Calculus directly... 
+    </p>
+
+    <p>
+      But... there is a workaround here. 
+      Instead of treating infinity as a number and 
+    </p>
+    
+  </subsection>
 
 </section>
