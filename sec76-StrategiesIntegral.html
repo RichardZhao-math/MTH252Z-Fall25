@@ -363,7 +363,83 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec76-StrategiesIntegral-3-2-2">Evaluate the integral <span class="process-math">\(\displaystyle \int\dfrac{x}{9 - x^2}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<div class="autopermalink" data-description="Investigation 7.6.1: POP QUIZ!"><a href="#sec76-StrategiesIntegral-3" title="Copy heading and permalink for Investigation 7.6.1: POP QUIZ!" aria-label="Copy heading and permalink for Investigation 7.6.1: POP QUIZ!">🔗</a></div></article><section class="subsection" id="subsec-761-IntegralStrategies"><h3 class="heading hide-type">
+<details id="sec76-StrategiesIntegral-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec76-StrategiesIntegral-3-3-1">We can evaluate this integral using the three methods we have learned in his class: <span class="process-math">\(u\)</span>-sub, trig sub, and partial fraction decomposition.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec76-StrategiesIntegral-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using <span class="process-math">\(u\)</span>-sub</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec76-StrategiesIntegral-3-3-2-2">
+<div class="para">Let <span class="process-math">\(u = 9 - x^2\text{.}\)</span> Then <span class="process-math">\(du = -2x\, dx\text{.}\)</span> Hence, we obtain</div>
+<div class="displaymath process-math" id="sec76-StrategiesIntegral-3-3-2-2-3">
+\begin{align*}
+\int \frac{x}{9 - x^2}\, dx \amp = -\int \frac{1}{2u}\, du \\
+\amp = -\frac{1}{2}\ln|u| + C \\
+\amp = -\frac{1}{2}\ln\left|9 - x^2\right| + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-3-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.6.1.1.1: Using u-sub"><a href="#sec76-StrategiesIntegral-3-3-2" title="Copy heading and permalink for Solution 7.6.1.1.1: Using u-sub" aria-label="Copy heading and permalink for Solution 7.6.1.1.1: Using u-sub">🔗</a></div>
+</div></details><details id="sec76-StrategiesIntegral-3-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Trig sub</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec76-StrategiesIntegral-3-3-3-2">
+<div class="para">Let <span class="process-math">\(x = 3\sin(\theta)\text{.}\)</span> Then <span class="process-math">\(dx = 3\cos(\theta)\, d\theta\text{.}\)</span> Hence, we obtain</div>
+<div class="displaymath process-math" id="sec76-StrategiesIntegral-3-3-3-2-3">
+\begin{align*}
+\int \frac{x}{9 - x^2}\, dx \amp = \int \frac{3\sin(\theta)}{9 - 9\sin^2(\theta)}\cdot 3\cos(\theta)\, d\theta \\
+\amp = \int \frac{9\sin(\theta)\cos(\theta)}{9\cos^2(\theta)}\, d\theta \\
+\amp = \int \tan(\theta)\, d\theta \\
+\amp = \ln|\sec(\theta)| + C_0 \\
+\amp = \ln\left|\frac{3}{\sqrt{9 - x^2}}\right| + C_0 \\
+\amp = \ln(3) - \ln\left|9 - x^2\right|^{\frac{1}{2}} + C_0\\
+\amp = -\frac{1}{2}\ln\left|9 - x^2\right| + \ln(3) + C_0\\
+\amp = -\frac{1}{2}\ln\left|9 - x^2\right| + C 
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(C = \ln(3) + C_0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-3-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.6.1.1.2: Using Trig sub"><a href="#sec76-StrategiesIntegral-3-3-3" title="Copy heading and permalink for Solution 7.6.1.1.2: Using Trig sub" aria-label="Copy heading and permalink for Solution 7.6.1.1.2: Using Trig sub">🔗</a></div>
+</div></details><details id="sec76-StrategiesIntegral-3-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Partial Fraction Decomposition</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec76-StrategiesIntegral-3-3-4-2">
+<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two numbers. Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x}{9 - x^2} = \frac{x}{(3 - x)(3 + x)} = \frac{A}{3 - x} + \frac{B}{3 + x}
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = A(x + 3) + B(x - 3)
+\end{equation*}
+</div>
+<div class="para">We can determine that <span class="process-math">\(A = \dfrac{1}{2}\)</span> and <span class="process-math">\(B = -\dfrac{1}{2}\text{.}\)</span> Hence, we obtain</div>
+<div class="displaymath process-math" id="sec76-StrategiesIntegral-3-3-4-2-7">
+\begin{align*}
+\int \frac{x}{9 - x^2}\, dx \amp = \int \left(\frac{1/2}{3 - x} + \frac{-1/2}{3 + x}\right)\, dx \\
+\amp = \frac{1}{2} \int \left(\frac{1}{3 - x} - \frac{1}{3 + x}\right) \, dx \\
+\amp = \frac{1}{2} \left(-\ln|3 - x| - \ln|3 + x|\right) + C \\
+\amp = -\frac{1}{2} \left(\ln|3 - x| + \ln|3 + x|\right) + C \\
+\amp = -\frac{1}{2}\ln\left|9 - x^2\right| + C 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-3-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.6.1.1.3: Using Partial Fraction Decomposition"><a href="#sec76-StrategiesIntegral-3-3-4" title="Copy heading and permalink for Solution 7.6.1.1.3: Using Partial Fraction Decomposition" aria-label="Copy heading and permalink for Solution 7.6.1.1.3: Using Partial Fraction Decomposition">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Solution 7.6.1.1"><a href="#sec76-StrategiesIntegral-3-3" title="Copy heading and permalink for Solution 7.6.1.1" aria-label="Copy heading and permalink for Solution 7.6.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Investigation 7.6.1: POP QUIZ!"><a href="#sec76-StrategiesIntegral-3" title="Copy heading and permalink for Investigation 7.6.1: POP QUIZ!" aria-label="Copy heading and permalink for Investigation 7.6.1: POP QUIZ!">🔗</a></div></article><div class="para" id="sec76-StrategiesIntegral-4">Richard actually found this task from a research paper in math education during the first doctoral class he took during his first year of PhD. Back in the 1990s, an instructor placed the integral problem <span class="process-math">\(\int \frac{x}{x^2 - 9}\, dx\)</span> at the beginning of a final exam in an integral calculus course (our pop quiz problem is a bit different since the original integral was a bit complicated if a student attempted to try trig sub).<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec76-StrategiesIntegral-5">The result from that study showed that only about 50% of the students attempted the <span class="process-math">\(u\)</span>-sub in this problem. About 35% of them tried partial fraction decomposition and 15% of them used trig sub.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec76-StrategiesIntegral-6">Well students trying <span class="process-math">\(u\)</span>-sub performed better in general compared to students who didn’t try <span class="process-math">\(u\)</span>-sub in this problem since they have greater confidence and ample time for the rest of the exam. People trying trig sub spent too much time on this problem and often got stuck and doubt whether their answer was correct.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec76-StrategiesIntegral-7">But the surprising finding here is that students using partial fraction decomposition or trig sub didn’t switch method when they got stuck. They just kept on getting stuck using a complicated method rather than trying another method.<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec76-StrategiesIntegral-8">In addition, the instructor put this problem in the beginning of the final exam, hoping to bolster students’ confidence. This goal was only achieved for those who attempted <span class="process-math">\(u\)</span>-sub in this problem...<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec76-StrategiesIntegral-9">I was shocked by the finding when I read this paper two years ago (there are more from this paper but this is the most shocking finding to me). I hope you all learn something from this task and the findings in terms of evaluating the integrals!<div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="subsec-761-IntegralStrategies"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">What is the "best" way to evaluate integrals?</span>
 </h3>
 <div class="para" id="subsec-761-IntegralStrategies-2">We went through various strategies to evaluate integrals this term (and there are more strategies that goes beyond the scope of this class!). Sometimes it is difficult to determine which method to try right off the bat.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-761-IntegralStrategies-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -648,7 +724,7 @@ du = \frac{1}{1 + x^2}\, dx
 <div class="autopermalink" data-description="Solution 7.6.4.1"><a href="#subsec-762-CAS-4-4" title="Copy heading and permalink for Solution 7.6.4.1" aria-label="Copy heading and permalink for Solution 7.6.4.1">🔗</a></div>
 </div></details><div class="autopermalink" data-description="Example 7.6.4"><a href="#subsec-762-CAS-4" title="Copy heading and permalink for Example 7.6.4" aria-label="Copy heading and permalink for Example 7.6.4">🔗</a></div></article><div class="para" id="subsec-762-CAS-5">You may all have some takeaways about evaluating integrals using CAS! Normally, CAS is powerful enough to provide the correct answer, but it may not provide the most easiest and elegant solution. Don’t just trust the CAS 100%. We human are a lot smarter than CAS!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-762-CAS-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection: Evaluate Integrals using CAS"><a href="#subsec-762-CAS" title="Copy heading and permalink for Subsection: Evaluate Integrals using CAS" aria-label="Copy heading and permalink for Subsection: Evaluate Integrals using CAS">🔗</a></div></section><div class="para" id="sec76-StrategiesIntegral-6">Remember the goal in this class is for you to learn how to integrate functions. Richard can’t past you if you don’t show any understanding on integrating functions. Below are a lot of practices on integrating functions. Feel free to test yourself or practice with the list. <em class="alert">Reach out to Richard if you need help!!</em><div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Subsection: Evaluate Integrals using CAS"><a href="#subsec-762-CAS" title="Copy heading and permalink for Subsection: Evaluate Integrals using CAS" aria-label="Copy heading and permalink for Subsection: Evaluate Integrals using CAS">🔗</a></div></section><div class="para" id="sec76-StrategiesIntegral-12">Remember the goal in this class is for you to learn how to integrate functions. Richard can’t past you if you don’t show any understanding on integrating functions. Below are a lot of practices on integrating functions. Feel free to test yourself or practice with the list. <em class="alert">Reach out to Richard if you need help!!</em><div class="autopermalink" data-description="Paragraph"><a href="#sec76-StrategiesIntegral-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <section class="worksheet" id="ws-sec76" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
 <span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Exercises for this section</span><div class="print-links"><a href="ws-sec76-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
