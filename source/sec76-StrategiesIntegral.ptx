@@ -280,7 +280,7 @@
         See that the integrand is a lot easier now compared to what we started with! 
         A simple <m>u</m>-sub will help evaluate the integral. 
         <md>
-          <mrow> \int \left(1 + \sin(2x)\right)\, dx \amp= x + \frac{1}{2x}\cos(2x) + C </mrow>
+          <mrow> \int \left(1 + \sin(2x)\right)\, dx \amp= x - \frac{1}{2}\cos(2x) + C </mrow>
         </md>
       </p>
     </solution>
