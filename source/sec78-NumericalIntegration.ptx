@@ -3,6 +3,664 @@
 <section xml:id="sec78-NumericalIntegration" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Numerical Integration</title>
 
-  <p> Text of section. </p>
+  <introduction>
+    <p>
+      In this section, we will discuss some more numerical methods to approximate the definite integrals. 
+    </p>
+
+    <objectives>
+      <introduction>
+        <p>
+          After this section, students will be able to:
+        </p>
+      </introduction>
+      <ul>
+        <li>
+          <p>
+            approximate definite integrals using the midpoint rule
+          </p>
+        </li>
+        <li>
+          <p>
+            approximate definite integrals using the trapezoidal rule
+          </p>
+        </li>
+        <li>
+          <p>
+            approximate definite integrals using the Simpson's rule
+          </p>
+        </li>
+        <li>
+          <p>
+            identify the relationships between the numerical methods to approximate definite integrals. 
+          </p>
+        </li>
+      </ul>
+    </objectives>
+  </introduction>
+
+  <investigation>
+    <introduction>
+      <p>
+        Recall we learned about three methods to approximate the area under the curve back in <xref ref="sec51-ApproximatingArea"/>: left-endpoint approximation, right-endpoint approximation, and midpoint approximation. 
+        Let's quickly review the left- and right- endpoint approximations. 
+      </p>
+
+      <p>
+        Let <m>f(x) = \sqrt{1 + \sqrt{x}}</m> whose graph on <m>[0,4]</m> is shown below. 
+      </p>
+
+      <figure>
+        <caption>Graph of <m>f(x) = \sqrt{1 + \sqrt{x}}</m></caption>
+        <image width="80%">
+          <latex-image>
+            \begin{tikzpicture}
+              \begin{axis}[
+                axis lines=middle,
+                axis on top, 
+                xlabel={$x$},
+                ylabel={$y$},
+                xmin=-0.5, xmax=4.5,
+                ymin=-0.5, ymax=2.2,
+                xtick={2,4}, 
+                minor xtick={0,0.5,...,4},
+                ytick={2},
+                minor ytick={1},
+                samples=300,
+                width=12cm,
+                height=7cm
+              ]
+
+                % === Shading region under sqrt(1+sqrt(x)) ===
+                \addplot [draw=none, fill=green!10, domain=0:4] 
+                  ({x},{sqrt(1+sqrt(x))}) 
+                  |- (4,0) -- (0,0) -- cycle;
+
+                % === Curves ===
+                \addplot[ultra thick, blue, domain=0:4.5] {sqrt(1+sqrt(x))};
+
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+
+      <p>
+        We want to approximate the area under the curve on <m>[0,4]</m> using the following methods. 
+      </p>
+
+      <task>
+        <p>
+          Approximate the shaded area using the left-endpoint approximation with four rectangles. 
+        </p>
+
+        <hint>
+          <p>
+            In case you don't recall how the left-endpoint approximation works, below is the diagram with the rectangles for this approximation method. 
+          </p>
+
+          <figure>
+            <caption>Left-endpoint Approximation of <m>f(x) = \sqrt{1 + \sqrt{x}}</m></caption>
+            <image width="80%">
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    axis lines=middle,
+                    axis on top, 
+                    xlabel={$x$},
+                    ylabel={$y$},
+                    xmin=-0.5, xmax=4.5,
+                    ymin=-0.5, ymax=2.2,
+                    xtick={2,4}, 
+                    minor xtick={0,0.5,...,4},
+                    ytick={2},
+                    minor ytick={1},
+                    samples=300,
+                    width=12cm,
+                    height=7cm
+                  ]
+
+                    % === Shading region under sqrt(1+sqrt(x)) ===
+                    \addplot [draw=none, fill=green!10, domain=0:4] 
+                      ({x},{sqrt(1+sqrt(x))}) 
+                      |- (4,0) -- (0,0) -- cycle;
+
+                    % === Left-endpoint rectangles (Δx = 1) ===
+                    % On [0,1] with height f(0)=1
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(0,0) (0,1) (1,1) (1,0)} -- cycle;
+                    % On [1,2] with height f(1)=1.414
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(1,0) (1,1.414) (2,1.414) (2,0)} -- cycle;
+                    % On [2,3] with height f(2)=1.554
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(2,0) (2,1.554) (3,1.554) (3,0)} -- cycle;
+                    % On [3,4] with height f(3)=1.653
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(3,0) (3,1.653) (4,1.653) (4,0)} -- cycle;
+
+                    % --- Mark the upper-left endpoints
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(0,1)};
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(1,1.414)};
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(2,1.554)};
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(3,1.653)};
+
+                    % === Curves ===
+                    \addplot[ultra thick, blue, domain=0:4.5] {sqrt(1+sqrt(x))};
+
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+
+          <p>
+            What is the combined area of the four rectangles? 
+          </p>
+        </hint>
+
+        <solution>
+          <p>
+            Observe that 
+            <me>
+              \Delta x = \frac{4 - 0}{4} = 1
+            </me>
+            Then the left-endpoint approximation with four rectangles is
+            <md>
+              <mrow>L_4 \amp= \Delta x\left(f(0) + f(1) + f(2) + f(3)\right) </mrow>
+              <mrow> \amp= 1\cdot 1\cdot\left(1 + 1.414 + 1.554 + 1.653\right) </mrow>
+              <mrow> \amp= 5.621</mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
+
+      <task>
+        <p>
+          Approximate the shaded area using the right-endpoint approximation with four rectangles. 
+        </p>
+
+        <hint>
+          <p>
+            In case you don't recall how the right-endpoint approximation works, below is the diagram with the rectangles for this approximation method. 
+          </p>
+
+          <figure>
+            <caption>Right-endpoint Approximation of <m>f(x) = \sqrt{1 + \sqrt{x}}</m></caption>
+            <image width="80%">
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    axis lines=middle,
+                    axis on top, 
+                    xlabel={$x$},
+                    ylabel={$y$},
+                    xmin=-0.5, xmax=4.5,
+                    ymin=-0.5, ymax=2.2,
+                    xtick={2,4}, 
+                    minor xtick={0,0.5,...,4},
+                    ytick={2},
+                    minor ytick={1},
+                    samples=300,
+                    width=12cm,
+                    height=7cm
+                  ]
+
+                    % === Shading region under sqrt(1+sqrt(x)) ===
+                    \addplot [draw=none, fill=green!10, domain=0:4] 
+                      ({x},{sqrt(1+sqrt(x))}) 
+                      |- (4,0) -- (0,0) -- cycle;
+
+                    % === Right-endpoint rectangles (Δx = 1) ===
+                    % On [0,1] with height f(1)=1.414
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(0,0) (0,1.414) (1,1.414) (1,0)} -- cycle;
+                    % On [1,2] with height f(2)=1.554
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(1,0) (1,1.554) (2,1.554) (2,0)} -- cycle;
+                    % On [2,3] with height f(3)=1.653
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(2,0) (2,1.653) (3,1.653) (3,0)} -- cycle;
+                    % On [3,4] with height f(4)=1.732
+                    \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                      coordinates {(3,0) (3,1.732) (4,1.732) (4,0)} -- cycle;
+
+                    % --- Mark the upper-left endpoints
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(1,1.414)};
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(2,1.554)};
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(3,1.653)};
+                    \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(4,1.732)};
+
+                    % === Curves ===
+                    \addplot[ultra thick, blue, domain=0:4.5] {sqrt(1+sqrt(x))};
+
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+
+          <p>
+            What is the combined area of the four rectangles? 
+          </p>
+        </hint>
+
+        <solution>
+          <p>
+            Observe that 
+            <me>
+              \Delta x = \frac{4 - 0}{4} = 1
+            </me>
+            Then the right-endpoint approximation with four rectangles is
+            <md>
+              <mrow>L_4 \amp= \Delta x\left(f(1) + f(2) + f(3) + f(4)\right) </mrow>
+              <mrow> \amp= 1\cdot 1\cdot\left(1.414 + 1.554 + 1.653 + 1.732\right) </mrow>
+              <mrow> \amp= 6.353</mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
+    </introduction>
+  </investigation>
+
+  <p>
+    In this section, we will learn three more numerical methods to approximate the area under the curve, the midpoint rule, the trapezoidal rule, and the Simpson's rule. 
+    We will use the same function as the example to explore both the rules and the relation between the rules. 
+  </p>
+
+  <subsection xml:id="subsec-781MidpointRule">
+    <title>The Midpoint Rule</title>
+
+    <p>
+      We have seen the midpoint rule before. 
+      This is the same thing as the midpoint approximation we learned back in <xref ref="sec51-ApproximatingArea"/>, that we want to construct the rectangles whose height is the function value of the midpoint of each subinterval. 
+    </p>
+
+    <example>
+      <p>
+        Approximate the shaded area under the curve of <m>f(x) = \sqrt{1 + \sqrt{x}}</m> on <m>[0,4]</m> with four rectangles using the <alert>midpoint rule</alert>. 
+      </p>
+
+      <hint>
+          <p>
+            In case you don't recall how the midpoint rule (aka the midpoint approximation) works, below is the diagram with the rectangles for this approximation method. 
+          </p>
+
+          <figure>
+            <caption>Midpoint Rule to Find the Approximation of <m>f(x) = \sqrt{1 + \sqrt{x}}</m></caption>
+            <image width="80%">
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    axis lines=middle,
+                    axis on top, 
+                    xlabel={$x$},
+                    ylabel={$y$},
+                    xmin=-0.5, xmax=4.5,
+                    ymin=-0.5, ymax=2.2,
+                    xtick={2,4}, 
+                    minor xtick={0,0.5,...,4},
+                    ytick={2},
+                    minor ytick={1},
+                    samples=300,
+                    width=12cm,
+                    height=7cm
+                  ]
+
+                    % === Shading region under sqrt(1+sqrt(x)) ===
+                    \addplot [draw=none, fill=green!10, domain=0:4] 
+                      ({x},{sqrt(1+sqrt(x))}) 
+                      |- (4,0) -- (0,0) -- cycle;
+
+                    % === Midpoint rectangles (Δx = 1) ===
+                      % On [0,1], height f(0.5)=1.306
+                      \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                        coordinates {(0,0) (0,1.306) (1,1.306) (1,0)} -- cycle;
+
+                      % On [1,2], height f(1.5)=1.497
+                      \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                        coordinates {(1,0) (1,1.497) (2,1.497) (2,0)} -- cycle;
+
+                      % On [2,3], height f(2.5)=1.621
+                      \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                        coordinates {(2,0) (2,1.621) (3,1.621) (3,0)} -- cycle;
+
+                      % On [3,4], height f(3.5)=1.714
+                      \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                        coordinates {(3,0) (3,1.714) (4,1.714) (4,0)} -- cycle;
+
+                      % --- Midpoint markers
+                      \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(0.5,1.306)};
+                      \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(1.5,1.497)};
+                      \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(2.5,1.621)};
+                      \addplot[only marks, mark=* , mark size=2.5pt, color=red] coordinates {(3.5,1.714)};
+
+                      % --- Red dashed verticals marking rectangle heights
+                      \draw[red, dashed, thick] (axis cs:0.5,0) -- (axis cs:0.5,1.306);
+                      \draw[red, dashed, thick] (axis cs:1.5,0) -- (axis cs:1.5,1.497);
+                      \draw[red, dashed, thick] (axis cs:2.5,0) -- (axis cs:2.5,1.621);
+                      \draw[red, dashed, thick] (axis cs:3.5,0) -- (axis cs:3.5,1.714);
+
+                    % === Curves ===
+                    \addplot[ultra thick, blue, domain=0:4.5] {sqrt(1+sqrt(x))};
+
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+
+          <p>
+            What is the combined area of the four rectangles? 
+          </p>
+        </hint>
+
+        <solution>
+          <p>
+            Observe that
+            <me>
+              \Delta x = \frac{4 - 0}{4} = 1
+            </me>
+            Then the midpoint rule with four rectangles is
+            <md>
+              <mrow>M_4 \amp= \Delta x\left(f\left(\frac{0 + 1}{2}\right) + f\left(\frac{1 + 2}{2}\right) + f\left(\frac{2 + 3}{2}\right) + f\left(\frac{3 + 4}{2}\right)\right) </mrow>
+              <mrow> \amp= \Delta x\left(f(0.5) + f(1.5) + f(2.5) + f(3.5)\right) </mrow>
+              <mrow> \amp= 1\cdot\left(1.306 + 1.497 + 1.621 + 1.714\right) </mrow>
+              <mrow> \amp= 6.138</mrow>
+            </md>
+          </p>
+        </solution>
+    </example>
+
+    <p>
+      Observe that we first find the midpoint of each sub-interval, then find the function outputs of these midpoints as the heights of the rectangles. 
+      So we are really finding the midpoints of the inputs, not the outputs.  
+    </p>
+
+    <theorem xml:id="thm-MidpointRule">
+      <title>The Midpoint Rule</title>
+      <statement>
+        <p>
+          The <m>N</m>th midpoint approximation to <m>\displaystyle \int_a^b f(x)\, dx</m> is
+          <me>
+            M_N = \Delta x \left(f(c_1) + f(c_2) + \cdots + f(c_N)\right)
+          </me>
+          where <m>\Delta x = \dfrac{b - a}{N}</m> and <m>c_i = a + \left(i + \frac{1}{2}\right)\Delta</m> is the midpoint of the sub-interval <m>[x_{i-1}, x_i]</m>. 
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      Make sure you have some sort of formulas on your notes so that you can recall the formula on the exam. 
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-782TrapezoidalRule">
+    <title>The Trapezoidal Rule</title>
+
+    <p>
+      You may be wondering why we always approximate the area under the curve using rectangles. 
+      That is because the area of rectangles can be easily calculated. 
+      But the tradeoff here is that the approximation may not be accurate. 
+    </p>
+
+    <p>
+      If you don't oppose using another shape to approximate the area under the curve, we can approximate the area using <alert>trapezoids</alert>. 
+      This approximation method will give us a slightly better result compared to the left- and the right- endpoint approximation, but the tradeoff here is that the area of the trapezoids is a bit more complicated to calculate compared to the area of rectangles. 
+    </p>
+
+    <p>
+      If you don't recall how to find the area of a trapezoid, the diagram below may jog your memory. 
+    </p>
+
+    <figure>
+      <caption>A trapezoid </caption>
+      <image width="30%">
+        <latex-image>
+          \begin{tikzpicture}
+
+          % Coordinates:
+          \coordinate (A) at (0,0);      % bottom-left
+          \coordinate (B) at (0,2);      % bottom-right
+          \coordinate (C) at (2,3);      % top-right
+          \coordinate (D) at (2,0);      % top-left
+
+          % Trapezoid
+          \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+          % Side labels:
+          % vertical left side = a
+          \node[left] at (0,1) {$a$};
+
+          % vertical right side = b
+          \node[right] at (2,1.5) {$b$};
+
+          % horizontal base = Δx
+          \node[below] at (1,0) {$\Delta x$};
+
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      <me>
+        \text{Area} = \frac{\Delta x}{2}\left(a + b\right)
+      </me>
+    </p>
+
+    <example>
+      <p>
+        Approximate the shaded area under the curve of <m>f(x) = \sqrt{1 + \sqrt{x}}</m> on <m>[0,4]</m> with four trapezoids using the <alert>trapezoidal rule</alert>. 
+      </p>
+
+      <hint>
+        <p>
+          To help you visualize the diagram, Richard graphed the function and the four trapezoids. 
+        </p>
+
+        <figure>
+          <caption>Trapezoidal Rule to Find the Approximation of <m>f(x) = \sqrt{1 + \sqrt{x}}</m></caption>
+          <image width="80%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines=middle,
+                  axis on top, 
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-0.5, xmax=4.5,
+                  ymin=-0.5, ymax=2.2,
+                  xtick={2,4}, 
+                  minor xtick={0,0.5,...,4},
+                  ytick={2},
+                  minor ytick={1},
+                  samples=300,
+                  width=12cm,
+                  height=7cm
+                ]
+
+                  % === Shading region under sqrt(1+sqrt(x)) ===
+                  \addplot [draw=none, fill=green!10, domain=0:4] 
+                    ({x},{sqrt(1+sqrt(x))}) 
+                    |- (4,0) -- (0,0) -- cycle;
+
+                  % === Trapezoids for Δx = 1 ===
+
+                  % Trapezoid on [0,1]
+                  \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                    coordinates {(0,0) (0,1.000) (1,1.414) (1,0)} -- cycle;
+
+                  % Trapezoid on [1,2]
+                  \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                    coordinates {(1,0) (1,1.414) (2,1.554) (2,0)} -- cycle;
+
+                  % Trapezoid on [2,3]
+                  \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                    coordinates {(2,0) (2,1.554) (3,1.653) (3,0)} -- cycle;
+
+                  % Trapezoid on [3,4]
+                  \addplot[draw=orange!80, fill=orange!40, opacity=0.7]
+                    coordinates {(3,0) (3,1.653) (4,1.732) (4,0)} -- cycle;
+
+                  % === Endpoint markers (left and right) ===
+                  \addplot[only marks, mark=* , mark size=2.5pt, color=red]
+                    coordinates {(0,1.000) (1,1.414) (2,1.554) (3,1.653) (4,1.732)};
+
+                  % === Vertical dashed lines at endpoints ===
+                  \draw[red, dashed, thick] (axis cs:0,0) -- (axis cs:0,1.000);
+                  \draw[red, dashed, thick] (axis cs:1,0) -- (axis cs:1,1.414);
+                  \draw[red, dashed, thick] (axis cs:2,0) -- (axis cs:2,1.554);
+                  \draw[red, dashed, thick] (axis cs:3,0) -- (axis cs:3,1.653);
+                  \draw[red, dashed, thick] (axis cs:4,0) -- (axis cs:4,1.732);
+
+                  % === Curves ===
+                  \addplot[ultra thick, blue, domain=0:4.5] {sqrt(1+sqrt(x))};
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          How do we find the area of each trapezoid and then sum them up? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Observe that each trapezoid has the width of <m>\Delta x</m>, where
+          <me>
+            \Delta x = \frac{4 - 0}{4} = 1
+          </me>
+          Then the approximation using the trapezoidal rule is 
+          <md>
+            <mrow>T_4 \amp= \frac{\Delta x}{2}\left(f(0) + f(1)\right) + \frac{\Delta x}{2}\left(f(1) + f(2)\right) + \frac{\Delta x}{2}\left(f(2) + f(3)\right) + \frac{\Delta x}{2}\left(f(3) + f(4)\right)</mrow>
+            <mrow> \amp= \frac{\Delta x}{2}\left(f(0) + 2f(1) + 2f(2) + 2f(3) + f(4)\right) </mrow>
+            <mrow> \amp= \frac{1}{2}\left(1 + 2\cdot 1.414 + 2\cdot 1.554 + 2\cdot 1.653 + 1.732\right) </mrow>
+            <mrow> \amp= 5.987 </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      We can summarize the pattern and make it a fancy formula out of it (so we don't need to keep on drawing trapezoids). 
+      Observe that we need to divide <m>\Delta x</m> by <m>2</m>. 
+      In addition, we need to multiply all the function values in the middle by <m>2</m>, but not to the first and the last function values. 
+    </p>
+
+    <theorem xml:id="thm-TrapezoidalRule">
+      <title>The Trapezoidal Rule</title>
+      <statement>
+        <p>
+          The <m>N</m>th trapezoidal approximation to <m>\displaystyle \int_a^b f(x)\, dx</m> is 
+          <me>
+            T_N = \frac{\Delta x}{2}\left(y_0 + 2\cdot y_1 + 2\cdot y_2 + \cdots + 2\cdot y_{N - 1} + y_N\right)
+          </me>
+          where <m>\Delta x = \dfrac{b - a}{N}</m> and <m>y_i = f\left(x_i\right)</m>.
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      If you are super observant, you may notice that the trapezoidal rule is just the <em>average</em> of the left- and right- endpoint approximation. 
+      That is, 
+      <me>
+        T_N = \frac{L_N + R_N}{2}
+      </me>
+      To demonstrate this idea, we will again look at the same example. 
+    </p>
+
+    <p>
+      Observe that 
+      <me>
+        L_4 = 1\cdot \left(f(0) + f(1) + f(2) + f(3)\right)
+      </me>
+      and 
+      <me>
+        R_4 = 1\cdot \left(f(1) + f(2) + f(3) + f(4)\right)
+      </me>
+      Then
+      <md>
+        <mrow>\frac{L_4 + R_4}{2} \amp= \frac{1}{2}\cdot 1\cdot\left(f(0) + f(1) + f(2) + f(3) + f(1) + f(2) + f(3) + f(4)\right) </mrow>
+        <mrow> \amp= \frac{1}{2}\cdot 1\cdot \left(f(0) + 2\cdot f(1) + 2\cdot f(2) + 2\cdot f(3) + f(4)\right) </mrow>
+        <mrow> \amp= T_4 </mrow>
+      </md>
+    </p>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-783SimpsonRule">
+    <title>Simpson's Rule</title>
+
+    <p>
+      This is the most fanciest type of approximation we will learn in this class. 
+      In fact, this method is kind of complicated to demonstrate algebraically (not hard, just a lot of work) so Richard will not explain the theorem but just to state the rule below. 
+      If you really want to figure out why this rule works the way it does, your textbook includes the derivation.  
+    </p>
+
+    <theorem xml:id="thm-SimpsonRule">
+      <title>Simpson's Rule</title>
+      <statement>
+        <p>
+          For <m>N</m> even, the <m>N</m>th approximation to <m>\displaystyle \int_a^b f(x)\, dx</m> by Simpson's rule is
+          <me>
+            S_N = \frac{\Delta x}{3} \left(y_0 + 4\cdot y_1 + 2\cdot y_2 + 4\cdot y_3 + \cdots + 2\cdot y_{N-2} + 4\cdot y_{N-1} + y_N\right)
+          </me>
+          where <m>\Delta x = \frac{b - a}{N}</m> and <m>y_i = f(x_i)</m>. 
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      Simpson's rule uses <em>parabolas</em> to approximate the area under the curve, providing a more accurate approximation of the area under the curve (but again, the tradeoff is the more complicated formula). 
+      We can determine a parabola using three points, so technically we will be constructing back-to-back parabolas to approximate the area. 
+    </p>
+
+    <p>
+      There are patterns we can observe from Simpson's rule: we need to divide <m>\Delta x</m> by <m>3</m>. 
+      In addition, the coefficient for the first and the last function values is <m>1</m>. 
+      The coefficients for the middle function values alternate between <m>4</m> and <m>2</m>. 
+    </p>
+    
+    <example>
+      <p>
+        Approximate the shaded area under the curve of <m>f(x) = \sqrt{1 + \sqrt{x}}</m> on <m>[0,4]</m> using <alert>Simpson's rule</alert> with <m>N = 8</m>.  
+      </p>
+
+      <p>
+        <alert>P.S.:</alert> Richard will not code the parabolas on the graph as he sucks at coding. 
+        He will draw the diagram in class on the board. 
+        The goal here is for you to know how to use the formula AND what the output represents. 
+      </p>
+
+      <solution>
+        <p>
+          Observe that 
+          <me>
+            \Delta = \frac{4 - 0}{8} = \frac{1}{2}
+          </me>
+          Then we obtain
+          <md>
+            <mrow>S_8 \amp= \frac{\Delta x}{3}\left(y_0 + 4\cdot y_1 + 2\cdot y_2 + 4\cdot y_3 + 2\cdot y_4 + 4\cdot y_5 + 2\cdot y_6 + 4\cdot y_7 + y_8\right) </mrow>
+            <mrow> \amp= \frac{1}{6}\left(1 + 4(1.3066) + 2(1.1412) + 4(1.4916) + 2(1.5538) + 4(1.6066) + 2(1.6529) + 4(1.6944) + 1.7321\right) </mrow>
+            <mrow> \amp= 5.9708 </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      There are certain more relations between the approximation methods we can explore. 
+      Given that we are short in time this term, this is where I like to leave it. 
+    </p>
+
+    <p>
+      What you should get out of this section is to be able to approximate the area under the curve using the midpoint rule, the trapezoidal rule, and Simpson's rule. 
+    </p>
+    
+  </subsection>
 
 </section>

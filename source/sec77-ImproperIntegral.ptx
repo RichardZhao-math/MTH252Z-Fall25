@@ -17,22 +17,22 @@
       <ul>
         <li>
           <p>
-            blahblahblah
+            identify improper integrals 
           </p>
         </li>
         <li>
           <p>
-            blahblahblah
+            evaluate improper integrals 
           </p>
         </li>
         <li>
           <p>
-            blahblahblah
+            determine whether an improper integral converges or diverges by evaluation
           </p>
         </li>
         <li>
           <p>
-            blahblahblah
+            determine whether an improper integral converges or diverges by the comparison test
           </p>
         </li>
       </ul>
@@ -71,7 +71,7 @@
   </investigation>
 
   <p>
-    The reason why we call a definite integral <m>improper</m> is because we can't evaluate it using the Fundamental Theorem of Calculus <em>directly</em> (hence, improper). 
+    The reason why we call a definite integral <em>improper</em> is because we can't evaluate it using the Fundamental Theorem of Calculus <em>directly</em> (hence, improper). 
     Recall the Fundamental theorem of calculus only holds if we are integrating a <em>continuous</em> function on some <em>closed</em>. 
   </p>
 
@@ -85,9 +85,781 @@
 
     <p>
       But... there is a workaround here. 
-      Instead of treating infinity as a number and 
+      Instead of treating infinity as a number and proceed with the FTC anyways (which leads to plugging <m>\infty</m> into some antiderivatives... this is bad), we can define a number to replace <m>\infty</m> and take the limit of the answer as the number approaches <m>\infty</m>. 
     </p>
+
+    <definition xml:id="def-ImproperIntegral">
+      <statement>
+        <p>
+          Fix a number <m>a</m> and assume <m>f</m> is integrable over <m>[a,b]</m> for all <m>b \gt a</m>. 
+          The <alert>improper integral</alert> of <m>f</m> over <m>[a,\infty)</m> is defined as the following limit. 
+          <me>
+            \int_a^\infty f(x)\, dx = \lim_{b\to \infty} \int_a^b f(x)\, dx
+          </me>
+          If the limit exists, we say that the improper integral <alert>converges</alert>; if the limit doesn't exist, we say that the improper integral <alert>diverges</alert>. 
+        </p>
+
+        <p>
+          Similarly, the improper integral of <m>f</m> over <m>(-\infty,b]</m> is defined as the following limit. 
+          <me>
+            \int_{-\infty}^b f(x)\, dx = \lim_{a\to -\infty} \int_a^b f(x)\, dx
+          </me>
+        </p>
+
+        <p>
+          The improper integral of <m>f</m> over <m>(-\infty,\infty)</m> is defined as the following limit. 
+          <md>
+            <mrow>\int_{-\infty}^\infty f(x)\, dx \amp= \int_{-\infty}^c f(x)\, dx + \int_c^\infty f(x)\, dx </mrow>
+            <mrow> \amp= \lim_{a\to -\infty} \int_a^c f(x)\, dx + \lim_{b\to \infty} \int_c^b f(x)\, dx </mrow>
+          </md>
+          where <m>a \lt c \lt b</m>. 
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The ideas of <alert>convergence</alert> and <alert>divergence</alert> really come from sequences and series, which is what MTH 253Z is all about. 
+      Richard will not elaborate much on these two concepts, since this isn't really MTH 253Z. 
+      For the purpose of this section, remember that an improper integral <em>converges</em> if the final answer is a number, and <em>diverges</em> if the final answer is not a number (like <m>\pm \infty</m> or DNE). 
+      If you really want to know more about these concepts now, talk to Richard and he is happy to investigate these concepts together with you. 
+    </p>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_1^\infty \frac{1}{x^2}\, dx</m>. 
+        Does the integral converge or diverge? 
+      </p>
+
+      <hint>
+        <p>
+          Can we use the FTC to evaluate this integral right off the bat? Why or why not? 
+        </p>
+
+        <p>
+          If FTC can't be applied, what can we do so that we can use FTC? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          We <alert>cannot</alert> apply FTC right off the bat since the interval <m>[1,\infty)</m> is not closed. 
+          We can go around this issue by defining <m>b</m> to be the upper limit and take the limit of the answer as <m>b\to \infty</m>. 
+          <md>
+            <mrow> \int_1^\infty \frac{1}{x^2}\, dx \amp= \lim_{b\to \infty} \int_1^b \frac{1}{x^2}\, dx </mrow>
+            <mrow> \amp= \lim_{b\to \infty} \int_1^b x^{-2}\, dx </mrow>
+            <mrow> \amp= \lim_{b\to \infty} -x^{-1}\bigg|_1^b </mrow>
+            <mrow> \amp= \lim_{b\to \infty} \bigg(-b^{-1} + 1\bigg) </mrow>
+            <mrow> \amp= -\left(\lim_{b\to \infty} b^{-1}\right) + 1 </mrow>
+            <mrow> \amp= 1 </mrow>
+          </md>
+          Hence, the improper integral <m>\displaystyle \int_1^\infty \frac{1}{x^2}\, dx</m> <alert>converges</alert>. 
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_1^\infty \frac{1}{x}\, dx</m>
+        Does the integral converge or diverge?
+      </p>
+
+      <hint>
+        <p>
+          Can we use the FTC to evaluate this integral right off the bat? Why or why not? 
+        </p>
+
+        <p>
+          If FTC can't be applied, what can we do so that we can use FTC? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          We <alert>cannot</alert> apply FTC right off the bat since the interval <m>[1,\infty)</m> is not closed. 
+          We can go around this issue by defining <m>b</m> to be the upper limit and take the limit of the answer as <m>b\to \infty</m>.
+          <md>
+            <mrow> \int_1^\infty \frac{1}{x}\, dx \amp= \lim_{b\to \infty} \int_1^b \frac{1}{x}\, dx </mrow>
+            <mrow> \amp= \lim_{b\to \infty} \ln|x|\bigg|_1^b </mrow>
+            <mrow> \amp= \lim_{b\to \infty} \bigg(\ln(b) - \ln(1)\bigg) </mrow>
+            <mrow> \amp= \lim_{b\to \infty} \ln(b) </mrow>
+            <mrow> \amp= \infty </mrow>
+          </md>
+          Hence, the improper integral <m>\displaystyle \int_1^\infty \frac{1}{x}\, dx</m> <alert>diverges</alert>. 
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Recall definite integrals represent the area under the curve on some intervals. 
+      That is, 
+      <ul marker="">
+        <li>
+          <p>
+            <m>\displaystyle \int_1^\infty \frac{1}{x^2}\, dx</m> represents the area under the curve of <m>y = \dfrac{1}{x^2}</m> on <m>[1,\infty)</m>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \int_1^\infty \frac{1}{x}\, dx</m> represents the area under the curve of <m>y = \dfrac{1}{x}</m> on <m>[1,\infty)</m>. 
+          </p>
+        </li>
+      </ul>
+      Let's graph the functions and label the regions, where the blue curve is <m>y = \dfrac{1}{x}</m> and the red curve is <m>y = \dfrac{1}{x^2}</m>. 
+    </p>
+
+    <figure>
+      <caption>Shaded regions under <m>y=\frac{1}{x}</m> (in blue) and <m>y=\frac{1}{x^2}</m> (in red) on <m>[1,\infty)</m></caption>
+      <image width="60%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              axis lines=middle,
+              xlabel={$x$},
+              ylabel={$y$},
+              xmin=-0.5, xmax=12.5,
+              ymin=-0.2, ymax=1.2,
+              xtick={1},
+              ytick=\empty,
+              samples=300,
+              width=12cm,
+              height=7cm
+            ]
+
+              % === Shading region under 1/x ===
+              \addplot [draw=none, fill=blue!10, domain=1:12] 
+                ({x},{1/x}) 
+                |- (12,0) -- (1,0) -- cycle;
+
+              % === Shading region under 1/x^2 ===
+              \addplot [draw=none, fill=red!10, domain=1:12] 
+                ({x},{1/(x^2)}) 
+                |- (12,0) -- (1,0) -- cycle;
+
+              % === Curves ===
+              \addplot[thick, blue, domain=1:12] {1/x};
+              \addplot[thick, red, domain=1:12] {1/(x^2)};
+
+              % Mark x=1
+              \draw[dashed] (axis cs:1,0) -- (axis cs:1,1.2);
+
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      Based on the math, we know that the area under the curve of <m>y = \frac{1}{x^2}</m> (in red), is <m>1</m> and the area under the curve of <m>y = \frac{1}{x}</m> (in blue) is <m>\infty</m>. 
+      We can do some fun math using the graphs. 
+    </p>
+
+    <example>
+      <p>
+        Does the improper integral <m>\displaystyle \int_1^\infty \frac{1}{x^4}\, dx</m> converges or diverges? 
+        Can we determine it using the graphs without formally evaluating the integral? 
+      </p>
+
+      <hint>
+        <p>
+          Richard graphed the function <m>y = \frac{1}{x^4}</m> below for you and he also graphed <m>y = \frac{1}{x^2}</m> as well. 
+        </p>
+
+        <figure>
+          <caption>Graphs of <m>y=\frac{1}{x^2}</m> (in red) and <m>y = \frac{1}{x^4}</m> (in green) on <m>[1,\infty)</m></caption>
+          <image width="60%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines=middle,
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-0.5, xmax=6.5,
+                  ymin=-0.2, ymax=1.2,
+                  xtick={1},
+                  ytick=\empty,
+                  samples=300,
+                  width=12cm,
+                  height=7cm
+                ]
+
+                  % === Curves ===
+                  \addplot[thick, green, domain=1:6] {1/(x^4)};
+                  \addplot[thick, red, domain=1:6] {1/(x^2)};
+
+                  % Mark x=1
+                  \draw[dashed] (axis cs:1,0) -- (axis cs:1,1.2);
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Can we determine the placement of each function, which may tell us about the relation between the area under the curves? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Observe that <m>y = \frac{1}{x^4}</m> lies on the <alert>bottom</alert> of <m>y = \frac{1}{x^2}</m>, which means
+          <me>
+            \frac{1}{x^4} \lt \frac{1}{x^2} \qquad\text{ on } (1,\infty)
+          </me>
+        </p>
+
+        <p>
+          Graphically, lower curves should have smaller area. That is, the area under <m>y = \frac{1}{x^4}</m> (in green) is <em>less than</em> the area under <m>y = \frac{1}{x^2}</m> (in red).  
+        </p>
+
+        <figure>
+          <caption>Shaded regions under <m>y=\frac{1}{x^2}</m> (in red) and <m>y = \frac{1}{x^4}</m> (in green) on <m>[1,\infty)</m></caption>
+          <image width="60%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines=middle,
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-0.5, xmax=6.5,
+                  ymin=-0.2, ymax=1.2,
+                  xtick={1},
+                  ytick=\empty,
+                  samples=300,
+                  width=12cm,
+                  height=7cm
+                ]
+
+                  % === Shading region under 1/x^2 ===
+                  \addplot [draw=none, fill=red!10, domain=1:6] 
+                    ({x},{1/(x^2)}) 
+                    |- (6,0) -- (1,0) -- cycle;
+
+                  % === Shading region under 1/x^4 ===
+                  \addplot [draw=none, fill=green!20, domain=1:6] 
+                    ({x},{1/(x^4)}) 
+                    |- (6,0) -- (1,0) -- cycle;
+
+                  % === Curves ===
+                  \addplot[thick, green, domain=1:6] {1/(x^4)};
+                  \addplot[thick, red, domain=1:6] {1/(x^2)};
+
+                  % Mark x=1
+                  \draw[dashed] (axis cs:1,0) -- (axis cs:1,1.2);
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Then we know that <m>\displaystyle \int_1^\infty \frac{1}{x^4}\, dx \lt \int_1^\infty \frac{1}{x^2}\, dx</m>. 
+          We found out that <m>\displaystyle \int_1^\infty \frac{1}{x^2}\, dx = 1</m>, so 
+          <me>
+            \int_1^\infty \frac{1}{x^4}\, dx \lt 1
+          </me>
+          It's impossible for <m>\infty</m> to be less than <m>1</m>. 
+          Hence, <m>\displaystyle \int_1^\infty \frac{1}{x^4}\, dx</m> <alert>converges</alert>. 
+        </p>
+      </solution>
+    </example>
     
+    <example>
+      <p>
+        Does the improper integral <m>\displaystyle \int_1^\infty \frac{1}{\sqrt{x}}\, dx</m> converges or diverges? 
+        Can we determine it using the graphs without formally evaluating the integral? 
+      </p>
+
+      <hint>
+        <p>
+          Richard graphed the function <m>y = \frac{1}{\sqrt{x}}</m> below for you and he also graphed <m>y = \frac{1}{x}</m> as well. 
+        </p>
+
+        <figure>
+          <caption>Graphs of <m>y=\frac{1}{x}</m> (in blue) and <m>y = \frac{1}{\sqrt{x}}</m> (in orange) on <m>[1,\infty)</m></caption>
+          <image width="60%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines=middle,
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-0.5, xmax=12.5,
+                  ymin=-0.2, ymax=1.2,
+                  xtick={1},
+                  ytick=\empty,
+                  samples=300,
+                  width=12cm,
+                  height=7cm
+                ]
+
+                  % === Curves ===
+                  \addplot[thick, blue, domain=1:12] {1/x};
+                  \addplot[thick, orange, domain=1:12] {1/sqrt(x)};
+
+                  % Mark x=1
+                  \draw[dashed] (axis cs:1,0) -- (axis cs:1,1.2);
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Can we determine the placement of each function, which may tell us about the relation between the area under the curves? 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          Observe that <m>y = \frac{1}{\sqrt{x}}</m> lies on <alert>top</alert> of <m>y = \frac{1}{x}</m>, which means
+          <me>
+            \frac{1}{\sqrt{x}} \gt \frac{1}{x} \qquad\text{ on } (1,\infty)
+          </me>
+        </p>
+
+        <p>
+          Graphically, higher curves should have larger area. That is, the area under <m>y = \frac{1}{\sqrt{x}}</m> (in orange) is <em>greater than</em> the area under <m>y = \frac{1}{x}</m> (in blue).  
+        </p>
+
+        <figure>
+          <caption>Shaded regions under <m>y=\frac{1}{x}</m> (in blue) and <m>y = \frac{1}{\sqrt{x}}</m> (in orange) on <m>[1,\infty)</m></caption>
+          <image width="60%">
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines=middle,
+                  xlabel={$x$},
+                  ylabel={$y$},
+                  xmin=-0.5, xmax=12.5,
+                  ymin=-0.2, ymax=1.2,
+                  xtick={1},
+                  ytick=\empty,
+                  samples=300,
+                  width=12cm,
+                  height=7cm
+                ]
+
+                  % === Shading region under 1/sqrt(x) ===
+                  \addplot [draw=none, fill=orange!10, domain=1:12] 
+                    ({x},{1/sqrt(x)}) 
+                    |- (12,0) -- (1,0) -- cycle;
+
+                  % === Shading region under 1/x ===
+                  \addplot [draw=none, fill=blue!20, domain=1:12] 
+                    ({x},{1/x}) 
+                    |- (12,0) -- (1,0) -- cycle;
+
+                  % === Curves ===
+                  \addplot[thick, blue, domain=1:12] {1/x};
+                  \addplot[thick, orange, domain=1:12] {1/sqrt(x)};
+
+                  % Mark x=1
+                  \draw[dashed] (axis cs:1,0) -- (axis cs:1,1.2);
+
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+        <p>
+          Then we know that <m>\displaystyle \int_1^\infty \frac{1}{\sqrt{x}}\, dx \gt \int_1^\infty \frac{1}{x}\, dx</m>. 
+          We found out that <m>\displaystyle \int_1^\infty \frac{1}{x}\, dx = \infty</m>, so 
+          <me>
+            \int_1^\infty \frac{1}{\sqrt{x}}\, dx \gt \infty
+          </me>
+          It's impossible for a finite number to be greater than <m>\infty</m>. 
+          Hence, <m>\displaystyle \int_1^\infty \frac{1}{x^4}\, dx</m> <alert>diverges</alert>. 
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The two examples above demonstrated the idea of the <alert>Comparison Test</alert>, one of the test that you will be using in MTH 253Z. 
+    </p>
+
+    <theorem xml:id="thm-ComparisonTest">
+      <title>Comparison Test</title>
+      <statement>
+        <p>
+          Assume that <m>f</m> and <m>g</m> are continuous functions such that <m>f(x) \geq g(x) \geq 0</m> for <m>x \geq a</m>,  
+          <ul marker="">
+            <li>
+              <p>
+                if <m>\displaystyle \int_a^\infty f(x)\, dx</m> converges, then <m>\displaystyle \int_a^\infty g(x)\, dx</m> also converges; 
+              </p>
+            </li>
+            <li>
+              <p>
+                if <m>\displaystyle \int_a^\infty g(x)\, dx</m> diverges, then <m>\displaystyle \int_a^\infty f(x)\, dx</m> also diverges.  
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      What the comparison test says is essentially (1) anything less than a finite number cannot be <m>\infty</m>, and (2) anything greater than <m>\infty</m> cannot be a finite number. 
+      We can use the comparison test to identify whether an improper integral converges or diverges. 
+    </p>
+
+    <example>
+      <p>
+        Determine whether the improper integral <m>\displaystyle \int_1^\infty \frac{1}{x^2 + x}\, dx</m> converges or diverges. 
+      </p>
+
+      <hint>
+        <p>
+          We don't need to evaluate the integral, but just to identify whether it converges (the final answer is a number) or diverges (the final answer is not a number). 
+          We can figure it out using the <em>comparison test</em>. 
+        </p>
+
+        <p>
+          To use the comparison text, we need to pick a function to compare with <m>y = \frac{1}{x^2 + x}</m>. 
+          Usually, we want to pick a <em>similar</em> function for comparison. 
+        </p>
+
+        <p>
+          Observe that this function looks like <m>y = \frac{1}{x}</m> and <m>y = \frac{1}{x^2}</m>. 
+          Richard can let you know that only one of these two choices will work. 
+          Let's try them both and see which one will work. 
+          For the one that doesn't work, why not? 
+        </p>
+      </hint>
+
+      <solution>
+        <title>If we compare it with <m>y = \dfrac{1}{x}</m></title>
+        <p>
+          Let's compare <m>y = \frac{1}{x^2 + x}</m> with <m>y = \frac{1}{x}</m>. 
+          Let <m>x \gt 1</m>. Then we know that
+          <me>
+            x^2 + x \gt x \qquad \implies \qquad \frac{1}{x^2 + x} \lt \frac{1}{x}
+          </me>
+          This implies that <m>y = \frac{1}{x^2 + x}</m> is the bottom curve and <m>y = \frac{1}{x}</m> is the top curve. 
+          Hence, 
+          <me>
+            \int_1^\infty \frac{1}{x^2 + x}\, dx \lt \int_1^\infty \frac{1}{x}\, dx = \infty
+          </me>
+          But this is <alert>inconclusive</alert>, since both a finite number AND infinity can be less than infinity. 
+          We cannot say for sure whether the integral converges or diverges. 
+        </p>
+      </solution>
+
+      <solution>
+        <title>If we compare it with <m>y = \dfrac{1}{x^2}</m></title>
+        <p>
+          Let's compare <m>y = \frac{1}{x^2 + x}</m> with <m>y = \frac{1}{x^2}</m>. 
+          Let <m>x \gt 1</m>. Then we know that
+          <me>
+            x^2 + x \gt x^2 \qquad \implies \qquad \frac{1}{x^2 + x} \lt \frac{1}{x^2}
+          </me>
+          This implies that <m>y = \frac{1}{x^2 + x}</m> is the bottom curve and <m>y = \frac{1}{x^2}</m> is the top curve. 
+          Hence, 
+          <me>
+            \int_1^\infty \frac{1}{x^2 + x}\, dx \lt \int_1^\infty \frac{1}{x^2}\, dx = 1
+          </me>
+          By the comparison test, what's less than a finite number cannot be infinity. 
+          Hence, the integral <alert>converges</alert>. 
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      This is a common trap for the comparison test, especially in MTH 253Z: 
+      (1) both a finite number AND infinity can be less than infinity, and 
+      (2) both a finite number AND infinity can be greater than a number. 
+      So make sure you read the comparison test carefully!! 
+    </p>
+
+    <p>
+      The last thing in this subsection, before we move on to the second case of improper integrals, is the idea of a <m>p</m>-integral. 
+      Richard will not elaborate too much on this idea since the whole purpose of this idea is to prepare you for a MTH 253Z concept called the <m>p</m>-series. 
+      If you want to know more about it, feel free to reach out to Richard to discuss further. 
+    </p>
+
+    <definition xml:id="def-pIntegral">
+      <title><m>p</m>-Integral over <m>[a,\infty)</m></title>
+      <statement>
+        <p>
+          For <m>a \gt 0</m>, we define a <m>p</m>-integral as 
+          <me>
+            \int_a^\infty \frac{1}{x^p}\, dx
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Some examples of the <m>p</m>-integrals we have seen before are: 
+      <me>
+        \int_1^\infty \frac{1}{x}\, dx, \quad \int_1^\infty \frac{1}{x^2}\, dx, \quad \int_1^\infty \frac{1}{x^4}\, dx, \quad \int_1^\infty \frac{1}{\sqrt{x}}\, dx
+      </me>
+    </p>
+
+    <p>
+      We can quickly determine whether a <m>p</m>-integral converges or diverges by looking at the value of <m>p</m>. 
+      The <m>p</m>-integral <alert>converges</alert> if <m>p \gt 1</m>; otherwise the <m>p</m>-integral <alert>diverges</alert>. 
+    </p>
+
+    <theorem xml:id="thm-pIntegral">
+      <title><m>p</m>-Integral over <m>[a,\infty)</m></title>
+      <statement>
+        <p>
+          For <m>a \gt 0</m>, 
+          <me>
+            \int_a^\infty \frac{1}{x^p}\, dx = 
+            \begin{cases}
+              \dfrac{a^{1 - p}}{p - 1} \amp\text{ if } p \gt 1 \\[1em]
+              \infty \amp\text{ if } p \leq 1
+            \end{cases}
+          </me>
+        </p>
+      </statement>
+    </theorem>
+    
+    <p>
+      While the idea of <m>p</m>-integrals seems to be out of nowhere in this class, you will need this quick little concept to define <m>p</m>-series and whether a <m>p</m>-series converges in MTH 253Z. 
+      Richard will not elaborate further about this and let you learn all the fun things about sequences and series in MTH 253Z. 
+    </p>
   </subsection>
+
+  <subsection xml:id="subsec-772UnboundedFunctions">
+    <title>Improper Integrals for Unbounded Integrands</title>
+    
+    <p>
+      Richard asked a question at the end of <xref ref="sec54-FTCpartI"/>. 
+      For our convenience, Richard copied over the question below: 
+    </p>
+
+    <p>
+      To give you an actual problem to think about, is it correct to evaluate the integral as follows? 
+      <me>
+        \int_{-1}^3 \frac{1}{x^2}\, dx = -\frac{1}{x}\bigg|_{-1}^3 = \left(-\frac{1}{3}\right) - \left(-\frac{1}{-1}\right) = -\frac{4}{3}
+      </me>
+      We will revisit this problem in section 7.7 and point out what's wrong with this line of work. 
+    </p>
+
+    <p>
+      Now we are in Section 7.7 so let's think about what's wrong with this line of work. 
+      Observe that FTC was applied directly right off the bat, so the assumption is that <m>y = \frac{1}{x^2}</m> is continuous on <m>[-1,3]</m> (we can only apply FTC to integrate a continuous function on a closed interval). 
+      Yet, <m>y = \frac{1}{x^2}</m> is for sure <alert>NOT</alert> continuous on <m>[-1,3]</m>, as the function is not continuous at <m>x = 0</m>. 
+      There is a vertical asymptote at <m>x = 0</m>. 
+    </p>
+
+    <p>
+      Hence, this is also an improper integral, in the sense that the integrand is not continuous, more specifically, unbounded. 
+    </p>
+
+    <p>
+      Of course, there is also a workaround here. 
+      We know <m>y = \frac{1}{x^2}</m> is continuous on <m>[-1,0)</m> and <m>(0,3]</m>. 
+      Then we can split up the integral into two pieces and do the same limit trick in order to apply the FTC. 
+    </p>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_{-1}^3 \frac{1}{x^2}\, dx</m>
+      </p>
+
+      <hint>
+        <p>
+          The workaround here is to split up the integral at <m>x = 0</m> since this is the point of discontinuity and do the same limit trick in order to apply the FTC. 
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          <md>
+            <mrow> \int_{-1}^3 \frac{1}{x^2}\, dx \amp= \int_{-1}^0 \frac{1}{x^2}\, dx + \int_0^3 \frac{1}{x^2}\, dx</mrow>
+            <mrow> \amp= \lim_{b\to 0^-} \int_{-1}^b \frac{1}{x^2}\, dx + \lim_{a\to 0^+} \int_a^3 \frac{1}{x^2}\, dx </mrow>
+            <mrow> \amp= \lim_{b\to 0^-} -x^{-1}\bigg|_{-1}^b + \lim_{a\to 0^+} -x^{-1}\bigg|_a^3 </mrow>
+            <mrow> \amp= \lim_{b\to 0^-}\left(-b^{-1} + 1\right) + \lim_{a\to 0^+}\left(-3^{-1} + a^{-1}\right) </mrow>
+            <mrow> \amp= DNE </mrow>
+          </md>
+          Hence, the integral <alert>diverges</alert>. 
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <p>
+        Evaluate the definite integral <m>\displaystyle \int_0^3 \frac{1}{2\sqrt{x}}\, dx</m>
+        Does the integral converge or diverge?
+      </p>
+
+      <hint>
+        <p>
+          Can we use the FTC to evaluate this integral right off the bat? Why or why not?
+          If FTC can’t be applied, what can we do so that we can use FTC?
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          We <alert>cannot</alert> apply FTC right off the bat since the integrand <m>y = \frac{1}{2\sqrt{x}}</m> is not continuous at <m>x = 0</m>. 
+          We can go around this issue by defining <m>a</m> to be the lower limit and take the limit of the answer as <m>a\to 0^+</m>. 
+          <md>
+            <mrow> \int_0^3 \frac{1}{2\sqrt{x}}\, dx \amp= \lim_{a\to 0^+}\int_a^3 \frac{1}{2\sqrt{x}}\, dx </mrow>
+            <mrow> \amp= \lim_{a\to 0^+} \frac{1}{2}\int_a^3 x^{-\frac{1}{2}}\, dx </mrow>
+            <mrow> \amp= \lim_{a\to 0^+} \frac{1}{2} \cdot 2x^{\frac{1}{2}}\bigg|_a^3 </mrow>
+            <mrow> \amp= \lim_{a\to 0^+} \left(3^{\frac{1}{2}} - a^{\frac{1}{2}}\right) </mrow>
+            <mrow> \amp= \sqrt{3} - \left(\lim_{a\to 0^+} a\right)^{\frac{1}{2}} </mrow>
+            <mrow> \amp= \sqrt{3} </mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <worksheet xml:id="ws-sec77">
+    <title>Some Exercises for this section</title>
+    
+    <introduction>
+      <p>
+        I included some practice problems that cover some main concepts in this section. 
+        You don't need to turn it in, but I highly encourage you to work on this with your classmates. 
+        I may take problems here to be your in-class practice problems, homework problems, and/or exam problems. 
+        Reach out to Richard for help if you get stuck or have any questions. 
+      </p>
+
+      <p>
+        I will only include the final answer to some of the problems for you to check your result. 
+        If you want to check your work, talk to Richard and he is happy to discuss the process with you. 
+      </p>
+    </introduction>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Evaluate the following integral. Also, does the integral converge or diverge? 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <p>
+          <m>\displaystyle \int_1^\infty \frac{\ln(x)}{x^2}\, dx</m>
+        </p>
+
+        <solution>
+          <p>
+            <m>1</m>; converges
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <p>
+          <m>\displaystyle \int_\pi^\infty \cos(\theta)\, \sin\left(\sin(\theta)\right)\, d\theta</m>
+        </p>
+
+        <solution>
+          <p>
+            <m>DNE</m>; diverges
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <p>
+          <m>\displaystyle \int_0^\frac{\pi}{2} \tan(\theta)\, d\theta</m>
+        </p>
+
+        <solution>
+          <p>
+            <m>\infty</m>; diverges
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <p>
+          <m>\displaystyle \int_0^3 \frac{dx}{\sqrt{9 - x^2}}</m>
+        </p>
+
+        <solution>
+          <p>
+            <m>\dfrac{\pi}{2}</m>; converges
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <p>
+          <m>\displaystyle \int_2^\infty e^{-2x}\, dx</m>
+        </p>
+
+        <solution>
+          <p>
+            <m>\dfrac{1}{2e^4}</m>; converges
+          </p>
+        </solution>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup>
+    
+      <introduction>
+        <p>
+          Determine whether the following integral converges or diverges using the comparison test. 
+        </p>
+      </introduction>
+    
+      <exercise>
+        <p>
+          <m>\displaystyle \int_3^\infty \frac{dx}{\sqrt{x} - 1}</m>
+        </p>
+
+        <solution>
+          <p>
+            diverges
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <p>
+          <m>\displaystyle \int_1^\infty \frac{dx}{\sqrt{x^5 + 2}}</m>
+        </p>
+
+        <solution>
+          <p>
+            converges
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <p>
+          <m>\displaystyle \int_1^\infty \frac{|\sin(x)|}{x^2}\, dx</m>
+        </p>
+
+        <solution>
+          <p>
+            converges
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <p>
+          <m>\displaystyle \int_1^\infty \frac{e^x}{x}\, dx</m>
+        </p>
+
+        <solution>
+          <p>
+            diverges
+          </p>
+        </solution>
+      </exercise>
+    
+    </exercisegroup>
+
+  </worksheet>
 
 </section>
