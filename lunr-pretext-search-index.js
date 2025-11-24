@@ -2656,6 +2656,312 @@ var ptx_lunr_docs = [
   "body": "           "
 },
 {
+  "id": "sec77-ImproperIntegral",
+  "level": "1",
+  "url": "sec77-ImproperIntegral.html",
+  "type": "Section",
+  "number": "7.7",
+  "title": "Improper Integrals",
+  "body": " Improper Integrals   In this section, we will discuss the concept of improper integrals .    After this section, students will be able to:     identify improper integrals    evaluate improper integrals    determine whether an improper integral converges or diverges by evaluation    determine whether an improper integral converges or diverges by the comparison test        Recall we learned about finding the volume of revolution using the disk method back in section 6.3. Let's solve a quick problem using the disk method.    Find the volume of the solid obtained by rotating on the interval across the -axis, where is a constant greater than .    Now we make to be larger and larger (to potentially ). How does it affect the volume of the solid obtained by the rotation?    Find the volume of the solid obtained by rotating on the interval by taking the limit of the volume you obtained in part (a) as . Does it match up with your expectation in part (b)? Why or why not?    The reason why we call a definite integral improper is because we can't evaluate it using the Fundamental Theorem of Calculus directly (hence, improper). Recall the Fundamental theorem of calculus only holds if we are integrating a continuous function on some closed .   Improper Integrals over Infinite Intervals  The first case of improper integrals is when we integrate a function over an infinite interval, which means the interval has at least one endpoint to be infinity (or negative infinity). Since the interval is not closed, we can't apply the Fundamental Theorem of Calculus directly...  But... there is a workaround here. Instead of treating infinity as a number and proceed with the FTC anyways (which leads to plugging into some antiderivatives... this is bad), we can define a number to replace and take the limit of the answer as the number approaches .    Fix a number and assume is integrable over for all . The improper integral of over is defined as the following limit. If the limit exists, we say that the improper integral converges ; if the limit doesn't exist, we say that the improper integral diverges .  Similarly, the improper integral of over is defined as the following limit.   The improper integral of over is defined as the following limit. where .    The ideas of convergence and divergence really come from sequences and series, which is what MTH 253Z is all about. Richard will not elaborate much on these two concepts, since this isn't really MTH 253Z. For the purpose of this section, remember that an improper integral converges if the final answer is a number, and diverges if the final answer is not a number (like or DNE). If you really want to know more about these concepts now, talk to Richard and he is happy to investigate these concepts together with you.   Evaluate the definite integral . Does the integral converge or diverge?   Can we use the FTC to evaluate this integral right off the bat? Why or why not?  If FTC can't be applied, what can we do so that we can use FTC?    We cannot apply FTC right off the bat since the interval is not closed. We can go around this issue by defining to be the upper limit and take the limit of the answer as . Hence, the improper integral  converges .     Evaluate the definite integral Does the integral converge or diverge?   Can we use the FTC to evaluate this integral right off the bat? Why or why not?  If FTC can't be applied, what can we do so that we can use FTC?    We cannot apply FTC right off the bat since the interval is not closed. We can go around this issue by defining to be the upper limit and take the limit of the answer as . Hence, the improper integral  diverges .    Recall definite integrals represent the area under the curve on some intervals. That is,    represents the area under the curve of on .     represents the area under the curve of on .   Let's graph the functions and label the regions, where the blue curve is and the red curve is .   Shaded regions under (in blue) and (in red) on      Based on the math, we know that the area under the curve of (in red), is and the area under the curve of (in blue) is . We can do some fun math using the graphs.   Does the improper integral converges or diverges? Can we determine it using the graphs without formally evaluating the integral?   Richard graphed the function below for you and he also graphed as well.   Graphs of (in red) and (in green) on      Can we determine the placement of each function, which may tell us about the relation between the area under the curves?    Observe that lies on the bottom of , which means   Graphically, lower curves should have smaller area. That is, the area under (in green) is less than the area under (in red).   Shaded regions under (in red) and (in green) on      Then we know that . We found out that , so It's impossible for to be less than . Hence,  converges .     Does the improper integral converges or diverges? Can we determine it using the graphs without formally evaluating the integral?   Richard graphed the function below for you and he also graphed as well.   Graphs of (in blue) and (in orange) on      Can we determine the placement of each function, which may tell us about the relation between the area under the curves?    Observe that lies on top of , which means   Graphically, higher curves should have larger area. That is, the area under (in orange) is greater than the area under (in blue).   Shaded regions under (in blue) and (in orange) on      Then we know that . We found out that , so It's impossible for a finite number to be greater than . Hence,  diverges .    The two examples above demonstrated the idea of the Comparison Test , one of the test that you will be using in MTH 253Z.   Comparison Test   Assume that and are continuous functions such that for ,   if converges, then also converges;    if diverges, then also diverges.       What the comparison test says is essentially (1) anything less than a finite number cannot be , and (2) anything greater than cannot be a finite number. We can use the comparison test to identify whether an improper integral converges or diverges.   Determine whether the improper integral converges or diverges.   We don't need to evaluate the integral, but just to identify whether it converges (the final answer is a number) or diverges (the final answer is not a number). We can figure it out using the comparison test .  To use the comparison text, we need to pick a function to compare with . Usually, we want to pick a similar function for comparison.  Observe that this function looks like and . Richard can let you know that only one of these two choices will work. Let's try them both and see which one will work. For the one that doesn't work, why not?    If we compare it with  Let's compare with . Let . Then we know that This implies that is the bottom curve and is the top curve. Hence, But this is inconclusive , since both a finite number AND infinity can be less than infinity. We cannot say for sure whether the integral converges or diverges.    If we compare it with  Let's compare with . Let . Then we know that This implies that is the bottom curve and is the top curve. Hence, By the comparison test, what's less than a finite number cannot be infinity. Hence, the integral converges .    This is a common trap for the comparison test, especially in MTH 253Z: (1) both a finite number AND infinity can be less than infinity, and (2) both a finite number AND infinity can be greater than a number. So make sure you read the comparison test carefully!!  The last thing in this subsection, before we move on to the second case of improper integrals, is the idea of a -integral. Richard will not elaborate too much on this idea since the whole purpose of this idea is to prepare you for a MTH 253Z concept called the -series. If you want to know more about it, feel free to reach out to Richard to discuss further.   -Integral over   For , we define a -integral as     Some examples of the -integrals we have seen before are:   We can quickly determine whether a -integral converges or diverges by looking at the value of . The -integral converges if ; otherwise the -integral diverges .   -Integral over   For ,     While the idea of -integrals seems to be out of nowhere in this class, you will need this quick little concept to define -series and whether a -series converges in MTH 253Z. Richard will not elaborate further about this and let you learn all the fun things about sequences and series in MTH 253Z.    Improper Integrals for Unbounded Integrands  Richard asked a question at the end of . For our convenience, Richard copied over the question below:  To give you an actual problem to think about, is it correct to evaluate the integral as follows? We will revisit this problem in section 7.7 and point out what's wrong with this line of work.  Now we are in Section 7.7 so let's think about what's wrong with this line of work. Observe that FTC was applied directly right off the bat, so the assumption is that is continuous on (we can only apply FTC to integrate a continuous function on a closed interval). Yet, is for sure NOT continuous on , as the function is not continuous at . There is a vertical asymptote at .  Hence, this is also an improper integral, in the sense that the integrand is not continuous, more specifically, unbounded.  Of course, there is also a workaround here. We know is continuous on and . Then we can split up the integral into two pieces and do the same limit trick in order to apply the FTC.   Evaluate the definite integral    The workaround here is to split up the integral at since this is the point of discontinuity and do the same limit trick in order to apply the FTC.     Hence, the integral diverges .     Evaluate the definite integral Does the integral converge or diverge?   Can we use the FTC to evaluate this integral right off the bat? Why or why not? If FTC can’t be applied, what can we do so that we can use FTC?    We cannot apply FTC right off the bat since the integrand is not continuous at . We can go around this issue by defining to be the lower limit and take the limit of the answer as .       Some Exercises for this section   I included some practice problems that cover some main concepts in this section. You don't need to turn it in, but I highly encourage you to work on this with your classmates. I may take problems here to be your in-class practice problems, homework problems, and\/or exam problems. Reach out to Richard for help if you get stuck or have any questions.  I will only include the final answer to some of the problems for you to check your result. If you want to check your work, talk to Richard and he is happy to discuss the process with you.     Evaluate the following integral. Also, does the integral converge or diverge?         ; converges          ; diverges          ; diverges          ; converges          ; converges       Determine whether the following integral converges or diverges using the comparison test.        diverges         converges         converges         diverges      "
+},
+{
+  "id": "sec77-ImproperIntegral-2-2",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#sec77-ImproperIntegral-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     identify improper integrals    evaluate improper integrals    determine whether an improper integral converges or diverges by evaluation    determine whether an improper integral converges or diverges by the comparison test    "
+},
+{
+  "id": "sec77-ImproperIntegral-3",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#sec77-ImproperIntegral-3",
+  "type": "Investigation",
+  "number": "7.7.1",
+  "title": "",
+  "body": "  Recall we learned about finding the volume of revolution using the disk method back in section 6.3. Let's solve a quick problem using the disk method.    Find the volume of the solid obtained by rotating on the interval across the -axis, where is a constant greater than .    Now we make to be larger and larger (to potentially ). How does it affect the volume of the solid obtained by the rotation?    Find the volume of the solid obtained by rotating on the interval by taking the limit of the volume you obtained in part (a) as . Does it match up with your expectation in part (b)? Why or why not?   "
+},
+{
+  "id": "def-ImproperIntegral",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#def-ImproperIntegral",
+  "type": "Definition",
+  "number": "7.7.1",
+  "title": "",
+  "body": "  Fix a number and assume is integrable over for all . The improper integral of over is defined as the following limit. If the limit exists, we say that the improper integral converges ; if the limit doesn't exist, we say that the improper integral diverges .  Similarly, the improper integral of over is defined as the following limit.   The improper integral of over is defined as the following limit. where .   "
+},
+{
+  "id": "subsec-771-InfiniteIntervals-6",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-771-InfiniteIntervals-6",
+  "type": "Example",
+  "number": "7.7.2",
+  "title": "",
+  "body": " Evaluate the definite integral . Does the integral converge or diverge?   Can we use the FTC to evaluate this integral right off the bat? Why or why not?  If FTC can't be applied, what can we do so that we can use FTC?    We cannot apply FTC right off the bat since the interval is not closed. We can go around this issue by defining to be the upper limit and take the limit of the answer as . Hence, the improper integral  converges .   "
+},
+{
+  "id": "subsec-771-InfiniteIntervals-7",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-771-InfiniteIntervals-7",
+  "type": "Example",
+  "number": "7.7.3",
+  "title": "",
+  "body": " Evaluate the definite integral Does the integral converge or diverge?   Can we use the FTC to evaluate this integral right off the bat? Why or why not?  If FTC can't be applied, what can we do so that we can use FTC?    We cannot apply FTC right off the bat since the interval is not closed. We can go around this issue by defining to be the upper limit and take the limit of the answer as . Hence, the improper integral  diverges .   "
+},
+{
+  "id": "subsec-771-InfiniteIntervals-9",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-771-InfiniteIntervals-9",
+  "type": "Figure",
+  "number": "7.7.4",
+  "title": "",
+  "body": " Shaded regions under (in blue) and (in red) on     "
+},
+{
+  "id": "subsec-771-InfiniteIntervals-11",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-771-InfiniteIntervals-11",
+  "type": "Example",
+  "number": "7.7.5",
+  "title": "",
+  "body": " Does the improper integral converges or diverges? Can we determine it using the graphs without formally evaluating the integral?   Richard graphed the function below for you and he also graphed as well.   Graphs of (in red) and (in green) on      Can we determine the placement of each function, which may tell us about the relation between the area under the curves?    Observe that lies on the bottom of , which means   Graphically, lower curves should have smaller area. That is, the area under (in green) is less than the area under (in red).   Shaded regions under (in red) and (in green) on      Then we know that . We found out that , so It's impossible for to be less than . Hence,  converges .   "
+},
+{
+  "id": "subsec-771-InfiniteIntervals-12",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-771-InfiniteIntervals-12",
+  "type": "Example",
+  "number": "7.7.8",
+  "title": "",
+  "body": " Does the improper integral converges or diverges? Can we determine it using the graphs without formally evaluating the integral?   Richard graphed the function below for you and he also graphed as well.   Graphs of (in blue) and (in orange) on      Can we determine the placement of each function, which may tell us about the relation between the area under the curves?    Observe that lies on top of , which means   Graphically, higher curves should have larger area. That is, the area under (in orange) is greater than the area under (in blue).   Shaded regions under (in blue) and (in orange) on      Then we know that . We found out that , so It's impossible for a finite number to be greater than . Hence,  diverges .   "
+},
+{
+  "id": "thm-ComparisonTest",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#thm-ComparisonTest",
+  "type": "Theorem",
+  "number": "7.7.11",
+  "title": "Comparison Test.",
+  "body": " Comparison Test   Assume that and are continuous functions such that for ,   if converges, then also converges;    if diverges, then also diverges.      "
+},
+{
+  "id": "subsec-771-InfiniteIntervals-16",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-771-InfiniteIntervals-16",
+  "type": "Example",
+  "number": "7.7.12",
+  "title": "",
+  "body": " Determine whether the improper integral converges or diverges.   We don't need to evaluate the integral, but just to identify whether it converges (the final answer is a number) or diverges (the final answer is not a number). We can figure it out using the comparison test .  To use the comparison text, we need to pick a function to compare with . Usually, we want to pick a similar function for comparison.  Observe that this function looks like and . Richard can let you know that only one of these two choices will work. Let's try them both and see which one will work. For the one that doesn't work, why not?    If we compare it with  Let's compare with . Let . Then we know that This implies that is the bottom curve and is the top curve. Hence, But this is inconclusive , since both a finite number AND infinity can be less than infinity. We cannot say for sure whether the integral converges or diverges.    If we compare it with  Let's compare with . Let . Then we know that This implies that is the bottom curve and is the top curve. Hence, By the comparison test, what's less than a finite number cannot be infinity. Hence, the integral converges .   "
+},
+{
+  "id": "def-pIntegral",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#def-pIntegral",
+  "type": "Definition",
+  "number": "7.7.13",
+  "title": "<span class=\"process-math\">\\(p\\)<\/span>-Integral over <span class=\"process-math\">\\([a,\\infty)\\)<\/span>.",
+  "body": " -Integral over   For , we define a -integral as    "
+},
+{
+  "id": "thm-pIntegral",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#thm-pIntegral",
+  "type": "Theorem",
+  "number": "7.7.14",
+  "title": "<span class=\"process-math\">\\(p\\)<\/span>-Integral over <span class=\"process-math\">\\([a,\\infty)\\)<\/span>.",
+  "body": " -Integral over   For ,    "
+},
+{
+  "id": "subsec-772UnboundedFunctions-7",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-772UnboundedFunctions-7",
+  "type": "Example",
+  "number": "7.7.15",
+  "title": "",
+  "body": " Evaluate the definite integral    The workaround here is to split up the integral at since this is the point of discontinuity and do the same limit trick in order to apply the FTC.     Hence, the integral diverges .   "
+},
+{
+  "id": "subsec-772UnboundedFunctions-8",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#subsec-772UnboundedFunctions-8",
+  "type": "Example",
+  "number": "7.7.16",
+  "title": "",
+  "body": " Evaluate the definite integral Does the integral converge or diverge?   Can we use the FTC to evaluate this integral right off the bat? Why or why not? If FTC can’t be applied, what can we do so that we can use FTC?    We cannot apply FTC right off the bat since the integrand is not continuous at . We can go around this issue by defining to be the lower limit and take the limit of the answer as .    "
+},
+{
+  "id": "ws-sec77-3-2",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-3-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "      ; converges   "
+},
+{
+  "id": "ws-sec77-3-3",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-3-3",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "      ; diverges   "
+},
+{
+  "id": "ws-sec77-3-4",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-3-4",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "      ; diverges   "
+},
+{
+  "id": "ws-sec77-3-5",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-3-5",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "      ; converges   "
+},
+{
+  "id": "ws-sec77-3-6",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-3-6",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "      ; converges   "
+},
+{
+  "id": "ws-sec77-4-2",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-4-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "     diverges   "
+},
+{
+  "id": "ws-sec77-4-3",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-4-3",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "",
+  "body": "     converges   "
+},
+{
+  "id": "ws-sec77-4-4",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-4-4",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "",
+  "body": "     converges   "
+},
+{
+  "id": "ws-sec77-4-5",
+  "level": "2",
+  "url": "sec77-ImproperIntegral.html#ws-sec77-4-5",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "",
+  "body": "     diverges   "
+},
+{
+  "id": "sec78-NumericalIntegration",
+  "level": "1",
+  "url": "sec78-NumericalIntegration.html",
+  "type": "Section",
+  "number": "7.8",
+  "title": "Numerical Integration",
+  "body": " Numerical Integration   In this section, we will discuss some more numerical methods to approximate the definite integrals.    After this section, students will be able to:     approximate definite integrals using the midpoint rule    approximate definite integrals using the trapezoidal rule    approximate definite integrals using the Simpson's rule    identify the relationships between the numerical methods to approximate definite integrals.        Recall we learned about three methods to approximate the area under the curve back in : left-endpoint approximation, right-endpoint approximation, and midpoint approximation. Let's quickly review the left- and right- endpoint approximations.  Let whose graph on is shown below.   Graph of      We want to approximate the area under the curve on using the following methods.   Approximate the shaded area using the left-endpoint approximation with four rectangles.   In case you don't recall how the left-endpoint approximation works, below is the diagram with the rectangles for this approximation method.   Left-endpoint Approximation of      What is the combined area of the four rectangles?    Observe that Then the left-endpoint approximation with four rectangles is      Approximate the shaded area using the right-endpoint approximation with four rectangles.   In case you don't recall how the right-endpoint approximation works, below is the diagram with the rectangles for this approximation method.   Right-endpoint Approximation of      What is the combined area of the four rectangles?    Observe that Then the right-endpoint approximation with four rectangles is       In this section, we will learn three more numerical methods to approximate the area under the curve, the midpoint rule, the trapezoidal rule, and the Simpson's rule. We will use the same function as the example to explore both the rules and the relation between the rules.   The Midpoint Rule  We have seen the midpoint rule before. This is the same thing as the midpoint approximation we learned back in , that we want to construct the rectangles whose height is the function value of the midpoint of each subinterval.   Approximate the shaded area under the curve of on with four rectangles using the midpoint rule .   In case you don't recall how the midpoint rule (aka the midpoint approximation) works, below is the diagram with the rectangles for this approximation method.   Midpoint Rule to Find the Approximation of      What is the combined area of the four rectangles?    Observe that Then the midpoint rule with four rectangles is     Observe that we first find the midpoint of each sub-interval, then find the function outputs of these midpoints as the heights of the rectangles. So we are really finding the midpoints of the inputs, not the outputs.   The Midpoint Rule   The th midpoint approximation to is where and is the midpoint of the sub-interval .    Make sure you have some sort of formulas on your notes so that you can recall the formula on the exam.    The Trapezoidal Rule  You may be wondering why we always approximate the area under the curve using rectangles. That is because the area of rectangles can be easily calculated. But the tradeoff here is that the approximation may not be accurate.  If you don't oppose using another shape to approximate the area under the curve, we can approximate the area using trapezoids . This approximation method will give us a slightly better result compared to the left- and the right- endpoint approximation, but the tradeoff here is that the area of the trapezoids is a bit more complicated to calculate compared to the area of rectangles.  If you don't recall how to find the area of a trapezoid, the diagram below may jog your memory.   A trapezoid          Approximate the shaded area under the curve of on with four trapezoids using the trapezoidal rule .   To help you visualize the diagram, Richard graphed the function and the four trapezoids.   Trapezoidal Rule to Find the Approximation of      How do we find the area of each trapezoid and then sum them up?    Observe that each trapezoid has the width of , where Then the approximation using the trapezoidal rule is     We can summarize the pattern and make it a fancy formula out of it (so we don't need to keep on drawing trapezoids). Observe that we need to divide by . In addition, we need to multiply all the function values in the middle by , but not to the first and the last function values.   The Trapezoidal Rule   The th trapezoidal approximation to is where and .    If you are super observant, you may notice that the trapezoidal rule is just the average of the left- and right- endpoint approximation. That is, To demonstrate this idea, we will again look at the same example.  Observe that and Then     Simpson's Rule  This is the most fanciest type of approximation we will learn in this class. In fact, this method is kind of complicated to demonstrate algebraically (not hard, just a lot of work) so Richard will not explain the theorem but just to state the rule below. If you really want to figure out why this rule works the way it does, your textbook includes the derivation.   Simpson's Rule   For even, the th approximation to by Simpson's rule is where and .    Simpson's rule uses parabolas to approximate the area under the curve, providing a more accurate approximation of the area under the curve (but again, the tradeoff is the more complicated formula). We can determine a parabola using three points, so technically we will be constructing back-to-back parabolas to approximate the area.  There are patterns we can observe from Simpson's rule: we need to divide by . In addition, the coefficient for the first and the last function values is . The coefficients for the middle function values alternate between and .   Approximate the shaded area under the curve of on using Simpson's rule with .   P.S.: Richard will not code the parabolas on the graph as he sucks at coding. He will draw the diagram in class on the board. The goal here is for you to know how to use the formula AND what the output represents.   Observe that Then we obtain     There are certain more relations between the approximation methods we can explore. Given that we are short in time this term, this is where I like to leave it.  What you should get out of this section is to be able to approximate the area under the curve using the midpoint rule, the trapezoidal rule, and Simpson's rule.   "
+},
+{
+  "id": "sec78-NumericalIntegration-2-2",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#sec78-NumericalIntegration-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": "  After this section, students will be able to:     approximate definite integrals using the midpoint rule    approximate definite integrals using the trapezoidal rule    approximate definite integrals using the Simpson's rule    identify the relationships between the numerical methods to approximate definite integrals.    "
+},
+{
+  "id": "sec78-NumericalIntegration-3",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#sec78-NumericalIntegration-3",
+  "type": "Investigation",
+  "number": "7.8.1",
+  "title": "",
+  "body": "  Recall we learned about three methods to approximate the area under the curve back in : left-endpoint approximation, right-endpoint approximation, and midpoint approximation. Let's quickly review the left- and right- endpoint approximations.  Let whose graph on is shown below.   Graph of      We want to approximate the area under the curve on using the following methods.   Approximate the shaded area using the left-endpoint approximation with four rectangles.   In case you don't recall how the left-endpoint approximation works, below is the diagram with the rectangles for this approximation method.   Left-endpoint Approximation of      What is the combined area of the four rectangles?    Observe that Then the left-endpoint approximation with four rectangles is      Approximate the shaded area using the right-endpoint approximation with four rectangles.   In case you don't recall how the right-endpoint approximation works, below is the diagram with the rectangles for this approximation method.   Right-endpoint Approximation of      What is the combined area of the four rectangles?    Observe that Then the right-endpoint approximation with four rectangles is      "
+},
+{
+  "id": "subsec-781MidpointRule-3",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#subsec-781MidpointRule-3",
+  "type": "Example",
+  "number": "7.8.4",
+  "title": "",
+  "body": " Approximate the shaded area under the curve of on with four rectangles using the midpoint rule .   In case you don't recall how the midpoint rule (aka the midpoint approximation) works, below is the diagram with the rectangles for this approximation method.   Midpoint Rule to Find the Approximation of      What is the combined area of the four rectangles?    Observe that Then the midpoint rule with four rectangles is    "
+},
+{
+  "id": "thm-MidpointRule",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#thm-MidpointRule",
+  "type": "Theorem",
+  "number": "7.8.6",
+  "title": "The Midpoint Rule.",
+  "body": " The Midpoint Rule   The th midpoint approximation to is where and is the midpoint of the sub-interval .   "
+},
+{
+  "id": "subsec-782TrapezoidalRule-5",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#subsec-782TrapezoidalRule-5",
+  "type": "Figure",
+  "number": "7.8.7",
+  "title": "",
+  "body": " A trapezoid     "
+},
+{
+  "id": "subsec-782TrapezoidalRule-7",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#subsec-782TrapezoidalRule-7",
+  "type": "Example",
+  "number": "7.8.8",
+  "title": "",
+  "body": " Approximate the shaded area under the curve of on with four trapezoids using the trapezoidal rule .   To help you visualize the diagram, Richard graphed the function and the four trapezoids.   Trapezoidal Rule to Find the Approximation of      How do we find the area of each trapezoid and then sum them up?    Observe that each trapezoid has the width of , where Then the approximation using the trapezoidal rule is    "
+},
+{
+  "id": "thm-TrapezoidalRule",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#thm-TrapezoidalRule",
+  "type": "Theorem",
+  "number": "7.8.10",
+  "title": "The Trapezoidal Rule.",
+  "body": " The Trapezoidal Rule   The th trapezoidal approximation to is where and .   "
+},
+{
+  "id": "thm-SimpsonRule",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#thm-SimpsonRule",
+  "type": "Theorem",
+  "number": "7.8.11",
+  "title": "Simpson’s Rule.",
+  "body": " Simpson's Rule   For even, the th approximation to by Simpson's rule is where and .   "
+},
+{
+  "id": "subsec-783SimpsonRule-6",
+  "level": "2",
+  "url": "sec78-NumericalIntegration.html#subsec-783SimpsonRule-6",
+  "type": "Example",
+  "number": "7.8.12",
+  "title": "",
+  "body": " Approximate the shaded area under the curve of on using Simpson's rule with .   P.S.: Richard will not code the parabolas on the graph as he sucks at coding. He will draw the diagram in class on the board. The goal here is for you to know how to use the formula AND what the output represents.   Observe that Then we obtain    "
+},
+{
   "id": "secA1-HW1",
   "level": "1",
   "url": "secA1-HW1.html",
